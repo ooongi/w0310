@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+    <h1>폼</h1>
+    <h1>로그인 페이지</h1>
+    <form action="login.jsp">
+        <!--
+            for속성값과 id속성값이 같아야 한다.
+            form action값은 백엔드개발자가 개발한다. *.php, *.jsp, *.asp
+
+            웹 서버 언어: php, jsp, asp, java > 백엔드
+            웹 클라이언트 언어: html, css, js, > 프론트엔드
+        -->
+        <label for="user_id">아이디</label> <input type="text" id="user_id"> <br>
+        <label for="user_pw">비밀번호</label> <input type="password" id="user_pw"> <br>
+        <input type="checkbox" id="auto_login"><label for="auto_login">자동로그인</label><br>
+        <input type="submit" value="로그인">
+        <a href="#">회원가입</a>
+        <a href="#">아이디/비밀번호 찾기</a>
+    </form>
+    <!--
+        크로스 브라우징
+        크롬, 엣지, 파이어폭스 등의 익스플로러에서 제작한 홈페이지를 확인하는 것.
+    -->
+</body>
+</html>
+
+
+
+
+<!--
+    필수!
+    1. 검색창
+    2. 회원가입
+    3. 로그인창
+
+    <form>: 폼(양식) 전체를 그룹핑
+    <fieldset>: 폼 양식 그룹핑
+    <legend>: 필드셋의 제목
+
+    <input>: 한 줄 입력, 라디오버튼, 체크박스, 데이터 전송용 버튼(ex-로그인)
+    <label>: 글씨를 눌러도 체크되게
+    <button>: 데이터 전송용 버튼
+    <textarea>: 여러 줄 입력
+    <select>: 목록에서 선택만 가능
+        <optgroup>
+        <option>
+        <option>
+        <optgroup>
+        <option>
+        <option>
+
+    <datalist>: 목록에서 선택과 입력도 가능
+-->
