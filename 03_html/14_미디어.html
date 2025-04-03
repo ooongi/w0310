@@ -26,18 +26,36 @@
         
     -->
     <img src="./../70_pf/jeepcar/swot_jeepcar.png" alt="JeepSWOT분석" style="width: 640px;">
-    <video src="cheesecat.mp4" autoplay loop></video>
-    <video autoplay loop width="640">
-        <source src="main_video2_we.mp4" type="video/mp4">
+    
+    <video src="./assets/cheesecat.webm" autoplay loop muted style="width: 640px;"></video>
+
+    <video autoplay loop muted width="640">
+        <source src="./assets/cheesecat.mp4" type="video/mp4">
+        <source src="./assets/cheesecat.webm" type="video/webm">
+        <source src="./assets/cheesecat.webm" type="video/webm">
+        <!-- ogv는 제일 품질이 떨어짐(안만듦) -->
+        <!-- 영상 세개 다 안나옴. 지원되는 순서로 먼저보여줌(mp4먼저) -->
+        <!-- 엣지는 muted 추가해야 움직임 -->
     </video>
+
+    <video src="./assets/main_video2.mp4" autoplay loop muted style="width: 640px;"></video>
+
+    <video width="640" autoplay loop muted>
+        <source src="./assets/main_video2.mp4" type="video/mp4">
+    </video>
+    
     <iframe src="https://www.youtube.com/embed/_Gazskdv_V4?si=8e5Y8Ud3P3Di0WPe"></iframe>
     <iframe src="https://www.youtube.com/embed/_Gazskdv_V4?si=8e5Y8Ud3P3Di0WPe" style="border: none; width: 640px; height: 360px;"></iframe>
     <!-- 풀스크린 비디오, 유튜브 연결 트렌드 -->
 
-    <audio src="./Mas Cafe - Casa Rosa.mp3" controls></audio>
+    <audio src="./assets/Mas Cafe - Casa Rosa.mp3 Cafe - Casa Rosa.mp3" controls></audio>
     <!-- 배경음악 사용할 때 -->
-    <audio src="./Mas Cafe - Casa Rosa.mp3" autoplay></audio>
+    <audio src="./assets/Mas Cafe - Casa Rosa.mp3 Cafe - Casa Rosa.mp3" autoplay></audio>
 
-
+    <audio>
+        <source src="./assets/Mas Cafe - Casa Rosa.mp3 Cafe - Casa Rosa.mp3" type="audio/mp3">
+        <source src="./assets/Mas Cafe - Casa Rosa.mp3 Cafe - Casa Rosa.wav" type="audio/mp3">
+        <source src="./assets/Mas Cafe - Casa Rosa.mp3 Cafe - Casa Rosa.ogg" type="audio/mp3"><!-- 제일 품질이 떨어짐(안만듦) -->
+    </audio>
 </body>
 </html>
