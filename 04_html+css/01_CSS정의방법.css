@@ -1,0 +1,5 @@
+/*
+    선택자(태그, 타입, element 예시: h1, p ...) {속성: 값;}
+    .클래스 선택자(예시: <p class=color_green>) {속성: 값;}
+*/
+.color_green {color: green;}
