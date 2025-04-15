@@ -49,10 +49,29 @@
         설명 항목(description term) = dt
         설명 항목에 대한 설명(description of description term) = dd
     -->
-    <h2>약어 정의</h2>
+    <h2>설명 목록</h2>
+    <dl>
+        <div>
+            <dt>HTML</dt>
+            <dd>Hyper Text Markup Language의 약자로 웹 페이지의 <i>구조와 내용</i>을 정의하는 언어이다.</dd>
+        </div>
+        <div>
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheet의 약자로 HTML, XML 등의 문서의 <b>스타일을 지정(디자인)</b>하는 언어이다.</dd>
+        </div>
+        <!-- div로 그룹핑. dt, dd를 한 세트로 -->
+        <!--
+            설명 목록 description list dl
+            설명 항목 description term dt
+            설명 항목의 설명 description description dd
+            dl 안에 자식으로 dt와 dd를 사용하는데
+            dt를 먼저 쓰고 dd를 나중에 쓴다.
+        -->
+    </dl>
     <dl>
         <dt>HTML</dt>
         <dd>Hyper Text Markup Language의 약자로 웹 페이지의 <i>구조와 내용</i>을 정의하는 언어이다.</dd>
+
         <dt>CSS</dt>
         <dd>Cascading Style Sheet의 약자로 HTML, XML 등의 문서의 <b>스타일을 지정(디자인)</b>하는 언어이다.</dd>
     </dl>
