@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+
+
+
+/* 전체 */
+* {
+    margin: 0;
+}
+
+body {
+    background: #fff;
+    color: #333;
+}
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 헤더 */
+.header {
+    display: flex;
+    height: 100px;
+}
+
+/* 로고 */
+.logo {
+    width: 264px;
+    height: 40px;
+}
+
+/* 내비게이션 */
+
+/* 슬라이드 */
+.slide {
+    height: 300px;
+}
+
+/* 콘텐츠 */
+.contents {
+    display: flex;
+    height: 200px;
+}
+.notice, .banner, .shortcut {
+    width: 400px;
+}
+
+/* 공지사항 */
+/* 배너 */
+/* 바로가기 */
+
+/* 푸터 */
+.footer {
+    display: flex;
+    height: 100px;
+}
+
+/* 하단로고 */
+.blogo {
+    width: 293px;
+}
+
+/* 주소 및 저작권 */
+.copy {
+    width: 681px;
+}
+
+/* SNS */
+.sns {
+    width: 259px;
+}
