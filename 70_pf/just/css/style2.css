@@ -1,0 +1,143 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* 전체 */
+
+body,
+h1,
+h2,
+ul,
+p {
+    margin: 0;
+}
+
+ul {
+    /* 목록의 블릿 기호 제거 */
+    list-style: none;
+    /* ul은 기본적으로 padding을 가지고 있다. */
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+    margin: 0;
+    color: #222328;
+    font: 15px/1.5 "Noto Sans KR", sans-serif;
+}
+
+a {
+    color: #222328;
+}
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 헤더 */
+.header {
+    height: 100px;
+    display: flex;
+}
+
+.logo {
+    width: 200px;
+    margin-top: 30px;
+}
+
+
+.gnb {
+    width: 1000px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 32px;
+
+}
+
+.main {
+    width: 400px;
+    line-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    /* 보더와는 다른 점 박스크기 밖으로 그려짐. */
+    /* outline: 1px solid red; */
+    font-size: 18px;
+}
+
+
+/* 슬라이드 */
+.slide {
+    height: 300px;
+    background: #ddd;
+}
+
+/* 콘텐츠 */
+.contents {
+    height: 200px;
+    display: flex;
+}
+
+.notice {
+    width: 400px;
+    padding: 16px 0 0 16px;
+    line-height: 1.8;
+}
+
+.notice h2 {
+    margin-bottom: 8px;
+}
+
+.notice span {
+    display: inline-block;
+    width: 290px;
+}
+
+.banner {
+    background-color: aquamarine;
+    width: 400px;
+
+}
+
+.shortcut {
+    background-color: chocolate;
+    width: 400px;
+
+}
+
+/* 푸터 */
+.footer {
+    height: 100px;
+    display: flex;
+    background-color: #505050;
+    color: #8d8b8b;
+}
+
+.blogo {
+    width: 200px;
+    padding-top: 28px;
+}
+
+.copy {
+    padding: 24px;
+    width: 800px;
+    text-align: center;
+}
+
+.sns {
+    width: 200px;
+    /* 1줄일때만 가능 */
+    line-height: 100px;
+    text-align: center;
+    font-size: 24px;
+
+}
+
+.sns li {
+    display: inline-block;
+
+}
+
+.sns a {
+    color: #8d8b8b;
+    margin-left: 8px;
+}
