@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+            개별속성
+            font-family
+            font-size
+            font-weight
+            font-italic
+            font-height
+            color > color는 별도
+
+
+            속기속성
+            font: [굵기|기울기], 크기[/줄간격], 글꼴
+            굵기, 기울기, 줄간격 생략 가능
+            크기와 글꼴은 반드시 지정해야 하며, 순서대로 지정해야한다.
+        */
+
+        p:nth-of-type(1) {
+            font: 14px '굴림', sans-serif;
+        }
+        p:nth-of-type(2) {
+            font: bold italic 18px/1.5 '굴림', sans-serif;
+        }
+        p:nth-of-type(3) {
+            font: 800 italic 14px 'Arial', sans-serif;
+        }
+        /* 굴림은 n00 굵기 지원x */
+    </style>
+</head>
+<body>
+    <h1>폰트</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis illum odit eligendi consequatur debitis eaque earum, voluptate possimus fugiat sed nesciunt, nulla quidem vero nostrum aspernatur voluptates, ratione adipisci.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis illum odit eligendi consequatur debitis eaque earum, voluptate possimus fugiat sed nesciunt, nulla quidem vero nostrum aspernatur voluptates, ratione adipisci.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae omnis illum odit eligendi consequatur debitis eaque earum, voluptate possimus fugiat sed nesciunt, nulla quidem vero nostrum aspernatur voluptates, ratione adipisci.</p>
+</body>
+</html>

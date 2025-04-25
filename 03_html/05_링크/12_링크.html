@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+    <h1>링크(link, 연결)</h1>
+    <!--
+        anchor(앵커, 닻)
+        <a href="링크">콘텐츠(텍스트,이미지,비디오)</a>
+        href는 필수속성
+            URL     - http://~ https://~
+            파일    - 경로/파일명(./, ../)
+            메일    - mailto:~
+            전화번호 - tel:~
+
+        이미지 자료 수집
+            언스플래쉬 > 사진
+            Pngwing > 로고,아이폰
+        프로토콜(Protocal, 통신규약)
+            http, https, mailto, tel, ftp, smtp, pop TCP/IP ...
+        target은 선택속성
+        _self > 기본값으로 현재 창으로 열림
+        _blank > 새 창으로 열림
+        _top > 최상위(root) 페이지로 열림
+        _parent > 부모(../) 페이지로 열림
+
+        href= hyper reference 하이퍼 참조
+    -->
+    <!-- 현재 창으로 열림, 타깃 사이트 -->
+    <a href="http://www.naver.com">naver</a>
+    <!-- 새 창으로 열림,타사이트 -->
+    <a href="http://google.com" target="_blank">구글</a>
+    <!-- 이메일 -->
+    <a href="mailto:ddors20818@gmail.com">이메일</a>
+    <!-- 전화번호 -->
+    <a href="tell:010-1234-5678">전화번호</a>
+    <!-- 파일 -->
+    <a href="./11_이미지.html">페이지</a>
+    <a href="./../70_pf/jeepcar/images/10002.png">갤러리 이미지</a>
+    <a href="./../70_pf/jeepcar/mindmap_jeepcar.pdf">PDF 파일</a>
+
+    <h2>이미지에 링크 걸기</h2>
+    <a href="https://www.jeep.co.kr" target="_blank"><img src="./../70_pf/jeepcar/images/jeep_black.png" alt="jeep자동차 로고"></a>
+</body>
+</html>

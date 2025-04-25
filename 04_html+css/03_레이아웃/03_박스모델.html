@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+            선택자 {속성: 값;}
+            선택자 {속성: 값 값 값; 속성: 값 ...}
+            단위: px, %, em(엠), rem, ...
+            대표단위: px
+        */
+        p {
+            background-color: rgba(255, 0, 0, 0.5);
+            /* 가로 크기 */
+            width: 600px;
+            /* 세로 크기 */
+            /* height: 100px; */
+
+            /* 개별 속성 */
+            margin: 50px;
+            margin-right: 40px;
+            margin-bottom: 30px;
+            margin-left: 20px;
+
+            /* 속기 속성 */
+            /* margin: 박스의 바깥쪽 여백: 상하좌우 모둔 50px */
+            margin: 50px;
+            /* 상하 50, 좌우 40 */
+            margin: 50px 40px;
+            /* 상 50, 좌우 40, 하 30 */
+            margin: 50px 40px 30px;
+            /* 상 50, 우 40, 하 30, 좌 20 시계방향 */
+            margin: 50px 40px 30px 20px;
+
+            /* 개별 속성 */
+            padding-top: 50px;
+            padding-right: 40px;
+            padding-bottom: 30px;
+            padding-left: 20px;
+
+            /* 속기 속성 */
+            /* padding: 박스의 안쪽 여백: 상하좌우 모둔 50px */
+            padding: 50px;
+            /* 상하 50, 좌우 40 */
+            padding: 50px 40px;
+            /* 상 50, 좌우 40, 하 30 */
+            padding: 50px 40px 30px;
+            /* 상 50, 우 40, 하 30, 좌 20 시계방향 */
+            padding: 50px 40px 30px 20px;
+
+            /* 개별 속성 */
+            /* 테두리 굵기: 20px; */
+            border-width: 20px;
+            /* 테두리 종류: 실선; */
+            border-style: solid;
+            /* 테두리 색상: 반투명 녹색; */
+            border-color: rgba(0 ,255 ,0 ,0.5);
+
+            /* 속기 속성 >> 개별 속성을 한 줄로 작성한 것 */
+            border: 20px solid rgba(0 ,255 ,0 ,0.5);
+        }
+    </style>
+</head>
+<body>
+    <h1>박스 모델</h1>
+    <p>박스 모델 관련 CSS의 속성에는 width, height, margin, padding, border가 있다.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, illum. Alias, similique! Sunt rem ipsam impedit maiores ab ex ad numquam velit tempore molestias, modi officia perferendis odio, mollitia consequuntur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt sapiente voluptates possimus dolor illum labore impedit quaerat temporibus modi? Deleniti maiores labore cum impedit molestiae hic laudantium deserunt voluptatibus reiciendis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui enim eligendi laboriosam natus sunt minus labore tempore delectus, repudiandae, pariatur adipisci veritatis quod? Porro accusamus natus illum, rem omnis atque. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem vitae quibusdam quo, velit officiis veniam praesentium tempore amet! Exercitationem, laudantium quod. Nostrum pariatur consequuntur ipsa? Commodi distinctio rerum nam recusandae?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi iure voluptate laborum velit debitis modi sed, numquam dolorum assumenda earum itaque id. Atque ducimus quaerat consectetur quas beatae. Ad, vitae.</p>
+</body>
+</html>

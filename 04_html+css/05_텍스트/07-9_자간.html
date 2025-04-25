@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        p:nth-of-type(2) {
+            letter-spacing: -0.1px; /* 자간 px는 정수만 */
+            /* 기본값은 normal 0 */
+        }
+
+        p:last-of-type {
+            word-spacing: 3.2em; /* 어간 em은 실수, 정수 모두*/
+        }
+    </style>
+</head>
+
+<body>
+    <h1>자간과 어간</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+</body>
+
+</html>
