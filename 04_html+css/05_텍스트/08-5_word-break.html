@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+
+        p {
+            width: 200px;
+            text-align: justify;
+            /* justify를 썼을 때 word-break 사용 */
+            border: 1px solid #000;
+        }
+
+        .breaking {
+            /* 글자가 넘치면 줄바꿈된다. */
+            word-wrap: break-word;
+            /* text-align: justify(양쪽 맞춤)를 썼을 경우 글자를 깨뜨린다. */
+            word-break: break-all;
+        }
+
+    </style>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt totam deleniti quibusdam ullam quaerat molestiae dolorum quidem pariatur, ad accusantium, doloribus maxime sed quos obcaecati, qui rem perferendis voluptatum! Distinctio.
+    </p>
+    <p class="breaking">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi labore repudiandae magnam facilis suscipit quis nemo fugiat quos blanditiis sunt accusantium nobis libero inventore vero debitis tempore, veniam velit nisi?
+    </p>
+
+</body>
+</html>
