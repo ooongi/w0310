@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HTML+CSS</title>
+        <style>
+            body {
+                margin: 0;
+            }
+            /*
+            블록 레벨 요소
+            whdth: auto; > 100%
+        */
+            h1,
+            p {
+                border: 1px solid;
+                margin: 0;
+                padding: 0;
+            }
+
+            h1 {
+                /* h1이 다른 요소의 왼쪽에 배치 */
+                float: left;
+                margin: 15px 10px 5px 16px;
+                padding: 3px 10px;
+                font-size: 200%;
+                background: brown;
+                color: #fff;
+            }
+
+            p {
+                width: 500px;
+                text-align: justify;
+                /* 한글처럼 영어도 단어 상관 없이 줄바꿈. justify와 항상 같이 쓸 것 */
+                word-break: break-all;
+                color: darkgreen;
+                padding: 8px 16px;
+            }
+
+            p strong {
+                font-size: 120%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>flo<br />at</h1>
+        <p>
+            <strong>강한 강조</strong>Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Iste totam molestiae adipisci
+            <b>asperiores</b> incidunt eveniet quo officia illum a aliquam?
+            <b>Nisi</b> ad laborum eligendi! Ab, dolores? Provident deleniti ab
+            facere. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+    </body>
+</html>

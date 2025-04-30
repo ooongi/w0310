@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HTML+CSS</title>
+        <style>
+            /*
+                바디 안에 있는 내용 = body *
+            */
+            body * {
+                outline: 1px solid rgb(9, 170, 63);
+            }
+
+            h1, p, ul {
+                margin: 0;
+            }
+
+            ul {
+                /* = list-style-type 개별속성 */
+                /* ul,li 작성 가능 */
+                list-style: none; /* 속기속성 */
+                padding-left: 0;
+            }
+
+            .gallery li {
+                background: yellow;
+                width: 150px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lorem, ipsum dolor.</h1>
+        <p>
+            Lorem ipsum dolor sit amet.<br>
+            Lorem ipsum dolor sit amet,
+            <strong>consectetur</strong> adipisicing.
+        </p>
+        <ul class="gallery">
+            <li>
+                <h3>lorem</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Harum, maxime?
+                </p>
+            </li>
+            <li>
+                <h3>lorem</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Harum, maxime?
+                </p>
+            </li>
+            <li>
+                <h3>lorem</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Harum, maxime?
+                </p>
+            </li>
+            <li>
+                <h3>lorem</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Harum, maxime?
+                </p>
+            </li>
+        </ul>
+    </body>
+</html>

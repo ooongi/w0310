@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HTML+CSS</title>
+        <style>
+            /*
+                    글자크기    여백(margin)
+        body        16px        8ox
+        p           16px        1em(16px)
+        h3          1.17em      1em(18.72px)
+        여백은 글자 크기의 배수
+        */
+            body,
+            h3,
+            p {
+                margin: 0;
+                padding: 0;
+            }
+
+            h3 {
+                padding: 10px 70px 10px;
+                border-bottom: 1px dotted #aaa;
+                color: #357;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .toomany {
+                background: rgb(241, 241, 241);
+                /* 가로 크기가 부모 크기의 75%이고, 부모 크기를 늘렸을 때 최대 가로 크기는 600px */
+                width: 75%;
+                max-width: 600px;
+                margin: 20px;
+                text-align: justify;
+                word-break: break-all;
+            }
+
+            .lotus {
+                float: right;
+                width: 150px;
+                padding: 10px;
+                border: 1px solid #aaa;
+                margin-left: 20px;
+            }
+
+            .lotus p {
+                font-size: 10px;
+                /* .lotus에 작성해도 됌 (상속) */
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h3>
+        <div class="toomany">
+            <div class="lotus">
+                <img
+                    src="https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/d3ai/image/8MaNvuRTPYcM8sNN8Xp_X41AlZI" alt="연꽃">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. In
+                    ipsum eveniet rem!
+                </p>
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet. <br />
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+                mollitia velit exercitationem, dignissimos animi temporibus quia
+                fuga, qui, reiciendis nesciunt nostrum unde praesentium facilis
+                totam vel in cum esse explicabo nobis expedita voluptatum
+                quibusdam excepturi porro. Excepturi officiis dolore velit ipsa
+                numquam aliquid, accusamus sapiente consectetur alias deleniti.
+                Totam itaque exercitationem rem sunt explicabo et, illo
+                voluptatum non tempora. Repellat, quia optio. Atque qui quo
+                ipsa, amet possimus eligendi commodi dolorum fugiat voluptas
+                fuga veritatis consectetur sit maxime aspernatur corporis natus
+                similique sint dignissimos ut voluptatem fugit. Quos corrupti
+                ullam suscipit quis inventore placeat rerum odit odio alias,
+                perferendis nisi quaerat fugiat debitis blanditiis vitae iste
+                animi illum quidem distinctio sed quas cupiditate aliquid! Ipsum
+                nisi doloribus labore, vitae neque voluptatum magni ipsa, cumque
+                nesciunt praesentium cupiditate reprehenderit commodi eaque
+                itaque libero odit maxime corporis tempora accusamus delectus
+                consequatur. Blanditiis, vel aut recusandae vero, porro
+                exercitationem mollitia fugit earum et praesentium perspiciatis
+                temporibus tempora inventore voluptatum animi consectetur
+                deleniti repellendus laudantium consequatur dolore velit, nobis
+                necessitatibus explicabo. Optio, aliquid. Error fuga dolorum
+                aperiam temporibus veritatis? Voluptatibus neque blanditiis cum,
+                eaque, atque enim quaerat vel sunt dolores earum pariatur, rem
+                nulla. Nostrum ea quos, quam commodi illo veritatis aut enim
+                molestias!
+            </p>
+        </div>
+    </body>
+</html>
