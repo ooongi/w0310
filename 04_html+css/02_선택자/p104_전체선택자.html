@@ -31,14 +31,20 @@
             3.특수문자는 _와 - 사용 가능
         */
 
+        * {
+            color: blue;
+        }
+
         h1, p {
             border: 5px solid lightblue;
         }
 
 
         /*
-            *는 전체>html포함 안의 모든 태그(head와 head안의 태그는 제외)
+            *(별표)
+            전체>html포함 안의 모든 태그(head와 head안의 태그는 제외)
             html, body, h1, h2, p
+            속도 저하의 원인이 되므로 반드시 필요한 경우가 아니면 선택자를 명확하게 명시하는 것이 좋다.
         */
 
         /*
@@ -51,9 +57,14 @@
 </head>
 
 <body>
-    <h1>선택자</h1>
-    <h2>요소(타입, 태그)선택자</h2>
-    <p>Lorem ipsum <b>dolor</b> sit amet.</p>
+    <h2>순서 없는 목록</h2>
+    <ul>
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+        <li>목록4</li>
+    </ul>
+    <p class="ctxt">Lorem ipsum dolor sit amet.</p>
 </body>
 
 </html>
