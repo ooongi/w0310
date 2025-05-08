@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /*
+            인접 선택자 >  선택자를 + 으로 구분
+            선택자+선택자
+        */
+        /* h1 바로 다음(인접) p를 선택 */
+        h1 + p {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>h1의 인접한 동생은 첫 번째 p이다.</h1>
+    <p>첫 번째 p의 인접한 동생은 바로 아래 두 번째 p이다.</p>
+    <p>p는 div의 세 번째 자식이다.</p>
+</body>
+</html>

@@ -99,7 +99,6 @@ nav li {
     background: #333;
 }
 
-
 .banner {
     height: 150px;
     display: flex;
@@ -112,6 +111,7 @@ nav li {
 .banner .cont {
     display: flex;
 }
+
 .banner .cont img {
     margin-right: 16px;
 }
@@ -132,8 +132,13 @@ nav li {
     width: 670px;
 }
 
-.notice tr td:nth-child(2) {
-    padding-left: 120px;
+.notice a {
+    display: inline-block;
+    width: 500px;
+}
+
+.notice span {
+    padding-left: 16px;
 }
 
 
