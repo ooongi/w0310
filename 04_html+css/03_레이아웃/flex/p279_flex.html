@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display: flexable 방식</title>
+    <style>
+            /* 
+                어떤 요소에 display: flex;를 지정하면
+                그 요소는 flex-container가 되고,
+                자식은 flex-items가 된다.
+
+                부모 요소에 지정하는 플렉스 컨테이너flex-container
+                1. flex-direction       방향
+                2. flex-wrap            줄 바꿈 방식
+                3. justify-content      align(정렬, 맞춤)
+                4. align-items          정렬
+                5. align-content        정렬
+                6. flex-flow            flex-direction + flex-wrap ex)flex-flow: direction wrap;
+
+
+                자식 요소에 지정하는 플렉스 아이템flex-items
+                1. align-self
+                2. flex-grow
+                3. flex-shrink
+                4. flex-basis
+                5. order
+                6. flex                 flex-grow + flex-shrink + flex-basis
+
+            
+            */
+
+
+        .flexbox {
+            /* 가로배치: width가 자식 크기만큼 */
+            display: flex;
+            height: 300px;
+            background-color: #ccc;
+        }
+
+        .flexbox > div {
+            background-color: darkcyan;
+            width: 200px;
+            margin: 10px;
+            flex: 1;
+            
+            /* 기본값 0 1 auto; */
+            flex: 1 1 0;
+            flex: 1 1 auto;
+            flex: 1 1 100px;
+
+            flex-grow: 0; /* 1이면 성장, 0이면 수축 */
+            flex-shrink: 1; /* 1이면 변화, 0이면 줄어들지 않음 */
+            flex-basis: 200px; /* 200px보다 늘어나지만 줄어들지도 않는다 */
+            
+            /* grow와 shrink가 1이면 basis는 어떤 값이든 같다. */
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="flexbox">
+        <!--
+            블록레벨요소는 width는 부모 크기의 100%이며, 줄바꿈되기 때문에 세로(위에서 아래로) 배치된다. height는 자식 크기만큼 지정된다.
+        -->
+        <div>flex-item</div>
+        <div>flex-item</div>
+        <div>flex-item</div>
+
+    </div>
+</body>
+</html>
