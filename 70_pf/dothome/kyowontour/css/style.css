@@ -1,2 +1,109 @@
 @charset "utf-8";
-/* CSS Document */  
+/* CSS Document */
+
+/* reset */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background: #fff;
+    color: #333;
+    font: 16px/1.6 '굴림', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+
+/* 공통 */
+html, body {
+    height: 100%;
+}
+
+.wrap {
+    display: flex;
+    height: calc(100% - 120px);
+    /*
+        함수의 형식
+        함수명(매개변수)
+        함수명(피연산자1 연산자 피연산자2)
+        calc(피연산자 - 피연산자) 띄어쓰기 주의
+    
+    */
+    /* 120px - footer */
+}
+
+
+
+
+/* header */
+header {
+    width: 200px;
+    background: #309898;
+    padding: 20px 0;
+}
+
+/* 로고 */
+.logo {
+    text-align: center;
+}
+
+/* nav */
+
+nav {
+    padding: 20px;
+    text-align: center;
+
+}
+nav li {
+    height: 60px;
+    line-height: 60px;
+    margin-top: 8px;
+    background: #fff;
+    /* cursor: pointer; 
+    a영역 확장 */
+}
+
+nav a:hover {
+    background: #E53E30;
+    color: #fff;
+}
+
+nav a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+
+    /* transition: 0.3s; */
+}
+
+/* contents */
+.contents {
+    width: 400px;
+    background: lightcoral;
+}
+
+/* slide */
+.slide {
+    width: calc(100% - 600px);
+    background: greenyellow;
+    overflow: hidden;
+    /* overflow: hidden; 넘치면 숨기는 기능 */
+}
+
+/* footer */
+footer {
+    height: 120px;
+    background: yellow;
+}
