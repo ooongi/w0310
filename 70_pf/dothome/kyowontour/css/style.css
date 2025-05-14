@@ -107,3 +107,16 @@ footer {
     height: 120px;
     background: yellow;
 }
+
+.blogo {
+    width: 200px;
+}
+.center_cont {
+    width: calc(100% - 500px);
+    background: darkcyan;
+}
+
+.fs {
+    width: 300px;
+    background: darkgoldenrod;
+}
