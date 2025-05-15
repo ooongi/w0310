@@ -1,0 +1,65 @@
+css 선택자에 무엇이 있는가
+
+
+태그
+class .
+id #
+
+전체
+*
+
+하위
+h1 p {}
+
+자식
+h1 > p  {}
+
+인접 형제
+h1 + p {}
+
+그룹
+h1, p {}
+
+속성
+[속성=값]
+[속성~=값]
+[속성$=값]
+[속성*=값]
+[속성|=값]
+[속성^=값]
+
+가상요소
+::before {}
+::after {}
+:not:before {}
+:not:after {}
+
+가상클래스
+:hover {}
+:link {}
+:visited {}
+:first-child {}
+:last-child {}
+:nth-child() {}
+:first-of-type {}
+:last-of-type {}
+:nth-of-type() {}
+
+
+display: flex;
+
+justifiy-content: space-between;
+
+align-items; center;
+
+align-content
+align-self
+flex-direction
+    -wrap
+    -flow
+    -glow
+    -shrink
+    -basis
+
+order
+flex
