@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 20px;
+        }
+
+        .box {
+            position: relative;
+            width: 650px;
+            background: #333;
+        }
+
+        p {
+            margin: 0;
+            font-weight: bold;
+            width: 250px;
+            height: 100px;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        .red {
+            background: crimson;
+        }
+        .green {
+            background: green;
+            position: absolute;
+            z-index: 1;
+            left: 70px;
+            top: 50px;
+        }
+        .blue {
+            position: relative;
+            left: 100px;
+            top: 40px;
+            background: dodgerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p class="red">lorem ipsum</p>
+        <p class="green">lorem ipsum</p>
+        <p class="blue">lorem ipsum</p>
+    </div>
+</body>
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,15 +21,52 @@
             background: darkgreen;
         }
 
+        ul {
+            justify-content: center;
+            justify-content: space-evenly;
+            padding: 0;
+            display: flex;
+            list-style: none;
+            
+        }
+        
+        .gnb li {
+            margin: 10px;
+        }
+        
+        .gnb a {
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .gnb a:hover {
+            border-bottom: 3px solid #fff;
+
+        }
+
         section {
             height: 1080px;
-            background: #999;
+        }
+
+        section:nth-of-type(2n) {
+            background: lightblue;
+        }
+
+        footer {
+            height: 100px;
+            background: #777;
         }
     </style>
 </head>
 <body>
     <header>
-
+        <ul class="gnb">
+            <li><a href="#">차량</a></li>
+            <li><a href="#">서비스</a></li>
+            <li><a href="#">고객지원</a></li>
+            <li><a href="#">멤버쉽</a></li>
+        </ul>
         
     </header>
     <section>1</section>
