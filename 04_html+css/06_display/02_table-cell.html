@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table-cell</title>
+</head>
+<body>
+    <!--
+        p57~66
+
+        display
+            block <form> <fieldset> <legend>
+            inline <span> <label>
+            inline-block <input> <textarea> <button> <select>
+            none
+    -->
+    <table>
+        <caption>표의 제목</caption>
+        <colgroup>
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>이름</th>
+                <th>점수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>홍길동</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>이지수</td>
+                <td>90</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>합계</th>
+                <td></td>
+                <td>180</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <form>
+        <fieldset>
+            <legend>필드셋의 제목</legend>
+            <label for="aaa">라벨</label>
+            <input type="text" id="aaa">
+            <textarea name="" id=""></textarea>
+            <button>버튼</button>
+            <select name="" id="">
+                <optgroup>
+                    <option value="고양이">강아지</option>
+                    <option value="고양이">고양이</option>
+                </optgroup>
+            </select>
+            <datalist>
+                <optgroup>
+                    <option value="">비둘기</option>
+                    <option value="">갈매기</option>
+                </optgroup>
+            </datalist>
+        </fieldset>
+    </form>
+</body>
+</html>
