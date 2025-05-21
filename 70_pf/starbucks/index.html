@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font: 15/1.6 "Noto Sans KR", sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sec {
+            height: 800px;
+            background: darkgreen;
+        }
+
+        header {background: lightcoral;}
+        .s1 {background: darkkhaki;}
+        .s2 {background: darkolivegreen;}
+        .s3 {background: darkorange;}
+        .s4 {background: darkgray;}
+        footer {background: darkorchid;}
+
+        .s3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url(images/bg.png) no-repeat 50% 50%/cover fixed;
+        }
+
+        /*
+        flex-direction: row; (기본값)
+        주축 justify-content 세로
+            flex-start
+            flex-end
+            center
+        교차축 align-items 가로
+            flex-start
+            flex-end
+            center
+
+        flex-direction: column;
+        주축 align-items (가로가 된다)
+        교차축 justify-content (세로가 된다)
+        */
+
+        .s3 .txt {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-right: 90px;
+        }
+        
+        .s3 .txt p {
+            margin: 48px 0 36px;
+        }
+
+        /* ghost */
+        .s3 .txt a {
+            width: 126px;
+            height: 38px;
+            border-radius: 3px;
+            border: 2px solid #fff;
+            text-align: center;
+            line-height: 2;
+            color: #fff;
+            margin-right: 8px;
+        }
+
+        .s3 .txt a:hover {
+            color: #333;
+            text-decoration: underline;
+            background: #fff;
+            transition: .5s;
+        }
+    </style>
+</head>
+
+<body>
+    <header>header</header>
+
+    <section class="sec s1">
+        <h2>1st section</h2>
+    </section>
+
+    <section class="sec s2">
+        <h2>2nd section</h2>
+    </section>
+
+    <section class="sec s3">
+        <!-- title & desc -->
+        <div class="txt">
+            <h2><img src="images/title.png" alt="제목"></h2>
+            <p><img src="images/desc.png" alt="설명"></p>
+            <!-- ghost button -->
+            <a href="#">자세히 보기</a>
+        </div>
+        <!-- image contents -->
+        <div class="conts">
+            <img src="images/contents.png" alt="콘텐츠">
+        </div>
+    </section>
+
+    <section class="sec s4">
+        4th section
+    </section>
+
+    <footer>푸터</footer>
+</body>
+
+</html>
