@@ -46,20 +46,24 @@ h1, p {}
 :nth-of-type() {}
 
 
+
+flex
 display: flex;
-
+display: flex-direction;
+display: flex-wrap;
+display: flex-grow;
 justifiy-content: space-between;
-
-align-items; center;
-
+align-items: center;
 align-content
 align-self
-flex-direction
-    -wrap
-    -flow
-    -glow
-    -shrink
-    -basis
-
-order
+flex-grow
+flex-shrink
+flex-basis
 flex
+order
+
+grid-template-columns
+grid-template-rows
+grid-column-start
+grid-row-start
+grid-row-end
