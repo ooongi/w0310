@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display:none;</title>
+    <style>
+        /* 상호작용 가능 */
+        /* ex) :hover */
+        .opacity {
+            opacity: 0;
+        }
+
+        .opacity:hover {
+            opacity: 1;
+            transition: .5s;
+        }
+
+        /* 상호작용 불가능 */
+        .visibility {
+            visibility: hidden;
+        }
+
+        .none {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>난 아무것도 안함</div>
+    <div class="opacity">난 opacity: 0;</div>
+    <div>난 아무것도 안함</div>
+    <div class="visibility">난 visibility: hidden;</div>
+    <div>난 아무것도 안함</div>
+    <div class="none">난 display: none;</div>
+    <div>난 아무것도 안함</div>
+</body>
+
+</html>
