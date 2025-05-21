@@ -184,9 +184,27 @@ nav a {
 /* slide */
 .slide {
     width: calc(100% - 600px);
-    background: greenyellow;
     overflow: hidden;
     /* overflow: hidden; 넘치면 숨기는 기능 */
+}
+
+.slide ul {
+    position: relative;
+    display: flex;
+    width: calc(100% - 600px);
+    animation: slide 8s infinite;
+
+}
+
+@keyframes slide {
+    0% {left: 0%;}
+    10% {left: -100%;}
+    33% {left: -100%;}
+    43% {left: -200%;}
+    66% {left: -200%;}
+    76% {left: -300%;}
+    99.99% {left: -300%;}
+    100% {left: 0%;}
 }
 
 /* footer */
