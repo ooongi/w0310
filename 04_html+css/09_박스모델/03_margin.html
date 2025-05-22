@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마진</title>
+    <style>
+        /*
+            개별속성
+            padding-top
+            padding-right
+            padding-bottom
+            padding-left
+
+            속기속성
+            padding: TRBL;
+            padding: TB LR;
+            padding: T LR B;
+            padding: T R B L;
+
+        */
+        * {margin: 0; padding: 0;}
+
+        p {
+            background: rgba(100,200,0,0.5);
+            width: 700px;
+            margin: 20px;
+        }
+
+        .box_inner {
+            /*
+                auto는 전체 가로 크기에서 요소 크기를 뺀 나머지를 좌우에 균등하게 처리한다.
+            */
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        p:nth-of-type(2) {
+            margin-top: -68px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>마진</h1>
+    <!-- 세로마진 겹침 -->
+    <p>마진은 요소의 안쪽 여백</p>
+    <p>마진의 값은 숫자로 지정(음수는 지정할 수 없다)</p>
+    <p class="box_inner">가로 가운데로 맞춤</p>
+</body>
+</html>
