@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테두리</title>
+    <style>
+        /*
+            개별속성
+                border-top-width
+                border-top-style
+                border-top-color
+                    bottom
+                    left
+                    right
+
+            속기속성
+                border-top
+                border-bottom
+                border-left
+                border-right
+
+                border-width: medium;(기본값)
+                border-style: none;(기본값)
+                border-color: 글자색;(기본값)
+
+                border: medium none 글자색;
+            
+        */
+
+        div {
+            border-top: 1px solid #000;
+            border-bottom: 1px dashed #000;
+        }
+
+        p {
+            width: 120px;
+            padding: 10px;
+            margin: 10px 8px;
+            border-width: 13px;
+        }
+
+
+        p:nth-of-type(1) {
+            border-style: solid;
+            background-color: #fff;
+        }
+
+        p:nth-of-type(2) {
+            border-style: dotted;
+            border-color: red;
+        }
+
+        p:nth-of-type(3) {
+            border-style: dashed;
+            border-color: #357;
+        }
+
+        p:nth-of-type(4) {
+            border-style: double;
+            border-color: brown;
+        }
+
+        p:nth-of-type(5) {
+            border-style: none;
+        }
+
+        p:nth-of-type(6) {
+            border-style: groove;
+            border-color: rgb(182, 145, 250);
+        }
+
+        p:nth-of-type(7) {
+            border-style: ridge;
+            border-color: crimson;
+        }
+
+        p:nth-of-type(8) {
+            border-style: inset;
+            border-color: #0c3;
+
+        }
+
+        p:nth-of-type(9) {
+            border-style: outset;
+            border-color: #c63;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>테두리 스타일</h1>
+        <p>solid(실선)</p>
+        <p>dotted(점선)</p>
+        <p>dashed(대시선)</p>
+        <p>double(이중실선)</p>
+        <p>none(없음, 기본값)</p>
+        <p>groove(파인 듯한 입체선)</p>
+        <p>ridge(튀어나온 입체선)</p>
+        <p>inset(안으로 들어감)</p>
+        <p>outset(밖으로 튀어나옴)</p>
+    </div>
+</body>
+
+</html>
