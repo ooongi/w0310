@@ -14,6 +14,21 @@ body {
     color: #333;
 }
 
+a {
+    list-style: none;
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+
 /* header */
 header {
     height: 100px;
@@ -22,31 +37,21 @@ header {
     align-items: center;
 }
 
-a {
-    list-style: none;
-    text-decoration: none;
+.logo a {
+    display: inline-block;
+    margin-top: 16px;
 }
-
-ul {
-    list-style: none;
-}
-
 .main {
     display: flex;
 }
 
-.main li {
-    align-items: end;
-}
-
 .main li a {
-    width: 150px;
+    width: 140px;
     height: 40px;
     border: 1px solid #00A9E0;
     color: #00A9E0;
-    margin-right: 3px;
+    margin-right: 8px;
     display: inline-block;
-    justify-content: space-evenly;
     text-align: center;
     line-height: 36px;
 
@@ -58,10 +63,6 @@ ul {
 }
 
 /* slide */
-img {
-    vertical-align: top;
-}
-
 .slide {
     position: relative;
     width: 1200px;
@@ -107,6 +108,7 @@ img {
     }
 }
 
+/* contents */
 .contents {
     display: flex;
     height: 200px;
@@ -125,26 +127,25 @@ img {
 
 .notice li {
     line-height: 28px;
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid #333;
 
 }
 
 .notice li:hover {
     text-decoration: underline;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid transparent;
+    background: #00A9E0;
 }
 
 .notice a {
     display: inline-block;
     width: 260px;
-    color: #333;
 
 }
 
 .notice span {
     display: inline-block;
-    padding-left: 30px;
-    color: #333;
+    padding-left: 36px;
 
 }
 
@@ -172,7 +173,7 @@ img {
 }
 
 .copy {
-    padding: 8px 20px;
+    padding: 14px 20px;
 }
 
 .copy p {
@@ -193,8 +194,7 @@ footer {
 }
 
 .sns {
-    height: 50px;
-    padding: 8px;
+    padding: 14px 0 0 8px;
 }
 
 .sns ul {
