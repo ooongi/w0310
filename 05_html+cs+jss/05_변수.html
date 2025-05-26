@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수</title>
+</head>
+<body>
+    <script>
+        /*     
+            데이터
+                1. 숫자(number): 10
+                2. 문자열(string): 'javascript'
+                3. 논리값: true, false -> 예약어(키워드)
+
+            예약어(키워드): (=html 태그: body,head,script)
+            document, write(), True, False
+            1. 논리값: true, false
+            2. 변수 키워드: var, let, const
+            3. 제어문: if, for, break, continue...
+            변수 이름으로 예약어를 사용하면 안됌!!
+
+            변수란?
+                데이터를 담는 저장공간
+
+            변수(variable) 선언 키워드
+                var > let, const (엄격)
+        */
+
+
+        /*
+            변수 이름 정의
+            1. 띄어쓰기 안됌 > 한 단어로
+            2. 첫글자 영문자,_(언더바)와 $(달러)
+            3. 두 번째 글자부터는 영문자, _, $, 숫자 조합
+
+            연산자
+                산술: + - * /
+                비교: > < >= <=
+                비교: == === 같다.
+                비교: != !== 같지 않다.
+                대입(할당): = 
+        */
+
+
+        // 오른쪽의 데이터를 왼쪽 변수에 할당한다(넣는다).
+        var num = 100; // 변수 선언 및 할당
+        var str = 'javascript', temp = false;
+        var temp = false;
+
+        // 1. 여러 개의 변수를 ,로 연속하여 선언
+        var num1, srt1, temp1; // 변수 선언
+        num1 = 1000; // 변수 할당
+        var num1 = 1000; // 변수 선언 및 할당
+
+        num1 = 2000; //변수 다시 할당
+
+        // 2. 변수는 새로운 데이터가 저장되면 기존 데이터는 사라진다.
+
+        
+        // 출력
+        console.log(num);
+        console.log(str);
+        console.log(temp);
+        
+        
+        
+        console.log(num1 + num);
+        </script>
+</body>
+</html>

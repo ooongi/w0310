@@ -1,21 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>모서리둥글게</title>
     <style>
+        /*
+            개별 속성
+            border-top-left-radius
+            border-top-right-radius
+            border-bottom-left-radius
+            border-bottom-right-radius
+
+            속기속성
+            border-radius: 값;
+            border-radius: 값 값;
+            border-radius: 값 값 값;
+            border-radius: topleft topright bottomright bottomleft;
+        */
+
+
         div {
-            width: 200px;
-            height: 200px;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
             background: green;
             /* 가로 또는 세로크기의 1/2 이상 지정하면 동그라미가 됌 */
             /* 1/2 이하의 크기면 둥근사각형 */
-            border-radius: 100px;
         }
+
+        div:nth-of-type(1) {
+            border-radius: 10px;
+        }
+
+        div:nth-of-type(2) {
+            border-radius: 50px;
+        }
+
+        div:nth-of-type(3) {
+            border-radius: 10px 20px 30px 40px;
+        }
+
+        div:nth-of-type(4) {
+            border-radius: 10px 20px 30px;
+        }
+
+        div:nth-of-type(5) {
+            border-radius: 10px 20px;
+        }
+
+        /* 반원 */
+        div:nth-of-type(6) {
+            width: 100px;
+            height: 50px;
+            border-radius: 50px 50px 0 0;
+        }
+
+        /* 1/4원 */
+        div:nth-of-type(7) {
+            width: 100px;
+            height: 100px;
+            border-radius: 200px 0 0;
+        }
+
+        
     </style>
 </head>
+
 <body>
-    <div>box</div>
+    <div>border-radius: 10px;</div>
+    <div>border-radius: 50px;</div>
+    <div>border-radius: 10px 20px 30px 40px;</div>
+    <div>border-radius: 10px 20px 30px;</div>
+    <div>border-radius: 10px 20px;</div>
+    <div>border-radius: 50px 50px 0 0;
+</div>
+    <div>박스7</div>
+    <div>박스8</div>
 </body>
+
 </html>
