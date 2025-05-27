@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-sizing</title>
+    <style>
+        body,
+        p,
+        ul {
+            margin: 0;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        body * {
+            box-sizing: border-box;
+        }
+
+        p {
+            width: 600px;
+            height: 100px;
+            padding: 30px;
+            margin-bottom: 40px;
+            background: rgba(0,0,100,0.3);
+            border:10px solid #333;
+        }
+
+        .sizing {
+            box-sizing: border-box;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            width: 500px;
+        }
+
+        li {
+            /* float: left; */
+            width: 25%;
+            list-style: none;
+            padding: 10px;
+            text-align: center;
+            box-sizing: border-box;
+            background: rgba(0,0,100,0.3);
+        }
+
+        li:nth-child(2n) {
+            background: rgba(0,0,100,0.15);
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+            box-sizing: border-box;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, accusantium.</p>
+    <p class="sizing">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, nulla!</p>
+    <ul class="sizing_list">
+        <li><a href="#">company</a></li>
+        <li><a href="#">service</a></li>
+        <li><a href="#">customer</a></li>
+        <li><a href="#">community</a></li>
+    </ul>
+</body>
+
+</html>
