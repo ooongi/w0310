@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <div id="gnb">하이</div>
     <script>
         /*
             데이터타입
@@ -61,14 +62,35 @@
         document.write(str6 + '<br>')
         document.write(str7 + '<br>')
 
-        var boo1 = (5 > 4);
-        var boo2 = (5 < 4);
+        document.write('<hr>');
 
-        document.write(boo1);
+        var bool1 = (5 > 4);
+        var bool2 = false;
+
+        document.write('bool1 = ' + bool1);
         document.write('<br>');
-        document.write(boo2);
+        document.write('bool2 = ' + bool2);
         document.write('<br>');
 
+        var bool3 = (5 > 4);
+        var bool4 = false;
+
+
+
+        document.write("Boolean(bool3) = " + Boolean(bool3));
+        document.write('<br>');
+        document.write("Boolean(bool4) = " + Boolean(bool4));
+        document.write('<br>');
+
+        var bool5 = (5 > 4);
+        var bool6 = null;
+        document.write("Boolean(bool5) = " + Boolean(bool5));
+        document.write('<br>');
+        document.write("Boolean(bool6) = " + Boolean(bool6));
+
+
+
+        document.write('<hr>');
         var boo3 = 0;
         var boo4 = 1;
 
@@ -80,17 +102,28 @@
         document.write(Boolean(boo4));
 
 
-        //변수 선언 후 값을 할당하지 않았ㅇ르 때
+        //변수 선언 후 값을 할당하지 않았을 때
         var temp1;
         document.write('<br>');
         document.write(temp1);
 
-        //객체 데이터는 {}로 표기한다.
-        var obj = {};
-        obj.name = '홍길동';
-        dbj.age;
+        // null - 빈(empty) 상태(초기화), 데이터를 할당하였으나 값이 존재하지 않을 때
+        var temp2 = 10;
+        temp2 = null;
         document.write('<br>');
-        document.write(obj);
+        document.write(temp2);
+
+        // document는 문서 객체
+        // .getElementMyId()는 객체의 매서드(방법)
+        // get 얻다
+        // Element 요소
+        // By ~의
+        // Id HTML의 id 속성
+        // .메서드(파라미터, 매개변수, ...)
+        // HTML 문서에서 id가 gnb인 요소를 가져온다.
+        var gnb = document.getElementById('gnb'); /* id가 gnb인 요소가 없으니 null 출력 */
+        document.write('<br>');
+        document.write(gnb);
     </script>
 </body>
 

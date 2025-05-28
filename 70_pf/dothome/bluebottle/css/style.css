@@ -70,6 +70,7 @@ nav a {
     opacity: 0;
     visibility: hidden;
     z-index: 9999; /* 슬라이드 위로 */
+
 }
 
 .main li:hover .sub {
@@ -83,11 +84,14 @@ nav a {
     color: #00a9e0;
     display: inline-block;
     text-align: center;
+
+    
 }
 
 .main li a:hover {
     color: #fff;
     background: #00a9e0;
+    
 }
 
 /* container */
