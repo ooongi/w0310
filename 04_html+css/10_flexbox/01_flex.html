@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display:flex;</title>
+    <style>
+        .flexbox {
+            display: flex;
+            flex-direction: row;
+            height: 200px;
+            background: #ccc;
+        }
+
+        .flexbox div {
+            flex: 1;
+            background: darkcyan;
+            margin: 10px;
+        }
+
+        /* 
+            맞춤(정렬) 주축,교차축 정렬
+
+            justify-content
+                값: flex-start, flex-end, center
+                    space-btween, space-around, space-evenly
+
+            align-content
+                값: flex-start, flex-end, center, stretch
+                    space-btween, space-around, space-evenly
+
+            align-items
+                값: flex-start, flex-end, center, baseline, stretch
+
+            align-self
+                값: auto, stretch, flex-start, flex-end, center
+
+
+            flex-direction: row; > 주축이 가로
+            justify-content:  주축(가로)
+            align-items:      교차축(세로)
+            align-content:    교차축
+            align-self:       교차축
+
+            flex-direction: column(기본값); > 주축이 세로
+            justify-content:  교차축(세로)
+            align-items:      주축(가로)
+            align-content:    주축
+            align-self:       주축
+
+        */
+    </style>
+</head>
+
+<body>
+    <div class="flexbox">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+
+</html>
