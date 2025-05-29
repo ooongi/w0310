@@ -9,7 +9,8 @@
 
 <body>
     <script>
-        /*연산자
+        /*
+            연산자
             산술: + - * /
             비교: > < >= <=
             비교: == === 같다.
@@ -23,6 +24,146 @@
             비교 연산의 결과는 true 또는 false 이다.
             논리 연산의 결과는 true 또는 false 이다.
         */
+
+        /*
+            연산자의 우선 순위
+                1. ()
+                2. ++ -- !
+                3. * /
+                4. + -
+                5. >, <, >=, <=
+                6. ===, !==
+                7. &&
+                8. ||
+                9. =, +=, -=, *=, /=, %=
+        
+        */
+
+        document.write('기본연산자');
+        document.write('<br>');
+
+        var a = 5;
+        var b = 2;
+
+        document.write(a + '2' + '<br>');
+        document.write(a + b + '<br>');
+        document.write(a - b + '<br>');
+        document.write(a * b + '<br>');
+        document.write(a / b + '<br>');
+        //나머지. 5를 2로나누면 4, 남은 1
+        document.write(a % b + '<br>');
+        //1씩 증가(후위 연산: 출력 후 증가)
+        // 5+ 6 + 7 + 8
+        document.write(a++);
+        document.write('<br>');
+        //1씩 증가(전위 연산:)
+        document.write(a);
+        document.write('<br>');
+        document.write(++a);
+        document.write(a % b);
+
+        // 대입 연산자
+        /* 
+            = 
+            += 더한 후 대입
+            -= 뺀 후 대입
+            *= 곱한 후 대입
+            /= 나눈 후 대입
+            %= 나머지를 구한 후 대입
+        */
+        document.write('<hr>');
+        document.write('<hr>');
+        document.write('대입연산자');
+        document.write('<br>');
+        // NaN: Not a Number
+        // ( ) -> 연산의 우선순위를 바꾼다.
+        document.write(b + '<br>'); // b = 2
+        document.write((a = b) + '<br>');  // b 대입, a = 2 가 된다
+        document.write((a += b) + '<br>'); // a = a + b -> 2 + 2 -> a = 4
+        document.write((a -= b) + '<br>'); // a = a - b -> 2 - 2 -> a = 2
+        document.write((a *= b) + '<br>'); // a = a * b -> 2 * 2 -> a = 4
+        document.write((a /= b) + '<br>'); // a = a / b -> 2 / 2 -> a = 2
+        document.write((a %= b) + '<br>'); // a = a % b -> 2/2= 0 -> a = 0
+
+        // 여기서 a가 0이 되었음. b는 그대로 2
+
+
+        document.write('<hr>');
+        document.write('<hr>');
+        document.write('비교연산자');
+        document.write('<br>');
+        // 비교 연산자
+        /*
+            >       초과(크다)
+            <       미만(작다)
+            >=      이상(크거나같다)
+            <=      이하(작거나같다)
+            ==      같다            데이터타입 구별하지 않음
+            ===     같다            데이터타입 구별
+            !=      같지 않다       데이터타입 구별하지 않음
+            !==     같지 않다       데이터타입 구별
+        
+            비교 연산의 결과는 true or false
+        */
+
+        document.write('a = ' + a + '<br>');
+        document.write('b = ' + b + '<br>');
+        document.write((a > b) + '<br>');          
+        document.write((a < b) + '<br>'); 
+        document.write((a >= b) + '<br>'); 
+        document.write((a <= b) + '<br>');
+        //데이터타입과 관계가 없다.
+
+        document.write((a == b) + '<br>'); 
+        document.write((a === b) + '<br>');
+        document.write((a != b) + '<br>');
+        document.write((a !== b) + '<br>');
+
+        document.write('<hr>');
+
+        document.write((2 == '2') + '<br>'); // true > 같은 데이터타입이 아니지만 숫자가 같으므로
+        document.write((2 === '2') + '<br>'); // false > 같은 데이터 타입이 아니므로 > 권장
+        document.write((2 != '2') + '<br>'); // false > 같은 데이터타입이 아니지만 숫자가 같은데 같지 않다고 했으므로
+        document.write((2 !== '2') + '<br>'); // true > 같은 데이터가 아니므로 > 권장
+
+
+
+        document.write('<hr>');
+        document.write('<hr>');
+
+        document.write('논리연산자');
+        document.write('<br>');
+        // 논리 연산자
+        /*
+            &&  그리고      피연산자의 연산 결과가 모두 true일 경우 true, 아니면 false
+            ||  또는        피연산자 연산 결과 중 하나 이상 true이면 true, 아니면 false
+            !   부정(not)   피연산자의 연산 결과가 true이면 false, false이면 true
+
+            주로 논리 연산자는 비교 연산자와 함께 사용한다.
+            논리 연산의 결과도 true 또는 false 이다.
+            숫자가 비교 또는 논리 연산에 사용될 경우 0은 false, 다른 숫자는 true
+
+            비교 연산자가 논리 연산자보다 연산 우선순위가 높다.
+            Boolean(0)은 false, 나머지 숫자 즉, Boolean(0이 아닌 숫자)는 true
+        */
+
+        // a=0 b=2
+        document.write(' a = ' + a + '<br>'); 
+        document.write(' b = ' + b + '<br>');
+        document.write((b && a) + '<br>'); //false
+        document.write((b || a) + '<br>'); //false
+        document.write((a > b && a > b) + '<br>'); //false
+        document.write((a > b || a > b) + '<br>'); //false
+        document.write((!(a > b)) + '<br>'); //false
+
+        var c = true;
+        var d = false;
+        document.write('<hr>');
+        document.write((c && c && c && c && c && d) + '<br>'); // false
+        document.write((c || d) + '<br>'); //true 참이 나올 가능성이 있는 것을 맨 앞
+        document.write((!c) + '<br>'); // false
+        //차례로 검사하다가 false를 검사하게 되면 그 뒤는 검사하지 않음
+
     </script>
 </body>
 
