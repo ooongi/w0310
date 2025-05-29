@@ -26,20 +26,76 @@
             color: #333;
         }
 
+        /* header */
+
+        header {
+            position: relative;
+            width: 1320px;
+            height: 100px;
+            margin: 0 auto;
+
+        }
+
         /* gnb */
         /* typo 폰트의 위계 */
-        /* 1depth - 메인메뉴 */
+
+
+
         .gnb .main>li>a {
             font-size: 18px;
             font-weight: bold;
-            color: #999;
+            color: #333;
         }
 
+        /* 1depth - 메인메뉴 */
 
+        .gnb {
+            position: absolute;
+            right: 0;
+            top: 35px;
+        }
+
+        .main {
+            display: flex;
+        }
+
+        .main>li>a {
+            display: block;
+            width: 160px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .main>li>a:hover {
+            background: #60a0ff;
+            color: #fff;
+        }
+
+        .main>li:hover .sub {
+            height: 120px;
+        }
 
         /* 2depth - 서브메뉴 */
         .gnb .sub a {
+            display: block;
+            height: 30px;
+            line-height: 30px;
             font-size: 14px;
+            color: #fff;
+        }
+
+        .sub {
+            height: 0;
+            overflow: hidden;
+            text-align: center;
+            transition: .3s;
+            background: #264c70;
+        }
+
+        .sub li a:hover {
+            background: #a3a1bb;
+            color: #fff;
         }
     </style>
 </head>

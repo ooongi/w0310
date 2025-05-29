@@ -150,8 +150,15 @@
         // a=0 b=2
         document.write(' a = ' + a + '<br>'); 
         document.write(' b = ' + b + '<br>');
-        document.write((b && a) + '<br>'); //false
-        document.write((b || a) + '<br>'); //false
+
+        document.write((b && a) + '<br>'); 
+        document.write((b || a) + '<br>');
+        //숫자가 암무적으로 Boolean으로 변환될 수도 있습니다.
+        /*
+            0               false
+            NaN             true
+            그 외 숫자      true
+        */
         document.write((a > b && a > b) + '<br>'); //false
         document.write((a > b || a > b) + '<br>'); //false
         document.write((!(a > b)) + '<br>'); //false
