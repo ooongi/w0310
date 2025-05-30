@@ -29,6 +29,11 @@ a {
 
 /* 헤더 */
 header {
+    position: relative;
+    z-index: 1; /* 앞으로올리기 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 100px;
     display: flex;
     background: #eef2f8;
@@ -42,22 +47,76 @@ header {
 
 /* 내비게이션 */
 .gnb {
+    position: absolute;
+    right: 0;
     width: 640px;
     height: 30px;
-    background: rebeccapurple;
+    background: rgb(155, 152, 158);
+    text-align: center;
+    line-height: 30px;
+
 }
 
-.gnb li {
-    opacity: 0;
+/* 1depth 메인메뉴 */
+.gnb .main {
+    display: flex;
 }
+
+.gnb .main>li>a {
+    display: block;
+    width: 160px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.gnb .main>li>a:hover {
+    background: #1A4975;
+    color: #fff;
+}
+
+/* 2depth 서브메뉴 */
+.gnb .sub {
+    height: 0;
+    overflow: hidden; /* 슬라이딩을 위해 */
+    transition: .3s;
+}
+
+.gnb .main>li>a:hover .sub {
+    height: 150px;
+}
+
+.gnb .sub>li>a {
+    font-size: 14px;
+}
+
+
 /* 슬라이드 */
 .slide {
     height: 300px;
-    background: yellow;
+    overflow: hidden;
 }
 
 .slide ul {
-    opacity: 0;
+    position: relative;
+    height: 400%;
+    animation: slide 8s infinite;
+}
+
+.slide img {
+    vertical-align: top;
+
+}
+
+@keyframes slide {
+    0% {top:0;}
+    10% {top:-100%;}
+    33% {top:-100%;}
+    43% {top:-200%;}
+    66% {top:-200%;}
+    76% {top:-300%;}
+    99.99% {top:-300%;}
+    100% {top:0;}
 }
 
 /* 컨텐츠 */
@@ -106,7 +165,6 @@ footer {
 
 .sns {
     width: 200px;
-    background: sienna;
 }
 
 .sns ul {
