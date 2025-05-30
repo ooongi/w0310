@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        /*
+            플렉스 컨테이너
+                flex-direction
+                    값: row(기본값, 행: 왼>오)
+                        column(열: 위>아래)
+                        row-reverse(오>왼)
+                        column-reverse(아래>위)
+                        
+        */
+        
+        .flexbox {
+            display: flex;
+            height: 200px;
+            background: #ccc;
+            padding-top: 10px;
+        }
+
+        /* 플렉스 아이템 */
+        .flexbox div {
+            background: darkviolet;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="flexbox">
+    <div>child1</div>
+    <div>child2</div>
+    <div>child3</div>
+</div>
+</body>
+</html>
