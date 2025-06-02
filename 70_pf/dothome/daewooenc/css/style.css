@@ -158,7 +158,6 @@ header {
 .tabs {
     position: relative;
     width: 480px;
-    height: 200px;
 }
 
 .tabs input {
@@ -166,8 +165,8 @@ header {
 }
 
 .tabs label {
+    font-size: 16px;
     display: inline-block;
-    font-size: 18px;
     padding: 2px 16px;
     background: #777;
     color: #999;
@@ -191,11 +190,13 @@ header {
 }
 
 /* 탭1 공지사항 */
-
-
+.tabs .tab1 li {
+    display: flex;
+    justify-content: space-between;
+}
 .tabs .tab1 a {
     display: inline-block;
-    width: 365px;
+    font-size: 14px;
     line-height: 2;
 }
 
@@ -204,9 +205,8 @@ header {
 }
 
 /* 탭2 갤러리 */
-
-
 .tabs .tab2 img {
+    margin-left: 16px;
     /* border: 1px solid transparent; */
 }
 
