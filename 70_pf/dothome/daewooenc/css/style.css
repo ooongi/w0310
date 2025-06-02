@@ -51,18 +51,17 @@ header {
     right: 0;
     width: 640px;
     height: 30px;
-    background: rgb(155, 152, 158);
     text-align: center;
     line-height: 30px;
-
+    margin-right: 20px;
 }
 
 /* 1depth 메인메뉴 */
-.gnb .main {
+.main {
     display: flex;
 }
 
-.gnb .main>li>a {
+.main > li > a {
     display: block;
     width: 160px;
     height: 30px;
@@ -70,26 +69,39 @@ header {
     font-weight: bold;
 }
 
-.gnb .main>li>a:hover {
-    background: #1A4975;
+.main > li > a:hover {
+    background: #1a4975;
     color: #fff;
 }
 
+.main:hover .sub {
+    height: 120px;
+}
+/*
+    .main>li:hover .sub메뉴당 한줄씩
+    .main:hover .sub메뉴 전부
+
+*/
+
 /* 2depth 서브메뉴 */
-.gnb .sub {
+.sub {
     height: 0;
-    overflow: hidden; /* 슬라이딩을 위해 */
-    transition: .3s;
+    overflow: hidden;
+    transition: 0.3s; /* 슬라이딩을 위해 */
+    background: rgba(255, 255, 255, 0.5);
 }
 
-.gnb .main>li>a:hover .sub {
-    height: 150px;
+.sub a {
+    display: block;
+}
+.sub li a:hover {
+    background: #1a4975;
+    color: #fff;
 }
 
-.gnb .sub>li>a {
+.sub > li > a {
     font-size: 14px;
 }
-
 
 /* 슬라이드 */
 .slide {
@@ -105,43 +117,113 @@ header {
 
 .slide img {
     vertical-align: top;
-
 }
 
 @keyframes slide {
-    0% {top:0;}
-    10% {top:-100%;}
-    33% {top:-100%;}
-    43% {top:-200%;}
-    66% {top:-200%;}
-    76% {top:-300%;}
-    99.99% {top:-300%;}
-    100% {top:0;}
+    0% {
+        top: 0;
+    }
+    10% {
+        top: -100%;
+    }
+    33% {
+        top: -100%;
+    }
+    43% {
+        top: -200%;
+    }
+    66% {
+        top: -200%;
+    }
+    76% {
+        top: -300%;
+    }
+    99.99% {
+        top: -300%;
+    }
+    100% {
+        top: 0;
+    }
 }
 
 /* 컨텐츠 */
 .contents {
     display: flex;
     height: 200px;
-    background: green;
+    padding-top: 10px;
 }
 
-/* 탭 */
+/* 탭 .tabs2html */
+
 .tabs {
-    width: 400px;
-    background: cadetblue;
+    position: relative;
+    width: 480px;
+    height: 200px;
+}
+
+.tabs input {
+    display: none;
+}
+
+.tabs label {
+    display: inline-block;
+    font-size: 18px;
+    padding: 2px 16px;
+    background: #777;
+    color: #999;
+    cursor: pointer;
+}
+
+.tabs input:checked + label {
+    background: #333;
+    color: #fff;
+}
+.tabs .tab-content {
+    position: absolute;
+    display: none;
+    width: 100%;
+    padding: 16px;
+    border-top: 2px solid #333;
+}
+
+.tabs input:checked + label + .tab-content {
+    display: block;
+}
+
+/* 탭1 공지사항 */
+
+
+.tabs .tab1 a {
+    display: inline-block;
+    width: 365px;
+    line-height: 2;
+}
+
+.tabs .tab1 a:hover {
+    text-decoration: underline;
+}
+
+/* 탭2 갤러리 */
+
+
+.tabs .tab2 img {
+    /* border: 1px solid transparent; */
+}
+
+.tabs .tab2 img:hover {
+    /* border-color: red; */
+    box-shadow: 0px 0px 10px 5px orange;
 }
 
 /* 배너 */
 .banner {
-    width: 400px;
-    background: hotpink;
+    width: 360px;
+    margin: 0 16px;
 }
 
 /* 바로가기 링크 */
 .link {
-    width: 400px;
-    background: darkgoldenrod;
+    width: 340px;
 }
 
 /* 푸터 */
@@ -162,7 +244,6 @@ footer {
     padding-top: 25px;
 }
 
-
 .sns {
     width: 200px;
 }
@@ -171,5 +252,4 @@ footer {
     display: flex;
     padding: 30px 10px 0 10px;
     justify-content: space-evenly;
-    
 }
