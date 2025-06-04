@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Navigation Bar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body {
+            font: 15/1.6 '돋움', sans-serif;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* header */
+
+        header {
+            position: relative;
+            width: 1320px;
+            height: 100px;
+            margin: 0 auto;
+
+        }
+
+        /* gnb */
+        /* typo 폰트의 위계 */
+
+
+
+        .gnb .main>li>a {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* 1depth - 메인메뉴 */
+
+        .gnb {
+            position: absolute;
+            right: 0;
+            top: 35px;
+        }
+
+        .main {
+            display: flex;
+        }
+
+        .main>li>a {
+            display: block;
+            width: 160px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .main>li>a:hover {
+            background: #60a0ff;
+            color: #fff;
+        }
+
+        .main>li:hover .sub {
+            height: 120px;
+        }
+
+        /* 2depth - 서브메뉴 */
+        .gnb .sub a {
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .sub {
+            height: 0;
+            overflow: hidden;
+            text-align: center;
+            transition: .3s;
+            background: #264c70;
+        }
+
+        .sub li a:hover {
+            background: #a3a1bb;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="gnb">
+            <ul class="main">
+                <li><a href="#">학교소개</a>
+                    <ul class="sub">
+                        <li><a href="#">총장실</a></li>
+                        <li><a href="#">설립이념</a></li>
+                        <li><a href="#">연혁</a></li>
+                        <li><a href="#">비전</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">예술사&#47;예술전문사</a>
+                    <ul class="sub">
+                        <li><a href="#">음악원</a></li>
+                        <li><a href="#">연극원</a></li>
+                        <li><a href="#">영상원</a></li>
+                        <li><a href="#">무용원</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">대학생활</a>
+                    <ul class="sub">
+                        <li><a href="#">학사일정</a></li>
+                        <li><a href="#">성적</a></li>
+                        <li><a href="#">학적</a></li>
+                        <li><a href="#">등록</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">알림&#47;참여</a>
+                    <ul class="sub">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">보도자료</a></li>
+                        <li><a href="#">언론보도</a></li>
+                        <li><a href="#">수상소식</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
