@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            font: 15px/1.6 "돋움", sans-serif;
+            color: #333;
+            background: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 기본 */
+        .wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 헤더 */
+        header {
+            position: relative;
+            z-index: 1;
+            /* 앞으로올리기 */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            background: #eef2f8;
+        }
+
+        /* 로고 */
+        .logo {
+            width: 200px;
+            height: 40px;
+        }
+
+        /* 내비게이션 */
+        .gnb {
+            position: absolute;
+            right: 0;
+            width: 640px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 20px;
+        }
+
+        /* 1depth 메인메뉴 */
+        .main {
+            display: flex;
+        }
+
+        .main>li>a {
+            /* 메인메뉴 */
+            display: block;
+            width: 160px;
+            height: 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .main>li>a:hover {
+            background: #1a4975;
+            color: #fff;
+        }
+
+        .main:hover .sub {
+            height: 120px;
+        }
+
+        /*
+    .main>li:hover .sub메뉴당 한줄씩
+    .main:hover .sub메뉴 전부
+
+*/
+
+        /* 2depth 서브메뉴 */
+        .sub {
+            height: 0;
+            overflow: hidden;
+            transition: 0.3s;
+            /* 슬라이딩을 위해 */
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .sub a {
+            display: block;
+        }
+
+        .sub li a:hover {
+            background: #1a4975;
+            color: #fff;
+        }
+
+        .sub>li>a {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- A: header -->
+    <header>
+        <!-- 로고 -->
+        <h1 class="logo"><a href="#"><img src="images/logo.png" alt="로고"></a></h1>
+        <!-- 네비게이션 -->
+        <nav class="gnb">
+            <ul class="main">
+                <li><a href="#">회사소개</a>
+                    <ul class="sub">
+                        <li><a href="#">기업정보</a></li>
+                        <li><a href="#">지속가능경영</a></li>
+                        <li><a href="#">R&D</a></li>
+                        <li><a href="#">투자정보</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">사업분야</a>
+                    <ul class="sub">
+                        <li><a href="#">투목</a></li>
+                        <li><a href="#">플랜트</a></li>
+                        <li><a href="#">건축개발</a></li>
+                        <li><a href="#">주택</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">홍보센터</a>
+                    <ul class="sub">
+                        <li><a href="#">공고</a></li>
+                        <li><a href="#">CI/BI</a></li>
+                        <li><a href="#">브로슈어</a></li>
+                        <li><a href="#">기업광고</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">뉴스룸</a>
+                    <ul class="sub">
+                        <li><a href="#">공지</a></li>
+                        <li><a href="#">보도자료</a></li>
+                        <li><a href="#">임직원 이야기</a></li>
+                        <li><a href="#">사보</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

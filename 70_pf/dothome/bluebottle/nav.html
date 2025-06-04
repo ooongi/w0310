@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블루보틀 GNB</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            font: 15px/1.6 "돋움", sans-serif;
+            color: #333;
+            background: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 기본 */
+        .wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 헤더 */
+        header {
+            z-index: 1;
+            /* 앞으로올리기 */
+            justify-content: space-between;
+            height: 100px;
+            background: #eef2f8;
+        }
+
+        header .inner {
+            position: relative;
+            display: flex;
+            /* 밑에 nav에 잡힌 position때문에 넣어야함 */
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            background: pink;
+            align-items: center;
+
+        }
+
+        /* 로고 */
+        .logo {
+            width: 200px;
+            height: 40px;
+        }
+
+        /* 내비게이션 */
+        .gnb {
+            position: absolute;
+            right: 20px;
+            width: 640px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            align-self: flex-end; /* 바닥으로 내림 */
+        }
+
+        /* 1depth 메인메뉴 */
+        .main {
+            display: flex;
+        }
+
+        /* 가상요소로 배경바 삽입 */
+        .gnb .main::before {
+            /* flex에 영향 안받기 위해 position 입력 */
+            position: absolute;
+            right: -20px;
+            z-index: -1;
+            top: 0;
+            content: "";
+            background: rgba(255,255,255,0.5);
+            width: 1200px;
+            height: 0;
+            transition: .3s;
+        }
+
+        .gnb .main:hover::before {
+            height: 150px;
+        }
+
+        .main>li>a {
+            /* 메인메뉴 */
+            display: block;
+            width: 160px;
+            height: 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .main>li>a:hover {
+            background: #1a4975;
+            color: #fff;
+        }
+
+        .main:hover .sub {
+            height: 120px;
+        }
+
+    /*
+        .main>li:hover .sub메뉴당 한줄씩
+        .main:hover .sub메뉴 전부
+    */
+
+        /* 2depth 서브메뉴 */
+        .sub {
+            height: 0;
+            overflow: hidden;
+            transition: 0.3s;
+            /* 슬라이딩을 위해 */
+        }
+
+        .sub a {
+            display: block;
+        }
+
+        .sub li a:hover {
+            background: #1a4975;
+            color: #fff;
+        }
+
+        .sub>li>a {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- A: header -->
+    <header>
+        <div class="inner">
+            <!-- 로고 -->
+            <h1 class="logo"><a href="#"><img src="images/logo.png" alt="로고"></a></h1>
+            <!-- 네비게이션 -->
+            <nav class="gnb">
+                <ul class="main">
+                    <li><a href="#">쇼핑</a>
+                        <ul class="sub">
+                            <li><a href="#">커피</a></li>
+                            <li><a href="#">컵과 텀블러</a></li>
+                            <li><a href="#">브루잉 도구</a></li>
+                            <li><a href="#">라이프 스타일</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">베스트셀러</a>
+                        <ul class="sub">
+                            <li><a href="#">원두</a></li>
+                            <li><a href="#">선물세트</a></li>
+                            <li><a href="#">텀블러</a></li>
+                            <li><a href="#">브루잉 도구</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">카페</a>
+                        <ul class="sub">
+                            <li><a href="#">브랜드 소개</a></li>
+                            <li><a href="#">카페 찾기</a></li>
+                            <li><a href="#">브루잉 가이드</a></li>
+                            <li><a href="#">블로그</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">소식</a>
+                        <ul class="sub">
+                            <li><a href="#">공지</a></li>
+                            <li><a href="#">보도자료</a></li>
+                            <li><a href="#">임직원 이야기</a></li>
+                            <li><a href="#">사보</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
+
+</html>
