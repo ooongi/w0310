@@ -46,6 +46,7 @@ nav {
 }
 
 nav a {
+    display: block;
     font-size: 18px;
 }
 
