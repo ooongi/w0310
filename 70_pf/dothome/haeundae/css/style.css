@@ -7,7 +7,7 @@
 }
 
 body {
-    font: 15px/1.6 '돋움', sans-serif;
+    font: 15px/1.6 "돋움", sans-serif;
     background: #fff;
     color: #333;
 }
@@ -32,6 +32,73 @@ header {
     width: 200px;
     height: 650px;
     background: lightpink;
+    padding-top: 30px;
+}
+
+/* 로고 */
+.logo {
+    width: 200px;
+    height: 40px;
+}
+
+/* 내비게이션 */
+.gnb {
+    width: 160px;
+    margin: 30px auto; /* 가운데배치 */
+    line-height: 30px;
+    text-align: center;
+}
+
+/* 1depth 메인메뉴 */
+/* .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        } */
+
+.main > li > a {
+    /* 메인메뉴 */
+    display: block;
+    width: 160px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #fff;
+    border-top: 2px solid #ad069f;
+}
+
+.main > li > a:hover {
+    background: #ad069f;
+    color: #fff;
+}
+
+.main li:hover .sub {
+    height: 90px;
+}
+
+/*
+        .main>li:hover .sub메뉴당 한줄씩
+        .main:hover .sub메뉴 전부
+    */
+
+/* 2depth 서브메뉴 */
+.sub {
+    height: 0;
+    overflow: hidden;
+    transition: 0.7s;
+    /* 슬라이딩을 위해 */
+    background: #fff;
+}
+
+.sub > li > a {
+    display: block;
+    font-size: 14px;
+}
+
+.sub li a:hover {
+    background: #ff96f1;
+    color: #fff;
 }
 
 /* 오른쪽 콘텐츠 */
