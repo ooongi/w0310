@@ -35,7 +35,6 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    display: flex;
     background: #eef2f8;
 }
 
@@ -62,6 +61,7 @@ header {
 }
 
 .main > li > a {
+    /* 메인메뉴 */
     display: block;
     width: 160px;
     height: 30px;
@@ -120,30 +120,51 @@ header {
 }
 
 @keyframes slide {
-    0% {
-        top: 0;
-    }
-    10% {
-        top: -100%;
-    }
-    33% {
-        top: -100%;
-    }
-    43% {
-        top: -200%;
-    }
-    66% {
-        top: -200%;
-    }
-    76% {
-        top: -300%;
-    }
-    99.99% {
-        top: -300%;
-    }
-    100% {
-        top: 0;
-    }
+    0% {top: 0;}
+    10% {top: -100%;}
+    33% {top: -100%;}
+    43% {top: -200%;}
+    66% {top: -200%;}
+    76% {top: -300%;}
+    99.99% {top: -300%;}
+    100% {top: 0;}
+}
+
+/* 팝업 레이어 */
+#popup {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#popup:target {
+    display: block;
+}
+/* 팝업창 */
+.popup_content {
+    /* position: relative; */
+    margin: 10% auto;
+    padding: 20px;
+    background: #fff;
+    width: 500px;
+}
+
+/* 닫기 버튼 */
+.close_btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+.outer_btn {
+    text-align: right;
 }
 
 /* 컨텐츠 */
