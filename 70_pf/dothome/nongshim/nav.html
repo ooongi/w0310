@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>농심 플라이아웃 메뉴</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #fff;
+            color: #333;
+            font: 15px/1.6 '돋움', sans-serif;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+
+        /* 헤더 */
+
+        header {
+            /* position: relative; */
+            width: 200px;
+            height: calc(100vh - 120px);
+            /* vh 화면전체(세로) */
+            background: #fff;
+            padding-top: 30px;
+        }
+
+        /* 로고 */
+        .logo {
+            width: 200px;
+            height: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+
+        /* 내비게이션 */
+        .gnb {
+            margin: 20px;
+        }
+
+        /* 1뎁스 메인 */
+        .main>li {
+            position: relative;
+            /* sub가 li의 자식이기 때문 */
+        }
+
+        .main>li>a {
+            display: block;
+            text-align: center;
+            font-size: 18px;
+            border: 1px solid #333;
+            background: #fff;
+            padding: 8px 0;
+            color: #333;
+        }
+
+
+        .main>li>a:hover {
+            background: #E6001E;
+            color: #fff;
+        }
+
+        .main:hover .sub {
+            z-index: 1;
+            left: 160px;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .sub {
+            z-index: 1; /* -1까지 안써도 됌 */
+            position: absolute;
+            display: flex;
+            visibility: hidden;/* 잘 가리고 호버 잘되게 함 */
+            top: 0;
+            opacity: 0;
+            left: 100px;
+            width: calc(100vw - 180px);
+            background: rgba(119, 119, 119, 0.5);
+            transition: .3s;
+            line-height: 2;
+            padding: 9px 30px;
+        }
+
+        .sub li a {
+            display: block;
+            /* text-align: center; */
+            font-size: 14px;
+            color: #fff;
+            padding-left: 16px;
+            width: 160px;
+            margin: 0 16px;
+        }
+
+        .sub li a:hover {
+            color: #333;
+            background: #fff;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo"><a href="#"><img src="images/logo.png" alt="로고"></a></h1>
+        <nav class="gnb">
+            <ul class="main">
+                <li><a href="#">농심소개</a>
+                    <ul class="sub">
+                        <li><a href="#">CI소개</a></li>
+                        <li><a href="#">연혁</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">홍보센터</a>
+                    <ul class="sub">
+                        <li><a href="#">농시미 이벤트</a></li>
+                        <li><a href="#">농심소식</a></li>
+                        <li><a href="#">농심TV</a></li>
+                        <li><a href="#">글로벌 푸드 뉴스</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">오픈이노베이션</a>
+                    <ul class="sub">
+                        <li><a href="#">소개</a></li>
+                        <li><a href="#">스타트업 안내</a></li>
+                        <li><a href="#">지원하기</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">고객서비스</a>
+                    <ul class="sub">
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">자주묻는질문</a></li>
+                        <li><a href="#">견학신청</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
