@@ -5,10 +5,10 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    padding: 0;
 }
 
 ul {
-    padding: 0;
     list-style: none;
 }
 
@@ -83,7 +83,7 @@ header {
 }
 
 .main > li > a:hover {
-    background: #E33B2E;
+    background: #e33b2e;
     color: #fff;
 }
 
@@ -120,6 +120,9 @@ header {
     color: #333;
     background: #fff;
 }
+
+
+
 /* contents */
 .contents {
     width: 400px;
@@ -146,7 +149,7 @@ header {
     font-size: 16px;
 }
 
-/* notice */
+/* 공지사항 */
 .notice {
     height: calc(100% - 600px);
     padding: 16px 13px 13px;
@@ -167,6 +170,35 @@ header {
     border-bottom: 1px solid #309898;
 }
 
+/* 팝업창 */
+.modal {
+    z-index: 1;
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.popup {
+    width: 500px;
+    margin: 10% auto;
+    background: rgb(255, 198, 217);
+    padding: 20px;
+}
+
+.popup p {
+    margin: 16px 0 32px;
+}
+
+.popup > div {
+    text-align: right;
+}
+
+.popup > div > a {
+    padding: 5px 10px;
+    background: #fff;
+}
 /* .notice a {
     display: inline-block;
     width: 287px;

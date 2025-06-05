@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -49,7 +49,7 @@
         }
 
         .modal {
-            /* display: none; */
+            display: none;
             position: fixed;
             width: 100%;
             height: 100%;
@@ -123,7 +123,7 @@
             2. 다운로드
                 <script src="./script/jquery-3.7.1.js">
         */
-        
+
         // 제이쿼리 기본 형식
         // $(document).ready(function(){});
         // document(객체): 순수 자바스크립트(바닐라 스크립트) / $(document) 제이쿼리
@@ -142,24 +142,47 @@
 
             객체는 속성과 메서드()로 구성된다.
 
-                메서드(매개변수, parameter) > 객체의 함수
 
-                .ready() > 준비
-                .click() > 클릭한다
+                
+            자바스크립트
+                이벤트
+                1. 윈도우
+                2. 문서: ready
+                3. 마우스: click
+                4. 키보드:
+
+
+            제이쿼리
+                메서드(매개변수, parameter, ...) > 객체의 함수
+                객체.속성
+                객체.메서드()
+
+                >> 이벤트메서드
+                .ready(function(){}) > 준비한다
+                .click(function(){}) > 클릭한다
+
+                >> 효과메서드
                 .show()  > 보인다
                 .hide()  > 숨긴다  
             
-            객체.속성
-            객체.메서드()
+
 
         */
-        $(function(){
-            $(document).ready
-            $('li:first-of-type').click
-            $('modal').show
-            $('popup a').click
+        // $(document).ready(function(){});
+        $(function () {
+            // 1. 공지사항의 첫 번째 글자 클릭하면
+            $('li:first-of-type').click(function(){
+                // 2. .modal의 display를 block으로 변경(보여준다)
+                $('.modal').show();
+            });
+            // 3. 팝업의 닫기 버튼을 클릭하면
+            $('.popup a').click(function(){
+                // 4. 팝업창을 숨긴다.
+                $('.modal').hide();
+            });
         });
     </script>
+
 </body>
 
 </html>

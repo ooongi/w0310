@@ -9,17 +9,17 @@
 body {
     font: 15px/1.6 "돋움", sans-serif;
     background: #fff;
-    color:#333;
+    color: #333;
 }
 ul {
-    list-style:none;
+    list-style: none;
     /* margin-top: 1em;
     margin-bottom: 1em;
     padding-left: 40px; */
 }
 a {
     text-decoration: none;
-    color:#333;
+    color: #333;
 }
 
 /* 상단 영역 */
@@ -30,7 +30,7 @@ a {
 /* 헤더 영역 */
 header {
     width: 200px;
-    background: #F6F6F6;
+    background: #f6f6f6;
 }
 .gnb {
     text-align: center;
@@ -48,14 +48,14 @@ nav a {
     margin-top: 4px;
 }
 nav a:hover {
-    background: #E6001E;
+    background: #e6001e;
     color: #fff;
 }
 .spotmenu a {
     color: #555;
 }
 .spotmenu a:not(:last-child):after {
-    content: ' |';
+    content: " |";
     margin: 8px;
 }
 .spotmenu a:hover {
@@ -96,35 +96,69 @@ nav a:hover {
     animation-name: fade1;
 }
 .fade li:nth-of-type(2) {
-    animation-name: fade2; opacity: 0;
+    animation-name: fade2;
+    opacity: 0;
 }
 .fade li:nth-of-type(3) {
-    animation-name: fade3; opacity: 0;
+    animation-name: fade3;
+    opacity: 0;
 }
 
 @keyframes fade1 {
-    0% {opacity: 0;}
-    10% {opacity: 1;}
-    43% {opacity: 1;}
-    66% {opacity: 0;}
-    100% {opacity: 0;}
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    43% {
+        opacity: 1;
+    }
+    66% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @keyframes fade2 {
-    0% {opacity: 0;}
-    33% {opacity: 0;}
-    43% {opacity: 1;}
-    66% {opacity: 1;}
-    76% {opacity: 0;}
-    100% {opacity: 0;}
+    0% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 0;
+    }
+    43% {
+        opacity: 1;
+    }
+    66% {
+        opacity: 1;
+    }
+    76% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @keyframes fade3 {
-    0% {opacity: 1;}
-    10% {opacity: 0;}
-    66% {opacity: 0;}
-    76% {opacity: 1;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 0;
+    }
+    66% {
+        opacity: 0;
+    }
+    76% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* 바로가기 링크 */
@@ -158,27 +192,59 @@ nav a:hover {
     margin-right: 32px;
 }
 
-/* 공지사항 및 갤러리 */
+/* 버튼 */
+.tabs .btn a {
+    border-left: 1px solid #333;
+    border-top: 1px solid #333;
+    padding: 5px 15px;
+    background: #333;
+    color: #fff;
+}
+
+/* 제이쿼리 this 효과발생 */
+.tabs .btn a.active {
+    background: #fff;
+    color: #333;
+}
+
+.tabs .btn a:first-of-type {
+    margin-left: 20px;
+}
+
+.tabs .btn a:last-of-type {
+    border-right: 1px solid #333;
+}
+
+/* 탭의 콘텐츠 */
+.tabs div {
+    display: none;
+}
+
+.tabs div.active {
+    display: block;
+}
+
+/* 공지사항 */
 .tabs {
     height: 250px;
     padding: 25px 35px;
-    background: rgb(223, 171, 40);
     line-height: 2;
-
 }
 
-.tabs li a {
+#tab1 a {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #333;
     padding: 0 16px;
 }
-.tabs h3 {
-    display: inline-block;
+
+#tab1 a:hover {
+    background: rgb(223, 171, 40);
+    color: #fff;
 }
 
-.tabs li a:hover {
-    background: #fff;
+#tab2 a:not(:last-of-type) {
+    margin-right: 32px;
 }
 
 /* 푸터 영역 */
@@ -202,7 +268,7 @@ footer {
     height: 30px;
 }
 .bmenu li:not(:last-child):after {
-    content: ' | ';
+    content: " | ";
     margin: 8px;
 }
 /* 주소 및 저작권 */

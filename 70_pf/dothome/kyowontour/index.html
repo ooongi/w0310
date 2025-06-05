@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>여행이지</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="./script/jquery-3.7.1.js"></script>
+    <script src="./script/script.js"></script>
+
 </head>
 
 <body>
@@ -51,6 +54,23 @@
             </nav>
         </header>
         <!-- 콘텐츠 -->
+
+        <div class="modal">
+            <div class="popup">
+                <h2>태국 입국 TDAC 작성 안내</h2>
+                <p>
+                    • 2025년 05월 01일부터 태국에 입국하는 태국 자국민 제외, 한국인 포함 외국인은 TDAC를 발급 받으셔야 합니다.<br>
+                    • TDAC ( Thailand Digital Arrival Card )는 입국 전 온라인을 통한 사전 입국 허가를 취득하는 제도입니다.<br>
+                    • 출발일 기준 3일 전부터 태국 도착 전까지 작성<br>(예시 : 5/2 출발 시 4/30-5/2 도착 전까지 작성)<br>
+                    • 입국 신고서 작성 후 회신 받으신 이메일의 첨부파일 다운로드 혹은 QR코드 캡처하여, 태국 입국시 심사관에게 제시하여야 합니다.<br>
+                    • 여권 분실, 개명 등 기존 여권 정보 변경 시, 새로 발급 받은 여권 정보로 TDAC 재신청 필요합니다.<br>
+                    • 타인이 대신하여 신청 가능합니다.<br>
+                    • 0세 ~ 성인 모두 예외 없이 TDAC 접수를 해주셔야 합니다.
+                </p>
+                <div><a href="#">&times; 닫기</a></div>
+            </div>
+        </div><!-- .//modal end -->
+        
         <div class="contents">
 
             <!-- 배너 -->
@@ -155,10 +175,7 @@
             <form action="#">
                 <select name="fs" id="fs">
                     <option value="">--- 패밀리 사이트 ---</option>
-                    <opti
-                    
-                    
-                    on value="fs1">교원그룹</opti>
+                    <opti on value="fs1">교원그룹</opti>
                     <option value="fs2">교원 더스위트호텔</option>
                     <option value="fs3">구몬학습</option>
                 </select>

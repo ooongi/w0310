@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nongshim</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="script/jquery-1.12.4.js"></script>
+    <script src="./script/script.js"></script>
 </head>
 
 <body>
@@ -67,15 +69,50 @@
 
             </div>
             <!-- 공지사항 및 갤러리 -->
+            <!-- 탭 버튼 -->
             <div class="tabs">
-                <h2>공지사항</h2>
-                <ul>
-                    <li><a href="#"><h3>농심 신라면 툼바, 일본서 초도물량 100만 개 완판</h3><span>2025.05.14</span></a></li>
-                    <li><a href="#"><h3>농심, 감자칩 스낵 ‘크레오파트라 솔트앤김’ 출시</h3><span>2025.05.08</span></a></li>
-                    <li><a href="#"><h3>농심, ‘너구리 다시마의 고장’ 완도 장보고수산물축제 참가</h3><span>2025.05.06</span></a></li>
-                    <li><a href="#"><h3>농심, 페루 마추픽추에 ‘신라면 분식’ 1호점 오픈</h3><span>2025.04.28</span></a></li>
-                </ul>
-            </div>
+                <span class="btn">
+                    <a href="#tab1" class="active">공지사항</a>
+                    <a href="#tab2">갤러리</a>
+                </span>
+
+                <!-- 공지사항 -->
+                <div id="tab1" class="active">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <h3>농심 신라면 툼바, 일본서 초도물량 100만 개 완판</h3>
+                                <span>2025.05.14</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <h3>농심, 감자칩 스낵 ‘크레오파트라 솔트앤김’ 출시</h3>
+                                <span>2025.05.08</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <h3>농심, ‘너구리 다시마의 고장’ 완도 장보고수산물축제 참가</h3>
+                                <span>2025.05.06</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <h3>농심, 페루 마추픽추에 ‘신라면 분식’ 1호점 오픈</h3>
+                                <span>2025.04.28</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 갤러리 -->
+                <div id="tab2">
+                    <a href="#"><img src="images/gallery1.png" alt="겔러리이미지1"></a>
+                    <a href="#"><img src="images/gallery2.png" alt="겔러리이미지2"></a>
+                    <a href="#"><img src="images/gallery3.png" alt="겔러리이미지3"></a>
+                </div>
+            </div><!-- //.tabs end -->
         </div><!-- //.container end -->
     </div><!-- //.wrap end -->
 
@@ -100,7 +137,7 @@
             </ul>
             <!-- 주소 및 저작권 표기 -->
             <p>(주)농심서울특별시 동작구 여의대방로 112 (신대방동)사업자등록번호118-81-03914대표이사이병학</p>
-            <p>© NONGSHIM CO.,LTD. ALL RIGHTS RESERVED	</p>
+            <p>© NONGSHIM CO.,LTD. ALL RIGHTS RESERVED </p>
         </div>
     </footer>
 </body>
