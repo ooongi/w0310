@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행이지 JS팝업창</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 15px/1.6 '돋움', sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 공지사항 */
+        .notice {
+            height: calc(100% - 600px);
+            padding: 16px 13px 13px;
+        }
+
+        .notice h2 {
+            margin-bottom: 8px;
+        }
+
+        .notice li {
+            display: flex;
+            justify-content: space-between;
+            line-height: 2;
+            border-bottom: 1px solid transparent;
+        }
+
+        .notice li:hover {
+            border-bottom: 1px solid #309898;
+        }
+
+        .modal {
+            /* display: none; */
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .popup {
+            width: 500px;
+            margin: 10% auto;
+            background: rgb(255, 198, 217);
+            padding: 20px;
+        }
+
+        .popup p {
+            margin: 16px 0 32px;
+        }
+
+        .popup>div {
+            text-align: right;
+        }
+
+        .popup>div>a {
+            padding: 5px 10px;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="modal">
+        <div class="popup">
+            <h2>태국 입국 TDAC 작성 안내</h2>
+            <p>
+                • 2025년 05월 01일부터 태국에 입국하는 태국 자국민 제외, 한국인 포함 외국인은 TDAC를 발급 받으셔야 합니다.<br>
+                • TDAC ( Thailand Digital Arrival Card )는 입국 전 온라인을 통한 사전 입국 허가를 취득하는 제도입니다.<br>
+                • 출발일 기준 3일 전부터 태국 도착 전까지 작성<br>(예시 : 5/2 출발 시 4/30-5/2 도착 전까지 작성)<br>
+                • 입국 신고서 작성 후 회신 받으신 이메일의 첨부파일 다운로드 혹은 QR코드 캡처하여, 태국 입국시 심사관에게 제시하여야 합니다.<br>
+                • 여권 분실, 개명 등 기존 여권 정보 변경 시, 새로 발급 받은 여권 정보로 TDAC 재신청 필요합니다.<br>
+                • 타인이 대신하여 신청 가능합니다.<br>
+                • 0세 ~ 성인 모두 예외 없이 TDAC 접수를 해주셔야 합니다.
+            </p>
+            <div><a href="#">&times; 닫기</a></div>
+        </div>
+    </div><!-- .//modal end -->
+
+    <!-- 공지사항 -->
+    <div class="notice">
+        <h2>공지사항</h2>
+        <ul>
+            <li>
+                <a href="#">태국 입국 TDAC 작성 안내 </a>
+                <span>2025-04-22</span>
+            </li>
+            <li>
+                <a href="#">타임딜(튀르키예) 당첨자 공지 </a>
+                <span>2025-04-22</span>
+            </li>
+            <li>
+                <a href="#">라이브(스페인&포르투갈) 당첨자 공지 </a>
+                <span>2025-04-21</span>
+            </li>
+        </ul>
+    </div><!-- .//notice end -->
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js"></script> -->
+    <script src="./script/jquery-3.7.1.js"></script>
+    <script>
+        /*
+            제이쿼리 라이브러리 http://releases.jquery.com/
+            1. CDN
+                <script src="https://code.jquery.com/jquery-3.7.1.js">
+            2. 다운로드
+                <script src="./script/jquery-3.7.1.js">
+        */
+        
+        // 제이쿼리 기본 형식
+        // $(document).ready(function(){});
+        // document(객체): 순수 자바스크립트(바닐라 스크립트) / $(document) 제이쿼리
+        /*
+            $(function(){
+                $('제이쿼리선택자')
+            });
+
+            함수 데이터: function(){}
+
+            함수
+                1. 익명함수
+                    변수 = function(){}
+                2. 선언적함수
+                    function 이름(){}
+
+            객체는 속성과 메서드()로 구성된다.
+
+                메서드(매개변수, parameter) > 객체의 함수
+
+                .ready() > 준비
+                .click() > 클릭한다
+                .show()  > 보인다
+                .hide()  > 숨긴다  
+            
+            객체.속성
+            객체.메서드()
+
+        */
+        $(function(){
+            $(document).ready
+            $('li:first-of-type').click
+            $('modal').show
+            $('popup a').click
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행이지 교원투어</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #fff;
+            color: #333;
+            font: 15px/1.6 '돋움', sans-serif;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+
+        /* 헤더 */
+
+        header {
+            /* position: relative; */
+            width: 200px;
+            height: calc(100vh - 120px);
+            /* vh 화면전체(세로) */
+            background: #309898;
+            padding-top: 30px;
+        }
+
+        /* 로고 */
+        .logo {
+            width: 200px;
+            height: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+
+        /* 내비게이션 */
+        .gnb {
+            margin: 20px;
+        }
+
+        /* 1뎁스 메인 */
+        .main>li {
+            position: relative;
+            /* sub가 li의 자식이기 때문 */
+        }
+
+        .main>li>a {
+            display: block;
+            text-align: center;
+            font-size: 18px;
+            border-bottom: 1px solid #333;
+            background: #E43C2E;
+            padding: 8px 0;
+            color: #fff;
+        }
+
+
+        .main>li>a:hover {
+            background: #fff;
+            color: #333;
+        }
+
+        .main li:hover .sub {
+            z-index: 1;
+            left: 160px;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .sub {
+            z-index: 1; /* -1까지 안써도 됌 */
+            position: absolute;
+            visibility: hidden;/* 잘 가리고 호버 잘되게 함 */
+            top: 0;
+            opacity: 0;
+            left: 100px;
+            width: 160px;
+            background: rgba(119, 119, 119, 0.5);
+            transition: .3s;
+            line-height: 2;
+            padding: 16px 0;
+        }
+
+        .sub li a {
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+            padding: 8px;
+        }
+
+        .sub li a:hover {
+            color: #333;
+            background: #fff;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo"><a href="#"><img src="images/logo.png" alt="로고"></a></h1>
+        <nav class="gnb">
+            <ul class="main">
+                <li><a href="#">해외여행</a>
+                    <ul class="sub">
+                        <li><a href="#">아시아</a></li>
+                        <li><a href="#">아프리카</a></li>
+                        <li><a href="#">아메리카</a></li>
+                        <li><a href="#">유럽</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">자유여행</a>
+                    <ul class="sub">
+                        <li><a href="#">아시아</a></li>
+                        <li><a href="#">아프리카</a></li>
+                        <li><a href="#">아메리카</a></li>
+                        <li><a href="#">유럽</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">지방출발</a>
+                    <ul class="sub">
+                        <li><a href="#">부산</a></li>
+                        <li><a href="#">청주</a></li>
+                        <li><a href="#">대구</a></li>
+                        <li><a href="#">해외</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">국내여행</a>
+                    <ul class="sub">
+                        <li><a href="#">국내숙박</a></li>
+                        <li><a href="#">내륙여행</a></li>
+                        <li><a href="#">섬여행</a></li>
+                        <li><a href="#">기차여행</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

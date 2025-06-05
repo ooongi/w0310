@@ -21,6 +21,10 @@ a {
     color: #333;
 }
 
+img {
+    vertical-align: top;
+}
+
 /* 전체 */
 .wrap {
     width: 1000px;
@@ -110,9 +114,20 @@ header {
 /* 슬라이드 */
 .slide {
     height: 350px;
+    overflow: hidden;
     background: blue;
 }
 
+.slide ul {
+    position: relative;
+    animation: slide 8s infinite;
+}
+
+@keyframes slide {
+    0% {opacity: 0;}
+    99% {opacity: 100%;}
+    100% {opacity: 0;}
+}
 /* 공지사항~바로가기링크 */
 .contents {
     display: flex;

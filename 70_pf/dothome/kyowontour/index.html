@@ -1,25 +1,54 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>여행이지</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="wrap">
         <!-- 헤더 -->
         <header>
-            <!-- 로고 -->
-            <h1 class="logo"><a href="#"><img src="images/logo.png" alt="여행이지"></a></h1>
-            <!-- 내비게이션 -->
-            <nav>
-                <ul>
-                    <li><a href="#">해외여행</a></li>
-                    <li><a href="#">국내여행</a></li>
-                    <li><a href="#">테마여행</a></li>
-                    <li><a href="#">맞춤여행</a></li>
+            <h1 class="logo"><a href="#"><img src="images/logo.png" alt="로고"></a></h1>
+            <nav class="gnb">
+                <ul class="main">
+                    <li><a href="#">해외여행</a>
+                        <ul class="sub">
+                            <li><a href="#">아시아</a></li>
+                            <li><a href="#">아프리카</a></li>
+                            <li><a href="#">아메리카</a></li>
+                            <li><a href="#">유럽</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">자유여행</a>
+                        <ul class="sub">
+                            <li><a href="#">아시아</a></li>
+                            <li><a href="#">아프리카</a></li>
+                            <li><a href="#">아메리카</a></li>
+                            <li><a href="#">유럽</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">지방출발</a>
+                        <ul class="sub">
+                            <li><a href="#">부산</a></li>
+                            <li><a href="#">청주</a></li>
+                            <li><a href="#">대구</a></li>
+                            <li><a href="#">해외</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">국내여행</a>
+                        <ul class="sub">
+                            <li><a href="#">국내숙박</a></li>
+                            <li><a href="#">내륙여행</a></li>
+                            <li><a href="#">섬여행</a></li>
+                            <li><a href="#">기차여행</a></li>
+                        </ul>
+                    </li>
                 </ul>
+            </nav>
         </header>
         <!-- 콘텐츠 -->
         <div class="contents">
@@ -126,7 +155,10 @@
             <form action="#">
                 <select name="fs" id="fs">
                     <option value="">--- 패밀리 사이트 ---</option>
-                    <option value="fs1">교원그룹</option>
+                    <opti
+                    
+                    
+                    on value="fs1">교원그룹</opti>
                     <option value="fs2">교원 더스위트호텔</option>
                     <option value="fs3">구몬학습</option>
                 </select>
@@ -134,4 +166,5 @@
         </div>
     </footer>
 </body>
+
 </html>

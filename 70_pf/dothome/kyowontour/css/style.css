@@ -15,7 +15,7 @@ ul {
 body {
     background: #fff;
     color: #333;
-    font: 16px/1.6 '굴림', sans-serif; /* '굴림' */
+    font: 16px/1.6 "굴림", sans-serif; /* '굴림' */
 }
 
 a {
@@ -23,10 +23,9 @@ a {
     color: #333;
 }
 
-
-
 /* 공통 */
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -43,51 +42,84 @@ html, body {
     /* 120px - footer */
 }
 
+/* 헤더 */
 
-
-
-/* header */
 header {
+    /* position: relative; */
     width: 200px;
+    height: calc(100vh - 120px);
+    /* vh 화면전체(세로) */
     background: #309898;
-    padding: 20px 0;
+    padding-top: 30px;
 }
 
 /* 로고 */
 .logo {
+    width: 200px;
+    height: 40px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
-/* nav */
-
-nav {
-    padding: 20px;
-    text-align: center;
-
+/* 내비게이션 */
+.gnb {
+    margin: 20px;
 }
-nav li {
-    height: 60px;
-    line-height: 60px;
-    margin-top: 8px;
+
+/* 1뎁스 메인 */
+.main > li {
+    position: relative;
+    /* sub가 li의 자식이기 때문 */
+}
+
+.main > li > a {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 1px solid #333;
     background: #fff;
-    /* cursor: pointer; 
-    a영역 확장 */
+    padding: 8px 0;
+    color: #333;
 }
 
-nav a:hover {
-    background: #E53E30;
+.main > li > a:hover {
+    background: #E33B2E;
     color: #fff;
 }
 
-nav a {
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    font-weight: bold;
-
-    /* transition: 0.3s; */
+.main li:hover .sub {
+    z-index: 1;
+    left: 160px;
+    visibility: visible;
+    opacity: 1;
 }
 
+.sub {
+    z-index: 1; /* -1까지 안써도 됌 */
+    position: absolute;
+    visibility: hidden; /* 잘 가리고 호버 잘되게 함 */
+    top: 0;
+    opacity: 0;
+    left: 100px;
+    width: 160px;
+    background: rgba(119, 119, 119, 0.8);
+    transition: 0.3s;
+    line-height: 2;
+    padding: 16px 0;
+}
+
+.sub li a {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    padding: 8px;
+}
+
+.sub li a:hover {
+    color: #333;
+    background: #fff;
+}
 /* contents */
 .contents {
     width: 400px;
@@ -99,7 +131,7 @@ nav a {
     height: 150px;
     justify-content: space-between;
     align-items: center;
-    padding:0 8px;
+    padding: 0 8px;
 }
 
 .cont {
@@ -129,7 +161,6 @@ nav a {
     justify-content: space-between;
     line-height: 2;
     border-bottom: 1px solid transparent;
-
 }
 
 .notice li:hover {
@@ -199,18 +230,33 @@ nav a {
     display: flex;
     width: calc(100% - 600px);
     animation: slide 8s infinite;
-
 }
 
 @keyframes slide {
-    0% {left: 0%;}
-    10% {left: -100%;}
-    33% {left: -100%;}
-    43% {left: -200%;}
-    66% {left: -200%;}
-    76% {left: -300%;}
-    99.99% {left: -300%;}
-    100% {left: 0%;}
+    0% {
+        left: 0%;
+    }
+    10% {
+        left: -100%;
+    }
+    33% {
+        left: -100%;
+    }
+    43% {
+        left: -200%;
+    }
+    66% {
+        left: -200%;
+    }
+    76% {
+        left: -300%;
+    }
+    99.99% {
+        left: -300%;
+    }
+    100% {
+        left: 0%;
+    }
 }
 
 /* footer */
