@@ -26,3 +26,12 @@ $(function (){
     // :eq(n), n은 0부터
     // :.eq()
 });
+
+$(function(){
+    $('#tab1>ul>li:first-of-type').click(function(){
+        $('.modal').show();
+    });
+    $('.popup a').click(function(){
+        $('.modal').hide();
+    });
+});

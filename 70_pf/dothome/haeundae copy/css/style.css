@@ -1,0 +1,324 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 15px/1.6 "돋움", sans-serif;
+    background: #fff;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+img {
+    vertical-align: top;
+}
+
+/* 전체 */
+.wrap {
+    width: 1000px;
+    display: flex;
+}
+
+/* 헤더 */
+header {
+    width: 200px;
+    height: 650px;
+    background: lightpink;
+    padding-top: 30px;
+}
+
+/* 로고 */
+.logo {
+    width: 200px;
+    height: 40px;
+}
+
+/* 내비게이션 */
+.gnb {
+    width: 160px;
+    margin: 30px auto;
+    /* 가운데배치 */
+    line-height: 30px;
+    text-align: center;
+}
+
+/* 1depth 메인메뉴 */
+/* .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        } */
+
+.main>li>a {
+    /* 메인메뉴 */
+    display: block;
+    width: 160px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #fff;
+    border-top: 2px solid #ad069f;
+}
+
+.main>li>a:hover {
+    background: #ad069f;
+    color: #fff;
+}
+
+.main li:hover .sub {
+    height: 90px;
+}
+
+/*
+        .main>li:hover .sub메뉴당 한줄씩
+        .main:hover .sub메뉴 전부
+    */
+
+/* 2depth 서브메뉴 */
+.sub {
+    height: 0;
+    overflow: hidden;
+    transition: 0.7s;
+    /* 슬라이딩을 위해 */
+    background: #fff;
+}
+
+.sub>li>a {
+    display: block;
+    font-size: 14px;
+}
+
+.sub li a:hover {
+    background: #ff96f1;
+    color: #fff;
+}
+
+/* 오른쪽 콘텐츠 */
+.container {
+    width: 800px;
+    background: greenyellow;
+}
+
+/* 슬라이드 */
+.slide {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    background: blue;
+}
+
+.slide li {
+    position: absolute;
+    animation: 6s infinite;
+}
+
+.slide li:nth-of-type(1) {
+    animation-name: slide1;
+}
+
+.slide li:nth-of-type(2) {
+    animation-name: slide2;
+    opacity: 0;
+}
+
+.slide li:nth-of-type(3) {
+    animation-name: slide3;
+    opacity: 0;
+}
+
+@keyframes slide1 {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    43% {
+        opacity: 1;
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slide2 {
+    0% {
+        opacity: 0;
+    }
+
+    33% {
+        opacity: 0;
+    }
+
+    43% {
+        opacity: 1;
+    }
+
+    66% {
+        opacity: 1;
+    }
+
+    76% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slide3 {
+    0% {
+        opacity: 1;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    76% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 공지사항~바로가기링크 */
+.contents {
+    display: flex;
+    height: 200px;
+    padding: 5px 0;
+}
+
+/* 탭 */
+.tabs {
+    width: 300px;
+}
+
+.tabs .btn a {
+    border-left: 1px solid #333;
+    border-top: 1px solid #333;
+    padding: 5px 15px;
+    text-align: center;
+    align-items: 20px;
+    background: #333;
+    color: #fff;
+}
+
+.tabs .btn a.active {
+    background: #fff;
+    color: #333;
+}
+
+/* 공지사항 */
+.tabs #notice {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding: 0 5px;
+}
+
+.tabs h2 {
+    border-bottom: 1px solid #333;
+    margin-bottom: 5px;
+}
+
+.tabs #notice li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabs #notice a {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.tabs #notice a:hover {
+    text-decoration: underline;
+
+}
+
+.tabs div {
+    display: none;
+}
+
+.tabs div.active {
+    display: block;
+}
+
+/* 갤러리 */
+#gallery {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+#gallery a {
+    display: flex;
+    justify-content: space-evenly;
+    display: none;
+}
+
+/* 배너 */
+.banner {
+    width: 250px;
+    background: yellow;
+}
+
+/* 바로가기 링크 */
+.link {
+    width: 250px;
+    background: green;
+}
+
+/* 푸터 */
+footer {
+    display: flex;
+    height: 100px;
+    background: #555;
+}
+
+.blogo {
+    width: 200px;
+    background: orange;
+}
+
+.right {
+    width: 600px;
+}
+
+.bmenu {
+    height: 50px;
+    background: palevioletred;
+}
+
+.copy {
+    height: 50px;
+    background: purple;
+}
