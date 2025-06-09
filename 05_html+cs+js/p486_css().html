@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css() 메서드</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div:nth-child(1) {
+            background: red;
+        }
+
+        div:nth-child(2) {
+            background: green;
+        }
+
+        div:nth-child(3) {
+            background: blue;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            // $("div").eq(0).css("padding", 10).css("text-align", "center"); 같은표기법
+            // $("div").eq(0).css({padding:10,  textAlign:"center"});
+            $("div").eq(0).css({ padding: 10, "text-align": "center" });
+
+            /*  
+                $("div").eq(0).css("width",100);
+                $("div").eq(1).css("width",200);
+                $("div").eq(2).css("width",300);
+             */
+
+            $("div").css("width", function (index) {
+                return index * 100 + 100; // 100,200,300
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div>내용1</div>
+    <div>내용2</div>
+    <div>내용3</div>
+</body>
+
+</html>
