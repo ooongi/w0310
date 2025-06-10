@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>해운대 빛축제</title>
     <link rel="stylesheet" href="css/style copy.css">
+    <script src="./script/jquery-1.12.4.js"></script>
+    <script src="./script/script copy.js"></script>
 </head>
 
 <body>
@@ -55,20 +57,23 @@
                 </ul>
             </div>
             <div class="contents">
-                <div class="tab">
-                    <span>
-                        <a href="#">공지사항</a>
-                        <a href="#">갤러리</a>
+                <div class="tabs">
+                    <span class="btn">
+                        <a href="#tab1" class="active">공지사항</a>
+                        <a href="#tab2">갤러리</a>
                     </span>
-                    <div class="tab1">
-                        <ul class="notice">
+
+                    <!-- 공지사항 -->
+                    <div id="notice" class="active">
+                        <ul>
                             <li><a href="#">빛축제 일정 안내</a><span>2024.12.01.</span></li>
                             <li><a href="#">빛콘서트 출연진 안내</a><span>2024.12.10.</span></li>
                             <li><a href="#">축제 점등식 취소 안내</a><span>2024.12.20.</span></li>
                             <li><a href="#">불꽃드론ㆍ불꽃쇼 일정 안내</a><span>2024.12.28.</span></li>
                         </ul>
                     </div>
-                    <div class="tab2">
+                    <!-- 갤러리 -->
+                    <div id="gallery">
                         <a href="#"><img src="images/gallery1.png" alt="갤러리1"></a>
                         <a href="#"><img src="images/gallery2.png" alt="갤러리2"></a>
                         <a href="#"><img src="images/gallery3.png" alt="갤러리3"></a>
@@ -83,10 +88,22 @@
             </div>
 
             <footer>
-                <div class="blogo"></div>
+                <div class="blogo">
+                    <a href="#"><img src="images/blogo.png" alt="흑백로고"></a>
+                </div>
                 <div class="txt">
-                    <div class="btxt"></div>
-                    <div class="copy"></div>
+                    <div class="btxt">
+                        <ul>
+                            <li><a href="#">전화번호안내</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">저작권보호정책</a></li>
+                            <li><a href="#">찾아오시는길</a></li>
+                        </ul>
+                    </div>
+                    <div class="copy">
+                        <p>48095 부산광역시 해운대구 중동2로 11(중동) 대표전화 : (051)749-4000 팩스 : (051)749-4444</p>
+                        <p>Copyright© 2019 Haeundae-gu. All rights reserved.</p>
+                    </div>
                 </div>
             </footer>
         </div>

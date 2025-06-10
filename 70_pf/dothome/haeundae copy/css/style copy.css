@@ -7,7 +7,7 @@
 }
 
 body {
-    font: 15px/1.6 '돋움', sans=serif;
+    font: 15px/1.6 "돋움", sans=serif;
     background: #fff;
     color: #333;
 }
@@ -50,7 +50,7 @@ nav {
     margin: 30px auto;
 }
 
-.main>li>a {
+.main > li > a {
     display: block;
     font-size: 18px;
     font-weight: bold;
@@ -60,7 +60,7 @@ nav {
     background: yellow;
 }
 
-.main>li>a:hover {
+.main > li > a:hover {
     background: #fff;
     color: blue;
 }
@@ -72,25 +72,24 @@ nav {
 .sub {
     height: 0;
     overflow: hidden;
-    transition: .5s;
+    transition: 0.5s;
     background: #fff;
 }
 
-.sub>li>a {
+.sub > li > a {
     display: block;
     text-align: center;
     height: 40px;
     line-height: 40px;
 }
 
-.sub>li>a:hover {
+.sub > li > a:hover {
     background: blue;
     color: #fff;
 }
 
 .container {
     width: 800px;
-    background: #555;
 }
 
 /* 슬라이드 */
@@ -101,34 +100,111 @@ nav {
 }
 
 .slide ul {
-    position: absolute;
-    width: 100%;
-    height: 400%;
+    position: relative;
+    display: flex;
+    width: 400%;
+    height: 100%;
     animation: slide 8s infinite;
 }
 
 @keyframes slide {
-    0% {top:0%}
-    10% {top:-100%}
-    33% {top:-100%}
-    43% {top:-200%}
-    66% {top:-200%}
-    76% {top:-300%}
-    99.99% {top:-300%}
-    100% {top:0%}
+    0% {
+        left: 0%;
+    }
+    10% {
+        left: -100%;
+    }
+    33% {
+        left: -100%;
+    }
+    43% {
+        left: -200%;
+    }
+    66% {
+        left: -200%;
+    }
+    76% {
+        left: -300%;
+    }
+    99.99% {
+        left: -300%;
+    }
+    100% {
+        left: 0%;
+    }
 }
 
-
+/* 공지사항~바로가기링크 */
 .contents {
     display: flex;
     height: 200px;
     padding: 5px 0;
 }
 
-.tab {
+/* 탭 */
+.tabs {
     width: 300px;
+    margin-top: 5px;
+    margin-left: 5px;
 }
 
+.tabs .btn a {
+    border-left: 1px solid #333;
+    border-top: 1px solid #333;
+    padding: 5px 15px;
+    text-align: center;
+    align-items: 20px;
+    background: #333;
+    color: #fff;
+}
+
+.tabs .btn a.active {
+    background: #fff;
+    color: #333;
+}
+
+/* 공지사항 */
+.tabs #notice {
+    width: 100%;
+    padding: 0 5px;
+}
+
+.tabs h2 {
+    border-bottom: 1px solid #333;
+    margin-bottom: 5px;
+}
+
+.tabs #notice li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabs #notice ul {
+    padding: 5px 0;
+}
+
+.tabs #notice a:hover {
+    text-decoration: underline;
+
+}
+
+.tabs div {
+    display: none;
+}
+
+.tabs div.active {
+    display: block;
+}
+
+/* 갤러리 */
+#gallery {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#gallery a {
+    padding: 0 5px;
+}
 .banner {
     width: 250px;
 }
@@ -145,5 +221,30 @@ footer {
 
 .blogo {
     width: 200px;
-    background: #888;
 }
+
+.blogo img {
+    margin-top: 20px;
+}
+
+.txt {
+    font-size: 14px;
+    color: #999;
+}
+
+.btxt a {
+    color: #999;
+}
+
+.btxt {
+    width: 600px;
+    height: 50px;
+}
+
+.btxt ul {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    line-height: 50px;
+}
+
