@@ -1,0 +1,310 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 15px/1.6 '돋움', sans-serif;
+    background: #fff;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+img {
+    vertical-align: top;
+}
+
+
+
+
+
+
+/* -------------------------------------- */
+
+
+
+
+
+.wrap {
+    width: 100%;
+    height: 920px;
+}
+
+.container {
+    display: flex;
+    height: 850px;
+}
+
+header {
+    width: 200px;
+    background: rgb(221, 221, 221);
+}
+
+header img {
+    width: 200px;
+    height: 40px;
+    margin: 30px 0;
+}
+
+.gnb {
+    width: 160px;
+    margin: 30px auto 0;
+    background: mediumaquamarine;
+}
+
+.main>li {
+    position: relative;
+
+}
+
+.main>li>a {
+    display: block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    background: #fff;
+    color: #333;
+}
+
+.main>li>a:hover {
+    background: green;
+    color: #fff;
+}
+
+.main:hover .sub {
+    z-index: 1;
+    left: 160px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.sub {
+    position: absolute;
+    display: flex;
+    visibility: hidden;
+    width: calc(100vw - 180px);
+    background: rgba(102, 102, 102, 0.5);
+    top: 0;
+    opacity: 0;
+    transition: .5s;
+}
+
+.sub>li>a {
+    display: block;
+    margin: 0 30px;
+    color: #fff;
+    padding: 17.5px;
+    text-align: left;
+}
+
+.sub>li>a:hover {
+    background: #fff;
+    color: #333;
+}
+
+.spotmenu {
+    width: 160px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.spotmenu a {
+    color: #555;
+}
+
+.spotmenu>a:not(:nth-child(2)):after {
+    content: " |";
+}
+
+.spotmenu>a:hover {
+    text-decoration: underline;
+    color: #333;
+}
+
+.contents {
+    width: calc(100% - 200px);
+}
+
+.fade {
+    height: 400px;
+    position: relative;
+    background: #503636;
+    overflow: hidden;
+}
+
+.fade li {
+    position: absolute;
+    width: 100%;
+    animation: fade 6s infinite;
+}
+
+.fade li:nth-of-type(1) {
+    animation-name: fade1;
+}
+
+.fade li:nth-of-type(2) {
+    animation-name: fade2;
+    opacity: 0;
+}
+
+.fade li:nth-of-type(1) {
+    animation-name: fade3;
+    opacity: 0;
+}
+
+.link {
+    position: fixed;
+    width: 180px;
+    height: 300px;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background: rgb(80, 62, 41);
+    text-align: center;
+}
+
+.link li {
+    margin: 8px 0;
+}
+
+.link span {
+    display: block;
+    color: #fff;
+}
+
+
+.banner {
+    display: flex;
+    height: 200px;
+    background: #fff;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.bnbn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabs {
+    height: 250px;
+}
+
+.btn a {
+    border-top: 1px solid #333;
+    border-left: 1px solid #333;
+    padding: 2px 5px;
+    background: #333;
+    color: #fff;
+}
+
+/* js액션 */
+
+.btn a.active {
+    background: #fff;
+    color: #333;
+}
+
+.tabs div {
+    display: none;
+}
+
+.tabs div.active {
+    display: block;
+}
+
+
+
+
+
+#notice ul {
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+#notice li {
+    display: flex;
+    justify-content: space-between;
+}
+
+#notice>ul>li>a:hover {
+    text-decoration: underline;
+}
+
+#gallery img {
+    height: 180px;
+}
+
+#gallery a {
+    margin-right: 32px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: rgba(51, 51, 51, 0.5);
+}
+
+.popup {
+    width: 500px;
+    height: 300px;
+    margin: 100px auto;
+    background: #fff;
+    padding: 30px;
+}
+
+.popup div {
+    text-align: right;
+}
+
+.popup a {
+    background: #333;
+    color: #fff;
+    width: 100px;
+    padding: 2px;
+}
+
+footer {
+    display: flex;
+    height: 120px;
+    background: #999;
+}
+
+.blogo {
+    width: 200px;
+}
+
+.blogo img {
+    width: 200px;
+    height: 40px;
+    margin: 30px 0;
+}
+
+.bmenu {
+    display: flex;
+}
+
+.bmenu>a:not(:last-child):after {
+    content: "|";
+}
+
+.text {
+    width: calc(100% - 200px);
+    background: #189;
+}
