@@ -29,6 +29,10 @@ ul {
     padding: 0;
     list-style: none;
 }
+
+img {
+    vertical-align: top
+}
 /* 주조색 50%이상 color: #1b3b86; */
 
 header,
@@ -109,14 +113,31 @@ header {
 .slide {
     height: 350px;
     overflow: hidden;
+    position: relative;
 }
 
-.slide li + li {
-    /*
-        li 밑에 있는 동생 li 숨기기
-    이후 슬라이드 구현 시 지워야 하는 부분
-    */
-    display: none;
+.slide ul {
+    position: absolute;
+    width: 100%;
+    height: 400%;
+    animation: slide 8s infinite;
+}
+
+@keyframes slide {
+    0% {top:0;}
+    10% {top:-100%;}
+    33% {top:-100%;}
+    43% {top:-200%;}
+    66% {top:-200%;}
+    76% {top:-300%;}
+    99.99% {top:-300%;}
+    100% {top:0%;}
+}
+
+.wrap {
+    position: absolute;
+    top: 330px;
+    left: 290px;
 }
 
 .contents {
@@ -126,6 +147,7 @@ header {
 
 .contents a {
     color: #fff;
+    
 }
 
 .link {
@@ -172,6 +194,10 @@ header {
 .notice a {
     display: inline-block;
     width: 500px;
+}
+
+.notice a:hover {
+    text-decoration: underline;
 }
 
 .notice span {
@@ -261,3 +287,32 @@ footer a {
 /* .sns li:not(:last-of-type)::after {
     content: " |";
 } */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: rgba(51, 51, 51, 0.5);
+
+}
+
+.popup {
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px;
+}
+
+.popup div {
+    text-align: right;
+}
+
+.popup a {
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+}
