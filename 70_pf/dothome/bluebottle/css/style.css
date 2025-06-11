@@ -41,57 +41,75 @@ header .inner {
     align-items: flex-end;
 }
 
-.logo a {
-    display: inline-block;
-    margin-top: 16px;
-}
-
-.logo img {
-    vertical-align: bottom;
-}
-
-nav a {
-    vertical-align: bottom;
-}
-
-.main {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.main li {
+.inner {
     position: relative;
 }
 
-/* 2뎁스메뉴 */
-.sub {
+.logo img {
+    padding-top: 24px;
+}
+
+.gnb {
+    z-index: 2;
+    position: relative;
+    height: 100px;
+    top: 64px;
+    right: 0;
+}
+
+.nav_bg {
     position: absolute;
-    width: 140px;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 9999; /* 슬라이드 위로 */
-
+    z-index: 1;
+    width: 100%;
+    height: 0;
+    top: 100px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-.main li:hover .sub {
-    background: #fff;
-    opacity: 1;
-    visibility: visible;
-}
-
-.main li a {
-    display: block;
-    width: 140px;
-    color: #00a9e0;
+/* 1dep */
+.main {
+    display: flex;
     text-align: center;
-
-    
+    justify-content: end;
 }
 
-.main li a:hover {
+.main li {
+    width: 160px;
+}
+
+.main > li > a {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    background: #333;
+    color: #999;
+    padding: 4px 0;
+}
+
+.main > li > a:hover {
+    background: blue;
     color: #fff;
-    background: #00a9e0;
-    
+}
+
+/* 2dep */
+.sub {
+    visibility: hidden;
+    display: none;
+    height: 150px;
+    line-height: 30px;
+    /* transition: .3s; */
+    /* display는 transition 적용 x */
+}
+
+.sub a {
+    display: block;
+    color: #fff;
+}
+
+.sub a:hover {
+    background: #fff;
+    color: #333;
 }
 
 /* container */

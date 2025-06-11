@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블루보틀_GNB_JQ</title>
+    <style>
+        /* 공통 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 15px/1.6 '굴림', sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+
+        /* 헤더 */
+        .inner {
+            position: relative;
+            width: 1200px;
+            height: 100px;
+            margin: 0 auto;
+            background: rgb(211, 211, 211);
+        }
+
+        
+        .logo img {
+            padding-top: 24px;
+        }
+
+        .gnb {
+            z-index: 2;
+            position: absolute;
+            right: 0;
+        }
+
+        .nav_bg {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            top: 100px;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        /* 1dep */
+        .main {
+            display: flex;
+            text-align: center;
+            justify-content: end;
+        }
+
+        .main li {
+            width: 160px;
+        }
+
+        .main>li>a {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            background: #333;
+            color: #999;
+            padding: 4px 0;
+        }
+
+        .main>li>a:hover {
+            background: blue;
+            color: #fff;
+        }
+
+        /* 2dep */
+        .sub {
+            /* height: 0;
+            opacity: 0;
+             */
+            visibility: hidden;
+            display: none;
+            height: 150px;
+            line-height: 30px;
+            /* transition: .3s; */
+            /* display는 transition 적용 x */
+        }
+
+        .sub a {
+            display: block;
+            color: #fff;
+        }
+
+        .sub a:hover {
+            background: #fff;
+            color: #333;
+        }
+    </style>
+    <script src="script/jquery-1.12.4.js"></script>
+    <script src="script/script.js"></script>
+</head>
+
+<body>
+    <!-- A: header -->
+    <header>
+        <div class="inner">
+            <div class="nav_bg"></div>
+            <!-- 로고 -->
+            <h1 class="logo"><a href="#"><img src="images/logo.png" alt="로고"></a></h1>
+            <!-- 네비게이션 -->
+            <nav class="gnb">
+                <ul class="main">
+                    <li><a href="#">쇼핑</a>
+                        <ul class="sub">
+                            <li><a href="#">커피</a></li>
+                            <li><a href="#">컵과 텀블러</a></li>
+                            <li><a href="#">브루잉 도구</a></li>
+                            <li><a href="#">라이프 스타일</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">베스트셀러</a>
+                        <ul class="sub">
+                            <li><a href="#">원두</a></li>
+                            <li><a href="#">선물세트</a></li>
+                            <li><a href="#">텀블러</a></li>
+                            <li><a href="#">브루잉 도구</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">카페</a>
+                        <ul class="sub">
+                            <li><a href="#">브랜드 소개</a></li>
+                            <li><a href="#">카페 찾기</a></li>
+                            <li><a href="#">브루잉 가이드</a></li>
+                            <li><a href="#">블로그</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">소식</a>
+                        <ul class="sub">
+                            <li><a href="#">공지</a></li>
+                            <li><a href="#">보도자료</a></li>
+                            <li><a href="#">임직원 이야기</a></li>
+                            <li><a href="#">사보</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
+
+</html>
