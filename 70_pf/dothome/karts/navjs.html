@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>대우건설_Nav_JQ</title>
-    <script src="script/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="script/script.js"></script>
+    <title>한양대학교_Nav_JQ</title>
+    <!-- <script src="script/script.js"></script> -->
     <style>
         /* 공통 */
         * {
@@ -39,14 +37,16 @@
         /* 헤더 */
         header {
             position: relative;
-            width: 1200px;
+            width: 1340px;
             height: 100px;
             margin: 0 auto;
+            padding-top: 24px;
             background: rgb(211, 211, 211);
         }
 
-        .logo img {
-            padding-top: 24px;
+        .logo {
+            width: 200px;
+            height: 40px;
         }
 
         .gnb {
@@ -55,6 +55,7 @@
             top: 24px;
             right: 24px;
         }
+
         /* 1dep */
         .main {
             display: flex;
@@ -122,44 +123,60 @@
         <nav class="gnb">
             <ul class="main">
                 <li>
-                    <a href="#">회사소개</a>
+                    <a href="#">학교소개</a>
                     <ul class="sub">
-                        <li><a href="#">기업정보</a></li>
-                        <li><a href="#">지속가능경영</a></li>
-                        <li><a href="#">R&D</a></li>
-                        <li><a href="#">투자정보</a></li>
+                        <li><a href="#">총장실</a></li>
+                        <li><a href="#">설립이념</a></li>
+                        <li><a href="#">연혁</a></li>
+                        <li><a href="#">비전</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="">사업분야</a>
+                    <a href="">예술사</a>
                     <ul class="sub">
-                        <li><a href="#">투목</a></li>
-                        <li><a href="#">플랜트</a></li>
-                        <li><a href="#">건축개발</a></li>
-                        <li><a href="#">주택</a></li>
+                        <li><a href="#">음악원</a></li>
+                        <li><a href="#">연극원</a></li>
+                        <li><a href="#">영상원</a></li>
+                        <li><a href="#">무용원</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="">홍보센터</a>
+                    <a href="">대학생활</a>
                     <ul class="sub">
-                        <li><a href="#">공고</a></li>
-                        <li><a href="#">CI/BI</a></li>
-                        <li><a href="#">브로슈어</a></li>
-                        <li><a href="#">기업광고</a></li>
+                        <li><a href="#">학사일정</a></li>
+                        <li><a href="#">성적</a></li>
+                        <li><a href="#">등록</a></li>
+                        <li><a href="#">교과과정</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="">뉴스룸</a>
+                    <a href="">알림</a>
                     <ul class="sub">
-                        <li><a href="#">공지</a></li>
+                        <li><a href="#">공지사항</a></li>
                         <li><a href="#">보도자료</a></li>
-                        <li><a href="#">임직원 이야기</a></li>
-                        <li><a href="#">사보</a></li>
+                        <li><a href="#">수상소식</a></li>
+                        <li><a href="#">정보공개</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
     </header>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.main>li').mouseover(function () {
+                $(this).find('.sub').stop().slideDown(200);
+            });
+            $('.main>li').mouseout(function () {
+                $(this).find('.sub').stop().slideUp(200);
+            });
+        });
+        /*
+        $ > find
+        메뉴 각자 내려오게 할 때 사용
+        */
+    </script>
 </body>
 
 </html>

@@ -21,6 +21,10 @@ a {
     color: #333;
 }
 
+img {
+    vertical-align: top;
+}
+
 /* 기본 */
 .wrap {
     width: 1200px;
@@ -31,11 +35,9 @@ a {
 header {
     position: relative;
     z-index: 1; /* 앞으로올리기 */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 100px;
     background: #eef2f8;
+    padding-top: 30px;
 }
 
 /* 로고 */
@@ -47,12 +49,9 @@ header {
 /* 내비게이션 */
 .gnb {
     position: absolute;
-    right: 0;
-    width: 640px;
-    height: 30px;
+    top: 30px;
+    right: 24px;
     text-align: center;
-    line-height: 30px;
-    margin-right: 20px;
 }
 
 /* 1depth 메인메뉴 */
@@ -64,8 +63,9 @@ header {
     /* 메인메뉴 */
     display: block;
     width: 160px;
-    height: 30px;
+    height: 40px;
     font-size: 18px;
+    line-height: 40px;
     font-weight: bold;
 }
 
@@ -74,9 +74,6 @@ header {
     color: #fff;
 }
 
-.main:hover .sub {
-    height: 120px;
-}
 /*
     .main>li:hover .sub메뉴당 한줄씩
     .main:hover .sub메뉴 전부
@@ -85,21 +82,19 @@ header {
 
 /* 2depth 서브메뉴 */
 .sub {
-    height: 0;
-    overflow: hidden;
-    transition: 0.3s; /* 슬라이딩을 위해 */
+    display: none;
+    height: 120px;
+    line-height: 30px;
     background: rgba(255, 255, 255, 0.5);
 }
 
-.sub a {
-    display: block;
-}
 .sub li a:hover {
     background: #1a4975;
     color: #fff;
 }
 
 .sub > li > a {
+    display: block;
     font-size: 14px;
 }
 
@@ -115,9 +110,6 @@ header {
     animation: slide 8s infinite;
 }
 
-.slide img {
-    vertical-align: top;
-}
 
 @keyframes slide {
     0% {top: 0;}

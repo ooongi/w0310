@@ -6,7 +6,11 @@
     box-sizing: border-box;
 }
 
-body, ul, h1, h2, p {
+body,
+ul,
+h1,
+h2,
+p {
     margin: 0;
 }
 
@@ -27,46 +31,79 @@ ul {
 }
 /* 주조색 50%이상 color: #1b3b86; */
 
-header, .contents, footer {
+header,
+.contents,
+footer {
     width: 1340px;
     /* 가운데정렬 */
     margin: 0 auto;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
+    width: 1340px;
     height: 100px;
+    margin: 0 auto;
+    padding-top: 24px;
+    background: #fff;
 }
 
-nav {
-    width: 800px;
-    height: 60px;
+.logo {
+    width: 200px;
+    height: 40px;
 }
 
-nav a {
+.gnb {
+    z-index: 2;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+
+/* 1dep */
+.main {
+    display: flex;
+    text-align: center;
+    justify-content: end;
+}
+
+.main>li {
+    width: 160px;
+    height: 40px; /* 아래범위한정 */
+}
+
+.main > li > a {
     display: block;
     font-size: 18px;
-}
-
-nav li {
-    border: 1px solid #333;
-    width: 160px;
-    line-height: 60px;
-    text-align: center;
-
-    /*
-        inline, inline-block, none은 자기자신에게 부여
-        inline은 width를 부여하지 못함
-    */
-    display: inline-block;
-}
-
-.main :hover {
-    background-color: #333;
+    font-weight: bold;
+    background: #386ed3;
     color: #fff;
+    padding: 10px;
+}
 
+.main > li > a:hover {
+    background: rgb(145, 145, 145);
+    color: #333;
+}
+
+/* 2dep */
+.sub {
+    display: none;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.5);
+    line-height: 30px;
+    /* transition: .3s; */
+    /* display는 transition 적용 x */
+}
+
+.sub a {
+    display: block;
+    color: #fff;
+}
+
+.sub a:hover {
+    background: #fff;
+    color: #333;
 }
 
 .slide {
@@ -74,8 +111,7 @@ nav li {
     overflow: hidden;
 }
 
-
-.slide li+li {
+.slide li + li {
     /*
         li 밑에 있는 동생 li 숨기기
     이후 슬라이드 구현 시 지워야 하는 부분
@@ -141,7 +177,6 @@ nav li {
 .notice span {
     padding-left: 16px;
 }
-
 
 .gallery {
     width: 670px;
@@ -210,10 +245,10 @@ footer a {
     color: #395599;
 }
 .sns li:nth-of-type(2) a:hover {
-    color: #1C96E8;
+    color: #1c96e8;
 }
 .sns li:nth-of-type(3) a:hover {
-    color: #9F53A4;
+    color: #9f53a4;
 }
 /* .sns li:nth-of-type(1)::after {
     content: "|";
