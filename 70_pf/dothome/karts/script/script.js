@@ -8,6 +8,15 @@
             });
         });
 
+        $(function(){
+            $('.notice>ul>li').click(function(){
+                $('.modal').show();
+            });
+            $('.popup>div').click(function(){
+                $('.modal').hide();
+            });
+        });
+
         /* 
             제이쿼리의 문(statements)의 형식
                 객체.메서드();
