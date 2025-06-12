@@ -19,10 +19,10 @@ $(function () {
 // });
 
 $(function(){
-    $('#notice li').eq(0).click(function(){
+    $('.notice li').click(function(){
         $('.modal').show();
     });
-    $('.popup a').click(function(){
-        $('.modal').show();
+    $('.popup div').click(function(){
+        $('.modal').hide();
     });
 });

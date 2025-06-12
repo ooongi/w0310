@@ -297,8 +297,7 @@ footer a {
 
 .popup {
     width: 500px;
-    height: 500px;
-    margin: 50px auto;
+    margin: 10% auto;
     background: #fff;
     padding: 30px;
 }
@@ -307,8 +306,6 @@ footer a {
     text-align: right;
 }
 
-.popup a {
-    background: #333;
-    color: #fff;
+.popup button {
     padding: 5px 10px;
 }

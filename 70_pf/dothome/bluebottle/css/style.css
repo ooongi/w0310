@@ -290,7 +290,6 @@ footer .inner {
 .popup {
     margin: 50px auto;
     width: 500px;
-    height: 600px;
     padding: 50px;
     background: #fff;
 }
@@ -304,9 +303,6 @@ footer .inner {
     text-align: right;
 }
 
-.popup a {
-    background: #333;
-    color: #fff;
-    width: 100px;
-    padding: 2px;
+.popup button {
+    padding: 2px 5px;
 }
