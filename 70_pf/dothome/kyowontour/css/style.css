@@ -23,6 +23,9 @@ a {
     color: #333;
 }
 
+img {
+    vertical-align: top;
+}
 /* 공통 */
 html,
 body {
@@ -76,6 +79,7 @@ header {
     display: block;
     text-align: center;
     font-size: 18px;
+    font-weight: bold;
     border-bottom: 1px solid #333;
     background: #fff;
     padding: 8px 0;
@@ -90,6 +94,7 @@ header {
 .main li:hover .sub {
     z-index: 1;
     left: 160px;
+    height: 200px;
     visibility: visible;
     opacity: 1;
 }
@@ -120,8 +125,6 @@ header {
     color: #333;
     background: #fff;
 }
-
-
 
 /* contents */
 .contents {
@@ -195,10 +198,10 @@ header {
     text-align: right;
 }
 
-.popup > div > a {
-    padding: 5px 10px;
-    background: #fff;
+.popup button {
+    padding: 2px 5px;
 }
+
 /* .notice a {
     display: inline-block;
     width: 287px;

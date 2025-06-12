@@ -1,19 +1,19 @@
-        $(document).ready(function(){
-            $('.main>li').mouseover(function(){
-                $('.sub').stop().slideDown();
-                $('.nav_bg').stop().animate({left: 160});
-            });
-            $('.main>li').mouseout(function(){
-                $('.sub').stop().slideUp();
-                $('.nav_bg').stop().animate({left: 0});
-            });
-        });
+        // $(document).ready(function(){
+        //     $('.main>li').mouseover(function(){
+        //         $('.sub').stop().slideDown();
+        //         $('.nav_bg').stop().animate({left: 160});
+        //     });
+        //     $('.main>li').mouseout(function(){
+        //         $('.sub').stop().slideUp();
+        //         $('.nav_bg').stop().animate({left: 0});
+        //     });
+        // });
 
         $(function(){
             $('.notice>ul>li:first-child').click(function(){
                 $('.modal').show();
             });
-            $('.popup>div>a').click(function(){
+            $('.popup>div>button').click(function(){
                 $('.modal').hide();
             });
         });

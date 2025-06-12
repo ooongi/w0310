@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>농심 플라이아웃 메뉴 js</title>
+    <title>농심 플라이아웃 메뉴 jq 미수정</title>
     <style>
-        /* 공통 */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -14,13 +13,13 @@
         }
 
         body {
-            font: 15px/1.6 '굴림', sans-serif;
             background: #fff;
             color: #333;
+            font: 15px/1.6 '돋움', sans-serif;
         }
 
         ul {
-            list-style-type: none;
+            list-style: none;
         }
 
         a {
@@ -28,81 +27,91 @@
             color: #333;
         }
 
-        img {
-            vertical-align: top;
-        }
-
 
         /* 헤더 */
+
         header {
+            /* position: relative; */
             width: 200px;
-            height: 850px;
-            background: rgb(211, 211, 211);
+            height: calc(100vh - 120px);
+            /* vh 화면전체(세로) */
+            background: #fff;
+            padding-top: 30px;
         }
 
-        .logo img {
-            padding-top: 24px;
-        }
-
-        .gnb {
+        /* 로고 */
+        .logo {
             width: 200px;
-            margin: 30px auto;
-            z-index: 2;
-        }
-
-        /* 1dep */
-        .main {
+            height: 40px;
+            margin-bottom: 30px;
             text-align: center;
-            justify-content: end;
         }
 
-        .main li {
-            width: 160px;
+
+        /* 내비게이션 */
+        .gnb {
+            margin: 20px;
+        }
+
+        /* 1뎁스 메인 */
+        .main>li {
+            position: relative;
+            /* sub가 li의 자식이기 때문 */
         }
 
         .main>li>a {
             display: block;
+            text-align: center;
             font-size: 18px;
-            font-weight: bold;
-            background: #333;
-            color: #999;
-            padding: 10px;
-        }
-
-        .main>li>a:hover {
-            background: blue;
-            color: #fff;
-        }
-
-        /* 2dep */
-        .sub {
-            /* height: 0;
-            opacity: 0;
-            visibility: hidden; */
-            display: none;
-            height: 150px;
-            background: rgba(0, 0, 0, 0.5);
-            line-height: 30px;
-            /* transition: .3s; */
-            /* display는 transition 적용 x */
-        }
-
-        .sub a {
-            display: block;
-            color: #fff;
-        }
-
-        .sub a:hover {
+            border: 1px solid #333;
             background: #fff;
+            padding: 8px 0;
             color: #333;
         }
 
-        /* .main:hover .sub {
-            height: 150px;
-            opacity: 1;
+
+        .main>li>a:hover {
+            background: #E6001E;
+            color: #fff;
+        }
+
+        .main:hover .sub {
+            z-index: 1;
+            left: 160px;
             visibility: visible;
-        } */
-        /* 내비게이션 */
+            opacity: 1;
+        }
+
+        .sub {
+            z-index: 1; /* -1까지 안써도 됌 */
+            position: absolute;
+            display: flex;
+            visibility: hidden;/* 잘 가리고 호버 잘되게 함 */
+            top: 0;
+            opacity: 0;
+            left: 100px;
+            width: calc(100vw - 180px);
+            background: rgba(119, 119, 119, 0.5);
+            transition: .3s;
+            line-height: 2;
+            padding: 9px 30px;
+        }
+
+        .sub li a {
+            display: block;
+            /* text-align: center; */
+            font-size: 14px;
+            color: #fff;
+            padding-left: 16px;
+            width: 160px;
+            margin: 0 16px;
+        }
+
+        .sub li a:hover {
+            color: #333;
+            background: #fff;
+
+        }
     </style>
 </head>
 
@@ -143,20 +152,6 @@
             </ul>
         </nav>
     </header>
-    <script src="script/jquery-1.12.4.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.main>li').mouseover(function(){
-                $('.sub').stop().slideDown();
-                $('.nav_bg').stop().animate({left: 160});
-            });
-            $('.main>li').mouseout(function(){
-                $('.sub').stop().slideUp();
-                $('.nav_bg').stop().animate({left: 0});
-            });
-        });
-
-    </script>
 </body>
 
 </html>
