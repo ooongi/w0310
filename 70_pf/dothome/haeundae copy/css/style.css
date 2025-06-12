@@ -214,7 +214,7 @@ header {
     line-height: 2;
 }
 
-.tabs #notice li:hover {
+.tabs #notice li>a:hover {
     text-decoration: underline;
 
 }
@@ -230,14 +230,11 @@ header {
 /* 갤러리 */
 #gallery {
     width: 100%;
-    height: 100%;
+    height: 160px;
     background: #fff;
     padding: 20px;
 }
 
-#gallery a {
-    margin-right: 3px;
-}
 
 /* 배너 */
 .banner {
