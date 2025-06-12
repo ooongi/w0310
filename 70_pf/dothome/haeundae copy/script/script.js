@@ -11,3 +11,12 @@ $(function () {
     });
 
 });
+
+$(function(){
+    $('#notice>ul>li:first-child').click(function(){
+        $('.modal').show();
+    });
+    $('.popup>div').click(function(){
+        $('.modal').hide();
+    });
+});

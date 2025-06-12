@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>농심 플라이아웃 메뉴 js</title>
+    <style>
+        /* 공통 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 15px/1.6 '굴림', sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+
+        /* 헤더 */
+        header {
+            width: 200px;
+            height: 850px;
+            background: rgb(211, 211, 211);
+        }
+
+        .logo img {
+            padding-top: 24px;
+        }
+
+        .gnb {
+            width: 200px;
+            margin: 30px auto;
+            z-index: 2;
+        }
+
+        /* 1dep */
+        .main {
+            text-align: center;
+            justify-content: end;
+        }
+
+        .main li {
+            width: 160px;
+        }
+
+        .main>li>a {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            background: #333;
+            color: #999;
+            padding: 10px;
+        }
+
+        .main>li>a:hover {
+            background: blue;
+            color: #fff;
+        }
+
+        /* 2dep */
+        .sub {
+            /* height: 0;
+            opacity: 0;
+            visibility: hidden; */
+            display: none;
+            height: 150px;
+            background: rgba(0, 0, 0, 0.5);
+            line-height: 30px;
+            /* transition: .3s; */
+            /* display는 transition 적용 x */
+        }
+
+        .sub a {
+            display: block;
+            color: #fff;
+        }
+
+        .sub a:hover {
+            background: #fff;
+            color: #333;
+        }
+
+        /* .main:hover .sub {
+            height: 150px;
+            opacity: 1;
+            visibility: visible;
+        } */
+        /* 내비게이션 */
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo"><a href="#"><img src="images/logo.png" alt="로고"></a></h1>
+        <nav class="gnb">
+            <ul class="main">
+                <li><a href="#">농심소개</a>
+                    <ul class="sub">
+                        <li><a href="#">CI소개</a></li>
+                        <li><a href="#">연혁</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">홍보센터</a>
+                    <ul class="sub">
+                        <li><a href="#">농시미 이벤트</a></li>
+                        <li><a href="#">농심소식</a></li>
+                        <li><a href="#">농심TV</a></li>
+                        <li><a href="#">글로벌 푸드 뉴스</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">오픈이노베이션</a>
+                    <ul class="sub">
+                        <li><a href="#">소개</a></li>
+                        <li><a href="#">스타트업 안내</a></li>
+                        <li><a href="#">지원하기</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">고객서비스</a>
+                    <ul class="sub">
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">자주묻는질문</a></li>
+                        <li><a href="#">견학신청</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <script src="script/jquery-1.12.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.main>li').mouseover(function(){
+                $('.sub').stop().slideDown();
+                $('.nav_bg').stop().animate({left: 160});
+            });
+            $('.main>li').mouseout(function(){
+                $('.sub').stop().slideUp();
+                $('.nav_bg').stop().animate({left: 0});
+            });
+        });
+
+    </script>
+</body>
+
+</html>
