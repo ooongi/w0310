@@ -27,6 +27,10 @@ ul {
 }
 /* 주조색 50%이상 color: #1b3b86; */
 
+img {
+    vertical-align: top;
+}
+
 header, .contents, footer {
     width: 1340px;
     /* 가운데정렬 */
@@ -36,7 +40,8 @@ header, .contents, footer {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
+    width: 1340px;
     height: 100px;
     position: relative;
 }
@@ -45,9 +50,10 @@ nav {
     width: 800px;
     height: 60px;
     z-index: 2;
+    padding-top: 11px;
 }
 
-.sub_bg {
+.nav_bg {
     position: absolute;
     z-index: 1;
     width: 100%;
@@ -102,15 +108,26 @@ nav {
 .slide {
     height: 350px;
     overflow: hidden;
+    position: relative;
 }
 
 
-.slide li+li {
-    /*
-        li 밑에 있는 동생 li 숨기기
-    이후 슬라이드 구현 시 지워야 하는 부분
-    */
-    display: none;
+.slide ul {
+    position: absolute;
+    width: 100%;
+    height: 400%;
+    animation: slide 6s infinite;
+}
+
+@keyframes slide {
+    0% {top: 0%}
+    10% {top: -100%}
+    33% {top: -100%}
+    43% {top: -200%}
+    66% {top: -200%}
+    76% {top: -300%}
+    99.99% {top: -300%}
+    100% {top: 0%}
 }
 
 .contents {
@@ -150,7 +167,7 @@ nav {
 .noga {
     display: flex;
     height: 330px;
-    background: #333;
+    background: #555;
     padding: 30px;
     color: #fff;
 }
@@ -163,14 +180,24 @@ nav {
     width: 670px;
 }
 
-.notice a {
+.notice li {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+.notice>ul>li:hover {
+    text-decoration: underline;
+}
+
+/* .notice a {
     display: inline-block;
     width: 500px;
 }
 
 .notice span {
     padding-left: 16px;
-}
+} */
 
 
 .gallery {
@@ -195,16 +222,24 @@ footer {
     /* align-items: center; */
     /* align-content: center; */
     height: 120px;
-    background-color: #111;
+    background-color: #333;
     color: #777;
-    padding: 0 35px;
 }
 
 footer a {
     color: #777;
 }
 
-.left {
+.blogo {
+    width: 199px;
+    height: 40px;
+    margin: 35px 20px 0;
+}
+
+.blogo img {
+}
+
+.copy {
     width: 1000px;
     padding-top: 35px;
 }
@@ -213,37 +248,9 @@ footer a {
     width: 340px;
 }
 
-.sns {
-    height: 40px;
-    padding-top: 24px;
-    font-size: 24px;
-}
-
-.sns img {
-    width: 24px;
-}
-
-.sns ul {
-    margin-bottom: 8px;
-}
-
-.sns li {
-    display: inline;
-    margin-right: 8px;
-}
 
 .fs {
     padding-top: 24px;
-}
-
-.sns li:nth-of-type(1) a:hover {
-    color: #395599;
-}
-.sns li:nth-of-type(2) a:hover {
-    color: #1C96E8;
-}
-.sns li:nth-of-type(3) a:hover {
-    color: #9F53A4;
 }
 /* .sns li:nth-of-type(1)::after {
     content: "|";
@@ -256,3 +263,31 @@ footer a {
 /* .sns li:not(:last-of-type)::after {
     content: " |";
 } */
+
+.modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.popup {
+    width: 500px;
+    height: 500px;
+    background: #fff;
+    margin: 150px auto;
+    padding: 20px;
+}
+
+.popup div {
+    text-align: right;
+}
+
+.popup a {
+    background: #333;
+    color: #fff;
+    padding: 5px 2px;
+}

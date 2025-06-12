@@ -8,3 +8,12 @@ $(function () {
         $('.nav_bg').stop().animate({height:0});
     });
 });
+
+$(function(){
+    $('.notice>ul>li:first-child').click(function(){
+        $('.modal').show();
+    });
+    $('.popup div').click(function(){
+        $('.modal').hide();
+    });
+});

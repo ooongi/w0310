@@ -134,11 +134,7 @@ header {
     100% {top:0%;}
 }
 
-.wrap {
-    position: absolute;
-    top: 330px;
-    left: 290px;
-}
+
 
 .contents {
     height: 600px;
