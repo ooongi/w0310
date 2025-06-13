@@ -31,6 +31,8 @@ img {
     height: 650px;
     display: flex;
 }
+/* 전체 너비와 높이를 잡고 flex */
+
 
 /* 헤더 */
 header {
@@ -39,12 +41,14 @@ header {
     background: lightpink;
     padding-top: 30px;
 }
+/* 헤더의 높이와 너비를 정하고 배경색을 넣고 패딩으로 내부 여백 */
 
 /* 로고 */
 .logo {
     width: 200px;
     height: 40px;
 }
+/* 문제 내 로고영역크기 */
 
 /* 내비게이션 */
 .gnb {
@@ -54,7 +58,7 @@ header {
     line-height: 30px;
     text-align: center;
 }
-
+/* 네비게이션 영역으로 너비주고 마진오토로 가운데배치, 라인하이트와 텍스트얼라인센터로 가운데정렬 */
 /* 1depth 메인메뉴 */
 /* .main {
             display: flex;
@@ -73,16 +77,18 @@ header {
     background: #fff;
     border-top: 2px solid #ad069f;
 }
+/* 디스플레이블럭으로 전체효과들어가게, 폰트크기 굵기 */
 
 .main>li>a:hover {
     background: #ad069f;
     color: #fff;
 }
+/* 호버효과 */
 
 .main li:hover .sub {
     height: 90px;
 }
-
+/* 아래드롭시 서브메뉴부분 공간의 높이 90px로 늘림*/
 /*
         .main>li:hover .sub메뉴당 한줄씩
         .main:hover .sub메뉴 전부
@@ -96,21 +102,27 @@ header {
     /* 슬라이딩을 위해 */
     background: #fff;
 }
+/* 서브메뉴부분 높이는 0으로 설정하므로 넘치는 부분은 오버플로우 히든, 부드러움 효과를 위해 트랜지션 */
 
 .sub>li>a {
     display: block;
     font-size: 14px;
 }
+/* 블럭으로 전체효과 */
 
 .sub li a:hover {
     background: #ff96f1;
     color: #fff;
 }
+/* 호버 전체효과 */
+
+
 
 /* 오른쪽 콘텐츠 */
 .container {
     width: 800px;
 }
+/* 오른쪽 컨텐츠 넓이 */
 
 /* 슬라이드 */
 .slide {
@@ -119,11 +131,14 @@ header {
     overflow: hidden;
     background: blue;
 }
+/* 슬라이드 높이 설정, 포지션렐러티브로 부모설정 넘치는 이미지 방지를 위해 오버플로우 히든 */
+
 
 .slide li {
     position: absolute;
     animation: 6s infinite;
 }
+/* 페이드는 이미지를 겹쳐야하므로 자식요소로 앱솔루트 추가 li 애니메이션 6초 인피니트 추가*/
 
 .slide li:nth-of-type(1) {
     animation-name: slide1;
@@ -138,6 +153,7 @@ header {
     animation-name: slide3;
     opacity: 0;
 }
+/* 각 li에 애니메이션 네임 추가 2,3 이미지는 오페시티0 */
 
 @keyframes slide1 {
     0% { opacity: 0;}
@@ -163,6 +179,7 @@ header {
     76% {opacity: 1;}
     100% {opacity: 1;}
 }
+/* 외워 */
 
 /* 공지사항~바로가기링크 */
 .contents {
@@ -170,11 +187,13 @@ header {
     height: 200px;
     padding: 5px 0 5px 5px;
 }
+/* 가로배치이므로 플렉스, 높이설정, 여백설정 */
 
 /* 탭 */
 .tabs {
     width: 300px;
 }
+/* 공지사항과 갤러리 탭을 하는 너비를 설정 남은 너비는 배너와 링크에서 사용해야하므로 */
 
 .tabs .btn a {
     border-left: 1px solid #333;
@@ -185,11 +204,14 @@ header {
     background: #333;
     color: #fff;
 }
+/* 공지사항, 갤러리 버튼 설정 보더 왼쪽, 위 테두리 설정으로 클릭했을 때 효과를 나타나게 함 패딩으로 여백설정 */
 
 .tabs .btn a.active {
     background: #fff;
     color: #333;
 }
+/* 제이쿼리 효과로 a.active를 가지고 있는 사람은 배경과 글자 색상이 변경된다 */
+
 
 /* 공지사항 */
 .tabs #notice {
@@ -198,34 +220,32 @@ header {
     background: #fff;
     padding: 0 5px;
 }
-
-.tabs h2 {
-    border-bottom: 1px solid #333;
-    margin-bottom: 5px;
-}
+/* 공지사항 넓이는 부모를 따라간다 높이만 적절히 설정 */
 
 .tabs #notice li {
     display: flex;
     justify-content: space-between;
-}
-
-.tabs #notice a {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 2;
 }
+/* 공지사항 글자 내부 가로정렬로 플렉스, 스페이스비트윈 추가, 글자 크기와 간격 조절 */
 
 .tabs #notice li>a:hover {
     text-decoration: underline;
-
 }
+/* 마우스호버로 밑줄 추가 */
 
+
+/* jq효과 */
 .tabs div {
     display: none;
 }
+/* jq효과로 none 처리 */
 
 .tabs div.active {
     display: block;
 }
+/* div.active를 가지고 있는 div만 보이게 함 */
 
 /* 갤러리 */
 #gallery {
@@ -234,6 +254,8 @@ header {
     background: #fff;
     padding: 20px;
 }
+/* 갤러리 부모기준 넓이, 높이 공지사항과 동일함
+패딩으로 간격 조절 이미지크기 80*80 */
 
 
 /* 배너 */
@@ -254,11 +276,14 @@ footer {
     height: 100px;
     background: #555;
 }
+/* 가로배치이므로 플렉스와 남은 높이를 줌 */
 
 .blogo {
     width: 200px;
     height: 40px;
 }
+/* 로고기본크기제공 */
+
 
 .blogo img {
     margin-top: 25px;
@@ -267,6 +292,7 @@ footer {
 .right {
     width: 600px;
 }
+/* 저작권, 바로가기메뉴공간 */
 
 .bmenu {
     height: 50px;
@@ -276,17 +302,19 @@ footer {
     display: flex;
     padding-top: 15px;
 }
+/* 바로가기 메뉴가 가로배치이므로 플렉스정렬 */
 
 .bmenu a {
     color: #999;
     margin: 0 6px;
 }
+/* 글자색 조절과 좌우여백 */
 
 .bmenu li:not(:last-of-type)::after {
     content: "|";
     color: #999;
-
 }
+/* 바로가기메뉴 옆에 | 추가 */
 
 .copy {
     height: 50px;
@@ -296,23 +324,27 @@ footer {
     font-size: 13px;
     color: #999;
 }
+/* 저작권 글자 크기 조절 */
 
+
+/* 모달팝업 */
 .modal {
     display: none;
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: fixed;
     background: rgba(51, 51, 51, 0.5);
     top: 0;
 }
+/* jq효과로 팝업되어야하므로 none처리 독립적으로 행동해야하므로 fix 처리 */
 
 .popup {
     width: 400px;
-    height: 400px;
     background: #fff;
     margin: 100px 300px;
     padding: 20px;
 }
+/* 팝업 내용은 메인페이지 안에 들어가있어야한다 */
 
 .popup p {
     margin-top: 6px;
@@ -322,8 +354,6 @@ footer {
     text-align: right;
 }
 
-.popup a {
-    background: #333;
-    color: #fff;
-    padding: 5px;
+.popup button {
+    padding: 2px 5px;
 }

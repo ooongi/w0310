@@ -7,7 +7,7 @@
 }
 
 body {
-    font: 15px/1.6 "돋움", sans=serif;
+    font: 15px/1.6 '돋움', sans-serif;
     background: #fff;
     color: #333;
 }
@@ -25,198 +25,202 @@ img {
     vertical-align: top;
 }
 
+/* 전체 */
+
 .wrap {
-    display: flex;
     width: 1000px;
     height: 650px;
+    background: #fff;
+    display: flex;
 }
 
 /* 헤더 */
+
 header {
     width: 200px;
-    background: #444;
-    position: relative;
+    background: #999;
 }
 
 .logo {
+    width: 200px;
     height: 40px;
-    padding-top: 10px;
+}
+
+.logo img {
+    margin-top: 20px;
 }
 
 nav {
-    position: relative;
     width: 160px;
-    text-align: center;
     margin: 30px auto;
+    background: #fff;
+    line-height: 30px;
 }
 
-.main > li > a {
+.main>li>a {
     display: block;
+    width: 160px;
+    height: 60px;
     font-size: 18px;
     font-weight: bold;
-    height: 60px;
+    text-align: center;
+    border-top: 3px solid pink;
     line-height: 60px;
-    border-top: 2px solid #333;
-    background: yellow;
+
 }
 
-.main > li > a:hover {
-    background: #fff;
-    color: blue;
+.main>li>a:hover {
+    background: red;
+    color: #fff;
 }
 
-.main li:hover .sub {
-    height: 120px;
+.main>li:hover .sub {
+    height: 90px;
 }
 
 .sub {
     height: 0;
     overflow: hidden;
-    transition: 0.5s;
-    background: #fff;
+    transition: .5s;
+    background: pink;
 }
 
-.sub > li > a {
+.sub>li>a {
     display: block;
     text-align: center;
-    height: 40px;
-    line-height: 40px;
-}
-
-.sub > li > a:hover {
-    background: blue;
+    line-height: 30px;
     color: #fff;
+
 }
 
-.container {
-    width: 800px;
-}
-
-/* 슬라이드 */
-.slide {
-    height: 350px;
-    overflow: hidden;
-    position: relative;
-}
-
-.slide ul {
-    position: relative;
-    display: flex;
-    width: 400%;
-    height: 100%;
-    animation: slide 8s infinite;
-}
-
-@keyframes slide {
-    0% {
-        left: 0%;
-    }
-    10% {
-        left: -100%;
-    }
-    33% {
-        left: -100%;
-    }
-    43% {
-        left: -200%;
-    }
-    66% {
-        left: -200%;
-    }
-    76% {
-        left: -300%;
-    }
-    99.99% {
-        left: -300%;
-    }
-    100% {
-        left: 0%;
-    }
-}
-
-/* 공지사항~바로가기링크 */
-.contents {
-    display: flex;
-    height: 200px;
-    padding: 5px 0;
-}
-
-/* 탭 */
-.tabs {
-    width: 300px;
-    margin-top: 5px;
-    margin-left: 5px;
-}
-
-.tabs .btn a {
-    border-left: 1px solid #333;
-    border-top: 1px solid #333;
-    padding: 5px 15px;
-    text-align: center;
-    align-items: 20px;
-    background: #333;
-    color: #fff;
-}
-
-.tabs .btn a.active {
+.sub>li>a:hover {
     background: #fff;
     color: #333;
 }
 
-/* 공지사항 */
-.tabs #notice {
-    width: 100%;
-    padding: 0 5px;
+/* container */
+.container {
+    width: 800px;
 }
 
-.tabs h2 {
-    border-bottom: 1px solid #333;
-    margin-bottom: 5px;
+/* slide */
+
+.slide {
+    height: 350px;
+    background: #888;
+    position: relative;
+    overflow: hidden;
 }
 
-.tabs #notice li {
+.slide li {
+    position: absolute;
+    animation: 6s infinite;
+}
+
+.slide li:nth-of-type(1) {
+    animation-name: fade1;
+}
+
+.slide li:nth-of-type(2) {
+    animation-name: fade2;
+    opacity: 0;
+}
+
+.slide li:nth-of-type(3) {
+    animation-name: fade3;
+    opacity: 0;
+}
+
+@keyframes fade1 {
+    0% {opacity: 0;}
+    10% {opacity: 1;}
+    43% {opacity: 1;}
+    66% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@keyframes fade2 {
+    0% {opacity: 0;}
+    33% {opacity: 0;}
+    43% {opacity: 1;}
+    66% {opacity: 1;}
+    76% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@keyframes fade3 {
+    0% {opacity: 1;}
+    10% {opacity: 0;}
+    66% {opacity: 0;}
+    76% {opacity: 1;}
+    100% {opacity: 1;}
+}
+/* contents */
+
+.contents {
+    display: flex;
+    height: 200px;
+    padding-top: 5px;
+}
+
+/* tabs */
+
+.tabs {
+    width: 300px;
+    padding: 3px;
+}
+
+.btn a {
+    border-top: 1px solid #333;
+    border-left: 1px solid #333;
+    padding: 2px 5px;
+    background: #333;
+    color: #fff;
+}
+
+.btn a.active {
+    background: #fff;
+    color: #333;
+}
+
+#notice li {
     display: flex;
     justify-content: space-between;
 }
 
-.tabs #notice ul {
-    padding: 5px 0;
-}
-
-.tabs #notice a:hover {
+#notice a:hover {
     text-decoration: underline;
-
-}
-
-.tabs div {
-    display: none;
 }
 
 .tabs div.active {
     display: block;
 }
 
-/* 갤러리 */
-#gallery {
-    width: 100%;
-    margin-top: 10px;
+.tabs div {
+    display: none;
 }
 
-#gallery a {
-    padding: 0 5px;
+#gallery {
+    padding: 20px 0 0 20px;
 }
+
+/* banner */
+
 .banner {
     width: 250px;
 }
+
+/* link */
 
 .link {
     width: 250px;
 }
 
+/* footer */
 footer {
-    display: flex;
     height: 100px;
-    background: #666;
+    display: flex;
+    background: #888;
 }
 
 .blogo {
@@ -227,24 +231,61 @@ footer {
     margin-top: 20px;
 }
 
-.txt {
-    font-size: 14px;
-    color: #999;
-}
-
-.btxt a {
-    color: #999;
-}
-
-.btxt {
+.bottom_menu {
     width: 600px;
+}
+
+.bmenu {
     height: 50px;
 }
 
-.btxt ul {
+.bmenu ul {
     display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-    line-height: 50px;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 
+.bmenu a {
+    margin: 0 5px;
+    font-size: 13px;
+} 
+
+.bmenu li:not(:last-of-type)::after {
+    content: "|";
+}
+
+.copy {
+    height: 50px;
+}
+
+.copy p {
+    font-size: 13px;
+    padding-left: 15px;
+
+}
+
+.modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    top: 0;
+}
+
+.popup {
+    width: 500px;
+    height: 300px;
+    margin: 200px 250px;
+    background: #fff;
+    padding: 20px;
+}
+
+.popup div {
+    text-align: right;
+}
+
+.popup button {
+    padding: 2px 5px;
+}
