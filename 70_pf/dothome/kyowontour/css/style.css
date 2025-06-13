@@ -103,12 +103,12 @@ header {
     z-index: 1; /* -1까지 안써도 됌 */
     position: absolute;
     visibility: hidden; /* 잘 가리고 호버 잘되게 함 */
-    top: 0;
     opacity: 0;
-    left: 100px;
+    top: 0;
+    left: 150px;
     width: 160px;
     background: rgba(119, 119, 119, 0.8);
-    transition: 0.3s;
+    transition: 0.5s;
     line-height: 2;
     padding: 16px 0;
 }
