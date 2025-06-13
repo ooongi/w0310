@@ -1,21 +1,31 @@
 @charset "utf-8";
 
-body,
-ul,
-img {
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-.fade img {
+body {
+    font: 15px/1.6 "돋움", sans-serif;
+    background: #fff;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+img {
     vertical-align: top;
 }
 
 .fade {
-    position: relative;
-    list-style: none;
-    padding: 0;
     width: 1720px;
     height: 400px;
     overflow: hidden;
@@ -39,8 +49,8 @@ img {
 @keyframes fade1 {
     0% {opacity: 0;}
     10% {opacity: 1;}
-    43% {opacity: 1;}
-    66% {opacity: 0;}
+    33% {opacity: 1;}
+    43% {opacity: 0;}
     100% {opacity: 0;}
 }
 
