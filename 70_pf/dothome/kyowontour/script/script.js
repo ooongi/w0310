@@ -16,6 +16,20 @@
             $('.popup>div>button').click(function(){
                 $('.modal').hide();
             });
+
+            //슬라이더
+            //슬라이더의 너비를 변수에 할당
+            var sliderWidth = $('#slider').width();
+            //매2초마다 setInterval(function(){}, 시간);
+            setInterval(function(){
+                // ul을 오른쪽(0)에서 왼쪽(calc(100% - 600px))으로 이동
+                $('#slider ul').animate({left : '-=' + sliderWidth + 'px'}, 500, function(){
+                    //#slider ul의 자식 중 첫번째 자식을 맨 뒤로 추가
+                    $(this).append($(this).children().first())
+                    // left 0의 위치로 이동
+                    .css('left', 0);
+                });
+            }, 2000);
         });
 
         /* 

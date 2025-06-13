@@ -1,10 +1,17 @@
         $(document).ready(function(){
+            //gnb
             $('.main').mouseover(function(){
                 $('.sub').stop().slideDown(200);
             });
             $('.main').mouseout(function(){
                 $('.sub').stop().slideUp(200);
             });
+
+            //slider
+            setInterval(function(){
+                $('#slider ul').animate({top: '-=300px'}, 500, function(){$(this).append($(this).children().first()).css('top', 0)
+                });
+            },2000);
         });
 
         /* 

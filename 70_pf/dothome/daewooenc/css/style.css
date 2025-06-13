@@ -99,28 +99,16 @@ header {
 }
 
 /* 슬라이드 */
-.slide {
+#slider {
     height: 300px;
     overflow: hidden;
 }
 
-.slide ul {
+#slider ul {
     position: relative;
-    height: 400%;
-    animation: slide 8s infinite;
+    top: 0;
 }
 
-
-@keyframes slide {
-    0% {top: 0;}
-    10% {top: -100%;}
-    33% {top: -100%;}
-    43% {top: -200%;}
-    66% {top: -200%;}
-    76% {top: -300%;}
-    99.99% {top: -300%;}
-    100% {top: 0;}
-}
 
 /* 팝업 레이어 */
 #popup {

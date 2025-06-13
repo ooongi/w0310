@@ -22,7 +22,7 @@ img {
 }
 
 .fade li {
-    position: absolute;
+    position: absolute; /* 이미지를 겹치게하기 위해 */
     animation: 6s infinite;
 }
 

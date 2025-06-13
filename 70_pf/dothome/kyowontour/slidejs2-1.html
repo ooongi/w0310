@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>세로 슬라이드 이미지</title>
+    <title>세로 슬라이드 이미지 반대로</title>
     <style>
         * {
             box-sizing: border-box;
@@ -38,7 +38,7 @@
 
         #slider ul {
             position: relative;
-            top: 0;
+            top: -600;
         }
 
     </style>
@@ -55,14 +55,12 @@
         </ul>
     </div>
 
-
-    
     <script>
         $(function () {
             var sliderHeight = $('#slider').height();
             setInterval(function () {
-                $('#slider ul').animate({ top: '-=300px' /* '-=' + sliderHeight + 'px' */ }, 500, function () {
-                    $(this).append($(this).children().first()).css('top', 0);
+                $('#slider ul').animate({ top: '+=300px' /* '-=' + sliderHeight + 'px' */ }, 500, function () {
+                    $(this).prepend($(this).children().last()).css('top', -600);
                 });
             }, 2000);
         });

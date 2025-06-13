@@ -101,15 +101,27 @@
                 a *= 1 >> a = a * 1
                 a /= 1 >> a = a / 1
 
+            함수(function)
+                setInterval()
         */
-        
-        $(function () {
-            var x = 1320;
             // 매 2초마다 반복 실행 2초=2000
             // 1000ms = 1s(초)
+            // append 맨 뒤에 추가 prepepend 맨 앞에 추가
+
+
+        //문서가 준비되면
+        $(function () {
+            //슬라이드 이미지 하나의 가로 크기를 변수 slideWidth에 할당
+            var slideWidth = $('#slider').width();
+            //매 2초마다 반복
             setInterval(function () {
-                $('#slider ul').animate({ left: '-=' + x + 'px'}, 500, function () {
-                    $(this).append($(this).children().first()).css('left', 0);
+                //ul(이미지 목록 전체)의 위치를 오른쪽에서 왼쪽(0에서 -1320px만큼)으로 이동하게 한다.
+                $('#slider ul').animate({ left: '-=' + slideWidth + 'px'}, 500, function () {
+                    $(this)
+                        // ul의 자식 중 첫 번째 자식을 ul의 맨 뒤에 추가한다.
+                        .append($(this).children().first())
+                        // ul의 위치를 -1320에서 0으로 위치시킨다.
+                        .css('left', 0);
                 });
             }, 2000);
         });

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>width()</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        div {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">박스1</div>
+    <div class="div2">박스2</div>
+
+    <script>
+        /*
+            html/css 메서드
+                $(선택자).width() > 요소의 가로 크기 가져오기(get)
+                $(선택자).width(값) > 요소의 가로 크기를 값으로 설정하기(set)
+                $(선택자).height() > 요소의 세로 크기 가져오기(get)
+                $(선택자).height(값) > 요소의 세로 크기를 값으로 설정하기(set)
+        */
+        $(function(){
+            //가져오기(getter)
+            var divWidth1 = $('.div1').width();
+            var divHeight1 = $('.div1').height();
+            console.log(divWidth1);
+            console.log(divHeight1);
+
+            //설정하기(setter)
+            $('.div2').width(200);
+            $('.div2').height(100);
+        });
+        
+
+    </script>
+</body>
+
+</html>
