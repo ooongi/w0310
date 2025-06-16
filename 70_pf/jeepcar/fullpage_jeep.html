@@ -17,6 +17,19 @@
             overflow: hidden;
         }
 
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
         /* 상단고정헤더 */
         .header {
             z-index: 9999;
@@ -26,8 +39,7 @@
             width: 100%;
             height: 80px;
             text-align: center;
-            line-height: 80px;
-            background: rgba(0, 0, 0, 0.5);
+            background: #fff;
         }
 
         /* 메인섹션 */
@@ -68,7 +80,15 @@
 </head>
 
 <body>
-    <header class="header">상단고정헤더</header>
+    <header class="header">
+        <ul>
+            <li><a href="sub/">모델소개</a></li>
+            <li><a href="#">구입문의</a></li>
+            <li><a href="#"><img src="images/logo.png" alt="로고"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+    </header>
     <div class="container">
         <div class="section">Section 1</div>
         <div class="section">Section 2</div>
