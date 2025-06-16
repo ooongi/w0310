@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>jQuery 풀페이지_jeep</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        /* 상단고정헤더 */
+        .header {
+            z-index: 9999;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        /* 메인섹션 */
+        .section {
+            height: 100vh;
+            width: 100%;
+            text-align: center;
+            font-size: 3em;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.5s;
+        }
+
+        .section:nth-child(1) {
+            background: #3498db;
+        }
+
+        .section:nth-child(2) {
+            background: #e67e22;
+        }
+
+        .section:nth-child(3) {
+            background: #2ecc71;
+        }
+
+        .section:nth-child(4) {
+            background: #dbe730;
+        }
+
+        .footer {
+            height: 100vh;
+            width: 100%;
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">상단고정헤더</header>
+    <div class="container">
+        <div class="section">Section 1</div>
+        <div class="section">Section 2</div>
+        <div class="section">Section 3</div>
+        <div class="section">Section 4</div>
+        <div class="footer">Footer Area</div>
+    </div>
+
+    <script>
+        //헤더고정풀페이지 - jeep
+        $(function () {
+            let now = 0;
+            const speed = 500;
+            const sections = $('.section');
+            const headerHeight = $('.header').height();
+            const total = sections.length + 1;
+
+            function scrollToSection(idx) {
+                let pos = 0;
+                if (idx < sections.length) {
+                    pos = sections.eq(idx).position().top;
+                } else {
+                    pos = $('.footer').position().top;
+                }
+                $('html,body').stop().animate({ scrollTop: pos }, speed);
+            }
+
+            $(window).on('wheel', function (e) {
+                if ($('html, body').is(':animated')) return; // 중복 스크롤 방지
+                const delta = e.originalEvent.deltaY;
+                if (delta > 0 && now < total - 1) {
+                    now++;
+                } else if (delta < 0 && now > 0) {
+                    now--;
+                }
+                scrollToSection(now);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
