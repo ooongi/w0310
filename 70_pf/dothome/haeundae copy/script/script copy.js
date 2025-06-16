@@ -1,5 +1,5 @@
-$(function () {
-    $('.tabs .btn a').click(function () {
+$(function(){
+    $('.btn a').click(function(){
         $(this).addClass('active');
         $(this).siblings().removeClass('active');
 
@@ -10,4 +10,10 @@ $(function () {
 
     });
 
+    $('#notice>ul>li:first-child').click(function(){
+        $('.modal').show();
+    });
+    $('.popup button').click(function(){
+        $('.modal').hide();
+    });
 });
