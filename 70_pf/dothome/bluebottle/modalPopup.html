@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블루보틀 모달팝업</title>
+    <script src="script/jquery-1.12.4.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        #modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        #modal-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>공지사항</h2>
+    <ul>
+        <li><a href="#" id="open-layer">첫 번째 공지사항입니다.</a></li>
+        <li><a href="#">두 번째 공지사항입니다.</a></li>
+    </ul>
+
+    <!-- 배경 어둡게 (오버레이) -->
+    <div id="modal-overlay"></div>
+
+    <!-- 모달 창 -->
+    <div id="modal-popup">
+        🔒 이것은 **모달 팝업**입니다.
+        <br><button id="close-modal">&times; 닫기</button>
+    </div>
+
+    <script>
+        $('#open-layer').click(() => {
+            $('#modal-popup, #modal-overlay').show();
+        });
+        $('#close-modal').click(() => {
+            $('#modal-popup, #modal-overlay').hide();
+        });
+    </script>
+
+
+</body>
+
+</html>
