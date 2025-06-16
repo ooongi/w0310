@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대우건설 레이어팝업</title>
+    <script src="script/jquery-1.12.4.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        #layer-popup {
+            display: none;
+            position: absolute;
+            top: 20%;
+            left: 100px;
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            z-index: 100;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 100;
+            top: 0;
+        }
+
+        .popup {
+            width: 500px;
+            background: #fff;
+            margin: 20% auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>공지사항</h2>
+    <ul>
+        <li><a href="#" id="open-layer">첫 번째 공지사항입니다.</a></li>
+        <li><a href="#" id="open2-layer">두 번째 공지사항입니다.</a></li>
+    </ul>
+    <!-- 모달 팝업 -->
+    <div class="modal">
+        <div class="popup">
+            <h2>제목</h2>
+            <p>내용입니다.</p>
+            <br><button id="close2-layer">닫기</button>
+        </div>
+    </div>
+
+    <!-- 레이어 팝업 (간단히 띄우는 레이어) -->
+    <div id="layer-popup">
+        <p>✅ 이것은 레이어 팝업입니다.</p>
+        <br><button id="close-layer">닫기</button>
+    </div>
+
+    <script>
+        $('#open-layer').click(() => $('#layer-popup').show());
+        $('#close-layer').click(() => $('#layer-popup').hide());
+
+        $('#open2-layer').click(() => $('.modal').show());
+        $('#close2-layer').click(() => $('.modal').hide());
+    </script>
+</body>
+
+</html>

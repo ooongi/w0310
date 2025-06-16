@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HARIBO: 헤더</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        #header {
+            z-index: 9999;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            color: #fff;
+            background: #222;
+            transition: .3s;
+        }
+
+        /* 스크롤 시 헤더 배경색깔 변화 */
+        #header.scrolled {
+            background: purple;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <h1>상단 고정 헤더</h1>
+        <p>-</p>
+    </header>
+
+    <script>
+        /*
+            객체
+                $(window)
+            이벤트
+                scroll - 스크롤 바가 움직일 때
+                wheel
+        */
+        $(window).on('scroll', function () {
+            let windowScrollTop = $(window).scrollTop();
+            $('p').html(windowScrollTop);
+            if (windowScrollTop > 100) {
+                $('#header').addClass('scrolled');
+            } else {
+                $('#header').removeClass('scrolled');
+
+            }
+        })
+    </script>
+</body>
+
+</html>

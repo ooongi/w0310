@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+/* 헤더임시고정 */
+#header {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140px;
+    text-align: center;
+    line-height: 120px;
+    background: #999;
+    background: background 0.3s;
+}
+
+/* 전체 */
+#section2 {
+    position: relative;
+    top: 140px;
+    height: calc(100vh - 140px);
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.5s;
+    /* background: #3498db; */
+}
+
+/* 섹션타이틀 */
+.section2_title {
+    padding-top: 32px;
+}
+
+.section2_title h1 {
+    font-size: 40px;
+}
+
+.section2_title p {
+    font-size: 16px;
+}
+
+/* 탭메뉴 */
+
+.tabs {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 32px;
+}
+
+.tabs a {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 6px 14px;
+    background: #eee;
+    border-radius: 30px;
+}
+
+.tabs a:not(:last-child) {
+    margin-right: 8px;
+}
+
+.tabs a.active {
+    background: #4c2f48;
+    color: #fff;
+}
+
+/* 여행정보페이지 */
+.tour_area {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1205px;
+    height: 540px;
+}
+
+.tour_text {
+    text-align: left;
+    margin-top: 12px;
+}
+
+.station_name {
+    font-size: 16px;
+}
+
+.tour_title {
+    font-size: 20px;
+}
+
+.tour_won {
+    font-size: 20px;
+}
+
+.tour_way {
+    font-size: 16px;
+    color: #888;
+}
+
+.tour_button {
+    padding: 40px;
+    padding-bottom: 80px;
+}
+
+.tour_button button {
+    font-size: 26px;
+    font-weight: bold;
+    padding: 11px 30px;
+    border-radius: 30px;
+    border-style: none;
+    /* js */
+    background: #4c2f48;
+    color: #fff;
+}

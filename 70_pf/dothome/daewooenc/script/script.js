@@ -12,7 +12,6 @@
                 $('#slider ul').animate({top: '-=300px'}, 500, function(){$(this).append($(this).children().first()).css('top', 0)
                 });
             },2000);
-
         });
 
         /* 

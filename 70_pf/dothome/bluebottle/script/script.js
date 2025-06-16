@@ -7,16 +7,15 @@
                 $('.sub').stop().slideUp();
                 $('.nav_bg').stop().animate({height: 0});
             });
+
+            $('#open-layer').click(function(){
+            $('#modal-popup, #modal-overlay').show();
+            });
+            $('#close-modal').click(function(){
+            $('#modal-popup, #modal-overlay').hide();
+            });
         });
 
-        $(function(){
-            $('.notice li').eq(0).click(function(){
-                $('.modal').show();
-            });
-            $('.popup div').click(function(){
-                $('.modal').hide();
-            });
-        });
 
         /* 
             제이쿼리의 문(statements)의 형식
