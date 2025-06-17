@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트의 변수선언</title>
+
+</head>
+<body>
+    
+    <script>
+        let num = 0;
+        let str = 'javascript';
+        let temp = true;
+
+        document.write(num + '<br>' + str + '<br>' + temp);
+
+        // 여러 개의 변수 선언 시 콤마로 구분
+        // let은 재선언 불가
+
+        let num2, str2, temp2;
+        let num3 = 10, str3 = 'javascript', temp3 = ture;
+
+        // 변수는 새로운 데이터가 저장되면 기존 데이터는 사라짐
+        num = 10;
+        document.write('<br>' + num);
+
+        /* 
+            변수 이름 정의 방법
+
+            1. 띄어쓰기할 수 없다.
+            2. 첫 글자는 영문자, _, $
+            3. 예약어(var, let, const, if, else ..)는 사용할 수 없다
+            4. 명명규칙
+                카멜 표기법camelCase
+                파스칼 표기법PascalCase
+                스네이크 표기법snake_case
+                케밥 표기법kebab-case
+
+            // 변수명과 함수명은 카멜 표기법을 사용하고, 객체는 파스칼 표기법을 사용하는 것이 좋다.
+            // 변수는 명사, 함수는 동사로 표현하는것이 좋다.
+        */
+    </script>
+</body>
+</html>
