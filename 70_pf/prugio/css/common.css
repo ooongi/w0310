@@ -1,0 +1,46 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+ul,
+p {
+    margin: 0;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 서체 */
+body {
+    font: 15px/1.6 "Noto Sans KR", sans=serif;
+}
+
+#section4 {
+    color: var(--main-color);
+}
+
+#section4 .description p {
+    font-size: 20px;
+    line-height: 160%;
+}
+
+#section4 .description a {
+    color: var(--main-color);
+}
+
+:root {
+    --main-color: #fff;
+}
