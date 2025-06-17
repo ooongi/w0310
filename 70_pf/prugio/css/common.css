@@ -23,6 +23,10 @@ a {
     text-decoration: none;
 }
 
+img {
+    vertical-align: top;
+}
+
 /* 서체 */
 body {
     font: 15px/1.6 "Noto Sans KR", sans=serif;

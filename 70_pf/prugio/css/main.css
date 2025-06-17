@@ -17,13 +17,13 @@
 }
 
 #section4 .left {
-    height: 584px;
     width: 50%;
+    height: 680px;
 }
 
 #section4 .right {
-    height: 584px;
     width: 50%;
+    height: 680px;
 }
 
 #section4 .btn img {
@@ -45,6 +45,22 @@
     margin-bottom: 20px;
 }
 
+#section4 .description img {
+    margin-top: 6px;
+}
+
 #section4 .description:last-child {
     width: 325px;
+}
+
+#section4 .bg {
+    overflow: hidden;
+}
+
+#section4 .bg img {
+    transition: 1s;
+}
+
+#section4 .bg:hover img{
+    transform: scale(1.1);
 }
