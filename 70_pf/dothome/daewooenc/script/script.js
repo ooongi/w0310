@@ -12,14 +12,6 @@
                 $('#slider ul').animate({top: '-=300px'}, 500, function(){$(this).append($(this).children().first()).css('top', 0)
                 });
             },2000);
-
-            //layerpopup
-            $('.tab1 li:first-child').click(function(){
-                $('#popup').show();
-            });
-            $('#popup button').click(function(){
-                $('#popup').hide();
-            });
         });
 
         /* 
