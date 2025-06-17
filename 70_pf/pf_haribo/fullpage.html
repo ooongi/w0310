@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>jQuery 풀페이지</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        /* 상단고정헤더 */
+        .header {
+            z-index: 9999;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            text-align: center;
+            line-height: 120px;
+            background: transparent;
+            background: background .3s;
+        }
+
+        /* 스크롤 시 색상 변경 */
+        .header.scrolled {
+            transition: .3s;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        /* 콘텐츠 컨테이너: 헤더 높이 고려 */
+        /* .container {
+            margin-top: 100px;
+        } */
+
+        /* 메인섹션 */
+        .section {
+            height: 100vh;
+            width: 100%;
+            text-align: center;
+            font-size: 3em;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.5s;
+        }
+
+        .section:nth-child(1) {
+            background: #3498db;
+        }
+
+        .section:nth-child(2) {
+            background: #e67e22;
+        }
+
+        .section:nth-child(3) {
+            background: #2ecc71;
+        }
+
+        .section:nth-child(4) {
+            background: #dbe730;
+        }
+
+        .footer {
+            height: 300px;
+            background: #333;
+            color: white;
+            font-size: 2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">상단고정헤더</header>
+    <div class="container">
+        <div class="section">Section 1</div>
+        <div class="section">Section 2</div>
+        <div class="section">Section 3</div>
+        <div class="section">Section 4</div>
+        <div class="footer">Footer Area</div>
+    </div>
+
+
+    <script>
+        $(function () {
+            // var 변수 선언 키워드 > let, const
+            let now = 0;
+            const sections = $('.section');
+            // 섹션의 수 + 1
+            const total = sections.length + 1; // 푸터 포함
+
+            function scrollTo(index) {
+                let pos;
+                if (index < sections.length) {
+                    // offset().top - 요소의 문서 기준 세로 위치
+                    pos = sections.eq(index).offset().top; // 헤더 높이 보정
+                } else {
+                    pos = $('.footer').offset().top;
+                }
+                $('html, body').stop().animate({ scrollTop: pos }, 500);
+            }
+
+            $(window).on('wheel', function (e) {
+                // 스크롤 이벤트의 중복 실행 방지
+                // html, body 안의 애니메이션되는 요소가 있으면 이벤트를 탈출!
+                // is(): ~있다.
+                // animated : JQ 선택자, 애니메이트가 적용된 요소
+                // return 함수(이벤트) 종료
+                // return 표현식; > 표현식의 결과를 반환
+
+
+                if ($('html, body').is(':animated')) return;
+
+                // 마우스 휠 이벤트에서 스크롤 방향과 크기를 가져옴
+                // deltaY > 0 보다 크면 아래로 스크롤(휠 내림)
+                // deltaY < 0 보다 크면 위로 스크롤(휠 올림)
+                const delta = e.originalEvent.deltaY;
+                if (delta > 0 && now < total - 1) {
+                    // now가 1씩 증가
+                    now++;
+                } else if (delta < 0 && now > 0) {
+                    // now가 1씩 감소
+                    now--;
+                }
+                scrollTo(now);
+            });
+
+            // 스크롤 시 헤더 색상 변경
+            $(window).on('scroll', function () {
+                // 세로 방향 스크롤 양
+                const scrollTop = $(window).scrollTop();
+                if (scrollTop > 50) {
+                    $('.header').addClass('scrolled');
+                } else {
+                    $('.header').css({'transition': '.3s'}).removeClass('scrolled');
+                }
+            });
+        });
+    </script>
+    <!--     <script>
+        //헤더고정풀페이지 - jeep
+        $(function () {
+            let now = 0;
+            const speed = 500;
+            const sections = $('.section');
+            const headerHeight = $('.header').height();
+            const total = sections.length + 1;
+
+            function scrollToSection(idx) {
+                let pos = 0;
+                if (idx < sections.length) {
+                    pos = sections.eq(idx).position().top - headerHeight;
+                } else {
+                    pos = $('.footer').position().top - headerHeight;
+                }
+                $('html,body').stop().animate({ scrollTop: pos }, speed);
+            }
+
+            $(window).on('wheel', function (e) {
+                if ($('html, body').is(':animated')) return; // 중복 스크롤 방지
+                const delta = e.originalEvent.deltaY;
+                if (delta > 0 && now < total - 1) {
+                    now++;
+                } else if (delta < 0 && now > 0) {
+                    now--;
+                }
+                scrollToSection(now);
+            });
+        });
+    </script> -->
+
+</body>
+
+</html>
