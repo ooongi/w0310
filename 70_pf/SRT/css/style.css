@@ -48,7 +48,7 @@
     padding-bottom: 32px;
 }
 
-.tabs a {
+.tabs .tour_btn a {
     font-size: 16px;
     font-weight: 500;
     padding: 6px 14px;
@@ -60,18 +60,56 @@
     margin-right: 8px;
 }
 
+.tabs .tour_btn a:hover {
+    background: #4c2f48;
+    transition: 0.2s;
+    color: #fff;
+}
+
 .tabs a.active {
     background: #4c2f48;
     color: #fff;
 }
 
 /* 여행정보페이지 */
-.tour_area {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
+.tour_carousel_container {
+    position: relative;
     width: 1205px;
+    overflow: hidden;
     height: 540px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.tour_best {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.tour_carousel {
+    position: relative;
+    display: flex;
+    /* justify-content: space-between; */
+    margin: 0 auto;
+    width: calc(283px * 6 + 20px * 5);
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
+.tour_carousel_container div.active {
+    display: none;
+}
+
+
+
+
+.tour_carousel li {
+    margin-right: 20px;
+}
+
+.tour_carousel li:last-child {
+    margin-right: 0;
 }
 
 .tour_text {
@@ -96,18 +134,52 @@
     color: #888;
 }
 
+/* 화살표이동 */
+.arrow_left {
+    position: absolute;
+    z-index: 1;
+    top: 42%;
+    left: 334px;
+}
+
+.arrow_right {
+    position: absolute;
+    z-index: 1;
+    top: 42%;
+    right: 345px;
+}
+
+.arrow_left img,
+.arrow_right img {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.arrow_left img:hover,
+.arrow_right img:hover {
+    background: #fff;
+}
+
+/* 탭메뉴 하단버튼 */
 .tour_button {
     padding: 40px;
     padding-bottom: 80px;
 }
 
-.tour_button button {
+.tour_button a {
     font-size: 26px;
-    font-weight: bold;
+    font-weight: 500;
     padding: 11px 30px;
     border-radius: 30px;
     border-style: none;
-    /* js */
+    background: #eee;
+}
+
+.tour_button a:hover {
     background: #4c2f48;
     color: #fff;
+    transition: 0.3s;
 }
