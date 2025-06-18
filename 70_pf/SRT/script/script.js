@@ -129,24 +129,25 @@ $(document).ready(function () {
         // 모든 탭 컨텐츠 숨기기
         $(".tour_carousel_container").removeClass("active");
 
+        const activeTabContent = $(".tour_carousel_container").eq(index);
         // 해당 인덱스의 컨텐츠 보이기
-        $(".tour_carousel_container").eq(index).addClass("active");
-    });
+        activeTabContent.addClass("active");
 
-    setTimeout(function () {
-        initSlide(activeTabContent);
-    }, 100);
+        setTimeout(function () {
+            initSlide(activeTabContent);
+        }, 100);
+    });
 });
 
-//슬라이드 초기화
+/* //슬라이드 초기화
 function initSlide(tabContent) {
     currentTabContent = tabContent;
-    const slideWrapper = tabContent.find('.tour_carousel');
-    const slides = slideWrapper.find('.tour_carousel>li');
+    const slideWrapper = tabContent.find(".tour_carousel");
+    const slides = slideWrapper.find(".tour_carousel_contents");
     slideCount = slides.length;
     currentSlide = 0; // 첫 번째 슬라이드로 리셋
-    
+
     // 슬라이드 위치 리셋
-    slideWrapper.css('transform', 'translateX(0%)');
-    
-}
+    slideWrapper.css("transform", "translateX(0%)");
+} */
+/* 기능구현 잘 안됌.. */
