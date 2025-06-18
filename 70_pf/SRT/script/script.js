@@ -1,7 +1,6 @@
 
+//풀페이지슬라이드
 $(document).ready(function() {
-
-    //풀페이지슬라이드
     let now = 0;
     const sections =$('.container section');
     const headerHeight =$('#header').height();
@@ -38,6 +37,10 @@ $(document).ready(function() {
     });
 });
 
+
+
+
+// 캐로셀
 $(document).ready(function() {
             let currentSlide = 0;
             const totalSlides = 6;
@@ -113,4 +116,24 @@ $(document).ready(function() {
             
             // 초기 버튼 상태 설정
             updateButtonStates();
+
+
+        });
+
+        $(document).ready(function() {
+            $('.tab-btn').click(function() {
+                var index = $(this).index();
+                
+                // 모든 탭 버튼에서 active 클래스 제거
+                $('.tab-btn').removeClass('active');
+                
+                // 클릭된 탭 버튼에 active 클래스 추가
+                $(this).addClass('active');
+                
+                // 모든 탭 컨텐츠 숨기기
+                $('.tour_carousel_container').removeClass('active');
+                
+                // 해당 인덱스의 컨텐츠 보이기
+                $('.tour_carousel_container').eq(index).addClass('active');
+            });
         });

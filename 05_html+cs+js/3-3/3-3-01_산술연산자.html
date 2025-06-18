@@ -32,7 +32,48 @@
         // 숫자 + 숫자 -> 숫자 (덧셈)
         console.log(subject + '과목 성적은 ' + score); // css과목 성적은 100
 
+        // `템플릿 ${변수} 문자열`
         // 템플릿 문자열
+        // 백틱/백쿼드(`)
+
+        console.log(`${subject}과목 성적은 ${score}`);
+
+        // %(나누고 나서의 나머지) 연산자
+        
+        // let dividend = prompt('숫자를 입력하면 3의 배수인지 알려줍니다.');
+        let dividend = 6;
+        let remainder = dividend % 3;
+        console.log(remainder);
+        let comment;
+        if (remainder === 0){
+            comment = '3의 배수입니다. <br>';
+        } else {
+            comment = '3의 배수가 아닙니다. <br>';
+        }
+        document.write(comment);
+
+        // ++, --
+        // ++는 1씩 증가, --는 1씩 감소
+
+        let score2 = 10;
+        // ++, -- 연산자는 변수의 앞 또는 뒤에 붙여서 사용
+        // 증가감 연산자가 변수와 단독으로 사용할 때
+        ++score2; // 1증가
+
+        document.write(score2 + '<br>');
+
+        score2++ // 1증가 
+
+        document.write(score2 + '<br>');
+
+
+        let score3 = 10;
+        let result = ++score3;
+        document.write(result + ',' + score3 + '<br>');
+        document.write(`${result},${score3}<br>`);
+        score3 = 10;
+        result = score3++;
+        document.write(result + ',' + score3);
     </script>
 </body>
 

@@ -46,6 +46,7 @@
     text-align: center;
     padding-top: 30px;
     padding-bottom: 32px;
+    margin: 0 auto;
 }
 
 .tabs .tour_btn a {
@@ -97,12 +98,13 @@
     transform: translateX(0);
 }
 
-.tour_carousel_container div.active {
-    display: none;
+.tour_carousel_container.active {
+    display: block;
 }
 
-
-
+.tour_carousel_container {
+    display: none;
+}
 
 .tour_carousel li {
     margin-right: 20px;
