@@ -74,11 +74,81 @@
     background: yellow;
 }
 
+
+/* 서브타이틀 드롭다운 */
 .best_sub {
+    position: relative;
     width: 100%;
-    height: 42px;
-    background: hotpink;
+    background: #555555;
 }
+
+.best_sub_title>a {
+    display: inline;
+    font-size: 20px;
+    line-height: 42px;
+    margin-right: 8px;
+    color: var(--mainColor);
+}
+
+/* 아래화살표 */
+.best_sub_title span {
+    position: absolute;
+    padding-top: 4px;
+}
+
+.best_sub_title span::after {
+    content: '';
+    width: 8px;
+    /* 사이즈 */
+    height: 8px;
+    /* 사이즈 */
+    border-top: 2px solid var(--mainColor);
+    /* 선 두께 */
+    border-right: 2px solid var(--mainColor);
+    /* 선 두께 */
+    display: inline-block;
+    transform: rotate(-45deg);
+    /* 각도 */
+}
+
+.best_sub_title.active span {
+    transform: rotate(180deg);
+}
+
+.best_down {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+    border-radius: 12px;
+    background: var(--mainColor);
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    line-height: 80px;
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.best_down.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.best_down>li>a {
+    display: block;
+    color: var(--whiteTextColor);
+}
+
+.best_down>li>a:hover {
+    font-weight: bold;
+}
+
+
+
+
+
 
 .best_sub_2 {
     display: flex;
