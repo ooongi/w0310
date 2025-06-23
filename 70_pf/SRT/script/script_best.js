@@ -33,17 +33,14 @@ $(document).ready(function () {
             $("#header").removeClass("scrolled");
         }
     });
-
-
 });
-
 
 //리모컨
 $(document).ready(function () {
-    const $sidebar = $('.sidebar_contents');
-    const $header = $('.header_container');
-    const $footer = $('.footer');
-    const $container = $('.best_container');
+    const $sidebar = $(".sidebar_contents");
+    const $header = $(".header_container");
+    const $footer = $(".footer");
+    const $container = $(".best_container");
 
     let headerHeight = $header.outerHeight();
     let sidebarHeight = $sidebar.outerHeight();
@@ -57,7 +54,7 @@ $(document).ready(function () {
 
         // 반응형을 위한 체크
         if ($(window).width() <= 768) {
-            $sidebar.removeClass('sticky bottom');
+            $sidebar.removeClass("sticky bottom");
             return;
         }
 
@@ -71,27 +68,27 @@ $(document).ready(function () {
 
             if (sidebarBottom >= footerOffset) {
                 // 푸터 근처에서 멈춤
-                $sidebar.removeClass('sticky').addClass('bottom');
+                $sidebar.removeClass("sticky").addClass("bottom");
                 $sidebar.css({
-                    'position': 'absolute',
-                    'top': 1105 + 'px',
+                    position: "absolute",
+                    top: 1105 + "px",
                 });
             } else {
                 // 스크롤 따라가기
-                $sidebar.removeClass('bottom').addClass('sticky');
+                $sidebar.removeClass("bottom").addClass("sticky");
                 $sidebar.css({
-                    'position': 'fixed',
-                    'top': '20px',
-                    'left': containerOffset + 'px',
-                    'width': sidebarWidth + 'px'
+                    position: "fixed",
+                    top: "20px",
+                    left: containerOffset + "px",
+                    width: sidebarWidth + "px",
                 });
             }
         } else {
             // 헤더가 아직 보이는 상태
-            $sidebar.removeClass('sticky bottom');
+            $sidebar.removeClass("sticky bottom");
             $sidebar.css({
-                'position': 'static',
-                'width': 'auto'
+                position: "static",
+                width: "auto",
             });
         }
     });
@@ -104,8 +101,41 @@ $(document).ready(function () {
         containerOffset = $container.offset().left;
         sidebarWidth = $sidebar.outerWidth();
 
-        $(window).trigger('scroll');
+        $(window).trigger("scroll");
     });
 });
 
 //드롭다운
+$(document).ready(function () {
+    const mainMenu = document.getElementById("best_sub_title");
+    const subMenu = document.getElementById("best_sub_nav");
+    const arrow = document.getElementById("arrow");
+
+    // 메인메뉴 클릭 시 토글
+    mainMenu.addEventListener("click", function (e) {
+        e.stopPropagation();
+
+        if (subMenu.classList.contains("show")) {
+            // 서브메뉴가 열려있으면 닫기
+            subMenu.classList.remove("show");
+            arrow.classList.remove("down");
+        } else {
+            // 서브메뉴가 닫혀있으면 열기
+            subMenu.classList.add("show");
+            arrow.classList.add("down");
+        }
+    });
+
+    // 토글 밖 영역 클릭 시 서브메뉴 닫기
+    document.addEventListener("click", function (e) {
+        if (!mainMenu.contains(e.target) && !subMenu.contains(e.target)) {
+            subMenu.classList.remove("show");
+            arrow.classList.remove("down");
+        }
+    });
+
+    // 서브메뉴 클릭 시 이벤트 버블링 방지
+    subMenu.addEventListener("click", function (e) {
+        e.stopPropagation();
+    });
+});

@@ -6,7 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <title>JEEP</title>
-    <link rel="stylesheet" href="test.css">
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bx슬라이더 라이브러리 jq -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
+    <script src="js/slider.js"></script>
+    <!-- bx슬라이더 라이브러리 css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/test.css">
 </head>
 
 <body>
@@ -15,8 +22,23 @@
         <div class="box_inner"></div>
     </header>
     <div id="container">
+        <!--
+
+            bx슬라이더
+            https://bxslider.com/
+            더미 이미지
+            http://placehold.co/
+            http://picsum.photos/
+        
+        -->
         <!-- 섹션1 : pc 메인 롤링-->
-        <div class="main_rolling_pc"></div>
+        <div class="main_rolling_pc">
+            <div class="bxslider">
+                <div><img src="http://picsum.photos/id/237/1905/600" alt="이미지1"></div>
+                <div><img src="http://picsum.photos/id/238/1905/600" alt="이미지2"></div>
+                <div><img src="http://picsum.photos/id/239/1905/600" alt="이미지3"></div>
+            </div>
+        </div>
         <!-- 섹션2 : 인기 여행지 -->
         <div class="about_area"></div>
         <!-- 섹션3 : 상담 및 최근게시물 -->
