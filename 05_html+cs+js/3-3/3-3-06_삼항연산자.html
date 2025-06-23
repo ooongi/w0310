@@ -12,7 +12,9 @@
 <body>
     <script>
         /*
-            삼항연산자(표현식)
+
+
+            삼항연산자 형식
             조건식 ? 실행문1 : 실행문2
             조건식 결과가 true면 실행문 1 실행
             조건식 결과가 false면 실행문 2 실행
@@ -26,12 +28,13 @@
 
         //if문과 같다.
 
-        if (조건식) {
-            실행문1;
+        let result;
+        if (num1 > 0) {
+            result = '양수';
         }else {
-            실행문2;
+            result = '음수';
         }
-
+        console.log(result);
     </script>
 </body>
 

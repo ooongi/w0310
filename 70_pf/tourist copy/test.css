@@ -1,11 +1,13 @@
 @charset "utf-8";
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
 }
 
-header {
-    background: rgba(0,0,0,0.5);
-}
 
 .box_inner {
     width: 1050px;
@@ -16,4 +18,31 @@ header {
 
 footer {
     border-top: 1px solid #ddd;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+/* 섹션1 */
+.main_rolling_pc {
+    height: 550px;
+    background: wheat;
+}
+
+/* 섹션2: 인기 여행지 */
+.about_area {
+    height: 876px;
+    background: violet;
+}
+
+
+/* 섹션3: 상담 및 최근게시물 */
+.appbbs_area {
+    height: 256px;
+    padding: 60px 0;
+    background: darkcyan;
+
 }
