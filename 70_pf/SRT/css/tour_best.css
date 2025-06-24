@@ -91,7 +91,7 @@
     font-weight: bold;
     gap: 8px;
     color: var(--mainColor);
-    background: none; 
+    background: none;
 }
 
 /* 토글 화살표 */
@@ -183,10 +183,11 @@
 .best_contents {
     width: 100%;
     height: 100%;
-    background: #421818;
+    background: #c7c7c7;
 }
 .best_tour_contents {
     width: 100%;
+    height: 1278px;
     background: #555;
 }
 
@@ -206,6 +207,38 @@
     text-align: center;
 }
 
+.best_btn_page {
+    display: flex;
+    justify-content: center;
+}
+
+.best_btn_area button {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 40px;
+}
+
+.best_btn_area button:hover {
+    background: var(--subColor);
+    color: var(--whiteTextColor);
+    border-radius: 20px;
+}
+
+.best_btn_area .page_num.btnClick {
+    background: var(--subColor);
+    color: var(--whiteTextColor);
+    border-radius: 20px;
+}
+
 .arrow_pagebtnL {
     width: 8px;
     height: 8px;
@@ -222,7 +255,6 @@
     border-right: 2px solid var(--mainColor);
     transform: rotate(45deg);
     transition: none;
-    
 }
 
 /* 푸터 */

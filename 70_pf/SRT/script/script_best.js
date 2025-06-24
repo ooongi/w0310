@@ -139,3 +139,49 @@ $(document).ready(function () {
         e.stopPropagation();
     });
 });
+
+//컨텐츠 페이지 넘김
+$(document).ready(function () {
+    let currentPage = 1;
+    const totalPages = 3;
+
+    // 페이지 상태 업데이트
+    function updatePagination() {
+        // 페이지 번호 버튼 활성화/비활성화
+        $(".page_num").removeClass("btnClick");
+        $(`.page_num[data-page="${currentPage}"]`).addClass("btnClick");
+
+/*         // 이전/다음 버튼 활성화/비활성화
+        $("#prev_btn").prop("disabled", currentPage === 1);
+        $("#next_btn").prop("disabled", currentPage === totalPages); */
+
+        // 콘텐츠 업데이트
+        $(".best_tour_contents");
+        // $(".best_tour_contents").text(`페이지 ${currentPage} 내용`);
+    }
+
+    // 페이지 번호 클릭
+    $(".page_num").click(function () {
+        currentPage = parseInt($(this).data("page"));
+        updatePagination();
+    });
+
+    // 이전 버튼 클릭
+    $("#prev_btn").click(function () {
+        if (currentPage > 1) {
+            currentPage--;
+            updatePagination();
+        }
+    });
+
+    // 다음 버튼 클릭
+    $("#next_btn").click(function () {
+        if (currentPage < totalPages) {
+            currentPage++;
+            updatePagination();
+        }
+    });
+
+    // 초기 설정
+    updatePagination();
+});
