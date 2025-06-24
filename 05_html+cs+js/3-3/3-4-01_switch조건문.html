@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch조건문</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <h1>조건문: switch</h1>
+    <input type="text" title="아이디를 입력하세요." placeholder="아이디를 입력하세요." id="user_id">
+    <p><small>아이디를 입력하세요.</small></p>
+    <button id="login_btn">로그인</button>
+    <div id="output">출력</div>
+
+    <script>
+        /*         let subject = 'html';
+        
+                switch (subject) {
+                    case 'html':
+                        // subject = subject + '은 1학점입니다.';
+                        subject += '은 1학점입니다.';
+                        // break를 만나면 제어문을 탈출한다.
+                        break;
+                    case 'css':
+                        subject += '은 2학점입니다.';
+                        break;
+                    case 'javascript':
+                        subject += '은 3학점입니다.';
+                        break;
+                    default:
+                        subject += '해당과목이 없습니다.';
+        
+                }
+                console.log(subject); */
+
+
+
+
+        /*         //선언문
+                let classification = '';
+                $('input').change(function () {
+                    classification = $('input').value;
+                });
+                console.log($('input').value);
+        
+                //제어문
+                switch (classification) {
+                    case 'undefined':
+                        classification += ': 입장료 무료';
+                        break;
+                    case '청소년':
+                        classification += ': 입장료 2,000원';
+                        break;
+                    case '성인':
+                        classification += ': 입장료 5,000원';
+                        break;
+        
+                    default:
+                        classification = '입력 값을 다시 확인하세요.'
+                }
+        
+                document.write(classification); */
+
+
+        /* id>> $('#login_btn') = document.getElementById('login_btn') */
+        /* class>> $('.login_btn') = document.getElementsByClassName('login_btn')[0] */
+        /* div>> $('div') = document.getElementsByTagName('div').item(0) */
+        /* val() = value */
+        /* document.querySelecter('#user_id') */
+        /* document.querySelecterAll('.login_btn')[0] */
+        /* document.querySelecterAll('.login_btn').item(0) */
+        /* .text('abc가 입장하였습니다.') = innerTEXT , textContent = 값 */
+
+        // click(function(){});
+        // onclick = function(){};
+
+        const user_id = document.querySelector('#user_id');
+        const login_btn = document.querySelectorAll('.login_btn')[0];
+        const output = document.querySelectorAll('div').item(0);
+
+        login_btn.onclick = function () {
+            switch (user_id.value) {
+                case 'abc':
+                    output.textContent = 'abc가 입장하였습니다.';
+                    location.href = 'http://www.naver.com';
+                    break;
+                case 'def':
+                    output.textContent = 'def가 입장하였습니다.';
+                    break;
+                default:
+                    output.textContent = '다시 입력하세요.';
+
+            }
+        };
+
+    </script>
+</body>
+
+</html>

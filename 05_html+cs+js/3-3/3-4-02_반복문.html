@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <h1>반복문</h1>
+    <h1>while</h1>
+    <div id="sum1"></div>
+    <div id="sum2"></div>
+    <script>
+        /* 
+            반복문
+                1. while
+                2. do~while
+                3. for
+
+            조건이 만족하는 동안 실행문을 실행한다.
+
+            while (조건) {
+                실행문;
+                증감문;
+            }
+        */
+
+        let n = 1;
+        let sum = 0;
+        while (n < 8) {
+            // sum = sum + n
+            // sum = 0 + 1
+            sum += n; // 0 -> 1 -> 3 -> 6 -> 10 -> 15 -> 21 -> 28
+
+            // n += 1;
+            // n = n + 1;
+            n++; // 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
+
+            // while이므로 반복
+        }
+        //제이쿼리
+        $('#sum1').text(`n = ${n}, sum = ${sum}`);
+        //바닐라스크립트
+        document.getElementById('sum2').textContent = `n = ${n}, sum = ${sum}`;
+        //콘솔
+        console.log(`n = ${n}, sum = ${sum}`);
+
+        //---------------------------------------------------------------------
+
+        /* 
+            // 조건이 거짓이면 코드가 한 번도 실행되지 않는다.
+            while (false) {
+                코드;
+            }
+
+            // 결과가 false라고 하더라도 무조건 1번은 코드가 실행된다
+            do {
+                코드;
+            } while (false)
+        */
+
+
+        //const는 재선언할 수 없다.
+        let n2 = 1;
+        let sum2 = 0;
+        do {
+            sum2 += n2;
+            n2++;
+        } while (n2 < 8);
+        console.log('sum2 = ' + sum2);
+
+        let x = 0;
+        let y = 0;
+        let z = 6;
+        let total1 = 0;
+        let total2 = 0;
+
+        while (x <= 5) {
+            total1 += x;
+            x++;
+            
+        }
+        console.log('x : ' + total1);
+
+        do {
+            total2 += y;
+            y++;
+        } while (y<=5);
+            console.log('y : ' + total2);
+        
+        do {
+            z++;
+        } while ( z<=5 );
+            console.log('z : ' + z);
+    </script>
+</body>
+
+</html>

@@ -76,6 +76,26 @@
         }
 
         document.write(admfee);
+
+        let subject = 'html';
+
+        switch (subject) {
+            case 'html':
+                // subject = subject + '은 1학점입니다.';
+                subject += '은 1학점입니다.';
+                // break를 만나면 제어문을 탈출한다.
+                break;
+            case 'css':
+                subject += '은 2학점입니다.';
+                break;
+            case 'javascript':
+                subject += '은 3학점입니다.';
+                break;
+            default:
+                subject += '해당과목이 없습니다.';
+
+        }
+        console.log(subject);
     </script>
 </body>
 
