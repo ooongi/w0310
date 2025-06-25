@@ -14,6 +14,7 @@
     <h1>while</h1>
     <div id="sum1"></div>
     <div id="sum2"></div>
+
     <script>
         /* 
             반복문
@@ -96,6 +97,45 @@
             z++;
         } while ( z<=5 );
             console.log('z : ' + z);
+
+        /*
+            while 형식
+                초기값;
+                while (조건식) {
+                    코드;
+                    증감식;
+                }
+
+            for 형식
+                for (1초기값; 2조건식; 4증감식) {
+                    3코드;
+                }
+                2조건식이 true이면 3코드 실행
+                4증감식 실행 후 2조건식 비교
+                2>3>4 를 조건식이 true이면 반복 수행
+                조건식이 false이면 for를 빠져나온다.
+
+        */
+
+        let sum3 = 0;
+        let i = 1;
+        while ( i <= 10) {
+            sum3 += i;
+            i++
+        }
+        console.log(sum3);
+        
+        // 몇 번 반복? (반복 횟수가 정해져있을때)
+        // for~in, for~of
+        let sum4 = 0;
+        // 변수의 스코프(scope) - 변수가 영향을 미치는 범위
+        for (let i = 1; i < 10; i++) {
+            sum4 += i;
+        }
+        console.log(sum4); //45
+
+        //구구단
+
     </script>
 </body>
 
