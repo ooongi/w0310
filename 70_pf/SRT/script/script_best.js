@@ -156,8 +156,8 @@ $(document).ready(function () {
         $("#next_btn").prop("disabled", currentPage === totalPages); */
 
         // 콘텐츠 업데이트
-        $(".best_tour_contents");
-        // $(".best_tour_contents").text(`페이지 ${currentPage} 내용`);
+        // $(".best_tour_contents");
+        $(".best_tour_contents").text(`페이지 ${currentPage} 내용`);
     }
 
     // 페이지 번호 클릭

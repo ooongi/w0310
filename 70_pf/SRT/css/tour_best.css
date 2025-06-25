@@ -49,9 +49,127 @@
 }
 
 .sidebar_contents {
+    position: relative;
     width: 320px;
     height: 730px;
-    background: rebeccapurple;
+    background: var(--whiteTextColor);
+    border: 1px solid var(--grayTextColor);
+    border-radius: 15px;
+}
+.sidebar_title {
+    position: relative;
+    top: 28px;
+    left: 25px;
+    width: 256px;
+    height: 34px;
+    display: flex;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--grayTextColor);
+}
+
+.sidebar_title h1 {
+    font-size: 16px;
+}
+
+.sidebar_title button {
+    cursor: pointer;
+    width: 60px;
+    height: 26px;
+    font-size: 12px;
+    background: #eee;
+    border: none;
+    line-height: 26px;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+
+.sidebar_title button:hover {
+    background: var(--mainColor);
+    color: var(--whiteTextColor);
+}
+
+.sidebar_contents_area {
+    position: relative;
+    top: 80px;
+    left: 25px;
+    width: 291px;
+    height: 540px;
+    overflow: auto;
+}
+
+.sidebar_contents_area h2 {
+    font-size: 14px;
+}
+
+.search_container {
+    position: relative;
+    width: 256px;
+    height: 90px;
+    border-bottom: 1px solid var(--grayTextColor);
+
+}
+
+.search_container .search_box {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    font-size: 12px;
+    outline: none;
+    padding: 0 20px;
+    background: #eee;
+    margin-top: 8px;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+    /* transition: all 0.3s ease; */
+}
+
+.search_container .search_btn {
+    position: absolute;
+    right: 25px;
+    top: 50px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item_container {
+    height: 75px;
+    background: red;
+    border-bottom: 1px solid var(--grayTextColor);
+
+}
+
+.train_container {
+    height: 150px;
+    background: orange;
+    border-bottom: 1px solid var(--grayTextColor);
+
+}
+
+.during_container {
+    height: 75px;
+    background: yellow;
+    border-bottom: 1px solid var(--grayTextColor);
+
+}
+
+.day_container {
+    height: 112px;
+    background: green;
+    border-bottom: 1px solid var(--grayTextColor);
+
+}
+
+.key_container {
+    height: 150px;
+    background: blue;
+
 }
 
 /* 스크롤 효과 */
