@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중지건너뛰기</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!-- 
+        기타 제어문
+        break문 - 중지 -> 제어문을 벗어난다.
+        continue문 - 건너뛰기
+
+        switch (표현식) {
+        case 값1:
+            코드1;
+            break;
+        case 값2:
+            코드2;
+            break;
+        ...
+        default:
+            코드;
+
+        // 제어문 끝에는 ;를 찍지 않는다.
+        }
+    -->
+    <script>
+        let flag = true;
+        let i = 0;
+
+        function looping() {
+            while (flag) {
+                document.write(`무한루프${i}<br>`);
+                i++;
+                if (i > 10) break;
+                // break는 반복문인 while을 탈출한다.
+            }
+        }
+
+        const limitNum = 5;
+        let sum = 0;
+        for (let i = 1; i <= 20; i++) {
+            sum += i;
+            if (i === limitNum) {
+                break; //for문을 벗어남.
+            }
+        }
+        console.log(sum);
+
+        for (let i = 1; i <= 10; i++) {
+            console.log(`난 바깥if${i}`)
+            for (let j = 1; j <= 10; j++) {
+                if (i === 3) {
+                    break;
+                }
+                console.log(`난 안쪽for${j}`)
+
+            }
+        }
+
+        /* 
+            for (초기값; 조건식; 증감식) {
+                코드1;
+                continue;
+            }
+        */
+
+        sum = 0;
+        let num = '3의 배수';
+        i = 0;
+        for (let i = 1; i < 10; i++) {
+            if (i % 3 === 0) {
+                num += i + ' ';
+                continue;
+            }
+            i++;
+        }
+        console.log(num + '제외 총합 : ' + sum);
+    </script>
+</body>
+
+</html>
