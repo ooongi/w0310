@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+.wrap {
+    position: relative;
+    width: 100%;
+    height: 1368px;
+    margin: 0 auto;
+}
+
+/* 헤더임시고정 */
+.header_container {
+    width: 100%;
+}
+
+#header {
+    width: 100%;
+    height: 140px;
+    text-align: center;
+    line-height: 140px;
+    background: #999;
+}
+
+.header_line {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+    background: #888;
+}
+
+/* container */
+.cs_container {
+    width: 1200px;
+    height: 623px;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    background: darkgreen;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 왼쪽 */
+.cs_left {
+    width: 472px;
+    background: aliceblue;
+}
+
+.cs_left div:not(:last-child) {
+    margin-bottom: 50px;
+}
+
+.cs_time {
+    display: flex;
+    height: 96px;
+    background: #555;
+}
+.cs_menu {
+    display: flex;
+    height: 253px;
+    background: #555;
+}
+.cs_men {
+    display: flex;
+    height: 24px;
+    background: #555;
+}
+.cs_call {
+    display: flex;
+    height: 96px;
+    background: #555;
+}
+
+
+
+
+/* 오른쪽 */
+.cs_right {
+    width: 570px;
+    background: darkcyan;
+}
+
+.cs_number {
+    height: 510px;
+    background: #888;
+}
+
+.cs_parking {
+    height: 75px;
+    margin-top: 38px;
+    background: #888;
+}
+
+/* 푸터 */
+.footer {
+    width: 100%;
+    height: 300px;
+    background: #555;
+}
