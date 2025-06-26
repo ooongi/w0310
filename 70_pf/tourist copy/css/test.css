@@ -154,6 +154,7 @@ footer {
 footer .box_inner {
     display: flex;
     justify-content: space-between;
+    padding: 25px 0 36px 0;
 }
 
 footer h3 {
@@ -165,6 +166,7 @@ footer h3 {
     display: flex;
     font-size: 16px;
     font-weight: 700;
+    margin-bottom: 25px;
 }
 
 .foot_list li:first-of-type::after {
