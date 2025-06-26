@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리턴매개변수</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <h1>당신의 성적을 입력하세요.</h1>
+    <label for="html_lang"></label>
+    <input type="text" id="html_lang"><br>
+    <label for="css_lang"></label>
+    <input type="text" id="css_lang">
+    <script>
+        /* 
+            익명함수생성
+            const 변수 = function() {코드;};
+
+            호이스팅x
+
+            함수호출
+                변수();
+        */
+        const compute = function () {
+            console.log('익명 함수');
+        };
+
+        compute();
+
+/*         let name = '이함수';
+        let h = 80;
+        let c = 90;
+        let j = 70;
+
+
+        let comment = name + ' 학생은 ';
+        if (h >= 60 && c >= 60 && j >= 60) {
+            comment += '전과목 PASS';
+        } else {
+            if (h < 60) {
+                comment += 'html 재시험,';
+
+            }
+            if (c < 60) {
+                comment += 'css 재시험,';
+
+            }
+            if (j < 60) {
+                comment += 'javascript 재시험,';
+
+            }
+        }
+
+        document.write(comment);
+
+
+        name = '저변수';
+        h = 80;
+        c = 50;
+        j = 50;
+
+
+        let comments = name + ' 학생은 ';
+        if (h >= 60 && c >= 60 && j >= 60) {
+            comments += '전과목 PASS';
+        } else {
+            if (h < 60) {
+                comments += 'html 재시험,';
+
+            }
+            if (c < 60) {
+                comments += 'css 재시험,';
+
+            }
+            if (j < 60) {
+                comments += 'javascript 재시험,';
+
+            }
+        }
+
+        document.write('<br>' + comments); */
+
+
+        function examPass(name, h, c, j) {
+            let comments = name + ' 학생은 ';
+            if (h >= 60 && c >= 60 && j >= 60) {
+                comments += '전과목 PASS';
+            } else {
+                if (h < 60) {
+                    comments += 'html 재시험,';
+
+                }
+                if (c < 60) {
+                    comments += 'css 재시험,';
+
+                }
+                if (j < 60) {
+                    comments += 'javascript 재시험,';
+
+                }
+            }
+        }
+        console.log(examPass('이함수', 80, 90, 60));
+    </script>
+</body>
+
+</html>

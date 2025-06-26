@@ -42,42 +42,123 @@
 
 /* 왼쪽 */
 .cs_left {
-    width: 472px;
+    width: 550px;
     background: aliceblue;
 }
 
-.cs_left div:not(:last-child) {
+.cs_left h3 {
+    font-size: 20px;
+    line-height: 2;
+}
+
+.cs_left > li {
+    display: flex;
+}
+
+.cs_left li:not(:last-child) {
     margin-bottom: 50px;
+}
+
+.cs_left li > div:first-child {
+    width: 106px;
+    margin-right: 40px;
+}
+
+.cs_call {
+    display: flex;
+    height: 96px;
+
+}
+
+.call_2 {
+    width: 326px;
+    height: 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+}
+
+.call_2 > p:nth-of-type(1) {
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 1;
+    color: var(--mainColor);
+}
+
+.call_2 > p:nth-of-type(2) {
+    font-size: 16px;
+    line-height: 1.3;
+    padding-left: 4px;
 }
 
 .cs_time {
     display: flex;
-    height: 96px;
-    background: #555;
+    height: 50px;
 }
+
+.time_2 {
+    padding-top: 6px;
+}
+
 .cs_menu {
     display: flex;
     height: 253px;
-    background: #555;
 }
+
+.menu_2 {
+    padding-top: 8px;
+}
+
+.menu_2 > div > p {
+    font-weight: bold;
+}
+
+.ars {
+    margin-bottom: 32px;
+}
+
+.ars>div, .counter>div {
+    margin-top: 8px;
+    line-height: 2;
+}
+
+.ars div, .counter div {
+    display: flex;
+}
+
+.n1 {
+    font-size: 18px;
+    background: var(--subColor);
+    color: var(--whiteTextColor);
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    align-items: center;
+    padding-left: 12px;
+    padding-bottom: 3px;
+    margin-right: 8px;
+}
+
 .cs_men {
     display: flex;
-    height: 24px;
-    background: #555;
-}
-.cs_call {
-    display: flex;
-    height: 96px;
-    background: #555;
+    height: 30px;
 }
 
-
-
+.men_2 {
+    padding-top: 8px;
+}
 
 /* 오른쪽 */
 .cs_right {
     width: 570px;
     background: darkcyan;
+}
+
+.cs_right h3 {
+    font-size: 20px;
+    line-height: 2;
 }
 
 .cs_number {
@@ -89,6 +170,13 @@
     height: 75px;
     margin-top: 38px;
     background: #888;
+}
+
+.parking_box {
+    width: 550px;
+    height: 35px;
+    border: 1px solid var(--grayTextColor);
+    padding: 6px 0 0 16px;
 }
 
 /* 푸터 */
