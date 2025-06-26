@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크박스</title>
+</head>
+
+<body>
+    <h1>확인란 유무 체크</h1>
+    <input type="checkbox" id="chk1">
+    <label for="chk">[필수] 뵹뿅</label><br>
+    <input type="checkbox" id="chk2">
+    <label for="chk">[필수] 뵹뿅</label><br>
+    <a href="#" id="link_btn">회원가입 완료</a>
+    <script>
+
+        const chk1 = document.getElementById('chk1');
+        const chk2 = document.getElementById('chk2');
+        const link_btn = document.getElementById('link_btn');
+
+        link_btn.onclick = function (e) {
+            //안써도 작동되는듯
+            e. preventDefault(); // a태그의 기본 이벤트를 제거
+
+            if(chk1.checked && chk2.checked) {
+                location.href= "http://www.naver.com"
+            } else {
+                alert('필수 확인란은 반드시 선택해 주세요.')
+            }
+        }
+    </script>
+</body>
+
+</html>

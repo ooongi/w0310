@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -11,100 +11,141 @@
 
 <body>
     <h1>당신의 성적을 입력하세요.</h1>
-    <label for="html_lang"></label>
-    <input type="text" id="html_lang"><br>
-    <label for="css_lang"></label>
-    <input type="text" id="css_lang">
+    <label for="user_name">이름</label>
+    <input type="text" id="user_name" required><br>
+    <label for="html_lang">HTML</label>
+    <input type="text" id="html_lang" required><br>
+    <label for="css_lang">CSS</label>
+    <input type="text" id="css_lang" required><br>
+    <label for="js_lang">javascript</label>
+    <input type="text" id="js_lang" required><br>
+    <button type="button" id="result_btn">결과 확인</button>
+    <div id="result_msg">결과 메시지</div>
+
     <script>
-        /* 
-            익명함수생성
-            const 변수 = function() {코드;};
+        /*         
+                let name = '이함수';
+                let h = 80;
+                let c = 90;
+                let j = 70;
+        
+        
+                let comment = name + ' 학생은 ';
+                if (h >= 60 && c >= 60 && j >= 60) {
+                    comment += '전과목 PASS';
+                } else {
+                    if (h < 60) {
+                        comment += 'html 재시험,';
+        
+                    }
+                    if (c < 60) {
+                        comment += 'css 재시험,';
+        
+                    }
+                    if (j < 60) {
+                        comment += 'javascript 재시험,';
+        
+                    }
+                }
+        
+                document.write(comment);
+        
+        
+                name = '저변수';
+                h = 80;
+                c = 50;
+                j = 50;
+        
+        
+                let comments = name + ' 학생은 ';
+                if (h >= 60 && c >= 60 && j >= 60) {
+                    comments += '전과목 PASS';
+                } else {
+                    if (h < 60) {
+                        comments += 'html 재시험,';
+        
+                    }
+                    if (c < 60) {
+                        comments += 'css 재시험,';
+        
+                    }
+                    if (j < 60) {
+                        comments += 'javascript 재시험,';
+        
+                    }
+                }
+        
+                document.write('<br>' + comments);
+                */
 
-            호이스팅x
 
-            함수호출
-                변수();
-        */
-        const compute = function () {
-            console.log('익명 함수');
+        /*        
+        function examPass(name, h, c, j) {
+                    let comments = name + ' 학생은 ';
+                    if (h >= 60 && c >= 60 && j >= 60) {
+                        comments += '전과목 PASS';
+                    } else {
+                        if (h < 60) {
+                            comments += 'html 재시험,';
+        
+                        }
+                        if (c < 60) {
+                            comments += 'css 재시험,';
+        
+                        }
+                        if (j < 60) {
+                            comments += 'javascript 재시험,';
+        
+                        }
+                    }
+                }
+                console.log(examPass('이함수', 80, 90, 60));
+                */
+
+        //요소 탐색
+        const user_name = document.getElementById('user_name');
+        const html_lang = document.getElementById('html_lang');
+        const css_lang = document.getElementById('css_lang');
+        const js_lang = document.getElementById('js_lang');
+        const result_btn = document.getElementById('result_btn');
+        const result_msg = document.getElementById('result_msg');
+
+        //이벤트
+        result_btn.onclick = function () {
+            // 입력 상자를 사용하여 사용자로부터 데이터 받기
+            const name = user_name.value;
+            const html = html_lang.value;
+            const css = css_lang.value;
+            const js = js_lang.value;
+
+            if (name === '' || html === '' || css === '' || js === '') {
+                alert('다시 입력해 주세요.');
+            } else {
+                result_msg.textContent = examPass(name, html, css, js);
+            }
         };
-
-        compute();
-
-/*         let name = '이함수';
-        let h = 80;
-        let c = 90;
-        let j = 70;
-
-
-        let comment = name + ' 학생은 ';
-        if (h >= 60 && c >= 60 && j >= 60) {
-            comment += '전과목 PASS';
-        } else {
-            if (h < 60) {
-                comment += 'html 재시험,';
-
-            }
-            if (c < 60) {
-                comment += 'css 재시험,';
-
-            }
-            if (j < 60) {
-                comment += 'javascript 재시험,';
-
-            }
-        }
-
-        document.write(comment);
-
-
-        name = '저변수';
-        h = 80;
-        c = 50;
-        j = 50;
-
-
-        let comments = name + ' 학생은 ';
-        if (h >= 60 && c >= 60 && j >= 60) {
-            comments += '전과목 PASS';
-        } else {
-            if (h < 60) {
-                comments += 'html 재시험,';
-
-            }
-            if (c < 60) {
-                comments += 'css 재시험,';
-
-            }
-            if (j < 60) {
-                comments += 'javascript 재시험,';
-
-            }
-        }
-
-        document.write('<br>' + comments); */
 
 
         function examPass(name, h, c, j) {
-            let comments = name + ' 학생은 ';
+            let comment = name + ' 학생은 ';
             if (h >= 60 && c >= 60 && j >= 60) {
-                comments += '전과목 PASS';
+                comment += '합격입니다. 축하드립니다.';
             } else {
                 if (h < 60) {
-                    comments += 'html 재시험,';
+                    comment += 'html 재시험,';
 
                 }
                 if (c < 60) {
-                    comments += 'css 재시험,';
+                    comment += 'css 재시험,';
 
                 }
                 if (j < 60) {
-                    comments += 'javascript 재시험,';
+                    comment += 'javascript 재시험,';
 
                 }
             }
+            return comment;
         }
-        console.log(examPass('이함수', 80, 90, 60));
     </script>
 </body>
 
