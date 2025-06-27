@@ -42,6 +42,10 @@ a {
     color: var(--color-gray2);
 }
 
+img {
+    vertical-align: top;
+}
+
 .box_inner {
     width: 1050px;
     margin: 0 auto;
@@ -53,12 +57,20 @@ footer {
 
 /* 헤더 */
 header {
+    z-index: 9999;
     position: absolute;
     width: 100%;
-    height: 113px;
-    z-index: 9999;
     background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
 }
+
+.logo {
+    width: 270px;
+    height: 40px;
+    border: 1px solid sandybrown;
+}
+
+
 
 /* 섹션1 */
 .main_rolling_pc {
