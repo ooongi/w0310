@@ -145,42 +145,45 @@ $(document).ready(function () {
     let currentPage = 1;
     const totalPages = 3;
 
-    // 페이지 상태 업데이트
-    function updatePagination() {
-        // 페이지 번호 버튼 활성화/비활성화
-        $(".page_num").removeClass("active");
-        $(`.page_num[data-page="${currentPage}"]`).addClass("active");
+    // 페이지 표시 함수
+    function showPage(pageNum) {
+        // 모든 콘텐츠 숨기기
+        $(".best_tour_contents_box").removeClass("activeBox");
 
-        // 이전/다음 버튼 활성화/비활성화
-        $("#prev-btn").prop("disabled", currentPage === 1);
-        $("#next-btn").prop("disabled", currentPage === totalPages);
+        // 해당 페이지 콘텐츠 표시
+        $(`.best_tour_contents_box[data-page="${pageNum}"]`).addClass("activeBox");
 
-        // 콘텐츠 업데이트
-        $("#page-content").text(`페이지 ${currentPage} 내용`);
+        // 페이지 버튼 상태 업데이트
+        $(".page_num").removeClass("btnClick");
+        $(`.page_num[data-page="${pageNum}"]`).addClass("btnClick");
+
+        /* // 화살표 버튼 상태 업데이트
+        $("#prev_btn").prop("disabled", pageNum === 1);
+        $("#next_btn").prop("disabled", pageNum === totalPages); */
+
+        currentPage = pageNum;
     }
 
-    // 페이지 번호 클릭
-    $(".page-num").click(function () {
-        currentPage = parseInt($(this).data("page"));
-        updatePagination();
+    // 페이지 번호 클릭 이벤트
+    $(".page_num").click(function () {
+        const pageNum = parseInt($(this).data("page"));
+        showPage(pageNum);
     });
 
-    // 이전 버튼 클릭
-    $("#prev-btn").click(function () {
+    // 이전 페이지 버튼 클릭 이벤트
+    $("#prev_btn").click(function () {
         if (currentPage > 1) {
-            currentPage--;
-            updatePagination();
+            showPage(currentPage - 1);
         }
     });
 
-    // 다음 버튼 클릭
-    $("#next-btn").click(function () {
+    // 다음 페이지 버튼 클릭 이벤트
+    $("#next_btn").click(function () {
         if (currentPage < totalPages) {
-            currentPage++;
-            updatePagination();
+            showPage(currentPage + 1);
         }
     });
 
-    // 초기 설정
-    updatePagination();
+    // 초기 페이지 설정
+    showPage(1);
 });
