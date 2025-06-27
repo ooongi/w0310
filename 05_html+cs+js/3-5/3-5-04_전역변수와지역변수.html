@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전역변수와지역변수</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <script>
+        /* 
+            전역변수와 지역변수
+                -전역변수는 블록 밖에 선언
+                    ->안에서도 사용 가능
+                    ->변수 이름이 같으면 지역변수가 우선 적용
+                -지역변수는 블록 안에 선언 -> 밖에서는 사용할 수 없다
+                    
+            변수의 scope
+            -function level scope >> function(){블록} >> var
+                var는 함수 블록에서만 지역변수가 존재한다.
+            -block level scope >> {블록} >> let, const
+                let, const는 블록{}이나 제어문 블록{}에서도 지역변수 선언 가능
+
+            객체 {}
+            배열 []
+            함수 function(){}
+
+
+
+
+
+            
+            */
+
+        /* let a = 10;
+        console.log('전역변수', a); //10
+        for (let i = 5; i < 6; i++) {
+            console.log('첫 번째 for지역변수', i); //5
+            console.log('전역변수', a); //10
+        }
+        for (let j = 0; j < 1; j++) {
+            console.log('두 번째 for지역변수', j); //0
+        }
+        console.log('전역변수', a); //10 */
+
+        /*         let kor = 90;
+                function getScore() {
+                    kor = 100; //전역변수
+                    console.log(kor); //100
+                }
+                getScore();
+                console.log(kor); //100
+        
+                let eng = 90;
+                function getScore2() {
+                    let eng = 100; //지역변수
+                    let HTML = 90; //지역변수
+                    console.log(eng); //100
+                }
+                getScore2();
+                console.log(eng); //전역변수 90
+                // console.log(HTML); >> 에러. 함수(function) 밖에서는 지역변수를 사용할 수 없음. */
+
+        //함수의 전역변수
+        var sum1 = 10;
+        function add1() {
+            // sum1 = console.log('함수 밖 전역' + sum1); = undifined
+            console.log('함수 밖 전역' + sum1);
+            sum1 = 20; // 위 var 변수와 같은 변수 // 전역변수
+            console.log('함수 밖 전역' + sum1);
+            var sum1 = 30; // 지역변수, 위 sum1과 다르다
+            console.log('함수 안 지역' + sum1);
+        }
+
+        add1(); //함수 호출 실행문장
+        console.log('전역' + sum1); // function x
+
+        //함수의 지역변수
+        var sum2 = 30; // 전역변수
+        function add2() {
+            var sum2 = 40; // 지역변수
+            console.log('지역' + sum2);
+        }
+        add2();
+        console.log('전역' + sum2);
+
+        //블록의 지역변수
+        var num1 = 50; // 전역변수
+        if (num1 === 50) {
+            var num1 = 60; // 전역변수 재선언
+        }
+        console.log('전역' + num1); // 60
+        
+        //블록의 지역변수
+        let num2 = 70; // 전역변수
+        if (num2 === 70) {
+            // console.log('지역' + num2); // error / var로 쓰면 에러나지않음
+            let num2 = 80;
+            console.log('지역' + num2); // 80
+        }
+        console.log('전역' + num2); // 70
+
+        let x = 10;
+        {
+            let x = 20;
+            {
+                let x = 30;
+
+            }
+            
+        }
+    </script>
+</body>
+
+</html>

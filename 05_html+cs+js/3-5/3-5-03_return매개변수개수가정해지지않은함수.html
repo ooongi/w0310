@@ -4,148 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>리턴매개변수</title>
+    <title>매개변수개수가정해지지않은함수</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 </head>
 
 <body>
-    <h1>당신의 성적을 입력하세요.</h1>
-    <label for="user_name">이름</label>
-    <input type="text" id="user_name" required><br>
-    <label for="html_lang">HTML</label>
-    <input type="text" id="html_lang" required><br>
-    <label for="css_lang">CSS</label>
-    <input type="text" id="css_lang" required><br>
-    <label for="js_lang">javascript</label>
-    <input type="text" id="js_lang" required><br>
-    <button type="button" id="result_btn">결과 확인</button>
-    <div id="result_msg">결과 메시지</div>
 
     <script>
-        /*         
-                let name = '이함수';
-                let h = 80;
-                let c = 90;
-                let j = 70;
-        
-        
-                let comment = name + ' 학생은 ';
-                if (h >= 60 && c >= 60 && j >= 60) {
-                    comment += '전과목 PASS';
-                } else {
-                    if (h < 60) {
-                        comment += 'html 재시험,';
-        
-                    }
-                    if (c < 60) {
-                        comment += 'css 재시험,';
-        
-                    }
-                    if (j < 60) {
-                        comment += 'javascript 재시험,';
-        
-                    }
+        /* 
+            매개변수의 개수가 정해지지 않은 함수
+
+                function 함수명() {
+                    코드;
                 }
-        
-                document.write(comment);
-        
-        
-                name = '저변수';
-                h = 80;
-                c = 50;
-                j = 50;
-        
-        
-                let comments = name + ' 학생은 ';
-                if (h >= 60 && c >= 60 && j >= 60) {
-                    comments += '전과목 PASS';
-                } else {
-                    if (h < 60) {
-                        comments += 'html 재시험,';
-        
-                    }
-                    if (c < 60) {
-                        comments += 'css 재시험,';
-        
-                    }
-                    if (j < 60) {
-                        comments += 'javascript 재시험,';
-        
-                    }
-                }
-        
-                document.write('<br>' + comments);
-                */
 
+                함수명(argument1, argument2);
+        */
 
-        /*        
-        function examPass(name, h, c, j) {
-                    let comments = name + ' 학생은 ';
-                    if (h >= 60 && c >= 60 && j >= 60) {
-                        comments += '전과목 PASS';
-                    } else {
-                        if (h < 60) {
-                            comments += 'html 재시험,';
-        
-                        }
-                        if (c < 60) {
-                            comments += 'css 재시험,';
-        
-                        }
-                        if (j < 60) {
-                            comments += 'javascript 재시험,';
-        
-                        }
-                    }
-                }
-                console.log(examPass('이함수', 80, 90, 60));
-                */
-
-        //요소 탐색
-        const user_name = document.getElementById('user_name');
-        const html_lang = document.getElementById('html_lang');
-        const css_lang = document.getElementById('css_lang');
-        const js_lang = document.getElementById('js_lang');
-        const result_btn = document.getElementById('result_btn');
-        const result_msg = document.getElementById('result_msg');
-
-        //이벤트
-        result_btn.onclick = function () {
-            // 입력 상자를 사용하여 사용자로부터 데이터 받기
-            const name = user_name.value;
-            const html = html_lang.value;
-            const css = css_lang.value;
-            const js = js_lang.value;
-
-            if (name === '' || html === '' || css === '' || js === '') {
-                alert('다시 입력해 주세요.');
-            } else {
-                result_msg.textContent = examPass(name, html, css, js);
+        function showSubject() {
+            for (let i = 0; i < arguments.length; i++) { // arguments.length -> 3
+                console.log(arguments[i]);
             }
-        };
-
-
-        function examPass(name, h, c, j) {
-            let comment = name + ' 학생은 ';
-            if (h >= 60 && c >= 60 && j >= 60) {
-                comment += '합격입니다. 축하드립니다.';
-            } else {
-                if (h < 60) {
-                    comment += 'html 재시험,';
-
-                }
-                if (c < 60) {
-                    comment += 'css 재시험,';
-
-                }
-                if (j < 60) {
-                    comment += 'javascript 재시험,';
-
-                }
-            }
-            return comment;
         }
+
+        showSubject('html', 'css', 'javascript');
     </script>
 </body>
 
