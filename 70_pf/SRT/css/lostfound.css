@@ -44,32 +44,38 @@
     font-size: 20px;
     line-height: 2;
 }
-.lf_container > div {
-    display: flex;
-}
+
 .cs_left li:not(:last-child) {
     margin-bottom: 50px;
 }
 
-.lf_container div > div:first-child {
+.info_1,
+.method_1,
+.momment_1 {
     width: 140px;
     margin-right: 40px;
 }
 
-
-
-.lost_info {
-    height: 103px;
-    background: #752;
-}
-
-.lost_method {
-    height: 185px;
-    background: #888;
-}
-
-.info_2, .method_2 {
+.info_2,
+.method_2,
+.momment_2 {
     margin-top: 8px;
+}
+
+/* 유실물 신고 안내 */
+.lost_info {
+    display: flex;
+    height: 103px;
+}
+
+.info_2 a:hover {
+    text-decoration: underline;
+}
+
+/* 유실물 신고 및 습득요령 */
+.lost_method {
+    display: flex;
+    height: 185px;
 }
 
 .lost112 {
@@ -83,26 +89,110 @@
     border-radius: 30px;
 }
 
-.lost112 a:hover{
+.lost112 a:hover {
     background: #4c2f48;
     color: #fff;
-
 }
 
+/* 유실물 습득 표 */
 .lf_table {
-    height: 284px;
-    background: beige;
+    width: 1200px;
 }
 
+.lf_line {
+    width: 1200px;
+    border-top: 3px solid #4c2f48;
+}
+
+.lf_table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.lf_table thead th {
+    width: 600px;
+    height: 48px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.lf_table thead th:first-child {
+    border-right: 1px solid #D9D9D9;
+}
+
+.lf_table tbody th {
+    width: 190px;
+    height: 45px;
+    font-weight: normal;
+    border-right: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.lf_table tbody td {
+    padding: 10px;
+    border: 1px solid #D9D9D9;
+}
+
+.lf_table tbody tr td:last-child {
+    border-right: none;
+}
+
+/* 유실물 수령 시 */
 .lost_momment {
+    display: flex;
     height: 52px;
-    background: blanchedalmond;
 }
 
-.dw_table {
-    height: 144px;
-    background: sandybrown;
+/* 대리수령 위임장 다운로드 */
+.dw_table table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
 }
+
+.dw_table thead th {
+    width: 1200px;
+    height: 48px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.dw_table tbody th {
+    width: 190px;
+    height: 45px;
+    border-right: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.dw_table tbody th:last-child {
+    border-right: none;
+}
+
+.dw_table tbody td {
+    width: 190px;
+    height: 45px;
+    border-right: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.dw_table tbody td:last-child {
+    border-right: none;
+}
+
+.td_img {
+    width: 110px;
+    height: 24px;
+    background: #eee;
+    margin: 0 auto;
+    line-height: 24px;
+}
+
+.td_img img {
+    padding-top: 5px;
+}
+
 /* 푸터 */
 .footer {
     width: 100%;
