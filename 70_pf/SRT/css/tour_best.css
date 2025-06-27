@@ -48,6 +48,7 @@
     /* transform: translateY(-20%); */
 }
 
+/* 리모콘 내부 */
 .sidebar_contents {
     position: relative;
     width: 320px;
@@ -56,6 +57,8 @@
     border: 1px solid #b5b5b6;
     border-radius: 15px;
 }
+
+/* 필터 */
 .sidebar_title {
     position: relative;
     top: 28px;
@@ -101,6 +104,7 @@
     font-size: 14px;
 }
 
+/* 종합검색 */
 .search_container {
     position: relative;
     width: 256px;
@@ -137,10 +141,33 @@
     justify-content: center;
 }
 
+/* 리모콘 내부 버튼 */
+.sidebar_contents_area button {
+    background: #eee;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 7px 10px;
+    border-radius: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.sidebar_contents_area button:hover {
+    background: #4c2f48;
+    color: #fff;
+}
+
+/* 상품상태 */
 .item_container {
     height: 75px;
     background: red;
     border-bottom: 1px solid #b5b5b6;
+}
+
+.item_container ul {
+    display: flex;
+    width: 213px;
 }
 
 .train_container {
