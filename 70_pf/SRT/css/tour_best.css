@@ -149,6 +149,7 @@
     font-weight: bold;
     padding: 7px 10px;
     border-radius: 30px;
+    margin-top: 8px;
     margin-right: 10px;
     cursor: pointer;
 }
@@ -158,6 +159,14 @@
     color: #fff;
 }
 
+.sidebar_contents_area div {
+    margin: 16px 0;
+}
+
+.sidebar_contents_area div>ul {
+    display: flex;
+}
+
 /* 상품상태 */
 .item_container {
     height: 75px;
@@ -165,16 +174,17 @@
     border-bottom: 1px solid #b5b5b6;
 }
 
-.item_container ul {
-    display: flex;
-    width: 213px;
-}
 
 .train_container {
     height: 150px;
     background: orange;
     border-bottom: 1px solid #b5b5b6;
 }
+
+.tour_sub {
+    display: none;
+}
+
 
 .during_container {
     height: 75px;

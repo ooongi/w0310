@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장함수</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <script>
+        /* 
+
+            전역함수
+                alert()
+                prompt()
+                confirm()
+                setInterval()
+
+            자바스크립트에 기본적으로 내장되어 있는 함수
+
+            인코딩, 디코딩 함수
+            encodeURIComponent()    영문, 숫자와 () - _ , ~ * ! ' 을 제외한 문자를 인코딩합니다.
+            decodeURIComponent()    encodeURIComponent()의 디코딩 함수
+
+            숫자, 유/무한 값 판별함수
+            isNaN()     숫자인지 아닌지를 판별하는 함수. 숫자이면 false, 아니면 true.
+            isFinite()  유한값인지 무한값인지 판별하는 함수. 유한값이면 true, 무한값이면 false
+
+            숫자, 문자 변환 함수
+            Number()        숫자로 변환해주는 함수
+            parselnt()      숫자와 문자가 포함되어 있을 경우 정수 부분만 숫자로 변환해주는 함수
+            parseFloat()    숫자와 문자가 포함되어 있을 경우 소수 부분까지 숫자로 변환해주는 함수
+            String()        문자로 바꾸어주는 함수
+
+            자바스크립트 코드 변경 함수
+            eval()          문자를 자바스크립트 코드로 변경해주는 함수
+
+
+        */
+
+        //인코딩, 디코딩 함수
+        const encodeStr = '자바스크립트';
+        console.log(encodeURIComponent(encodeStr));
+        //%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8
+        const decodeStr = (encodeURIComponent(encodeStr));
+        console.log(decodeURIComponent(encodeStr));
+
+        //숫자, 유한무한 값 판별함수
+        const num1 = '숫자';
+        if (!isNaN(num1)) {
+            console.log('숫자');
+        } else {
+            console.log('숫자아님');
+        }
+
+        const num2 = 1 / 0;
+        // isFinite(num2) > num2 가 유한값인가?
+        if (isFinite(num2)) {
+            console.log('유한값');
+        } else {
+            console.log('무한값');
+        }
+
+        //숫자, 문자 변환 함수
+        const num3 = '10';
+            console.log(Number(num3));
+        const num4 = '100px';
+            console.log(parseInt(num4));
+        const num5 = '33.3%';
+            console.log(parseFloat(num5));
+        const num6 = 10;
+            console.log(typeof num6);
+            console.log(typeof String(num6));
+
+        //자바스크립트의 코드 변경 함수
+        const str1 = 'var num7 = 10';
+        const str2 = 'var num8 = 20';
+        // evaluation(평가하다) / const, let은 인식하지않음
+        eval(str1);
+        eval(str2);
+        console.log(num7 + num8);
+    </script>
+</body>
+
+</html>

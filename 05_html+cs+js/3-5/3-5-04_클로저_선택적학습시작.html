@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클로저</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <script>
+        /* 
+            클로저(Closure)
+                일반적으로 함수 내 지역변수는 함수 밖에서 참조할 수 없지만,
+                클로저는 함수 내 지역변수를 함수 밖에서 참조할 수 있게 해준다.
+        */
+
+        /* 
+            제이쿼리
+            객체.animate({css속성: 값, ...}, 시간, 콜백함수);
+        */
+
+        /* 
+            객체명 = {
+                속성: 값;
+                속성: 값;
+                메서드: function(){},
+                ...
+            }
+        */
+        function add() {
+            let n = 0;
+            return function () {
+                return ++n;
+            }
+        }
+
+        const increase = add();
+        console.log(increase());
+        console.log(increase());
+
+        function multiply(n) {
+            return function() {
+                return n *= n;
+            }
+        }
+
+
+        const num1 = multiply(10); // const increase = function () { return ++n; };
+        console.log(num1); // function() {return 100;}
+        console.log(num1()); // 10 * 10
+        console.log(num1()); // 100 * 100
+        const num2 = multiply(20);
+        console.log(num2()); // 20 * 20
+        console.log(num2()); // 400 * 400
+    </script>
+</body>
+
+</html>
