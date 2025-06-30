@@ -3,7 +3,7 @@ document.ready(function () {
         // 객체 메서드().메서드().메서드().메서드();
         // >> 객체 메서드
         $(this).find(".sub").stop().fadeIn().css({display:'flex'});
-        $(".nav_bg").stop().animate({ height: 50 });
+        $(".nav_bg").stop().animate({ opacity:1 });
     });
 
     $(".main>li").mouseleave(function () {
@@ -13,6 +13,6 @@ document.ready(function () {
 
     $(".main>li").mouseout(function () {
         $('.gnb').find(".sub").stop().fadeout().css({display:'none'});
-        $(".nav_bg").stop().animate({ height: 0 });
+        $(".nav_bg").stop().animate({ opacity:0 });
     });
 });

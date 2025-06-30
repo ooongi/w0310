@@ -29,9 +29,9 @@
                         <div class="search_container">
                             <h2>종합검색</h2>
                             <input type="text" class="search_box" placeholder="원하는 여행을 검색해보세요.">
-                            <button class="search_btn">
+                            <div class="search_btn">
                                 <img src="../images/sub/search.svg" alt="검색버튼">
-                            </button>
+                            </div>
                         </div>
                         <div class="item_container">
                             <h2>상품상태</h2>
@@ -44,110 +44,158 @@
                         </div>
                         <div class="train_container">
                             <h2>운행구간</h2>
-                            <ul>
-                                <li><button type="button">전체</button></li>
-                                <li><button type="button">경부선</button>
-                                    <ul class="tour_sub">
-                                        <li>수서역</li>
-                                        <li>동탄역</li>
-                                        <li>평택지제역</li>
-                                        <li>천안아산역</li>
-                                        <li>오송역</li>
-                                        <li>대전역</li>
-                                        <li>김천구미역</li>
-                                        <li>서대구역</li>
-                                        <li>동대구역</li>
-                                        <li>경주역</li>
-                                        <li>울산역</li>
-                                        <li>부산역</li>
-                                    </ul>
-                                </li>
-                                <li><button type="button">호남선</button>
-                                    <ul class="tour_sub">
-                                        <li>수서역</li>
-                                        <li>동탄역</li>
-                                        <li>평택지제역</li>
-                                        <li>천안아산역</li>
-                                        <li>오송역</li>
-                                        <li>공주역</li>
-                                        <li>익산역</li>
-                                        <li>정읍역</li>
-                                        <li>광주송정역</li>
-                                        <li>나주역</li>
-                                        <li>목포역</li>
-                                    </ul>
-                                </li>
-                                <li><button type="button">전라선</button>
-                                    <ul class="tour_sub">
-                                        <li>수서역</li>
-                                        <li>동탄역</li>
-                                        <li>평택지제역</li>
-                                        <li>천안아산역</li>
-                                        <li>오송역</li>
-                                        <li>대전역</li>
-                                        <li>공주역</li>
-                                        <li>익산역</li>
-                                        <li>전주역</li>
-                                        <li>남원역</li>
-                                        <li>곡성역</li>
-                                        <li>곡성역</li>
-                                        <li>구례구역</li>
-                                        <li>순천역</li>
-                                        <li>여천역</li>
-                                        <li>여수엑스포역</li>
-                                    </ul>
-                                </li>
-                                <li><button type="button">경전선</button>
-                                    <ul class="tour_sub">
-                                        <li>수서역</li>
-                                        <li>동탄역</li>
-                                        <li>평택지제역</li>
-                                        <li>천안아산역</li>
-                                        <li>오송역</li>
-                                        <li>대전역</li>
-                                        <li>김천구미역</li>
-                                        <li>서대구역</li>
-                                        <li>동대구역</li>
-                                        <li>밀양역</li>
-                                        <li>진영역</li>
-                                        <li>창원중앙역</li>
-                                        <li>창원역</li>
-                                        <li>마산역</li>
-                                        <li>진주역</li>
-                                    </ul>
-                                </li>
-                                <li><button type="button">동해선</button>
-                                    <ul class="tour_sub">
-                                        <li>수서역</li>
-                                        <li>동탄역</li>
-                                        <li>평택지제역</li>
-                                        <li>천안아산역</li>
-                                        <li>오송역</li>
-                                        <li>대전역</li>
-                                        <li>김천구미역</li>
-                                        <li>서대구역</li>
-                                        <li>동대구역</li>
-                                        <li>포항역</li>
-                                    </ul>
-                                </li>
-                            </ul>
-
+                            <div class="train_container_box">
+                                <ul class="all_btn">
+                                    <li><button type="button">전체</button></li>
+                                </ul>
+                                <ul class="tour_main">
+                                    <li><button type="button">경부선
+                                            <span class="train_arrow" id="train_arrow"></span>
+                                        </button>
+                                        <ul class="tour_sub">
+                                            <li>수서역</li>
+                                            <li>동탄역</li>
+                                            <li>평택지제역</li>
+                                            <li>천안아산역</li>
+                                            <li>오송역</li>
+                                            <li>대전역</li>
+                                            <li>김천구미역</li>
+                                            <li>서대구역</li>
+                                            <li>동대구역</li>
+                                            <li>경주역</li>
+                                            <li>울산역</li>
+                                            <li>부산역</li>
+                                        </ul>
+                                    </li>
+                                    <li><button type="button">호남선 <span class="train_arrow"
+                                                id="train_arrow"></span></button>
+                                        <ul class="tour_sub">
+                                            <li>수서역</li>
+                                            <li>동탄역</li>
+                                            <li>평택지제역</li>
+                                            <li>천안아산역</li>
+                                            <li>오송역</li>
+                                            <li>공주역</li>
+                                            <li>익산역</li>
+                                            <li>정읍역</li>
+                                            <li>광주송정역</li>
+                                            <li>나주역</li>
+                                            <li>목포역</li>
+                                        </ul>
+                                    </li>
+                                    <li><button type="button">전라선 <span class="train_arrow"
+                                                id="train_arrow"></span></button>
+                                        <ul class="tour_sub">
+                                            <li>수서역</li>
+                                            <li>동탄역</li>
+                                            <li>평택지제역</li>
+                                            <li>천안아산역</li>
+                                            <li>오송역</li>
+                                            <li>대전역</li>
+                                            <li>공주역</li>
+                                            <li>익산역</li>
+                                            <li>전주역</li>
+                                            <li>남원역</li>
+                                            <li>곡성역</li>
+                                            <li>곡성역</li>
+                                            <li>구례구역</li>
+                                            <li>순천역</li>
+                                            <li>여천역</li>
+                                            <li>여수엑스포역</li>
+                                        </ul>
+                                    </li>
+                                    <li><button type="button">경전선 <span class="train_arrow"
+                                                id="train_arrow"></span></button>
+                                        <ul class="tour_sub">
+                                            <li>수서역</li>
+                                            <li>동탄역</li>
+                                            <li>평택지제역</li>
+                                            <li>천안아산역</li>
+                                            <li>오송역</li>
+                                            <li>대전역</li>
+                                            <li>김천구미역</li>
+                                            <li>서대구역</li>
+                                            <li>동대구역</li>
+                                            <li>밀양역</li>
+                                            <li>진영역</li>
+                                            <li>창원중앙역</li>
+                                            <li>창원역</li>
+                                            <li>마산역</li>
+                                            <li>진주역</li>
+                                        </ul>
+                                    </li>
+                                    <li><button type="button">동해선 <span class="train_arrow"
+                                                id="train_arrow"></span></button>
+                                        <ul class="tour_sub">
+                                            <li>수서역</li>
+                                            <li>동탄역</li>
+                                            <li>평택지제역</li>
+                                            <li>천안아산역</li>
+                                            <li>오송역</li>
+                                            <li>대전역</li>
+                                            <li>김천구미역</li>
+                                            <li>서대구역</li>
+                                            <li>동대구역</li>
+                                            <li>포항역</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+
                         <div class="during_container">
                             <h2>여행기간</h2>
+                            <div class="during_container_box">
+                                <ul class="all_btn">
+                                    <li><button type="button">전체</button></li>
+                                </ul>
+                                <ul>
+                                    <li><button type="button">당일</button></li>
+                                    <li><button type="button">1박2일</button></li>
+                                    <li><button type="button">2박3일</button></li>
+                                </ul>
+                            </div>
 
                         </div>
                         <div class="day_container">
                             <h2>출발요일</h2>
-
+                            <div class="day_container_box">
+                                <ul class="all_btn">
+                                    <li><button type="button">전체</button></li>
+                                </ul>
+                                <ul>
+                                    <li><button type="button">월</button></li>
+                                    <li><button type="button">화</button></li>
+                                    <li><button type="button">수</button></li>
+                                    <li><button type="button">목</button></li>
+                                    <li><button type="button">금</button></li>
+                                    <li><button type="button">토</button></li>
+                                    <li><button type="button">일</button></li>
+                                </ul>
+                            </div>
                         </div>
+
                         <div class="key_container">
                             <h2>키워드</h2>
-
+                            <div class="key_container_box">
+                                <ul class="all_btn">
+                                    <li><button type="button">전체</button></li>
+                                </ul>
+                                <ul>
+                                    <li><button type="button">기차여행</button></li>
+                                    <li><button type="button">시티투어</button></li>
+                                    <li><button type="button">축제</button></li>
+                                    <li><button type="button">계절</button></li>
+                                    <li><button type="button">체험</button></li>
+                                    <li><button type="button">산/강/바다</button></li>
+                                    <li><button type="button">관광지</button></li>
+                                </ul>
+                            </div>
                         </div>
+
                     </div><!-- sidebar_contents_area -->
-                    <div>
-                        <h2>필터적용</h2>
+                    <div class="filter_btn">
+                        <button type="submit">필터적용</button>
                     </div>
                 </div><!-- sidebar_contents -->
             </div>

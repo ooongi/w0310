@@ -43,7 +43,6 @@
 .sidebar {
     width: 320px;
     height: 1520px;
-    background: yellowgreen;
     padding-bottom: 20px;
     /* transform: translateY(-20%); */
 }
@@ -91,9 +90,14 @@
     color: #ffffff;
 }
 
+.sidebar_contents {
+    display: flex;
+    flex-direction: column;
+}
+
 .sidebar_contents_area {
     position: relative;
-    top: 80px;
+    top: 60px;
     left: 25px;
     width: 291px;
     height: 540px;
@@ -146,7 +150,7 @@
     background: #eee;
     border: none;
     font-size: 12px;
-    font-weight: bold;
+    font-weight: 600;
     padding: 7px 10px;
     border-radius: 30px;
     margin-top: 8px;
@@ -159,48 +163,115 @@
     color: #fff;
 }
 
-.sidebar_contents_area div {
+.sidebar_contents_area button:hover span {
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+.sidebar_contents_area > div {
     margin: 16px 0;
 }
 
-.sidebar_contents_area div>ul {
+.sidebar_contents_area div > ul {
+    flex-wrap: wrap;
     display: flex;
 }
 
 /* 상품상태 */
 .item_container {
-    height: 75px;
-    background: red;
+    width: 256px;
+    padding-bottom: 16px;
     border-bottom: 1px solid #b5b5b6;
 }
 
-
 .train_container {
-    height: 150px;
-    background: orange;
+    width: 256px;
+    padding-bottom: 16px;
     border-bottom: 1px solid #b5b5b6;
+}
+
+.train_container_box {
+    display: flex;
+}
+
+.tour_main {
+    width: 200px;
 }
 
 .tour_sub {
     display: none;
 }
 
+.train_arrow {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    transform: rotate(-45deg);
+    transition: none;
+}
+
+.tour_main span {
+    margin-left: 5px;
+}
+
+/* .train_arrow.down {
+    transform: rotate(135deg);
+} */
 
 .during_container {
+    width: 256px;
     height: 75px;
-    background: yellow;
+    padding-bottom: 16px;
     border-bottom: 1px solid #b5b5b6;
+}
+
+.during_container_box {
+    display: flex;
 }
 
 .day_container {
+    width: 256px;
     height: 112px;
-    background: green;
+    padding-bottom: 16px;
     border-bottom: 1px solid #b5b5b6;
 }
 
+.day_container_box {
+    display: flex;
+}
+
+.day_container_box>ul:nth-of-type(2) {
+    width: 200px;
+}
+
 .key_container {
+    width: 256px;
     height: 150px;
-    background: blue;
+    padding-bottom: 16px;
+}
+
+.key_container_box {
+    display: flex;
+}
+
+.key_container_box>ul:nth-of-type(2) {
+    width: 200px;
+}
+
+.filter_btn {
+    margin: 90px auto 0;
+
+}
+
+.filter_btn button {
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    width: 200px;
+    height: 40px;
 }
 
 /* 스크롤 효과 */
@@ -277,6 +348,7 @@
 }
 
 #best_sub_nav.show {
+    display: block;
     transition: 0.3s;
 }
 
@@ -295,7 +367,6 @@
     justify-content: space-between;
     width: 100%;
     height: 20px;
-    background: #dd1111;
     padding: 25px 0 40px;
     align-items: center;
 }
