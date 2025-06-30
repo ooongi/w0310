@@ -32,10 +32,10 @@ header {
 }
 
 .nav_bg {
-    position: absolute;
+    position: fixed;
     z-index: 1;
     width: 100%;
-    top: 35px;
+    top: 100px;
     left: 0;
     background: rgba(0, 0, 0, 0.5);
 }
@@ -57,11 +57,29 @@ header {
     width: 160px;
 }
 
+.main > li > a:hover {
+    background: blue;
+    color: #fff;
+}
+
+.main>li>a:hover .sub {
+    height: 210px;
+}
 
 .sub {
+    position: absolute;
+    top: 40px;
     display: none;
     height: 210px;
     line-height: 30px;
     padding-top: 10px;
+}
+.sub a {
+    display: block;
+    color: #fff;
+}
 
+.sub a:hover {
+    background: #fff;
+    color: #333;
 }
