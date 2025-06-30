@@ -1,7 +1,6 @@
 @charset "utf-8";
 @import url(common.css);
 
-
 /* 헤더 */
 header {
     z-index: 9999;
@@ -11,8 +10,58 @@ header {
     padding: 30px;
 }
 
+.box_inner {
+    display: flex;
+    width: 1050px;
+    margin: 0 auto;
+}
+
+.util {
+    text-align: right;
+}
+
 .logo {
     width: 270px;
     height: 40px;
     border: 1px solid sandybrown;
+}
+
+.gnb {
+    z-index: 2;
+    position: absolute;
+}
+
+.nav_bg {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 35px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.main {
+    display: flex;
+    text-align: right;
+}
+
+.main > li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.main > li > a {
+    background: red;
+    display: block;
+    margin-bottom: 1px;
+    width: 160px;
+}
+
+
+.sub {
+    display: none;
+    height: 210px;
+    line-height: 30px;
+    padding-top: 10px;
+
 }

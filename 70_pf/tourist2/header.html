@@ -9,8 +9,10 @@
     <!-- 제이쿼리 라이브러리 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/nav.js"></script>
     <!-- bx슬라이더 라이브러리 css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header.css">
 </head>
 
@@ -18,7 +20,45 @@
     <!-- 헤더 -->
     <header id="header">
         <div class="box_inner">
-            <h1 class="logo"><a href="/index.html"><img src="http://picsum.photos/id/200/270/40" alt="logo"></a></h1>
+            <h1 class="logo">
+                <a href="/index.html">
+                    <img src="http://picsum.photos/id/200/270/40" alt="logo">
+                </a>
+            </h1>
+            <div class="util">
+                <a href="#">로그인</a>
+                <a href="#">회원가입</a>
+            </div>
+            <div class="nav_outer_box">
+                <nav class="gnb">
+                    <ul class="main">
+                        <li><a href="#">여행정보</a>
+                            <ul class="sub">
+                                <li><a href="#">국내</a></li>
+                                <li><a href="#">해외</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">고객센터</a>
+                            <ul class="sub">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">문의하기</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">상품투어</a>
+                            <ul class="sub">
+                                <li><a href="#">프로그램 소개</a></li>
+                                <li><a href="#">여행자료</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">티켓/가이드</a>
+                            <ul class="sub">
+                                <li><a href="#">항공</a></li>
+                                <li><a href="#">호텔</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 </body>
