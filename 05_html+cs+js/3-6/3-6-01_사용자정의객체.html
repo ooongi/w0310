@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,83 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 </head>
+
 <body>
     <script>
-        
+        /*
+
+            제이쿼리
+                $(this)
+
+            예약어
+                true, false, if, else, for, while, do, break, continue, switch, try, catch, this, ...
+
+            객체(object)
+                데이터 값을 필요한 대로 만들어 사용
+                데이터는 '이름: 값'의 쌍으로 이루어져 있다.
+                -> 이것을 속성(properties)이라고 한다.
+
+                1. 사용자 정의 객체
+                    객체 리터럴
+                    객체 생성자 함수
+                    클래스(ES6) > 객체 지향 프로그래밍 언어
+                2. 내장 객체
+                    Number, String, Array, Math, Date, RegExp, ...
+
+
+                사용자 정의 객체 형식:
+                    {이름: 값, 이름: 값, ...}
+                    {변수1: 값, 변수2: 값, ...}
+                    const 변수 = {
+                        속성: 값,
+                        메서드: function(){},
+                        ...
+                    }
+
+
+                    예> person 객체
+                    const person = {
+                        name: '홍길동',
+                        age: 20,
+                        nationality: '한국',
+                        ...
+                        aboutMe: function(){ alert('hi!'); }
+                    }
+                    객체 사용
+                        console.log(person.name);
+                        console.log(person.aboutMe());
+
+        */
+        // //예> person 객체
+        // const person = {
+        //     name: '홍길동',
+        //     age: 20,
+        //     nationality: '한국',
+        //     aboutme: function() { alert(`나는 ${person.age}살 ${person.name}입니다.`); }
+        // }
+        // //객체 사용
+        // console.log(person.name); // 홍길동
+        // console.log(person.aboutme()); // 경고창 실행
+
+        // //출력문
+        // console.log(n);
+
+
+        const info = {
+            subject: 'css',
+            credit: 1,
+            printOut: function() {
+                // this는 info이다.
+                return this.subject + ', ' + this.credit + '학점';
+            }
+        };
+
+
+        //객체 사용
+        console.log(info.subject); // css
+        console.log(info.credit); // 1
+        console.log(info.printOut()); // css, 1학점
     </script>
 </body>
+
 </html>
