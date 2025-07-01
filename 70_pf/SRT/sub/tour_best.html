@@ -23,7 +23,7 @@
                 <div class="sidebar_contents">
                     <div class="sidebar_title">
                         <h1>필터</h1>
-                        <button type="button">초기화</button>
+                        <button type="button" class="reset_btn" id="resetFilter">초기화</button>
                     </div>
                     <div class="sidebar_contents_area">
                         <div class="search_container">
@@ -150,9 +150,9 @@
                                     <li><button type="button">전체</button></li>
                                 </ul>
                                 <ul>
-                                    <li><button type="button">당일</button></li>
-                                    <li><button type="button">1박2일</button></li>
-                                    <li><button type="button">2박3일</button></li>
+                                    <li><button type="button" class="filter_btn duration" data-filter="duration" data-value="당일">당일</button></li>
+                                    <li><button type="button" class="filter_btn duration" data-filter="duration" data-value="1박2일">1박2일</button></li>
+                                    <li><button type="button" class="filter_btn duration" data-filter="duration" data-value="2박3일">2박3일</button></li>
                                 </ul>
                             </div>
 
@@ -161,7 +161,7 @@
                             <h2>출발요일</h2>
                             <div class="day_container_box">
                                 <ul class="all_btn">
-                                    <li><button type="button">전체</button></li>
+                                    <li><button type="button" class="filter_btn">전체</button></li>
                                 </ul>
                                 <ul>
                                     <li><button type="button">월</button></li>
@@ -182,20 +182,20 @@
                                     <li><button type="button">전체</button></li>
                                 </ul>
                                 <ul>
-                                    <li><button type="button">기차여행</button></li>
-                                    <li><button type="button">시티투어</button></li>
-                                    <li><button type="button">축제</button></li>
-                                    <li><button type="button">계절</button></li>
-                                    <li><button type="button">체험</button></li>
-                                    <li><button type="button">산/강/바다</button></li>
-                                    <li><button type="button">관광지</button></li>
+                                    <li><button type="button" class="filter_btn theme" data-filter="theme" data-value="기차여행">기차여행</button></li>
+                                    <li><button type="button" class="filter_btn theme" data-filter="theme" data-value="시티투어">시티투어</button></li>
+                                    <li><button type="button" class="filter_btn theme" data-filter="theme" data-value="축제">축제</button></li>
+                                    <li><button type="button" class="filter_btn theme" data-filter="theme" data-value="계절">계절</button></li>
+                                    <li><button type="button" class="filter_btn theme" data-filter="theme" data-value="체험">체험</button></li>
+                                    <li><button type="button" class="filter_btn theme" data-filter="theme" data-value="산/강/바다">산/강/바다</button></li>
+                                    <li><button type="button" class="filter_btn theme" data-filter="theme" data-value="관광지">관광지</button></li>
                                 </ul>
                             </div>
                         </div>
 
                     </div><!-- sidebar_contents_area -->
-                    <div class="filter_btn">
-                        <button type="submit">필터적용</button>
+                    <div class="submit_btn">
+                        <button type="submit" class="apply_btn" id="applyFilter">필터적용</button>
                     </div>
                 </div><!-- sidebar_contents -->
             </div>
@@ -207,7 +207,7 @@
                     </button>
                     <nav id="best_sub_nav">
                         <ul class="best_down" id="best_down">
-                            <li><a href="#">SRT 베스트 여행상품</a></li>
+                            <li><a href="/70_pf/SRT/sub/tour_best.html">SRT 베스트 여행상품</a></li>
                             <li><a href="#">지역별 여행상품</a></li>
                             <li><a href="#">기간별 여행상품</a></li>
                         </ul>
@@ -229,14 +229,11 @@
                     <div class="best_tour_contents">
                         <div class="best_tour_contents_box" data-page="1">
                             <div>
-                                <div class="contents_img"><img src="../images/sub/busan1.png" alt=""></div>
+                                <div class="contents_img"><img src="../images/sub/busan1.png" alt="부산기차여행1"></div>
                                 <div class="contents_note">
-                                    <div class="contents_filter">
-                                        <div class="filter_1">필터1</div>
-                                        <div class="filter_2">필터2</div>
-                                        <div class="filter_3">필터3</div>
-                                    </div>
                                     <div class="contents_flex">
+                                        <div class="contents_filter">
+                                        </div>
                                         <div class="contents_info">
                                             <h3>[부산이야기 기차여행 2탄]당일로 즐기는 SRT 부산여행</h3>
                                             <p class="subway">부산역</p>
@@ -246,27 +243,172 @@
                                                 <span>당일</span>
                                             </div>
                                             <div class="contents_info_2">
-                                                <img src="../images/sub/people.svg" alt="여행기간">
+                                                <img src="../images/sub/people.svg" alt="출발인원">
                                                 <span>출발인원</span>
                                                 <span>최소 4인</span>
                                             </div>
                                             <div class="tour_logo">
-                                                <img src="../images/sub/tourgongbang.png" alt="">
+                                                <img src="../images/sub/tourgongbang.png" alt="여행공방여행사">
                                             </div>
                                         </div>
-                                        <div class="contents_pay">
-                                            <p>성인기준</p>
-                                            <p><span>159,000</span>원~</p>
-                                        </div>
                                     </div>
-                                    <a href="https://www.tour08.co.kr/home/goods_view/index.asp?ts=goods_day&strApart=B&strBpart=2&strCpart=2&goodsNum=1230" target="_blank">자세히보기</a>
+                                    <div class="contents_pay">
+                                        <p>성인기준</p>
+                                        <p><span>159,000</span>원~</p>
+                                    </div>
+                                    <a href="https://www.tour08.co.kr/home/goods_view/index.asp?ts=goods_day&strApart=B&strBpart=2&strCpart=2&goodsNum=1230"
+                                        target="_blank">자세히보기</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-page="1"></div>
-                        <div class="best_tour_contents_box" data-page="1"></div>
-                        <div class="best_tour_contents_box" data-page="1"></div>
-                        <div class="best_tour_contents_box" data-page="1"></div>
+                        <div class="best_tour_contents_box" data-page="1">
+                            <div>
+                                <div class="contents_img"><img src="../images/sub/gslose.png" alt="곡성장미축제와전주한옥마을"></div>
+                                <div class="contents_note">
+                                    <div class="contents_flex">
+                                        <div class="contents_filter">
+                                            <div class="filter_1">필터1</div>
+                                            <div class="filter_2">필터2</div>
+                                            <div class="filter_3">필터3</div>
+                                        </div>
+                                        <div class="contents_info">
+                                            <h3>곡성 장미축제·전주 한옥마을</h3>
+                                            <p class="subway">익산역</p>
+                                            <div class="contents_info_1">
+                                                <img src="../images/sub/month.svg" alt="여행기간">
+                                                <span>여행기간</span>
+                                                <span>2박 3일</span>
+                                            </div>
+                                            <div class="contents_info_2">
+                                                <img src="../images/sub/people.svg" alt="출발인원">
+                                                <span>출발인원</span>
+                                                <span>최소 10인</span>
+                                            </div>
+                                            <div class="tour_logo">
+                                                <img src="../images/sub/hongtour.png" alt="홍익여행사">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contents_pay">
+                                        <p>성인기준</p>
+                                        <p><span>119,000</span>원~</p>
+                                    </div>
+                                    <a href="https://www.ktxtour.co.kr/goods/goods_category_view.asp?goodsCode=1|15|2011|29&SearchKeyword=%B0%EE%BC%BA"
+                                        target="_blank">자세히보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="best_tour_contents_box" data-page="1">
+                            <div>
+                                <div class="contents_img"><img src="../images/sub/g_u_b.png" alt="경주울산부산여행"></div>
+                                <div class="contents_note">
+                                    <div class="contents_flex">
+                                        <div class="contents_filter">
+                                            <div class="filter_1">필터1</div>
+                                            <div class="filter_2">필터2</div>
+                                            <div class="filter_3">필터3</div>
+                                        </div>
+                                        <div class="contents_info">
+                                            <h3>경주·울산·부산 여행</h3>
+                                            <p class="subway">경주역</p>
+                                            <div class="contents_info_1">
+                                                <img src="../images/sub/month.svg" alt="여행기간">
+                                                <span>여행기간</span>
+                                                <span>2박 3일</span>
+                                            </div>
+                                            <div class="contents_info_2">
+                                                <img src="../images/sub/people.svg" alt="출발인원">
+                                                <span>출발인원</span>
+                                                <span>최소 8인</span>
+                                            </div>
+                                            <div class="tour_logo">
+                                                <img src="../images/sub/hongtour.png" alt="홍익여행사">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contents_pay">
+                                        <p>성인기준</p>
+                                        <p><span>434,000</span>원~</p>
+                                    </div>
+                                    <a href="https://www.ktxtour.co.kr/goods/goods_category_view.asp?goodsCode=Z|17|2023|1&SearchKeyword=%B0%E6%C1%D6"
+                                        target="_blank">자세히보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="best_tour_contents_box" data-page="1">
+                            <div>
+                                <div class="contents_img"><img src="../images/sub/haenam.png" alt="시인의섬보길도청산도해남"></div>
+                                <div class="contents_note">
+                                    <div class="contents_flex">
+                                        <div class="contents_filter">
+                                            <div class="filter_1">필터1</div>
+                                            <div class="filter_2">필터2</div>
+                                            <div class="filter_3">필터3</div>
+                                        </div>
+                                        <div class="contents_info">
+                                            <h3>시인의 섬 보길도·청산도·해남</h3>
+                                            <p class="subway">광주송정역</p>
+                                            <div class="contents_info_1">
+                                                <img src="../images/sub/month.svg" alt="여행기간">
+                                                <span>여행기간</span>
+                                                <span>2박 3일</span>
+                                            </div>
+                                            <div class="contents_info_2">
+                                                <img src="../images/sub/people.svg" alt="출발인원">
+                                                <span>출발인원</span>
+                                                <span>최소 8인</span>
+                                            </div>
+                                            <div class="tour_logo">
+                                                <img src="../images/sub/hongtour.png" alt="홍익여행사">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contents_pay">
+                                        <p>성인기준</p>
+                                        <p><span>284,000</span>원~</p>
+                                    </div>
+                                    <a href="https://www.ktxtour.co.kr/goods/goods_category_view.asp?goodsCode=1|15|2010|46&SearchKeyword=%C3%BB%BB%EA%B5%B5"
+                                        target="_blank">자세히보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="best_tour_contents_box" data-page="1">
+                            <div>
+                                <div class="contents_img"><img src="../images/sub/dochodo.png" alt="서해4도홍도흑산도비금도초도"></div>
+                                <div class="contents_note">
+                                    <div class="contents_flex">
+                                        <div class="contents_filter">
+                                            <div class="filter_1">필터1</div>
+                                            <div class="filter_2">필터2</div>
+                                            <div class="filter_3">필터3</div>
+                                        </div>
+                                        <div class="contents_info">
+                                            <h3>서해 4島 홍도·흑산도·비금·도초도</h3>
+                                            <p class="subway">부산역</p>
+                                            <div class="contents_info_1">
+                                                <img src="../images/sub/month.svg" alt="여행기간">
+                                                <span>여행기간</span>
+                                                <span>2박 3일</span>
+                                            </div>
+                                            <div class="contents_info_2">
+                                                <img src="../images/sub/people.svg" alt="출발인원">
+                                                <span>출발인원</span>
+                                                <span>최소 4인</span>
+                                            </div>
+                                            <div class="tour_logo">
+                                                <img src="../images/sub/hongtour.png" alt="홍익여행사">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contents_pay">
+                                        <p>성인기준</p>
+                                        <p><span>319,000</span>원~</p>
+                                    </div>
+                                    <a href="https://www.ktxtour.co.kr/goods/goods_category_view.asp?goodsCode=Z|15|2018|7&SearchKeyword=%B5%B5%C3%CA%B5%B5"
+                                        target="_blank">자세히보기</a>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="best_tour_contents_box" data-page="2"></div>
                         <div class="best_tour_contents_box" data-page="2"></div>
@@ -278,7 +420,7 @@
                         <div class="best_tour_contents_box" data-page="3"></div>
                         <div class="best_tour_contents_box" data-page="3"></div>
                         <div class="best_tour_contents_box" data-page="3"></div>
-                        <!-- <div class="best_tour_contents_box" data-page="3"></div> -->
+                        <div class="best_tour_contents_box" data-page="3"></div>
                     </div>
                     <div class="best_btn_area">
                         <div class="best_btn_page">

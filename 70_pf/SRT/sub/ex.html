@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행 정보 검색</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9fafb;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #374151;
+            margin-bottom: 2rem;
+        }
+
+        .filter-section {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 2rem;
+        }
+
+        .filter-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 1.5rem;
+        }
+
+        .filter-group {
+            margin-bottom: 2rem;
+        }
+
+        .filter-group h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid #d1d5db;
+            background: white;
+            color: #374151;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .filter-btn:hover {
+            border-color: #3b82f6;
+            transform: translateY(-1px);
+        }
+
+        .filter-btn.active.duration {
+            background: #3b82f6;
+            color: white;
+            border-color: #3b82f6;
+        }
+
+        .filter-btn.active.type {
+            background: #10b981;
+            color: white;
+            border-color: #10b981;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .apply-btn {
+            padding: 12px 30px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .apply-btn:hover {
+            background: #2563eb;
+        }
+
+        .reset-btn {
+            padding: 12px 30px;
+            background: #9ca3af;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .reset-btn:hover {
+            background: #6b7280;
+        }
+
+        .result-info {
+            margin-bottom: 1.5rem;
+            color: #6b7280;
+        }
+
+        .result-count {
+            font-weight: 600;
+            color: #3b82f6;
+        }
+
+        .travel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .travel-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .travel-card:hover {
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .travel-card.hidden {
+            display: none;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-emoji {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+
+        .card-tags {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .tag.duration {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .tag.type {
+            background: #d1fae5;
+            color: #059669;
+        }
+
+        .card-price {
+            text-align: right;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #3b82f6;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 80px 20px;
+            display: none;
+        }
+
+        .no-results-emoji {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .no-results h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #6b7280;
+            margin-bottom: 10px;
+        }
+
+        .no-results p {
+            color: #9ca3af;
+        }
+
+        @media (max-width: 768px) {
+            .filter-buttons {
+                justify-content: center;
+            }
+
+            .action-buttons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">✈️ 여행 정보 검색</h1>
+
+        <!-- 필터 섹션 -->
+        <div class="filter-section">
+            <h2 class="filter-title">필터 옵션</h2>
+
+            <!-- 여행 기간 -->
+            <div class="filter-group">
+                <h3>여행 기간</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn duration" data-filter="duration" data-value="1박2일">1박2일</button>
+                    <button class="filter-btn duration" data-filter="duration" data-value="2박3일">2박3일</button>
+                    <button class="filter-btn duration" data-filter="duration" data-value="3박4일">3박4일</button>
+                    <button class="filter-btn duration" data-filter="duration" data-value="6박7일">6박7일</button>
+                </div>
+            </div>
+
+            <!-- 여행 타입 -->
+            <div class="filter-group">
+                <h3>여행 타입</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn type" data-filter="type" data-value="국내여행">국내여행</button>
+                    <button class="filter-btn type" data-filter="type" data-value="해외여행">해외여행</button>
+                </div>
+            </div>
+
+            <!-- 적용/초기화 버튼 -->
+            <div class="action-buttons">
+                <button class="apply-btn" id="applyFilter">적용</button>
+                <button class="reset-btn" id="resetFilter">초기화</button>
+            </div>
+        </div>
+
+        <!-- 결과 표시 -->
+        <div class="result-info">
+            총 <span class="result-count" id="resultCount">6</span>개의 여행 상품이 있습니다.
+        </div>
+
+        <!-- 여행 상품 목록 (기존 HTML에 data 속성만 추가) -->
+        <div class="travel-grid" id="travelGrid">
+            <!-- 여기에 여행 상품들을 data-duration과 data-type 속성과 함께 추가하세요 -->
+            <!-- 예시: -->
+            <div class="travel-card" data-duration="1박2일" data-type="국내여행">
+                <div class="card-content">
+                    <div class="card-emoji">🏝️</div>
+                    <h3 class="card-title">제주도 힐링 여행</h3>
+                    <p class="card-description">제주도의 아름다운 자연과 함께하는 힐링 여행</p>
+                    <div class="card-tags">
+                        <span class="tag duration">1박2일</span>
+                        <span class="tag type">국내여행</span>
+                    </div>
+                    <div class="card-price">150,000원</div>
+                </div>
+            </div>
+
+            <div class="travel-card" data-duration="2박3일" data-type="해외여행">
+                <div class="card-content">
+                    <div class="card-emoji">🗼</div>
+                    <h3 class="card-title">일본 도쿄 투어</h3>
+                    <p class="card-description">도쿄의 현대적인 매력을 느낄 수 있는 여행</p>
+                    <div class="card-tags">
+                        <span class="tag duration">2박3일</span>
+                        <span class="tag type">해외여행</span>
+                    </div>
+                    <div class="card-price">450,000원</div>
+                </div>
+            </div>
+
+            <div class="travel-card" data-duration="1박2일" data-type="국내여행">
+                <div class="card-content">
+                    <div class="card-emoji">🌊</div>
+                    <h3 class="card-title">부산 바다 여행</h3>
+                    <p class="card-description">부산의 아름다운 해변과 맛있는 해산물</p>
+                    <div class="card-tags">
+                        <span class="tag duration">1박2일</span>
+                        <span class="tag type">국내여행</span>
+                    </div>
+                    <div class="card-price">120,000원</div>
+                </div>
+            </div>
+
+            <div class="travel-card" data-duration="6박7일" data-type="해외여행">
+                <div class="card-content">
+                    <div class="card-emoji">🎒</div>
+                    <h3 class="card-title">유럽 배낭여행</h3>
+                    <p class="card-description">유럽 3개국을 돌아보는 알찬 배낭여행</p>
+                    <div class="card-tags">
+                        <span class="tag duration">6박7일</span>
+                        <span class="tag type">해외여행</span>
+                    </div>
+                    <div class="card-price">1,200,000원</div>
+                </div>
+            </div>
+
+            <div class="travel-card" data-duration="2박3일" data-type="국내여행">
+                <div class="card-content">
+                    <div class="card-emoji">🎿</div>
+                    <h3 class="card-title">강원도 스키여행</h3>
+                    <p class="card-description">겨울 스키장에서 즐기는 짜릿한 여행</p>
+                    <div class="card-tags">
+                        <span class="tag duration">2박3일</span>
+                        <span class="tag type">국내여행</span>
+                    </div>
+                    <div class="card-price">200,000원</div>
+                </div>
+            </div>
+
+            <div class="travel-card" data-duration="3박4일" data-type="해외여행">
+                <div class="card-content">
+                    <div class="card-emoji">🏖️</div>
+                    <h3 class="card-title">태국 푸켓 리조트</h3>
+                    <p class="card-description">푸켓의 아름다운 해변과 럭셔리 리조트</p>
+                    <div class="card-tags">
+                        <span class="tag duration">3박4일</span>
+                        <span class="tag type">해외여행</span>
+                    </div>
+                    <div class="card-price">600,000원</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 검색 결과 없음 -->
+        <div class="no-results" id="noResults">
+            <div class="no-results-emoji">🔍</div>
+            <h3>검색 결과가 없습니다</h3>
+            <p>다른 조건으로 검색해보세요.</p>
+        </div>
+    </div>
+
+    <script>
+        // 선택된 필터 저장
+        var selectedFilters = {
+            duration: [],
+            type: []
+        };
+
+        $(document).ready(function () {
+            updateResultCount();
+
+            // 필터 버튼 클릭 이벤트
+            $('.filter-btn').click(function () {
+                var filterType = $(this).data('filter');
+                var filterValue = $(this).data('value');
+
+                $(this).toggleClass('active');
+
+                // 선택된 필터 업데이트
+                if ($(this).hasClass('active')) {
+                    if (selectedFilters[filterType].indexOf(filterValue) === -1) {
+                        selectedFilters[filterType].push(filterValue);
+                    }
+                } else {
+                    selectedFilters[filterType] = selectedFilters[filterType].filter(function (item) {
+                        return item !== filterValue;
+                    });
+                }
+            });
+
+            // 적용 버튼 클릭
+            $('#applyFilter').click(function () {
+                applyFilters();
+            });
+
+            // 초기화 버튼 클릭
+            $('#resetFilter').click(function () {
+                resetFilters();
+            });
+        });
+
+        // 필터 적용 함수
+        function applyFilters() {
+            var visibleCount = 0;
+
+            $('.travel-card').each(function () {
+                var card = $(this);
+                var cardDuration = card.data('duration');
+                var cardType = card.data('type');
+
+                // 필터 조건 확인
+                var durationMatch = selectedFilters.duration.length === 0 ||
+                    selectedFilters.duration.indexOf(cardDuration) !== -1;
+                var typeMatch = selectedFilters.type.length === 0 ||
+                    selectedFilters.type.indexOf(cardType) !== -1;
+
+                // 조건에 맞으면 보이고, 안 맞으면 숨김
+                if (durationMatch && typeMatch) {
+                    card.removeClass('hidden');
+                    visibleCount++;
+                } else {
+                    card.addClass('hidden');
+                }
+            });
+
+            // 결과 개수 업데이트
+            $('#resultCount').text(visibleCount);
+
+            // 결과가 없으면 "검색 결과 없음" 메시지 표시
+            if (visibleCount === 0) {
+                $('#noResults').show();
+            } else {
+                $('#noResults').hide();
+            }
+        }
+
+        // 필터 초기화 함수
+        function resetFilters() {
+            selectedFilters = {
+                duration: [],
+                type: []
+            };
+
+            $('.filter-btn').removeClass('active');
+            $('.travel-card').removeClass('hidden');
+            $('#noResults').hide();
+            updateResultCount();
+        }
+
+        // 결과 개수 업데이트 함수
+        function updateResultCount() {
+            var totalCount = $('.travel-card').length;
+            $('#resultCount').text(totalCount);
+        }
+    </script>
+</body>
+
+</html>

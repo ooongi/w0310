@@ -65,7 +65,7 @@
     height: 34px;
     display: flex;
     padding-bottom: 8px;
-    border-bottom: 1px solid #D9D9D9;
+    border-bottom: 1px solid #d9d9d9;
 }
 
 .sidebar_title h1 {
@@ -112,7 +112,7 @@
     position: relative;
     width: 256px;
     height: 90px;
-    border-bottom: 1px solid #D9D9D9;
+    border-bottom: 1px solid #d9d9d9;
 }
 
 .search_container .search_box {
@@ -167,11 +167,11 @@
     border-right: 2px solid #fff;
 }
 
-.sidebar_contents_area>div {
+.sidebar_contents_area > div {
     margin: 16px 0;
 }
 
-.sidebar_contents_area div>ul {
+.sidebar_contents_area div > ul {
     flex-wrap: wrap;
     display: flex;
 }
@@ -180,14 +180,14 @@
 .item_container {
     width: 256px;
     padding-bottom: 16px;
-    border-bottom: 1px solid #D9D9D9;
+    border-bottom: 1px solid #d9d9d9;
 }
 
 /* 운행구간 */
 .train_container {
     width: 256px;
     padding-bottom: 16px;
-    border-bottom: 1px solid #D9D9D9;
+    border-bottom: 1px solid #d9d9d9;
 }
 
 .train_container_box {
@@ -225,7 +225,7 @@
     width: 256px;
     height: 75px;
     padding-bottom: 16px;
-    border-bottom: 1px solid #D9D9D9;
+    border-bottom: 1px solid #d9d9d9;
 }
 
 .during_container_box {
@@ -237,14 +237,14 @@
     width: 256px;
     height: 112px;
     padding-bottom: 16px;
-    border-bottom: 1px solid #D9D9D9;
+    border-bottom: 1px solid #d9d9d9;
 }
 
 .day_container_box {
     display: flex;
 }
 
-.day_container_box>ul:nth-of-type(2) {
+.day_container_box > ul:nth-of-type(2) {
     width: 200px;
 }
 
@@ -259,23 +259,44 @@
     display: flex;
 }
 
-.key_container_box>ul:nth-of-type(2) {
+.key_container_box > ul:nth-of-type(2) {
     width: 200px;
 }
 
-/* 필터적용 */
-.filter_btn {
-    margin: 90px auto 0;
+.filter_btn.active.duration {
+    background: #4c2f48;
+    color: #fff;
 
 }
 
-.filter_btn button {
+.filter_btn.active.type {
+    background: #4c2f48;
+    color: #fff;
+}
+
+.filter_btn.active.theme {
+    background: #4c2f48;
+    color: #fff;
+}
+
+/* 필터적용 */
+.submit_btn {
+    margin: 90px auto 0;
+}
+
+.submit_btn button {
     font-size: 18px;
     font-weight: bold;
     border: none;
     border-radius: 25px;
     width: 200px;
     height: 40px;
+    cursor: pointer;
+}
+
+.submit_btn button:hover {
+    background: #c8b158;
+    color: #fff;
 }
 
 /* 스크롤 효과 */
@@ -289,8 +310,6 @@
     position: absolute;
     bottom: 0;
 }
-
-
 
 /* 오른쪽 컨텐츠 ------------------------------ */
 .best_right {
@@ -358,12 +377,12 @@
     transition: 0.3s;
 }
 
-.best_down>li>a {
+.best_down > li > a {
     display: block;
     color: #ffffff;
 }
 
-.best_down>li>a:hover {
+.best_down > li > a:hover {
     font-weight: bold;
 }
 
@@ -429,21 +448,27 @@
     display: block;
 }
 
-
 /* 여행컨텐츠 내용 */
-.best_tour_contents_box>div {
+.best_tour_contents_box > div {
     display: flex;
     position: relative;
 }
 
 .contents_note {
+    display: flex;
     padding: 25px 28px 28px 18px;
 }
 
+.contents_flex {
+    width: 370px;
+}
+
+/* 여행필터 */
 .contents_filter {
     display: flex;
 }
 
+/* 여행필터 버튼 */
 .contents_filter div {
     padding: 3px 10px;
     margin-right: 8px;
@@ -453,17 +478,11 @@
     border-radius: 15px;
 }
 
-.contents_flex {
-    display: flex;
-    justify-content: space-between;
-}
-
 .contents_img {
     width: 256px;
     height: 230px;
     border-radius: 15px 0 0 15px;
     overflow: hidden;
-
 }
 
 .contents_img img {
@@ -485,8 +504,8 @@
     margin-top: 8px;
 }
 
-.contents_info_1>span:nth-of-type(1),
-.contents_info_2>span:nth-of-type(1) {
+.contents_info_1 > span:nth-of-type(1),
+.contents_info_2 > span:nth-of-type(1) {
     font-weight: bold;
 }
 
@@ -495,15 +514,16 @@
 }
 
 .contents_pay {
-    width: 168px;
+    width: 186px;
+    margin-top: 16px;
 }
 
 .contents_pay p {
     text-align: right;
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
-.contents_pay>p:nth-of-type(1) {
+.contents_pay > p:nth-of-type(1) {
     font-size: 10px;
 }
 
@@ -512,21 +532,17 @@
     font-weight: bold;
 }
 
-.contents_note>a {
+.contents_note > a {
     position: absolute;
     display: block;
     right: 28px;
     bottom: 28px;
     font-size: 16px;
     padding: 10px 56px;
-    background: #eee;
-    border: none;
-    border-radius: 30px;
-}
-
-.contents_note>a:hover {
     background: #4c2f48;
     color: #fff;
+    border: none;
+    border-radius: 30px;
 }
 
 /* 오른쪽 하단 페이지넘김 */
@@ -555,6 +571,7 @@
     align-items: center;
     justify-content: center;
     line-height: 40px;
+    margin-right: 10px;
 }
 
 .best_btn_area button:hover {
