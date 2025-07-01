@@ -159,3 +159,19 @@ $(document).ready(function () {
     });
 });
 
+/* 
+$(function(){
+bx슬라이더써보기
+
+// 자동슬라이드
+auto: true;
+stopAutoOnclick: true;
+//일시정지/실행버튼
+autoControls: true;
+//중앙의 동그라미: pagination 또는 indicator
+pager: false,
+//멀티슬라이드의 하나의 슬라이드 크기
+slideWidth:
+})
+
+*/

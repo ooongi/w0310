@@ -423,7 +423,6 @@
     border: 1px solid #b5b5b6;
     border-radius: 15px;
     margin-bottom: 32px;
-    background: #fff;
 }
 
 .best_tour_contents_box.activeBox {
@@ -462,7 +461,6 @@
 .contents_img {
     width: 256px;
     height: 230px;
-    background: red;
     border-radius: 15px 0 0 15px;
     overflow: hidden;
 
@@ -470,8 +468,6 @@
 
 .contents_img img {
     position: relative;
-    right: 170px;
-    bottom: 10px;
 }
 
 .contents_info h3 {
