@@ -1,18 +1,12 @@
-document.ready(function () {
-    $(".main>li").mouseover(function () {
-        // 객체 메서드().메서드().메서드().메서드();
-        // >> 객체 메서드
-        $(this).find(".sub").stop().fadeIn().css({display:'flex'});
-        $(".nav_bg").stop().animate({ opacity:1 });
-    });
+// 2Depth Top-down Nav.ver.jQ
 
-    $(".main>li").mouseleave(function () {
-        $(this).find(".sub").stop().fadeIn().css({display:'none'});
-    });
-
-
-    $(".main>li").mouseout(function () {
-        $('.gnb').find(".sub").stop().fadeout().css({display:'none'});
-        $(".nav_bg").stop().animate({ opacity:0 });
-    });
+$(function () {
+  $(".main > li").mouseenter(function () {
+    $(this).find(".sub").addClass('active');
+    $(this).siblings().find(".sub").removeClass('active');
+    $(".nav_bg").addClass('active');
+  });
+  $(".gnb").mouseleave(function () {
+    $(".sub, .nav_bg").removeClass('active');
+  });
 });
