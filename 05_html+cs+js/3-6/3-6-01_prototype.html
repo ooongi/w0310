@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <script>
+        /* 
+            prototype >> draft + interactive
+                -어떤 제품이나 시스템의 초기 형태 또는 시범 모델
+                -주로 개발 과정에서 기능이나 디자인을 검증하거나 사용자 피드백을 얻기 위해 시작
+                -"시제품", "시험작", "견본" 등으로 번역
+
+
+                => 객체지향 프로그래밍의 특징
+                1. 상속
+                2. 추상화
+                3. 다형성
+                4. 캡슐화
+
+            생성자 함수로 생선된 객체들은 '생성자 함수'에서 정의한 속성을 그대로 상속받는다.
+        */
+
+        function Triangle(b, h) {
+            this.base = b;
+            this.height = h;
+        }
+
+        Triangle.prototype.area = function () {
+            return this.base * this.height / 2;
+        }
+
+        Triangle.prototype.printOut = function () {
+            return '밑변:' + this.base + ' 높이:' + this.height + ' 넓이:' + this.area();
+        }
+
+        /*
+        피그마: 컴포넌트 > 복제본: 인스턴스
+        객체의 사본(인스턴스) 생성
+        */
+        //객체 사본(인스턴스) 생성
+        const triangle1 = new Triangle(30, 20);
+        const triangle2 = new Triangle(80, 40);
+
+        //출력
+        console.log(triangle1.area());
+        console.log(triangle1.height);
+        console.log(triangle1.base);
+        console.log(triangle1.printOut());
+        
+        console.log(triangle2.area());
+        console.log(triangle2.height);
+        console.log(triangle2.base);
+        console.log(triangle2.printOut());
+    </script>
+</body>
+
+</html>
