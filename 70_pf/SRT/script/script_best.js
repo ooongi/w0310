@@ -189,3 +189,10 @@ $(document).ready(function () {
     // 초기 페이지 설정
     showPage(1);
 });
+
+//페이지 넘김 시 화면 맨 위로
+$(document).ready(function () {
+	$('.best_btn_page button').on('click', function() {
+    $('html').scrollTop('0');
+  });
+});
