@@ -136,18 +136,26 @@ $(document).ready(function () {
         setTimeout(function () {
             initSlide(activeTabContent);
         }, 100);
+
+        //슬라이드 초기화
+        function initSlide(tabContent) {
+            currentTabContent = tabContent;
+            const slideWrapper = tabContent.find("tour_area");
+            const slides = slideWrapper.find(".tour_carousel_contents");
+            slideCount = slides.length;
+            currentSlide = 0; // 첫 번째 슬라이드로 리셋
+
+            // 슬라이드 위치 리셋
+            slideWrapper.css("transform", "none");
+
+            // 슬라이드 위치 리셋
+            slideWrapper.css("transform", "translateX(0%)");
+
+            // 애니메이션 다시 활성화
+            setTimeout(function () {
+                slideWrapper.css('transition', 'transform 0.4s ease-in-out');
+            }, 50);
+        }
     });
 });
 
-/* //슬라이드 초기화
-function initSlide(tabContent) {
-    currentTabContent = tabContent;
-    const slideWrapper = tabContent.find(".tour_carousel");
-    const slides = slideWrapper.find(".tour_carousel_contents");
-    slideCount = slides.length;
-    currentSlide = 0; // 첫 번째 슬라이드로 리셋
-
-    // 슬라이드 위치 리셋
-    slideWrapper.css("transform", "translateX(0%)");
-} */
-/* 기능구현 잘 안됌.. */

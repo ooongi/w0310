@@ -87,14 +87,14 @@
 .arrow_left {
     position: absolute;
     z-index: 1;
-    top: 42%;
+    top: 400px;
     left: 334px;
 }
 
 .arrow_right {
     position: absolute;
     z-index: 1;
-    top: 42%;
+    top: 400px;
     right: 345px;
 }
 
@@ -181,6 +181,7 @@
 .tour_button {
     padding: 40px;
     padding-bottom: 80px;
+    margin: 0 auto;
 }
 
 .tour_button a {

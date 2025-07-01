@@ -32,7 +32,6 @@
 .best_container {
     width: 1200px;
     height: 1615px;
-    background: rgb(224, 223, 219);
     margin: 0 auto;
     margin-top: 25px;
     display: flex;
@@ -66,7 +65,7 @@
     height: 34px;
     display: flex;
     padding-bottom: 8px;
-    border-bottom: 1px solid #b5b5b6;
+    border-bottom: 1px solid #D9D9D9;
 }
 
 .sidebar_title h1 {
@@ -113,7 +112,7 @@
     position: relative;
     width: 256px;
     height: 90px;
-    border-bottom: 1px solid #b5b5b6;
+    border-bottom: 1px solid #D9D9D9;
 }
 
 .search_container .search_box {
@@ -168,11 +167,11 @@
     border-right: 2px solid #fff;
 }
 
-.sidebar_contents_area > div {
+.sidebar_contents_area>div {
     margin: 16px 0;
 }
 
-.sidebar_contents_area div > ul {
+.sidebar_contents_area div>ul {
     flex-wrap: wrap;
     display: flex;
 }
@@ -181,13 +180,14 @@
 .item_container {
     width: 256px;
     padding-bottom: 16px;
-    border-bottom: 1px solid #b5b5b6;
+    border-bottom: 1px solid #D9D9D9;
 }
 
+/* 운행구간 */
 .train_container {
     width: 256px;
     padding-bottom: 16px;
-    border-bottom: 1px solid #b5b5b6;
+    border-bottom: 1px solid #D9D9D9;
 }
 
 .train_container_box {
@@ -220,22 +220,24 @@
     transform: rotate(135deg);
 } */
 
+/* 여행기간 */
 .during_container {
     width: 256px;
     height: 75px;
     padding-bottom: 16px;
-    border-bottom: 1px solid #b5b5b6;
+    border-bottom: 1px solid #D9D9D9;
 }
 
 .during_container_box {
     display: flex;
 }
 
+/* 출발요일 */
 .day_container {
     width: 256px;
     height: 112px;
     padding-bottom: 16px;
-    border-bottom: 1px solid #b5b5b6;
+    border-bottom: 1px solid #D9D9D9;
 }
 
 .day_container_box {
@@ -246,6 +248,7 @@
     width: 200px;
 }
 
+/* 키워드 */
 .key_container {
     width: 256px;
     height: 150px;
@@ -260,6 +263,7 @@
     width: 200px;
 }
 
+/* 필터적용 */
 .filter_btn {
     margin: 90px auto 0;
 
@@ -286,7 +290,9 @@
     bottom: 0;
 }
 
-/* 오른쪽 컨텐츠 */
+
+
+/* 오른쪽 컨텐츠 ------------------------------ */
 .best_right {
     width: 856px;
     height: 1460px;
@@ -352,12 +358,12 @@
     transition: 0.3s;
 }
 
-.best_down > li > a {
+.best_down>li>a {
     display: block;
     color: #ffffff;
 }
 
-.best_down > li > a:hover {
+.best_down>li>a:hover {
     font-weight: bold;
 }
 
@@ -403,12 +409,11 @@
 .best_contents {
     width: 100%;
     height: 100%;
-    background: #c7c7c7;
 }
+
 .best_tour_contents {
     width: 100%;
     height: 1278px;
-    background: #555;
 }
 
 .best_tour_contents_box {
@@ -418,10 +423,114 @@
     border: 1px solid #b5b5b6;
     border-radius: 15px;
     margin-bottom: 32px;
+    background: #fff;
 }
 
 .best_tour_contents_box.activeBox {
     display: block;
+}
+
+
+/* 여행컨텐츠 내용 */
+.best_tour_contents_box>div {
+    display: flex;
+    position: relative;
+}
+
+.contents_note {
+    padding: 25px 28px 28px 18px;
+}
+
+.contents_filter {
+    display: flex;
+}
+
+.contents_filter div {
+    padding: 3px 10px;
+    margin-right: 8px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    border: 1px solid #333;
+    border-radius: 15px;
+}
+
+.contents_flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contents_img {
+    width: 256px;
+    height: 230px;
+    background: red;
+    border-radius: 15px 0 0 15px;
+    overflow: hidden;
+
+}
+
+.contents_img img {
+    position: relative;
+    right: 170px;
+    bottom: 10px;
+}
+
+.contents_info h3 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.subway {
+    color: #777777;
+    margin-bottom: 5px;
+}
+
+.contents_info_1 img,
+.contents_info_2 img {
+    margin-top: 8px;
+}
+
+.contents_info_1>span:nth-of-type(1),
+.contents_info_2>span:nth-of-type(1) {
+    font-weight: bold;
+}
+
+.tour_logo {
+    margin-top: 25px;
+}
+
+.contents_pay {
+    width: 168px;
+}
+
+.contents_pay p {
+    text-align: right;
+    line-height: 1.1;
+}
+
+.contents_pay>p:nth-of-type(1) {
+    font-size: 10px;
+}
+
+.contents_pay span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.contents_note>a {
+    position: absolute;
+    display: block;
+    right: 28px;
+    bottom: 28px;
+    font-size: 16px;
+    padding: 10px 56px;
+    background: #eee;
+    border: none;
+    border-radius: 30px;
+}
+
+.contents_note>a:hover {
+    background: #4c2f48;
+    color: #fff;
 }
 
 /* 오른쪽 하단 페이지넘김 */
