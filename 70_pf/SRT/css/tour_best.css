@@ -471,6 +471,8 @@
 
 .contents_img img {
     position: relative;
+    overflow: hidden;
+
 }
 
 .contents_info h3 {
