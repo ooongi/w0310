@@ -13,11 +13,84 @@
 </head>
 
 <body>
+
     <div class="wrap">
-        <div class="header_container">
-            <header id="header">상단고정헤더</header>
-            <div class="header_line">서브타이틀영역</div>
-        </div>
+        <!-- 헤더 -->
+        <header id="header">
+            <div class="header_inner">
+                <div class="first">
+                    <div class="language">
+                        <div class="lbtn" id="lbtn">
+                            <img src="../images/nav/language.png" alt="언어설정 아이콘" />
+                            <p>Language</p>
+                            <img class="language_btn" src="../images/nav/language_btn.png" alt="아래화살표" />
+                        </div>
+                        <ul class="language_list" id="language_list">
+                            <li>
+                                <a href="#"> <span>KR</span> 한국어 </a>
+                            </li>
+                            <li>
+                                <a href="#"><span>EN</span> English</a>
+                            </li>
+                            <li>
+                                <a href="#"><span>JP</span> 日本語 </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="logo">
+                        <a href="../index.html"><img src="../images/nav/logo.png" alt="상단로고" /></a>
+                    </div>
+                    <div class="icons">
+                        <a href="#"><img src="../images/nav/login.png" alt="로그인 페이지 이동 아이콘" /></a>
+                        <a href="#"><img src="../images/nav/guest.png" alt="회원가입 페이지 이동 아이콘" /></a>
+                        <a href="#"><img src="../images/nav/Search.png" alt="검색 페이지 이동 아이콘" /></a>
+                        <a href="#"><img src="../images/nav/hamburger_btn.png" alt="사이트맵 아이콘" /></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav_out">
+                <div class="nav">
+                    <div class="nav_bg"></div>
+                    <nav class="gnb">
+                        <ul class="main">
+                            <li>
+                                <a href="#">승차권</a>
+                                <ul class="sub">
+                                    <li><a href="#">승차권예약</a></li>
+                                    <li><a href="#">승차권확인</a></li>
+                                    <li><a href="#">비회원승차권</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">이용안내</a>
+                                <ul class="sub">
+                                    <li><a href="#">역안내</a></li>
+                                    <li><a href="#">노선안내</a></li>
+                                    <li><a href="#">운임안내</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">고객서비스</a>
+                                <ul class="sub">
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">고객센터</a></li>
+                                    <li><a href="#">자주찾는질문</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">여행상품</a>
+                                <ul class="sub">
+                                    <li><a href="#">SRT베스트 여행상품</a></li>
+                                    <li><a href="#">지역별 여행상품</a></li>
+                                    <li><a href="#">기간별 여행상품</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
         <div class="best_container">
             <div class="sidebar">
                 <div class="sidebar_contents">
@@ -150,14 +223,17 @@
                                     <li><button type="button">전체</button></li>
                                 </ul>
                                 <ul>
-                                    <li><button type="button" class="filter_btn duration" data-filter="duration" data-value="당일">당일</button></li>
-                                    <li><button type="button" class="filter_btn duration" data-filter="duration" data-value="1박2일">1박2일</button></li>
-                                    <li><button type="button" class="filter_btn duration" data-filter="duration" data-value="2박3일">2박3일</button></li>
+                                    <li><button type="button" class="filter_btn duration" data-filter="duration"
+                                            data-value="당일">당일</button></li>
+                                    <li><button type="button" class="filter_btn duration" data-filter="duration"
+                                            data-value="1박2일">1박2일</button></li>
+                                    <li><button type="button" class="filter_btn duration" data-filter="duration"
+                                            data-value="2박3일">2박3일</button></li>
                                 </ul>
                             </div>
 
                         </div>
-                        <div class="day_container">
+                        <!--                        <div class="day_container">
                             <h2>출발요일</h2>
                             <div class="day_container_box">
                                 <ul class="all_btn">
@@ -173,7 +249,7 @@
                                     <li><button type="button">일</button></li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="key_container">
                             <h2>키워드</h2>
@@ -182,13 +258,20 @@
                                     <li><button type="button">전체</button></li>
                                 </ul>
                                 <ul>
-                                    <li><button type="button" class="filter_btn theme" data-filter="theme" data-value="기차여행">기차여행</button></li>
-                                    <li><button type="button" class="filter_btn theme" data-filter="theme" data-value="시티투어">시티투어</button></li>
-                                    <li><button type="button" class="filter_btn theme" data-filter="theme" data-value="축제">축제</button></li>
-                                    <li><button type="button" class="filter_btn theme" data-filter="theme" data-value="계절">계절</button></li>
-                                    <li><button type="button" class="filter_btn theme" data-filter="theme" data-value="체험">체험</button></li>
-                                    <li><button type="button" class="filter_btn theme" data-filter="theme" data-value="산/강/바다">산/강/바다</button></li>
-                                    <li><button type="button" class="filter_btn theme" data-filter="theme" data-value="관광지">관광지</button></li>
+                                    <li><button type="button" class="filter_btn theme" data-filter="theme"
+                                            data-value="기차여행">기차여행</button></li>
+                                    <li><button type="button" class="filter_btn theme" data-filter="theme"
+                                            data-value="시티투어">시티투어</button></li>
+                                    <li><button type="button" class="filter_btn theme" data-filter="theme"
+                                            data-value="축제">축제</button></li>
+                                    <li><button type="button" class="filter_btn theme" data-filter="theme"
+                                            data-value="계절">계절</button></li>
+                                    <li><button type="button" class="filter_btn theme" data-filter="theme"
+                                            data-value="체험">체험</button></li>
+                                    <li><button type="button" class="filter_btn theme" data-filter="theme"
+                                            data-value="산/강/바다">산/강/바다</button></li>
+                                    <li><button type="button" class="filter_btn theme" data-filter="theme"
+                                            data-value="관광지">관광지</button></li>
                                 </ul>
                             </div>
                         </div>
@@ -227,12 +310,14 @@
                 </div>
                 <div class="best_contents">
                     <div class="best_tour_contents">
-                        <div class="best_tour_contents_box" data-page="1">
+                        <div class="best_tour_contents_box" data-page="1" data-duration="당일" data-theme="기차여행">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/busan1.png" alt="부산기차여행1"></div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
                                         <div class="contents_filter">
+                                            <div class="filter_tag duration">당일</div>
+                                            <div class="filter_tag theme">기차여행</div>
                                         </div>
                                         <div class="contents_info">
                                             <h3>[부산이야기 기차여행 2탄]당일로 즐기는 SRT 부산여행</h3>
@@ -261,15 +346,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-page="1">
+                        <div class="best_tour_contents_box" data-page="1" data-duration="당일" data-theme="축제">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/gslose.png" alt="곡성장미축제와전주한옥마을"></div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
                                         <div class="contents_filter">
-                                            <div class="filter_1">필터1</div>
-                                            <div class="filter_2">필터2</div>
-                                            <div class="filter_3">필터3</div>
+                                            <div class="filter_tag duration">당일</div>
+                                            <div class="filter_tag theme">축제</div>
                                         </div>
                                         <div class="contents_info">
                                             <h3>곡성 장미축제·전주 한옥마을</h3>
@@ -277,7 +361,7 @@
                                             <div class="contents_info_1">
                                                 <img src="../images/sub/month.svg" alt="여행기간">
                                                 <span>여행기간</span>
-                                                <span>2박 3일</span>
+                                                <span>당일</span>
                                             </div>
                                             <div class="contents_info_2">
                                                 <img src="../images/sub/people.svg" alt="출발인원">
@@ -298,15 +382,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-page="1">
+                        <div class="best_tour_contents_box" data-page="1" data-duration="2박3일" data-theme="시티투어">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/g_u_b.png" alt="경주울산부산여행"></div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
                                         <div class="contents_filter">
-                                            <div class="filter_1">필터1</div>
-                                            <div class="filter_2">필터2</div>
-                                            <div class="filter_3">필터3</div>
+                                            <div class="filter_tag duration">2박3일</div>
+                                            <div class="filter_tag theme">시티투어</div>
                                         </div>
                                         <div class="contents_info">
                                             <h3>경주·울산·부산 여행</h3>
@@ -335,15 +418,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-page="1">
+                        <div class="best_tour_contents_box" data-page="1" data-duration="2박3일" data-theme="관광지">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/haenam.png" alt="시인의섬보길도청산도해남"></div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
                                         <div class="contents_filter">
-                                            <div class="filter_1">필터1</div>
-                                            <div class="filter_2">필터2</div>
-                                            <div class="filter_3">필터3</div>
+                                            <div class="filter_tag duration">2박3일</div>
+                                            <div class="filter_tag theme">관광지</div>
                                         </div>
                                         <div class="contents_info">
                                             <h3>시인의 섬 보길도·청산도·해남</h3>
@@ -372,15 +454,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-page="1">
+                        <div class="best_tour_contents_box" data-page="1" data-duration="2박3일" data-theme="산/강/바다">
                             <div>
-                                <div class="contents_img"><img src="../images/sub/dochodo.png" alt="서해4도홍도흑산도비금도초도"></div>
+                                <div class="contents_img"><img src="../images/sub/dochodo.png" alt="서해4도홍도흑산도비금도초도">
+                                </div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
                                         <div class="contents_filter">
-                                            <div class="filter_1">필터1</div>
-                                            <div class="filter_2">필터2</div>
-                                            <div class="filter_3">필터3</div>
+                                            <div class="filter_tag duration">2박3일</div>
+                                            <div class="filter_tag theme">산/강/바다</div>
                                         </div>
                                         <div class="contents_info">
                                             <h3>서해 4島 홍도·흑산도·비금·도초도</h3>
@@ -437,7 +519,72 @@
                 </div>
             </div>
         </div>
-        <footer class="footer"></footer>
+        <footer>
+            <div class="fupper"> <!-- footer 윗부분 -->
+                <div class="inner">
+                    <div class="rule">
+                        <ul>
+                            <li><a href="https://www.srail.or.kr/cms/archive.do?pageId=KR9903000000">개인정보처리방침</a></li>
+                            <li><a href="https://etk.srail.kr/cms/archive.do?pageId=TK0501010000">고객서비스헌장</a></li>
+                            <li><a href="https://etk.srail.kr/cms/archive.do?pageId=TK0501020000">여객운송약관/부속약관</a></li>
+                        </ul>
+                    </div>
+                    <div class="sns">
+                        <ul>
+                            <li><a href="#"><img src="/70_pf/SRT/images/footer/facebook.png" alt=""></a></li>
+                            <li><a href="#"><img src="/70_pf/SRT/images/footer/instagram.png" alt=""></a></li>
+                            <li><a href="#"><img src="/70_pf/SRT/images/footer/line.png" alt=""></a></li>
+                            <li><a href="#"><img src="/70_pf/SRT/images/footer/kakao_channel.png" alt=""></a></li>
+                            <li><a href="#"><img src="/70_pf/SRT/images/footer/band.png" alt=""></a></li>
+                        </ul>
+                    </div> <!-- end of .sns -->
+                </div> <!-- end of .fupper .inner -->
+            </div> <!-- end of .fupper -->
+            <div class="flower">
+                <div class="inner">
+                    <div class="left">
+                        <div class="blogo">
+                            <img src="/70_pf/SRT/images/footer/blogo.png" alt="blogo">
+                        </div> <!-- end of .blogo -->
+                        <p>대표자 : 이종국 ㅣ 상호: 주식회사 에스알 ㅣ 사업자등록: 305-86-31590 ㅣ 통신판매업신고: 2016-서울강남-03705호<br>
+                            (우: 06367) 서울특별시 강남구 광평로 56길 12 희림빌딩 | TEL. 1800-1472 l FAX. 6484-4093<br>
+                            Copyright 2018. SR Inc. All rights reserved.</p>
+                    </div> <!-- end of left -->
+                    <div class="right">
+                        <div class="fs">
+                            <form action="#">
+                                <select name="fs" id="fs">
+                                    <option value="">유관기관 바로가기</option>
+                                    <option value="">코레일</option>
+                                    <option value="">국토교통부</option>
+                                </select>
+                            </form>
+                        </div> <!-- end of .fs -->
+                        <div class="ads">
+                            <ul>
+                                <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=76&pageId=TK0502000000"><img
+                                            src="/70_pf/SRT/images/footer/ad1.png" alt="ad1"></a></li>
+                                <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=91&pageId=TK0502000000"><img
+                                            src="/70_pf/SRT/images/footer/ad2.png" alt="ad2"></a></li>
+                                <li><a href="#"><img src="/70_pf/SRT/images/footer/ad3.png" alt="ad3"></a></li>
+                                <li><a href="https://partners.srail.or.kr/login.do"><img
+                                            src="/70_pf/SRT/images/footer/ad4.png" alt="ad4"></a></li>
+                                <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=536&pageId=TK0502000000"><img
+                                            src="/70_pf/SRT/images/footer/ad5.png" alt="ad5"></a></li>
+                                <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=359&pageId=TK0502000000"><img
+                                            src="/70_pf/SRT/images/footer/ad6.png" alt="ad6"></a></li>
+                                <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=358&pageId=TK0502000000"><img
+                                            src="/70_pf/SRT/images/footer/ad7.png" alt="ad7"></a></li>
+                                <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=365&pageId=TK0502000000"><img
+                                            src="/70_pf/SRT/images/footer/ad8.png" alt="ad8"></a></li>
+                                <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=393&pageId=TK0502000000"><img
+                                            src="/70_pf/SRT/images/footer/ad9.png" alt="ad9"></a></li>
+                            </ul>
+                        </div><!-- end .ads -->
+                    </div><!-- end of right -->
+                </div> <!-- end of .flower .inner -->
+            </div><!-- end of .flower -->
+        </footer>
     </div>
 </body>
 

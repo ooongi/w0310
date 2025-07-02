@@ -1,31 +1,10 @@
 @charset "utf-8";
+@import url("sub.css");
 
 .wrap {
     position: relative;
     width: 100%;
-    height: 2200px;
     margin: 0 auto;
-}
-
-/* 헤더임시고정 */
-.header_container {
-    width: 100%;
-}
-
-#header {
-    width: 100%;
-    height: 140px;
-    text-align: center;
-    line-height: 140px;
-    background: #999;
-}
-
-.header_line {
-    width: 100%;
-    height: 150px;
-    text-align: center;
-    line-height: 150px;
-    background: #888;
 }
 
 /* 본문 */
@@ -33,7 +12,7 @@
     width: 1200px;
     height: 1615px;
     margin: 0 auto;
-    margin-top: 25px;
+    margin-top: 175px;
     display: flex;
     justify-content: space-between;
 }
@@ -269,10 +248,10 @@
 
 }
 
-.filter_btn.active.type {
+/* .filter_btn.active.type {
     background: #4c2f48;
     color: #fff;
-}
+} */
 
 .filter_btn.active.theme {
     background: #4c2f48;
@@ -442,6 +421,10 @@
     border: 1px solid #b5b5b6;
     border-radius: 15px;
     margin-bottom: 32px;
+}
+
+.best_tour_contents_box.hidden {
+    display: none;
 }
 
 .best_tour_contents_box.activeBox {
