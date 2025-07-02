@@ -123,8 +123,10 @@
                             <h2>상품상태</h2>
                             <ul>
                                 <li><button type="button">전체</button></li>
-                                <li><button type="button">예약가능</button></li>
-                                <li><button type="button">출발확정</button></li>
+                                <li><button type="button" class="filter_btn reserved" data-filter="reserved"
+                                            data-value="예약가능">예약가능</button></li>
+                                <li><button type="button" class="filter_btn going" data-filter="going"
+                                            data-value="출발확정">출발확정</button></li>
                             </ul>
 
                         </div>
@@ -272,19 +274,19 @@
                                     <li><button type="button">전체</button></li>
                                 </ul>
                                 <ul>
-                                    <li><button type="button" class="filter_btn theme" data-filter="theme"
+                                    <li><button type="button" class="filter_btn type" data-filter="type"
                                             data-value="기차여행">기차여행</button></li>
-                                    <li><button type="button" class="filter_btn theme" data-filter="theme"
+                                    <li><button type="button" class="filter_btn type" data-filter="type"
                                             data-value="시티투어">시티투어</button></li>
-                                    <li><button type="button" class="filter_btn theme" data-filter="theme"
+                                    <li><button type="button" class="filter_btn type" data-filter="type"
                                             data-value="축제">축제</button></li>
-                                    <li><button type="button" class="filter_btn theme" data-filter="theme"
+                                    <li><button type="button" class="filter_btn type" data-filter="type"
                                             data-value="계절">계절</button></li>
-                                    <li><button type="button" class="filter_btn theme" data-filter="theme"
+                                    <li><button type="button" class="filter_btn type" data-filter="type"
                                             data-value="체험">체험</button></li>
-                                    <li><button type="button" class="filter_btn theme" data-filter="theme"
+                                    <li><button type="button" class="filter_btn type" data-filter="type"
                                             data-value="산/강/바다">산/강/바다</button></li>
-                                    <li><button type="button" class="filter_btn theme" data-filter="theme"
+                                    <li><button type="button" class="filter_btn type" data-filter="type"
                                             data-value="관광지">관광지</button></li>
                                 </ul>
                             </div>
@@ -324,14 +326,15 @@
                 </div>
                 <div class="best_contents">
                     <div class="best_tour_contents">
-                        <div class="best_tour_contents_box" data-duration="당일" data-theme="기차여행">
+                        <div class="best_tour_contents_box" data-duration="당일" data-type="기차여행" data-reserved="예약가능">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/busan1.png" alt="부산기차여행1"></div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
                                         <div class="contents_filter">
+                                            <div class="filter_tag reserved">예약가능</div>
                                             <div class="filter_tag duration">당일</div>
-                                            <div class="filter_tag theme">기차여행</div>
+                                            <div class="filter_tag type">기차여행</div>
                                         </div>
                                         <div class="contents_info">
                                             <h3>[부산이야기 기차여행 2탄]당일로 즐기는 SRT 부산여행</h3>
@@ -360,14 +363,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-duration="당일" data-theme="축제">
+                        <div class="best_tour_contents_box" data-duration="당일" data-type="축제">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/gslose.png" alt="곡성장미축제와전주한옥마을"></div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
                                         <div class="contents_filter">
                                             <div class="filter_tag duration">당일</div>
-                                            <div class="filter_tag theme">축제</div>
+                                            <div class="filter_tag type">축제</div>
                                         </div>
                                         <div class="contents_info">
                                             <h3>곡성 장미축제·전주 한옥마을</h3>
@@ -396,14 +399,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-duration="2박3일" data-theme="시티투어">
+                        <div class="best_tour_contents_box" data-duration="2박3일" data-type="시티투어">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/g_u_b.png" alt="경주울산부산여행"></div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
                                         <div class="contents_filter">
                                             <div class="filter_tag duration">2박3일</div>
-                                            <div class="filter_tag theme">시티투어</div>
+                                            <div class="filter_tag type">시티투어</div>
                                         </div>
                                         <div class="contents_info">
                                             <h3>경주·울산·부산 여행</h3>
@@ -432,14 +435,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-duration="2박3일" data-theme="관광지">
+                        <div class="best_tour_contents_box" data-duration="2박3일" data-type="관광지">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/haenam.png" alt="시인의섬보길도청산도해남"></div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
                                         <div class="contents_filter">
                                             <div class="filter_tag duration">2박3일</div>
-                                            <div class="filter_tag theme">관광지</div>
+                                            <div class="filter_tag type">관광지</div>
                                         </div>
                                         <div class="contents_info">
                                             <h3>시인의 섬 보길도·청산도·해남</h3>
@@ -468,7 +471,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-duration="2박3일" data-theme="산/강/바다">
+                        <div class="best_tour_contents_box" data-duration="2박3일" data-type="산/강/바다">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/dochodo.png" alt="서해4도홍도흑산도비금도초도">
                                 </div>
@@ -476,7 +479,7 @@
                                     <div class="contents_flex">
                                         <div class="contents_filter">
                                             <div class="filter_tag duration">2박3일</div>
-                                            <div class="filter_tag theme">산/강/바다</div>
+                                            <div class="filter_tag type">산/강/바다</div>
                                         </div>
                                         <div class="contents_info">
                                             <h3>서해 4島 홍도·흑산도·비금·도초도</h3>
@@ -505,14 +508,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-duration="당일" data-theme="기차여행">
+                        <div class="best_tour_contents_box" data-duration="당일" data-type="기차여행">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/busan1.png" alt="부산기차여행1"></div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
                                         <div class="contents_filter">
                                             <div class="filter_tag duration">당일</div>
-                                            <div class="filter_tag theme">기차여행</div>
+                                            <div class="filter_tag type">기차여행</div>
                                         </div>
                                         <div class="contents_info">
                                             <h3>[부산이야기 기차여행 2탄]당일로 즐기는 SRT 부산여행</h3>
@@ -541,14 +544,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-duration="당일" data-theme="축제">
+                        <div class="best_tour_contents_box" data-duration="당일" data-type="축제">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/gslose.png" alt="곡성장미축제와전주한옥마을"></div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
                                         <div class="contents_filter">
                                             <div class="filter_tag duration">당일</div>
-                                            <div class="filter_tag theme">축제</div>
+                                            <div class="filter_tag type">축제</div>
                                         </div>
                                         <div class="contents_info">
                                             <h3>곡성 장미축제·전주 한옥마을</h3>
@@ -577,14 +580,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-duration="2박3일" data-theme="시티투어">
+                        <div class="best_tour_contents_box" data-duration="2박3일" data-type="시티투어">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/g_u_b.png" alt="경주울산부산여행"></div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
                                         <div class="contents_filter">
                                             <div class="filter_tag duration">2박3일</div>
-                                            <div class="filter_tag theme">시티투어</div>
+                                            <div class="filter_tag type">시티투어</div>
                                         </div>
                                         <div class="contents_info">
                                             <h3>경주·울산·부산 여행</h3>
@@ -613,14 +616,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-duration="2박3일" data-theme="관광지">
+                        <div class="best_tour_contents_box" data-duration="2박3일" data-type="관광지">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/haenam.png" alt="시인의섬보길도청산도해남"></div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
                                         <div class="contents_filter">
                                             <div class="filter_tag duration">2박3일</div>
-                                            <div class="filter_tag theme">관광지</div>
+                                            <div class="filter_tag type">관광지</div>
                                         </div>
                                         <div class="contents_info">
                                             <h3>시인의 섬 보길도·청산도·해남</h3>
@@ -649,7 +652,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-duration="2박3일" data-theme="산/강/바다">
+                        <div class="best_tour_contents_box" data-duration="2박3일" data-type="산/강/바다">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/dochodo.png" alt="서해4도홍도흑산도비금도초도">
                                 </div>
@@ -657,7 +660,7 @@
                                     <div class="contents_flex">
                                         <div class="contents_filter">
                                             <div class="filter_tag duration">2박3일</div>
-                                            <div class="filter_tag theme">산/강/바다</div>
+                                            <div class="filter_tag type">산/강/바다</div>
                                         </div>
                                         <div class="contents_info">
                                             <h3>서해 4島 홍도·흑산도·비금·도초도</h3>
@@ -699,6 +702,10 @@
                             <button type="button" id="next_btn">▶</button>
                         </div>
                     </div> -->
+                    <div class="no_result" id="noResult">
+                        <h3>검색 결과가 없습니다.</h3>
+                        <p>다른 조건으로 검색해보세요.</p>
+                    </div>
                 </div>
                 <div class="best_tabs">
                     <span class="best_btn"></span>

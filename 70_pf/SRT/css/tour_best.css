@@ -1,7 +1,6 @@
 @charset "utf-8";
 @import url("sub.css");
 
-
 .wrap {
     position: relative;
     width: 100%;
@@ -246,15 +245,19 @@
 .filter_btn.active.duration {
     background: #4c2f48;
     color: #fff;
-
 }
 
-/* .filter_btn.active.type {
+.filter_btn.active.type {
     background: #4c2f48;
     color: #fff;
-} */
+}
 
-.filter_btn.active.theme {
+.filter_btn.active.reserved {
+    background: #4c2f48;
+    color: #fff;
+}
+
+.filter_btn.active.going {
     background: #4c2f48;
     color: #fff;
 }
@@ -472,7 +475,6 @@
 .contents_img img {
     position: relative;
     overflow: hidden;
-
 }
 
 .contents_info h3 {
@@ -529,6 +531,14 @@
     color: #fff;
     border: none;
     border-radius: 30px;
+}
+
+/* 검색결과없음 */
+.no_result {
+    text-align: center;
+    padding: 200px 20px;
+    display: none;
+    height: 700px;
 }
 
 /* 오른쪽 하단 페이지넘김 */

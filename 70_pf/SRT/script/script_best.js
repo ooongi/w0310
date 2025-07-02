@@ -208,7 +208,8 @@ $(document).ready(function () {
 
 var selectedFilters = {
     duration: [],
-    type: []
+    type: [],
+    reserved: []
 };
 
 $(document).ready(function () {
@@ -251,22 +252,25 @@ function applyFilters() {
     $('.best_tour_contents_box').each(function () {
         var card = $(this);
         var cardDuration = card.data('duration');
-        var cardType = card.data('theme');
+        var cardType = card.data('type');
+        var cardReserved = card.data('reserved');
 
         // 필터 조건 확인
         var durationMatch = selectedFilters.duration.length === 0 ||
             selectedFilters.duration.indexOf(cardDuration) !== -1;
         var typeMatch = selectedFilters.type.length === 0 ||
             selectedFilters.type.indexOf(cardType) !== -1;
+        var reservedMatch = selectedFilters.reserved.length === 0 ||
+            selectedFilters.reserved.indexOf(cardReserved) !== -1;
 
         // 조건에 맞으면 보이고, 안 맞으면 숨김
-        if (durationMatch && typeMatch) {
+        if (durationMatch && typeMatch && reservedMatch) {
             card.removeClass('hidden');
-            card.addClass('activeBox');
+            // card.addClass('activeBox');
             visibleCount++;
         } else {
             card.addClass('hidden');
-            card.removeClass('activeBox');
+            // card.removeClass('activeBox');
         }
     });
 
@@ -275,9 +279,9 @@ function applyFilters() {
 
     // 결과가 없으면 "검색 결과 없음" 메시지 표시
     if (visibleCount === 0) {
-        $('#noResults').show();
+        $('#noResult').show();
     } else {
-        $('#noResults').hide();
+        $('#noResult').hide();
     }
 }
 
@@ -285,7 +289,8 @@ function applyFilters() {
 function resetFilters() {
     selectedFilters = {
         duration: [],
-        type: []
+        type: [],
+        reserved: []
     };
 
     $('.filter_btn').removeClass('active');
