@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <script>
+        /* 
+            String 객체
+                var str = new String('자바스크립트');
+                var str = '자바스크립트';
+
+            String 객체 프로퍼티
+                length
+                    문자열 개수를 취득
+                    var str = 'Javasvript';
+                    console.log(str.length); // 10
+                    
+                    String 객체 주요 메서드
+                    j a v a s c r i p t
+                    0 1 2 3 4 5 6 7 8 9
+                    
+                    */
+
+        // 메서드
+        // charAt()
+        // charAt(n)인 경우 n과 같은 index 번호 문자를 반환
+        var str = 'Javascript';
+        console.log(str.charAt(0)); // j
+        
+        // indexOf()
+        // indexOf('a')인 경우 'a'를 왼쪽 문자부터 검색하여 일치하는 index 번호를 반환
+        var str = 'Javascript';
+        console.log(str.indexOf('a')); // 1
+        console.log(str.indexOf('q')); // -1 일치하지 않으면 -1을 반환
+        
+        // lastIndexOf()
+        // lastIndexOf('a')인 경우 마지막 'a'를 오른쪽 문자부터 검색하여 일치하는 index 번호를 반환
+        var str = 'Javascript';
+        console.log(str.lastIndexOf('a')); // 3
+        
+        // includes()
+        // includes('str')인 경우 해당 문자열에 'str' 문자를 포함하고 있으면 true를 반환
+        var str = 'Javascript';
+        console.log(str.includes('script')); // true
+        console.log(str.includes('str')); // false
+        </script>
+</body>
+
+</html>

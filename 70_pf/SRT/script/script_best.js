@@ -141,64 +141,71 @@ $(document).ready(function () {
 });
 
 //컨텐츠 페이지 넘김
-$(document).ready(function () {
-    let currentPage = 1;
-    const totalPages = 3;
+// $(document).ready(function () {
+//     let currentPage = 1;
+//     const totalPages = 3;
 
-    // 페이지 표시 함수
-    function showPage(pageNum) {
-        // 모든 콘텐츠 숨기기
-        $(".best_tour_contents_box").removeClass("activeBox");
+//     // 페이지 표시 함수
+//     function showPage(pageNum) {
+//         // 모든 콘텐츠 숨기기
+//         $(".best_tour_contents_box").removeClass("activeBox");
 
-        // 해당 페이지 콘텐츠 표시
-        $(`.best_tour_contents_box[data-page="${pageNum}"]`).addClass(
-            "activeBox"
-        );
+//         // 해당 페이지 콘텐츠 표시
+//         $(`.best_tour_contents_box[data-page="${pageNum}"]`).addClass(
+//             "activeBox"
+//         );
 
-        // 페이지 버튼 상태 업데이트
-        $(".page_num").removeClass("btnClick");
-        $(`.page_num[data-page="${pageNum}"]`).addClass("btnClick");
+//         // 페이지 버튼 상태 업데이트
+//         $(".page_num").removeClass("btnClick");
+//         $(`.page_num[data-page="${pageNum}"]`).addClass("btnClick");
 
-        /* // 화살표 버튼 상태 업데이트
-        $("#prev_btn").prop("disabled", pageNum === 1);
-        $("#next_btn").prop("disabled", pageNum === totalPages); */
+//         /* // 화살표 버튼 상태 업데이트
+//         $("#prev_btn").prop("disabled", pageNum === 1);
+//         $("#next_btn").prop("disabled", pageNum === totalPages); */
 
-        currentPage = pageNum;
-    }
+//         currentPage = pageNum;
+//     }
 
-    // 페이지 번호 클릭 이벤트
-    $(".page_num").click(function () {
-        const pageNum = parseInt($(this).data("page"));
-        showPage(pageNum);
-    });
+//     // 페이지 번호 클릭 이벤트
+//     $(".page_num").click(function () {
+//         const pageNum = parseInt($(this).data("page"));
+//         showPage(pageNum);
+//     });
 
-    // 이전 페이지 버튼 클릭 이벤트
-    $("#prev_btn").click(function () {
-        if (currentPage > 1) {
-            showPage(currentPage - 1);
-        }
-    });
+//     // 이전 페이지 버튼 클릭 이벤트
+//     $("#prev_btn").click(function () {
+//         if (currentPage > 1) {
+//             showPage(currentPage - 1);
+//         }
+//     });
 
-    // 다음 페이지 버튼 클릭 이벤트
-    $("#next_btn").click(function () {
-        if (currentPage < totalPages) {
-            showPage(currentPage + 1);
-        }
-    });
+//     // 다음 페이지 버튼 클릭 이벤트
+//     $("#next_btn").click(function () {
+//         if (currentPage < totalPages) {
+//             showPage(currentPage + 1);
+//         }
+//     });
 
-    // 초기 페이지 설정
-    showPage(1);
-});
+//     // 초기 페이지 설정
+//     showPage(1);
+// });
 
-//페이지 넘김 시 화면 맨 위로
-$(document).ready(function () {
-    $('.best_btn_page button').on('click', function () {
-        $('html').scrollTop('0');
-    });
-});
+// //페이지 넘김 시 화면 맨 위로
+// $(document).ready(function () {
+//     $('.best_btn_page button').on('click', function () {
+//         $('html').scrollTop('0');
+//     });
+// });
+
+
+
+
 
 //필터
 // 선택된 필터 저장
+
+
+
 var selectedFilters = {
     duration: [],
     type: []

@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import url("sub.css");
 
+
 .wrap {
     position: relative;
     width: 100%;
@@ -10,7 +11,7 @@
 /* 본문 */
 .best_container {
     width: 1200px;
-    height: 1615px;
+    /* height: 1615px; */
     margin: 0 auto;
     margin-top: 175px;
     display: flex;
@@ -20,7 +21,7 @@
 /* 왼쪽 컨텐츠 + 리모콘 */
 .sidebar {
     width: 320px;
-    height: 1520px;
+    /* height: 1520px; */
     padding-bottom: 20px;
     /* transform: translateY(-20%); */
 }
@@ -293,7 +294,7 @@
 /* 오른쪽 컨텐츠 ------------------------------ */
 .best_right {
     width: 856px;
-    height: 1460px;
+    /* height: 1460px; */
     /* background: yellow; */
 }
 
@@ -324,12 +325,12 @@
     height: 8px;
     border-top: 2px solid #4c2f48;
     border-right: 2px solid #4c2f48;
-    transform: rotate(-45deg);
+    transform: rotate(135deg);
     transition: none;
 }
 
 .arrow.down {
-    transform: rotate(135deg);
+    transform: rotate(-45deg);
 }
 
 /* 토글 서브 */
@@ -411,11 +412,11 @@
 
 .best_tour_contents {
     width: 100%;
-    height: 1278px;
+    /* height: 1278px; */
 }
 
 .best_tour_contents_box {
-    display: none;
+    /* display: none; */
     width: 100%;
     height: 230px;
     border: 1px solid #b5b5b6;
@@ -529,7 +530,7 @@
 }
 
 /* 오른쪽 하단 페이지넘김 */
-.best_btn_area {
+/* .best_btn_area {
     width: 100%;
     height: 20px;
     margin-top: 60px;
@@ -585,11 +586,4 @@
     border-right: 2px solid #4c2f48;
     transform: rotate(45deg);
     transition: none;
-}
-
-/* 푸터 */
-.footer {
-    width: 100%;
-    height: 300px;
-    background: #555;
-}
+} */
