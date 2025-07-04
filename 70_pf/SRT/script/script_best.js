@@ -8,7 +8,7 @@ $(document).ready(function () {
     function scrollTo(index) {
         let pos = 0;
         if (index < sections.length) {
-            pos = sections.eq('index').position().top - headerHeight;
+            pos = sections.eq("index").position().top - headerHeight;
         } else {
             pos = $("#footer").position().top - headerHeight;
         }
@@ -105,7 +105,53 @@ $(document).ready(function () {
     });
 });
 
-//드롭다운
+// //리모컨 내 운행구간
+// $(document).ready(function () {
+//     $(".tour_main button").click(function () {
+//         $(".tour_sub").stop().slideDown();
+//     });
+//     $(".main>li").mouseout(function () {
+//         $(".sub").stop().slideUp();
+//         $(".nav_bg").stop().animate({ left: 0 });
+//     });
+// });
+
+// //드롭다운(왼쪽메뉴)
+// $(document).ready(function () {
+//     const mainMenu = document.getElementById("best_sub_title");
+//     const subMenu = document.getElementById("best_sub_nav");
+//     const arrow = document.getElementById("arrow");
+
+//     // 메인메뉴 클릭 시 토글
+//     mainMenu.addEventListener("click", function (e) {
+//         e.stopPropagation();
+
+//         if (subMenu.classList.contains("show")) {
+//             // 서브메뉴가 열려있으면 닫기
+//             subMenu.classList.remove("show");
+//             arrow.classList.remove("down");
+//         } else {
+//             // 서브메뉴가 닫혀있으면 열기
+//             subMenu.classList.add("show");
+//             arrow.classList.add("down");
+//         }
+//     });
+
+//     // 토글 밖 영역 클릭 시 서브메뉴 닫기
+//     document.addEventListener("click", function (e) {
+//         if (!mainMenu.contains(e.target) && !subMenu.contains(e.target)) {
+//             subMenu.classList.remove("show");
+//             arrow.classList.remove("down");
+//         }
+//     });
+
+//     // 서브메뉴 클릭 시 이벤트 버블링 방지
+//     subMenu.addEventListener("click", function (e) {
+//         e.stopPropagation();
+//     });
+// });
+
+//드롭다운(오른쪽메뉴)
 $(document).ready(function () {
     const mainMenu = document.getElementById("best_sub_title");
     const subMenu = document.getElementById("best_sub_nav");
@@ -197,51 +243,47 @@ $(document).ready(function () {
 //     });
 // });
 
-
-
-
-
 //필터
 // 선택된 필터 저장
-
-
 
 var selectedFilters = {
     duration: [],
     type: [],
     reserved: [],
-    going: []
+    going: [],
 };
 
 $(document).ready(function () {
     updateResultCount();
 
     // 필터 버튼 클릭 이벤트
-    $('.filter_btn').click(function () {
-        var filterType = $(this).data('filter');
-        var filterValue = $(this).data('value');
+    $(".filter_btn").click(function () {
+        var filterType = $(this).data("filter");
+        var filterValue = $(this).data("value");
 
-        $(this).toggleClass('active');
+        $(this).toggleClass("active");
 
         // 선택된 필터 업데이트
-        if ($(this).hasClass('active')) {
+        if ($(this).hasClass("active")) {
             if (selectedFilters[filterType].indexOf(filterValue) === -1) {
                 selectedFilters[filterType].push(filterValue);
             }
         } else {
-            selectedFilters[filterType] = selectedFilters[filterType].filter(function (item) {
-                return item !== filterValue;
-            });
+            selectedFilters[filterType] = selectedFilters[filterType].filter(
+                function (item) {
+                    return item !== filterValue;
+                }
+            );
         }
     });
 
     // 적용 버튼 클릭
-    $('#applyFilter').click(function () {
+    $("#applyFilter").click(function () {
         applyFilters();
     });
 
     // 초기화 버튼 클릭
-    $('#resetFilter').click(function () {
+    $("#resetFilter").click(function () {
         resetFilters();
     });
 });
@@ -250,42 +292,46 @@ $(document).ready(function () {
 function applyFilters() {
     var visibleCount = 0;
 
-    $('.best_tour_contents_box').each(function () {
+    $(".best_tour_contents_box").each(function () {
         var card = $(this);
-        var cardDuration = card.data('duration');
-        var cardType = card.data('type');
-        var cardReserved = card.data('reserved');
-        var cardGoing = card.data('going');
+        var cardDuration = card.data("duration");
+        var cardType = card.data("type");
+        var cardReserved = card.data("reserved");
+        var cardGoing = card.data("going");
 
         // 필터 조건 확인
-        var durationMatch = selectedFilters.duration.length === 0 ||
+        var durationMatch =
+            selectedFilters.duration.length === 0 ||
             selectedFilters.duration.indexOf(cardDuration) !== -1;
-        var typeMatch = selectedFilters.type.length === 0 ||
+        var typeMatch =
+            selectedFilters.type.length === 0 ||
             selectedFilters.type.indexOf(cardType) !== -1;
-        var reservedMatch = selectedFilters.reserved.length === 0 ||
+        var reservedMatch =
+            selectedFilters.reserved.length === 0 ||
             selectedFilters.reserved.indexOf(cardReserved) !== -1;
-        var goingMatch = selectedFilters.going.length === 0 ||
+        var goingMatch =
+            selectedFilters.going.length === 0 ||
             selectedFilters.going.indexOf(cardGoing) !== -1;
 
         // 조건에 맞으면 보이고, 안 맞으면 숨김
         if (durationMatch && typeMatch && reservedMatch && goingMatch) {
-            card.removeClass('hidden');
+            card.removeClass("hidden");
             // card.addClass('activeBox');
             visibleCount++;
         } else {
-            card.addClass('hidden');
+            card.addClass("hidden");
             // card.removeClass('activeBox');
         }
     });
 
     // 결과 개수 업데이트
-    $('#resultCount').text(visibleCount);
+    $("#resultCount").text(visibleCount);
 
     // 결과가 없으면 "검색 결과 없음" 메시지 표시
     if (visibleCount === 0) {
-        $('#noResult').show();
+        $("#noResult").show();
     } else {
-        $('#noResult').hide();
+        $("#noResult").hide();
     }
 }
 
@@ -295,17 +341,17 @@ function resetFilters() {
         duration: [],
         type: [],
         reserved: [],
-        going: []
+        going: [],
     };
 
-    $('.filter_btn').removeClass('active');
-    $('.best_tour_contents_box').removeClass('hidden');
-    $('#noResults').hide();
+    $(".filter_btn").removeClass("active");
+    $(".best_tour_contents_box").removeClass("hidden");
+    $("#noResults").hide();
     updateResultCount();
 }
 
 // 결과 개수 업데이트 함수
 function updateResultCount() {
-    var totalCount = $('.best_tour_contents_box').length;
-    $('#resultCount').text(totalCount);
+    var totalCount = $(".best_tour_contents_box").length;
+    $("#resultCount").text(totalCount);
 }

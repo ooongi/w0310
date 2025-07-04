@@ -135,16 +135,16 @@
     margin-right: 10px;
     cursor: pointer;
 }
-
+/* 
 .sidebar_contents_area button:hover {
     background: #4c2f48;
     color: #fff;
-}
+} */
 
-.sidebar_contents_area button:hover span:nth-of-type(2) {
+/* .sidebar_contents_area button:hover span:nth-of-type(2) {
     border-top: 2px solid #fff;
     border-right: 2px solid #fff;
-}
+} */
 
 .sidebar_contents_area > div {
     margin: 16px 0;
@@ -182,11 +182,12 @@
 }
 
 .train_container_box button {
+    z-index: 2;
     background: #eee;
     border: none;
     font-size: 12px;
     font-weight: 600;
-    padding: 7px 10px 7px 6px;
+    /* padding: 7px 16px 7px 6px; */
     border-radius: 30px;
     margin-top: 8px;
     margin-right: 10px;
@@ -195,11 +196,51 @@
 
 .tour_main {
     width: 200px;
+    position: relative;
+}
+
+.tour_main select {
+    z-index: 2;
+    /* width: 74px; */
+    background: #eee;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 7px 10px 7px 8px;
+    border-radius: 30px;
+    margin-top: 8px;
+    margin-right: 10px;
+    cursor: pointer;
+    appearance: none;
+    background-image: url(/70_pf/srt/images/sub/arrow_down_7.svg);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: auto;
+}
+
+.tour_main span {
+    margin-left: 5px;
+    vertical-align: middle;
 }
 
 /* 운행구간 서브 */
 .tour_sub {
+    position: absolute;
+    z-index: 1;
+    width: 74px;
     display: none;
+    background: #4c2f48;
+    color: #fff;
+    border: none;
+    font-size: 12px;
+    padding: 7px 10px 10px 8px;
+    border-radius: 0 0 15px 15px;
+    top: 25px;
+}
+
+.tour_sub li {
+    cursor: pointer;
+    padding-top: 16px;
 }
 
 .train_arrow {
@@ -210,11 +251,6 @@
     border-right: 2px solid #333;
     transform: rotate(135deg);
     transition: none;
-}
-
-.tour_main span {
-    margin-left: 5px;
-    vertical-align: middle;
 }
 
 /* .train_arrow.down {
@@ -267,6 +303,16 @@
 .filter_btn.active.duration {
     background: #4c2f48;
     color: #fff;
+}
+
+.filter_btn.active.train {
+    background: #4c2f48;
+    color: #fff;
+}
+
+.train_arrow.active.train {
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
 }
 
 .filter_btn.active.type {

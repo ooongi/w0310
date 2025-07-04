@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SRT BEST 여행상품</title>
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="/w0310/70_pf/srt/css/tour_best.css">
+    <link rel="stylesheet" href="../css/tour_best.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../script/script_best.js"></script>
 
@@ -140,109 +140,91 @@
                                 <ul class="all_btn">
                                     <li><button type="button">전체</button></li>
                                 </ul>
-                                <ul class="tour_main">
-                                    <li><button type="button">
-                                            <span>경부선</span>
-                                            <span class="train_arrow" id="train_arrow"></span>
-                                        </button>
-                                        <ul class="tour_sub">
-                                            <li>수서역</li>
-                                            <li>동탄역</li>
-                                            <li>평택지제역</li>
-                                            <li>천안아산역</li>
-                                            <li>오송역</li>
-                                            <li>대전역</li>
-                                            <li>김천구미역</li>
-                                            <li>서대구역</li>
-                                            <li>동대구역</li>
-                                            <li>경주역</li>
-                                            <li>울산역</li>
-                                            <li>부산역</li>
-                                        </ul>
-                                    </li>
-                                    <li><button type="button">
-                                        <span>호남선</span>
-                                        <span class="train_arrow"
-                                                id="train_arrow"></span></button>
-                                        <ul class="tour_sub">
-                                            <li>수서역</li>
-                                            <li>동탄역</li>
-                                            <li>평택지제역</li>
-                                            <li>천안아산역</li>
-                                            <li>오송역</li>
-                                            <li>공주역</li>
-                                            <li>익산역</li>
-                                            <li>정읍역</li>
-                                            <li>광주송정역</li>
-                                            <li>나주역</li>
-                                            <li>목포역</li>
-                                        </ul>
-                                    </li>
-                                    <li><button type="button">
-                                        <span>전라선</span>
-                                        <span class="train_arrow"
-                                                id="train_arrow"></span></button>
-                                        <ul class="tour_sub">
-                                            <li>수서역</li>
-                                            <li>동탄역</li>
-                                            <li>평택지제역</li>
-                                            <li>천안아산역</li>
-                                            <li>오송역</li>
-                                            <li>대전역</li>
-                                            <li>공주역</li>
-                                            <li>익산역</li>
-                                            <li>전주역</li>
-                                            <li>남원역</li>
-                                            <li>곡성역</li>
-                                            <li>곡성역</li>
-                                            <li>구례구역</li>
-                                            <li>순천역</li>
-                                            <li>여천역</li>
-                                            <li>여수엑스포역</li>
-                                        </ul>
-                                    </li>
-                                    <li><button type="button">
-                                        <span>경전선</span>
-                                        <span class="train_arrow"
-                                                id="train_arrow"></span></button>
-                                        <ul class="tour_sub">
-                                            <li>수서역</li>
-                                            <li>동탄역</li>
-                                            <li>평택지제역</li>
-                                            <li>천안아산역</li>
-                                            <li>오송역</li>
-                                            <li>대전역</li>
-                                            <li>김천구미역</li>
-                                            <li>서대구역</li>
-                                            <li>동대구역</li>
-                                            <li>밀양역</li>
-                                            <li>진영역</li>
-                                            <li>창원중앙역</li>
-                                            <li>창원역</li>
-                                            <li>마산역</li>
-                                            <li>진주역</li>
-                                        </ul>
-                                    </li>
-                                    <li><button type="button">
-                                        <span>동해선</span>
-                                        <span class="train_arrow"
-                                                id="train_arrow"></span></button>
-                                        <ul class="tour_sub">
-                                            <li>수서역</li>
-                                            <li>동탄역</li>
-                                            <li>평택지제역</li>
-                                            <li>천안아산역</li>
-                                            <li>오송역</li>
-                                            <li>대전역</li>
-                                            <li>김천구미역</li>
-                                            <li>서대구역</li>
-                                            <li>동대구역</li>
-                                            <li>포항역</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                                <div class="tour_main">
+                                    <select id="stationSelect">
+                                        <option value="">경부선</option>
+                                        <option value="">수서역</option>
+                                        <option value="">동탄역</option>
+                                        <option value="">평택지제역</option>
+                                        <option value="">천안아산역</option>
+                                        <option value="">오송역</option>
+                                        <option value="">대전역</option>
+                                        <option value="">김천구미역</option>
+                                        <option value="">서대구역</option>
+                                        <option value="">동대구역</option>
+                                        <option value="">경주역</option>
+                                        <option value="">울산역</option>
+                                        <option value="">부산역</option>
+                                    </select>
+                                    <select id="stationSelect">
+                                        <option value="">호남선</option>
+                                        <option value="">수서역</option>
+                                        <option value="">동탄역</option>
+                                        <option value="">평택지제역</option>
+                                        <option value="">천안아산역</option>
+                                        <option value="">오송역</option>
+                                        <option value="">공주역</option>
+                                        <option value="">익산역</option>
+                                        <option value="">정읍역</option>
+                                        <option value="">광주송정역</option>
+                                        <option value="">나주역</option>
+                                        <option value="">목포역</option>
+                                    </select>
+                                    <select id="stationSelect">
+                                        <option value="">전라선</option>
+                                        <option value="">수서역</option>
+                                        <option value="">동탄역</option>
+                                        <option value="">평택지제역</option>
+                                        <option value="">천안아산역</option>
+                                        <option value="">오송역</option>
+                                        <option value="">대전역</option>
+                                        <option value="">공주역</option>
+                                        <option value="">익산역</option>
+                                        <option value="">전주역</option>
+                                        <option value="">남원역</option>
+                                        <option value="">곡성역</option>
+                                        <option value="">곡성역</option>
+                                        <option value="">구례구역</option>
+                                        <option value="">순천역</option>
+                                        <option value="">여천역</option>
+                                        <option value="">여수엑스포역</option>
+
+                                    </select>
+                                    <select id="stationSelect">
+                                        <option value="">경전선</option>
+                                        <option value="">수서역</option>
+                                        <option value="">동탄역</option>
+                                        <option value="">평택지제역</option>
+                                        <option value="">천안아산역</option>
+                                        <option value="">오송역</option>
+                                        <option value="">대전역</option>
+                                        <option value="">김천구미역</option>
+                                        <option value="">서대구역</option>
+                                        <option value="">동대구역</option>
+                                        <option value="">밀양역</option>
+                                        <option value="">진영역</option>
+                                        <option value="">창원중앙역</option>
+                                        <option value="">창원역</option>
+                                        <option value="">마산역</option>
+                                        <option value="">진주역</option>
+                                    </select>
+                                    <select id="stationSelect">
+                                        <option value="">동해선</option>
+                                        <option value="">수서역</option>
+                                        <option value="">동탄역</option>
+                                        <option value="">평택지제역</option>
+                                        <option value="">천안아산역</option>
+                                        <option value="">오송역</option>
+                                        <option value="">대전역</option>
+                                        <option value="">김천구미역</option>
+                                        <option value="">서대구역</option>
+                                        <option value="">동대구역</option>
+                                        <option value="">포항역</option>
+                                    </select>
+                                    
+                                </div><!-- tour_main -->
+                            </div><!-- train_container_box -->
+                        </div><!-- train_container -->
 
                         <div class="during_container">
                             <h2>여행기간</h2>
@@ -489,7 +471,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-duration="2박3일" data-type="산/강/바다" data-reserved="예약가능">
+                        <div class="best_tour_contents_box" data-duration="2박3일" data-type="산/강/바다"
+                            data-reserved="예약가능">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/dochodo.png" alt="서해4도홍도흑산도비금도초도">
                                 </div>
