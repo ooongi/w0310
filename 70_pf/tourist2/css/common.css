@@ -1,18 +1,22 @@
 @charset "utf-8";
 /* reset */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css);
 
 @font-face {
-    font-family: 'GothicA1-Light';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GothicA1-Light.woff2') format('woff2');
+    font-family: "GothicA1-Light";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GothicA1-Light.woff2")
+        format("woff2");
     font-weight: 300;
     font-style: normal;
 }
 
+/* *: root는 html 태그를 가리킨다. */
 :root {
     --gray1: #111;
     --gray3: #333;
     --gray5: #555;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -77,10 +81,9 @@ header a {
     font-size: 14px;
 }
 .util a:first-of-type::after {
-    content: '|';
+    content: "|";
     margin: 0 8px;
 }
-
 
 /* logo+GNB common */
 .nav_outer_box {
@@ -107,18 +110,18 @@ header a {
     height: 60px;
     opacity: 0;
     background: rgba(250, 100, 0, 0.85);
-    transition: .5s;
+    transition: 0.5s;
 }
 .nav_bg.active {
     opacity: 1;
 }
 
 /* 1depth */
-.main>li {
+.main > li {
     display: inline-block;
 }
 
-.main>li>a {
+.main > li > a {
     display: block;
     height: 80px;
     line-height: 80px;
@@ -131,15 +134,15 @@ header a {
 .sub {
     position: absolute;
     width: 40%;
-    top:70px;
-    opacity:0;
+    top: 70px;
+    opacity: 0;
     visibility: hidden;
-    transition: .5s;
+    transition: 0.5s;
     text-align: center;
 }
 .sub.active {
     visibility: visible;
-    opacity:1;
+    opacity: 1;
 }
 .sub li {
     display: inline-block;
@@ -178,7 +181,7 @@ ul.foot_list {
 }
 
 .foot_list li:first-of-type::after {
-    content: '|';
+    content: "|";
     padding: 0 10px;
 }
 
@@ -191,7 +194,7 @@ ul.foot_list {
     width: 50px;
     height: 50px;
     margin: 24px;
-    background: no-repeat 0 0/cover;
+    background: no-repeat 0 0 / cover;
 }
 
 .snslink li:nth-of-type(1) a {
@@ -204,4 +207,48 @@ ul.foot_list {
 
 .snslink li:nth-of-type(3) a {
     background-image: url("https://picsum.photos/id/406/50/50");
+}
+
+/* side menu */
+.quick_area {
+    z-index: 9999;
+    position: fixed;
+    right: 0;
+    top: 30%;
+    background: #282828;
+    text-align: center;
+}
+
+.quick_area h3 {
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.quick_area a {
+    display: block;
+    color: #fff;
+    padding: 12px 0;
+}
+
+.quick_area ul {
+    padding: 0 4px;
+}
+
+.quick_area li {
+    border-bottom: 1px solid #555;
+}
+
+.quick_area p {
+    font-size: 12px;
+}
+
+.to_the_top a {
+    display: block;
+    font-size: 16px;
+    background: #fff;
+    color: #333;
+}
+
+.to_the_top i {
+    margin-right: 8px;
 }
