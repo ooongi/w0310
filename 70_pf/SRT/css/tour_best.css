@@ -141,7 +141,7 @@
     color: #fff;
 }
 
-.sidebar_contents_area button:hover span {
+.sidebar_contents_area button:hover span:nth-of-type(2) {
     border-top: 2px solid #fff;
     border-right: 2px solid #fff;
 }
@@ -155,11 +155,19 @@
     display: flex;
 }
 
+.all_btn {
+    width: 60px;
+}
+
 /* 상품상태 */
 .item_container {
     width: 256px;
     padding-bottom: 16px;
     border-bottom: 1px solid #d9d9d9;
+}
+
+.item_container_box {
+    display: flex;
 }
 
 /* 운행구간 */
@@ -171,6 +179,18 @@
 
 .train_container_box {
     display: flex;
+}
+
+.train_container_box button {
+    background: #eee;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 7px 10px 7px 6px;
+    border-radius: 30px;
+    margin-top: 8px;
+    margin-right: 10px;
+    cursor: pointer;
 }
 
 .tour_main {
@@ -187,12 +207,13 @@
     height: 6px;
     border-top: 2px solid #333;
     border-right: 2px solid #333;
-    transform: rotate(-45deg);
+    transform: rotate(135deg);
     transition: none;
 }
 
 .tour_main span {
     margin-left: 5px;
+    vertical-align: middle;
 }
 
 /* .train_arrow.down {
