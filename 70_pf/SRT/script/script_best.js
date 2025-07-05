@@ -69,16 +69,16 @@ $(document).ready(function () {
             if (sidebarBottom >= footerOffset) {
                 // 푸터 근처에서 멈춤
                 $sidebar.removeClass("sticky").addClass("bottom");
-                $sidebar.css({
-                    position: "absolute",
-                    top: 800 + "px",
-                });
+                // $sidebar.css({
+                //     position: "absolute",
+                //     // top: 100 + "px",
+                // });
             } else {
                 // 스크롤 따라가기
                 $sidebar.removeClass("bottom").addClass("sticky");
                 $sidebar.css({
                     position: "fixed",
-                    top: "20px",
+                    // top: "20px",
                     left: containerOffset + "px",
                     width: sidebarWidth + "px",
                 });
@@ -275,6 +275,25 @@ $(document).ready(function () {
                 }
             );
         }
+
+        // 전체 선택 처리 > 전체탭제거
+        // if (filterValue === '전체') {
+        //     // 같은 필터 그룹의 다른 버튼들 비활성화
+        //     $('.filter_btn[data-filter="' + filterType + '"]').removeClass('active');
+        //     $(this).addClass('active');
+        //     selectedFilters[filterType] = ['전체'];
+        // } else {
+        //     // 전체 버튼 비활성화
+        //     $('.filter_btn[data-filter="' + filterType + '"][data-value="전체"]').removeClass('active');
+
+        //     // 전체 버튼에서 '전체' 제거
+        //     selectedFilters[filterType] = selectedFilters[filterType].filter(function (item) {
+        //         return item !== '전체';
+        //     });
+
+        // 필터조건확인추가문구
+        // selectedFilters.duration.includes('전체') ||
+        // }
     });
 
     // 적용 버튼 클릭
@@ -286,6 +305,8 @@ $(document).ready(function () {
     $("#resetFilter").click(function () {
         resetFilters();
     });
+
+
 });
 
 // 필터 적용 함수

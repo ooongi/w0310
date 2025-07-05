@@ -195,13 +195,13 @@
 }
 
 .tour_main {
-    width: 200px;
+    /* width: 200px; */
     position: relative;
 }
 
 .tour_main select {
     z-index: 2;
-    width: 90px;
+    width: 120px;
     background: #eee;
     border: none;
     font-size: 12px;
@@ -300,6 +300,8 @@
     width: 200px;
 }
 
+
+/* button active */
 .filter_btn.active.duration {
     background: #4c2f48;
     color: #fff;
@@ -325,10 +327,10 @@
     color: #fff;
 }
 
-.filter_btn.active.going {
+/* .filter_btn.active.all {
     background: #4c2f48;
     color: #fff;
-}
+} */
 
 /* 필터적용 */
 .submit_btn {
@@ -359,7 +361,7 @@
 
 .sidebar_contents.bottom {
     position: absolute;
-    bottom: 0;
+    bottom: 320px;
 }
 
 /* 오른쪽 컨텐츠 ------------------------------ */
@@ -471,6 +473,11 @@
 }
 
 .search_right a.active {
+    font-weight: bold;
+    color: #333333;
+}
+
+.tour_suggest.active {
     font-weight: bold;
     color: #333333;
 }
