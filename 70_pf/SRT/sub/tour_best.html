@@ -145,86 +145,18 @@
                                             data-value="전체">전체</button></li>
                                 </ul> -->
                                 <div class="tour_main">
-                                    <select id="stationSelect">
-                                        <option value="">경부선</option>
-                                        <option value="">수서역</option>
-                                        <option value="">동탄역</option>
-                                        <option value="">평택지제역</option>
-                                        <option value="">천안아산역</option>
-                                        <option value="">오송역</option>
-                                        <option value="">대전역</option>
-                                        <option value="">김천구미역</option>
-                                        <option value="">서대구역</option>
-                                        <option value="">동대구역</option>
-                                        <option value="">경주역</option>
-                                        <option value="">울산역</option>
-                                        <option value="">부산역</option>
-                                    </select>
-                                    <select id="stationSelect">
-                                        <option value="">호남선</option>
-                                        <option value="">수서역</option>
-                                        <option value="">동탄역</option>
-                                        <option value="">평택지제역</option>
-                                        <option value="">천안아산역</option>
-                                        <option value="">오송역</option>
-                                        <option value="">공주역</option>
-                                        <option value="">익산역</option>
-                                        <option value="">정읍역</option>
-                                        <option value="">광주송정역</option>
-                                        <option value="">나주역</option>
-                                        <option value="">목포역</option>
-                                    </select>
-                                    <select id="stationSelect">
-                                        <option value="">전라선</option>
-                                        <option value="">수서역</option>
-                                        <option value="">동탄역</option>
-                                        <option value="">평택지제역</option>
-                                        <option value="">천안아산역</option>
-                                        <option value="">오송역</option>
-                                        <option value="">대전역</option>
-                                        <option value="">공주역</option>
-                                        <option value="">익산역</option>
-                                        <option value="">전주역</option>
-                                        <option value="">남원역</option>
-                                        <option value="">곡성역</option>
-                                        <option value="">곡성역</option>
-                                        <option value="">구례구역</option>
-                                        <option value="">순천역</option>
-                                        <option value="">여천역</option>
-                                        <option value="">여수엑스포역</option>
-
-                                    </select>
-                                    <select id="stationSelect">
-                                        <option value="">경전선</option>
-                                        <option value="">수서역</option>
-                                        <option value="">동탄역</option>
-                                        <option value="">평택지제역</option>
-                                        <option value="">천안아산역</option>
-                                        <option value="">오송역</option>
-                                        <option value="">대전역</option>
-                                        <option value="">김천구미역</option>
-                                        <option value="">서대구역</option>
-                                        <option value="">동대구역</option>
-                                        <option value="">밀양역</option>
-                                        <option value="">진영역</option>
-                                        <option value="">창원중앙역</option>
-                                        <option value="">창원역</option>
-                                        <option value="">마산역</option>
-                                        <option value="">진주역</option>
-                                    </select>
-                                    <select id="stationSelect">
-                                        <option value="">동해선</option>
-                                        <option value="">수서역</option>
-                                        <option value="">동탄역</option>
-                                        <option value="">평택지제역</option>
-                                        <option value="">천안아산역</option>
-                                        <option value="">오송역</option>
-                                        <option value="">대전역</option>
-                                        <option value="">김천구미역</option>
-                                        <option value="">서대구역</option>
-                                        <option value="">동대구역</option>
-                                        <option value="">포항역</option>
-                                    </select>
+                                    <ul>
+                                        <li><button type="button" class="filter_btn tour_subway" data-filter="subway"
+                                                data-value="경부선">경부선</button></li>
+                                        <li><button type="button" class="filter_btn tour_subway" data-filter="subway"
+                                                data-value="호남선">호남선</button></li>
+                                        <li><button type="button" class="filter_btn tour_subway" data-filter="subway"
+                                                data-value="전라선">전라선</button></li>
+                                        <li><button type="button" class="filter_btn tour_subway" data-filter="subway"
+                                                data-value="경전선">경전선</button></li>
+                                        <li><button type="button" class="filter_btn tour_subway" data-filter="subway"
+                                                data-value="동해선">동해선</button></li>
+                                    </ul>
 
                                 </div><!-- tour_main -->
                             </div><!-- train_container_box -->
@@ -318,21 +250,20 @@
                         <p>검색결과 <span class="result-count" id="resultCount">6</span></p>
                     </div>
                     <div class="search_right">
-                        <ul>
-                            <li><a href="#" class="tour_suggest suggest" data-filter="type" data-value="추천순">추천순</a>
+                        <!-- <ul>
+                            <li><a href="#" class="tour_suggest suggest" data-filter="suggest" data-value="추천순">추천순</a>
                             </li>
-                            <li><a href="#" class="tour_suggest suggest" data-filter="type" data-value="가격낮은순">가격 낮은 순</a>
+                            <li><a href="#" class="tour_suggest suggest" data-filter="suggest" data-value="인기순">인기순</a>
                             </li>
-                            <li><a href="#" class="tour_suggest suggest" data-filter="type" data-value="가격높은순">가격 높은 순</a>
-                            </li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
 
                 <!----------------------------- 여행정보 ----------------------------->
                 <div class="best_contents">
                     <div class="best_tour_contents">
-                        <div class="best_tour_contents_box" data-duration="당일" data-type="기차여행" data-reserved="예약가능">
+                        <div class="best_tour_contents_box" data-duration="당일" data-type="기차여행" data-reserved="예약가능"
+                            data-subway="경부선">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/busan1.png" alt="부산기차여행1"></div>
                                 <div class="contents_note">
@@ -369,7 +300,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-duration="당일" data-type="축제" data-reserved="출발확정">
+                        <div class="best_tour_contents_box" data-duration="당일" data-type="축제" data-reserved="출발확정"
+                            data-subway="호남선" data-subway="전라선">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/gslose.png" alt="곡성장미축제와전주한옥마을"></div>
                                 <div class="contents_note">
@@ -406,7 +338,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-duration="2박3일" data-type="시티투어" data-reserved="예약가능">
+                        <div class="best_tour_contents_box" data-duration="2박3일" data-type="시티투어" data-reserved="예약가능"
+                            data-subway="경부선">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/g_u_b.png" alt="경주울산부산여행"></div>
                                 <div class="contents_note">
@@ -443,7 +376,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-duration="2박3일" data-type="관광지" data-reserved="출발확정">
+                        <div class="best_tour_contents_box" data-duration="2박3일" data-type="관광지" data-reserved="출발확정"
+                            data-subway="호남선">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/haenam.png" alt="시인의섬보길도청산도해남"></div>
                                 <div class="contents_note">
@@ -480,8 +414,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-duration="2박3일" data-type="산/강/바다"
-                            data-reserved="예약가능">
+                        <div class="best_tour_contents_box" data-duration="2박3일" data-type="산/강/바다" data-reserved="예약가능"
+                            data-subway="경부선">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/dochodo.png" alt="서해4도홍도흑산도비금도초도">
                                 </div>
@@ -519,7 +453,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-duration="당일" data-type="기차여행" data-reserved="출발확정">
+                        <div class="best_tour_contents_box" data-duration="당일" data-type="기차여행" data-reserved="출발확정"
+                            data-subway="경부선">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/busan1.png" alt="부산기차여행1"></div>
                                 <div class="contents_note">
@@ -556,7 +491,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-duration="당일" data-type="축제" data-reserved="예약가능">
+                        <div class="best_tour_contents_box" data-duration="당일" data-type="축제" data-reserved="예약가능"
+                            data-subway="호남선" data-subway="전라선">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/gslose.png" alt="곡성장미축제와전주한옥마을"></div>
                                 <div class="contents_note">
@@ -593,7 +529,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-duration="2박3일" data-type="시티투어" data-reserved="출발확정">
+                        <div class="best_tour_contents_box" data-duration="2박3일" data-type="시티투어" data-reserved="출발확정"
+                            data-subway="경부선">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/g_u_b.png" alt="경주울산부산여행"></div>
                                 <div class="contents_note">
@@ -630,7 +567,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-duration="2박3일" data-type="관광지" data-reserved="출발확정">
+                        <div class="best_tour_contents_box" data-duration="2박3일" data-type="관광지" data-reserved="출발확정"
+                            data-subway="호남선">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/haenam.png" alt="시인의섬보길도청산도해남"></div>
                                 <div class="contents_note">
@@ -667,8 +605,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="best_tour_contents_box" data-duration="2박3일" data-type="산/강/바다"
-                            data-reserved="출발확정">
+                        <div class="best_tour_contents_box" data-duration="2박3일" data-type="산/강/바다" data-reserved="출발확정"
+                            data-subway="경부선">
                             <div>
                                 <div class="contents_img"><img src="../images/sub/dochodo.png" alt="서해4도홍도흑산도비금도초도">
                                 </div>

@@ -250,7 +250,7 @@ var selectedFilters = {
     duration: [],
     type: [],
     reserved: [],
-    going: [],
+    subway: [],
 };
 
 $(document).ready(function () {
@@ -318,7 +318,7 @@ function applyFilters() {
         var cardDuration = card.data("duration");
         var cardType = card.data("type");
         var cardReserved = card.data("reserved");
-        var cardGoing = card.data("going");
+        var cardSubway = card.data("subway");
 
         // 필터 조건 확인
         var durationMatch =
@@ -330,12 +330,12 @@ function applyFilters() {
         var reservedMatch =
             selectedFilters.reserved.length === 0 ||
             selectedFilters.reserved.indexOf(cardReserved) !== -1;
-        var goingMatch =
-            selectedFilters.going.length === 0 ||
-            selectedFilters.going.indexOf(cardGoing) !== -1;
+        var subwayMatch =
+            selectedFilters.subway.length === 0 ||
+            selectedFilters.subway.indexOf(cardSubway) !== -1;
 
         // 조건에 맞으면 보이고, 안 맞으면 숨김
-        if (durationMatch && typeMatch && reservedMatch && goingMatch) {
+        if (durationMatch && typeMatch && reservedMatch && subwayMatch) {
             card.removeClass("hidden");
             // card.addClass('activeBox');
             visibleCount++;
@@ -362,7 +362,7 @@ function resetFilters() {
         duration: [],
         type: [],
         reserved: [],
-        going: [],
+        subway: [],
     };
 
     $(".filter_btn").removeClass("active");

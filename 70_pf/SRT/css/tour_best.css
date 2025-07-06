@@ -327,10 +327,11 @@
     color: #fff;
 }
 
-/* .filter_btn.active.all {
+
+.filter_btn.active.tour_subway {
     background: #4c2f48;
     color: #fff;
-} */
+}
 
 /* 필터적용 */
 .submit_btn {
