@@ -12,7 +12,7 @@
     width: 1200px;
     /* height: 1615px; */
     margin: 0 auto;
-    margin-top: 175px;
+    margin-top: 40px;
     display: flex;
     justify-content: space-between;
 }
@@ -135,12 +135,16 @@
     margin-right: 10px;
     cursor: pointer;
 }
-/* 
-.sidebar_contents_area button:hover {
-    background: #4c2f48;
-    color: #fff;
-} */
 
+.sidebar_contents_area button>img {
+    display: none;
+    margin-top: 3px;
+    margin-left: 4px;
+}
+
+.sidebar_contents_area button.active img{
+    display: inline-block;
+}
 /* .sidebar_contents_area button:hover span:nth-of-type(2) {
     border-top: 2px solid #fff;
     border-right: 2px solid #fff;
@@ -197,25 +201,6 @@
 .tour_main {
     /* width: 200px; */
     position: relative;
-}
-
-.tour_main select {
-    z-index: 2;
-    width: 120px;
-    background: #eee;
-    border: none;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 7px 10px 7px 8px;
-    border-radius: 30px;
-    margin-top: 8px;
-    /* margin-right: 10px; */
-    cursor: pointer;
-    appearance: none;
-    background-image: url(/70_pf/srt/images/sub/arrow_down_7.svg);
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: auto;
 }
 
 .tour_main span {
