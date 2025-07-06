@@ -312,8 +312,12 @@
     color: #fff;
 }
 
+.filter_btn.active.tour_region {
+    background: #4c2f48;
+    color: #fff;
+}
 
-.filter_btn.active.tour_subway {
+.filter_btn.active.tour_day {
     background: #4c2f48;
     color: #fff;
 }
