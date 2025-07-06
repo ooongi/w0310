@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>기간별 여행상품</title>
-    <link rel="stylesheet" href="/70_pf/SRT/css/reset.css">
-    <link rel="stylesheet" href="/70_pf/SRT/css/trip_day.css">
+    <link rel="stylesheet" href="/70_pf/srt/css/reset.css">
+    <link rel="stylesheet" href="/70_pf/srt/css/trip_day.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="/70_pf/SRT/script/script_day.js"></script>
+    <script src="/70_pf/srt/script/script_day.js"></script>
 
 </head>
 
@@ -21,9 +21,9 @@
                 <div class="first">
                     <div class="language">
                         <div class="lbtn" id="lbtn">
-                            <img src="/70_pf/SRT/images/nav/language.png" alt="언어설정 아이콘" />
+                            <img src="/70_pf/srt/images/nav/language.png" alt="언어설정 아이콘" />
                             <p>Language</p>
-                            <img class="language_btn" src="/70_pf/SRT/images/nav/language_btn.png" alt="아래화살표" />
+                            <img class="language_btn" src="/70_pf/srt/images/nav/language_btn.png" alt="아래화살표" />
                         </div>
                         <ul class="language_list" id="language_list">
                             <li>
@@ -38,13 +38,13 @@
                         </ul>
                     </div>
                     <div class="logo">
-                        <a href="/70_pf/SRT/index.html"><img src="/70_pf/SRT/images/nav/logo.png" alt="상단로고" /></a>
+                        <a href="/70_pf/srt/index.html"><img src="/70_pf/srt/images/nav/logo.png" alt="상단로고" /></a>
                     </div>
                     <div class="icons">
-                        <a href="#"><img src="/70_pf/SRT/images/nav/login.png" alt="로그인 페이지 이동 아이콘" /></a>
-                        <a href="#"><img src="/70_pf/SRT/images/nav/guest.png" alt="회원가입 페이지 이동 아이콘" /></a>
-                        <a href="#"><img src="/70_pf/SRT/images/nav/Search.png" alt="검색 페이지 이동 아이콘" /></a>
-                        <a href="#"><img src="/70_pf/SRT/images/nav/hamburger_btn.png" alt="사이트맵 아이콘" /></a>
+                        <a href="#"><img src="/70_pf/srt/images/nav/login.png" alt="로그인 페이지 이동 아이콘" /></a>
+                        <a href="#"><img src="/70_pf/srt/images/nav/guest.png" alt="회원가입 페이지 이동 아이콘" /></a>
+                        <a href="#"><img src="/70_pf/srt/images/nav/Search.png" alt="검색 페이지 이동 아이콘" /></a>
+                        <a href="#"><img src="/70_pf/srt/images/nav/hamburger_btn.png" alt="사이트맵 아이콘" /></a>
                     </div>
                 </div>
             </div>
@@ -97,9 +97,10 @@
             </div>
             <div class="submenu_bar">
                 <div class="sub_inner">
-                    <a href="#" class="home"><img src="/70_pf/SRT/images/sub/home.png" alt="홈">홈</a>
-                    <div class="menu"><a href="#">여행상품<img src="/70_pf/SRT/images/sub/arrow-down.png" alt="화살표"></a></div>
-                    <div class="menu"><a href="#">기간별 여행상품<img src="/70_pf/SRT/images/sub/arrow-down.png" alt="화살표"></a>
+                    <a href="#" class="home"><img src="/70_pf/srt/images/sub/home.png" alt="홈">홈</a>
+                    <div class="menu"><a href="#">여행상품<img src="/70_pf/srt/images/sub/arrow-down.png" alt="화살표"></a>
+                    </div>
+                    <div class="menu"><a href="#">기간별 여행상품<img src="/70_pf/srt/images/sub/arrow-down.png" alt="화살표"></a>
                     </div>
                 </div>
             </div>
@@ -116,7 +117,7 @@
                             <h2>종합검색</h2>
                             <input type="text" class="search_box" placeholder="원하는 여행을 검색해보세요.">
                             <div class="search_btn">
-                                <img src="/70_pf/SRT/images/sub/search.svg" alt="검색버튼">
+                                <img src="/70_pf/srt/images/sub/search.svg" alt="검색버튼">
                             </div>
                         </div>
 
@@ -130,9 +131,32 @@
                                 </ul> -->
                                 <ul>
                                     <li><button type="button" class="filter_btn reserved" data-filter="reserved"
-                                            data-value="예약가능">예약가능<img src="/70_pf/SRT/images/sub/btn_check.svg" alt="체크"></button></li>
+                                            data-value="예약가능">예약가능<img src="/70_pf/srt/images/sub/btn_check.svg"
+                                                alt="체크"></button></li>
                                     <li><button type="button" class="filter_btn reserved" data-filter="reserved"
-                                            data-value="출발확정">출발확정<img src="/70_pf/SRT/images/sub/btn_check.svg" alt="체크"></button></li>
+                                            data-value="출발확정">출발확정<img src="/70_pf/srt/images/sub/btn_check.svg"
+                                                alt="체크"></button></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="during_container">
+                            <h2>여행기간</h2>
+                            <div class="during_container_box">
+                                <!-- <ul class="all_btn">
+                                    <li><button type="button" class="filter_btn all duration" data-filter="duration"
+                                            data-value="전체">전체</button></li>
+                                </ul> -->
+                                <ul>
+                                    <li><button type="button" class="filter_btn duration" data-filter="duration"
+                                            data-value="당일">당일<img src="/70_pf/srt/images/sub/btn_check.svg"
+                                                alt="체크"></button></li>
+                                    <li><button type="button" class="filter_btn duration" data-filter="duration"
+                                            data-value="1박2일">1박2일<img src="/70_pf/srt/images/sub/btn_check.svg"
+                                                alt="체크"></button></li>
+                                    <li><button type="button" class="filter_btn duration" data-filter="duration"
+                                            data-value="2박3일">2박3일<img src="/70_pf/srt/images/sub/btn_check.svg"
+                                                alt="체크"></button></li>
                                 </ul>
                             </div>
 
@@ -147,39 +171,27 @@
                                 <div class="tour_main">
                                     <ul>
                                         <li><button type="button" class="filter_btn tour_region" data-filter="region"
-                                                data-value="수도권">수도권<img src="/70_pf/SRT/images/sub/btn_check.svg" alt="체크"></button></li>
+                                                data-value="수도권">수도권<img src="/70_pf/srt/images/sub/btn_check.svg"
+                                                    alt="체크"></button></li>
                                         <li><button type="button" class="filter_btn tour_region" data-filter="region"
-                                                data-value="강원권">강원권<img src="/70_pf/SRT/images/sub/btn_check.svg" alt="체크"></button></li>
+                                                data-value="강원권">강원권<img src="/70_pf/srt/images/sub/btn_check.svg"
+                                                    alt="체크"></button></li>
                                         <li><button type="button" class="filter_btn tour_region" data-filter="region"
-                                                data-value="충청권">충청권<img src="/70_pf/SRT/images/sub/btn_check.svg" alt="체크"></button></li>
+                                                data-value="충청권">충청권<img src="/70_pf/srt/images/sub/btn_check.svg"
+                                                    alt="체크"></button></li>
                                         <li><button type="button" class="filter_btn tour_region" data-filter="region"
-                                                data-value="경상권">경상권<img src="/70_pf/SRT/images/sub/btn_check.svg" alt="체크"></button></li>
+                                                data-value="경상권">경상권<img src="/70_pf/srt/images/sub/btn_check.svg"
+                                                    alt="체크"></button></li>
                                         <li><button type="button" class="filter_btn tour_region" data-filter="region"
-                                                data-value="전라권">전라권<img src="/70_pf/SRT/images/sub/btn_check.svg" alt="체크"></button></li>
+                                                data-value="전라권">전라권<img src="/70_pf/srt/images/sub/btn_check.svg"
+                                                    alt="체크"></button></li>
                                     </ul>
 
                                 </div><!-- tour_main -->
                             </div><!-- train_container_box -->
                         </div><!-- train_container -->
 
-                        <div class="during_container">
-                            <h2>여행기간</h2>
-                            <div class="during_container_box">
-                                <!-- <ul class="all_btn">
-                                    <li><button type="button" class="filter_btn all duration" data-filter="duration"
-                                            data-value="전체">전체</button></li>
-                                </ul> -->
-                                <ul>
-                                    <li><button type="button" class="filter_btn duration" data-filter="duration"
-                                            data-value="당일">당일<img src="/70_pf/SRT/images/sub/btn_check.svg" alt="체크"></button></li>
-                                    <li><button type="button" class="filter_btn duration" data-filter="duration"
-                                            data-value="1박2일">1박2일<img src="/70_pf/SRT/images/sub/btn_check.svg" alt="체크"></button></li>
-                                    <li><button type="button" class="filter_btn duration" data-filter="duration"
-                                            data-value="2박3일">2박3일<img src="/70_pf/SRT/images/sub/btn_check.svg" alt="체크"></button></li>
-                                </ul>
-                            </div>
 
-                        </div>
                         <!--
                         <div class="day_container">
                             <h2>출발요일</h2>
@@ -208,19 +220,26 @@
                                 </ul> -->
                                 <ul>
                                     <li><button type="button" class="filter_btn type" data-filter="type"
-                                            data-value="기차여행">기차여행<img src="/70_pf/SRT/images/sub/btn_check.svg" alt="체크"></button></li>
+                                            data-value="기차여행">기차여행<img src="/70_pf/srt/images/sub/btn_check.svg"
+                                                alt="체크"></button></li>
                                     <li><button type="button" class="filter_btn type" data-filter="type"
-                                            data-value="시티투어">시티투어<img src="/70_pf/SRT/images/sub/btn_check.svg" alt="체크"></button></li>
+                                            data-value="시티투어">시티투어<img src="/70_pf/srt/images/sub/btn_check.svg"
+                                                alt="체크"></button></li>
                                     <li><button type="button" class="filter_btn type" data-filter="type"
-                                            data-value="축제">축제<img src="/70_pf/SRT/images/sub/btn_check.svg" alt="체크"></button></li>
+                                            data-value="축제">축제<img src="/70_pf/srt/images/sub/btn_check.svg"
+                                                alt="체크"></button></li>
                                     <li><button type="button" class="filter_btn type" data-filter="type"
-                                            data-value="계절">계절<img src="/70_pf/SRT/images/sub/btn_check.svg" alt="체크"></button></li>
+                                            data-value="계절">계절<img src="/70_pf/srt/images/sub/btn_check.svg"
+                                                alt="체크"></button></li>
                                     <li><button type="button" class="filter_btn type" data-filter="type"
-                                            data-value="체험">체험<img src="/70_pf/SRT/images/sub/btn_check.svg" alt="체크"></button></li>
+                                            data-value="체험">체험<img src="/70_pf/srt/images/sub/btn_check.svg"
+                                                alt="체크"></button></li>
                                     <li><button type="button" class="filter_btn type" data-filter="type"
-                                            data-value="산/강/바다">산/강/바다<img src="/70_pf/SRT/images/sub/btn_check.svg" alt="체크"></button></li>
+                                            data-value="산/강/바다">산/강/바다<img src="/70_pf/srt/images/sub/btn_check.svg"
+                                                alt="체크"></button></li>
                                     <li><button type="button" class="filter_btn type" data-filter="type"
-                                            data-value="관광지">관광지<img src="/70_pf/SRT/images/sub/btn_check.svg" alt="체크"></button></li>
+                                            data-value="관광지">관광지<img src="/70_pf/srt/images/sub/btn_check.svg"
+                                                alt="체크"></button></li>
                                 </ul>
                             </div>
                         </div>
@@ -234,14 +253,14 @@
             <div class="best_right">
                 <div class="best_sub">
                     <button class="best_sub_title" id="best_sub_title" type="button">
-                        <span>지역별 여행상품</span>
+                        <span>기간별 여행상품</span>
                         <div class="arrow" id="arrow"></div>
                     </button>
                     <nav id="best_sub_nav">
                         <ul class="best_down" id="best_down">
-                            <li><a href="/70_pf/SRT/sub/trip_best.html">SRT 베스트 여행상품</a></li>
-                            <li><a href="/70_pf/SRT/sub/trip_region.html">지역별 여행상품</a></li>
-                            <li><a href="/70_pf/SRT/sub/trip_day.html">기간별 여행상품</a></li>
+                            <li><a href="/70_pf/srt/sub/trip_best.html">SRT 베스트 여행상품</a></li>
+                            <li><a href="/70_pf/srt/sub/trip_region.html">지역별 여행상품</a></li>
+                            <li><a href="/70_pf/srt/sub/trip_day.html">기간별 여행상품</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -265,7 +284,8 @@
                         <div class="best_tour_contents_box" data-duration="당일" data-type="기차여행" data-reserved="예약가능"
                             data-region="경상권">
                             <div>
-                                <div class="contents_img"><img src="/70_pf/SRT/images/sub/busan1.png" alt="부산기차여행1"></div>
+                                <div class="contents_img"><img src="/70_pf/srt/images/sub/busan1.png" alt="부산기차여행1">
+                                </div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
                                         <div class="contents_filter">
@@ -274,20 +294,20 @@
                                             <div class="filter_tag type">기차여행</div>
                                         </div>
                                         <div class="contents_info">
-                                            <h3>[부산이야기 기차여행 2탄]당일로 즐기는 SRT 부산여행</h3>
+                                            <h3>[부산이야기 기차여행 2탄]당일로 즐기는 srt 부산여행</h3>
                                             <p class="subway">부산역</p>
                                             <div class="contents_info_1">
-                                                <img src="/70_pf/SRT/images/sub/month.svg" alt="여행기간">
+                                                <img src="/70_pf/srt/images/sub/month.svg" alt="여행기간">
                                                 <span>여행기간</span>
                                                 <span>당일</span>
                                             </div>
                                             <div class="contents_info_2">
-                                                <img src="/70_pf/SRT/images/sub/people.svg" alt="출발인원">
+                                                <img src="/70_pf/srt/images/sub/people.svg" alt="출발인원">
                                                 <span>출발인원</span>
                                                 <span>최소 4인</span>
                                             </div>
                                             <div class="tour_logo">
-                                                <img src="/70_pf/SRT/images/sub/tourgongbang.png" alt="여행공방여행사">
+                                                <img src="/70_pf/srt/images/sub/tourgongbang.png" alt="여행공방여행사">
                                             </div>
                                         </div>
                                     </div>
@@ -303,7 +323,8 @@
                         <div class="best_tour_contents_box" data-duration="당일" data-type="축제" data-reserved="출발확정"
                             data-region="전라권">
                             <div>
-                                <div class="contents_img"><img src="/70_pf/SRT/images/sub/gslose.png" alt="곡성장미축제와전주한옥마을"></div>
+                                <div class="contents_img"><img src="/70_pf/srt/images/sub/gslose.png"
+                                        alt="곡성장미축제와전주한옥마을"></div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
                                         <div class="contents_filter">
@@ -315,17 +336,17 @@
                                             <h3>곡성 장미축제·전주 한옥마을</h3>
                                             <p class="subway">익산역</p>
                                             <div class="contents_info_1">
-                                                <img src="/70_pf/SRT/images/sub/month.svg" alt="여행기간">
+                                                <img src="/70_pf/srt/images/sub/month.svg" alt="여행기간">
                                                 <span>여행기간</span>
                                                 <span>당일</span>
                                             </div>
                                             <div class="contents_info_2">
-                                                <img src="/70_pf/SRT/images/sub/people.svg" alt="출발인원">
+                                                <img src="/70_pf/srt/images/sub/people.svg" alt="출발인원">
                                                 <span>출발인원</span>
                                                 <span>최소 10인</span>
                                             </div>
                                             <div class="tour_logo">
-                                                <img src="/70_pf/SRT/images/sub/hongtour.png" alt="홍익여행사">
+                                                <img src="/70_pf/srt/images/sub/hongtour.png" alt="홍익여행사">
                                             </div>
                                         </div>
                                     </div>
@@ -341,7 +362,8 @@
                         <div class="best_tour_contents_box" data-duration="2박3일" data-type="시티투어" data-reserved="예약가능"
                             data-subway="경부선">
                             <div>
-                                <div class="contents_img"><img src="/70_pf/SRT/images/sub/g_u_b.png" alt="경주울산부산여행"></div>
+                                <div class="contents_img"><img src="/70_pf/srt/images/sub/g_u_b.png" alt="경주울산부산여행">
+                                </div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
                                         <div class="contents_filter">
@@ -353,17 +375,17 @@
                                             <h3>경주·울산·부산 여행</h3>
                                             <p class="subway">경주역</p>
                                             <div class="contents_info_1">
-                                                <img src="/70_pf/SRT/images/sub/month.svg" alt="여행기간">
+                                                <img src="/70_pf/srt/images/sub/month.svg" alt="여행기간">
                                                 <span>여행기간</span>
                                                 <span>2박 3일</span>
                                             </div>
                                             <div class="contents_info_2">
-                                                <img src="/70_pf/SRT/images/sub/people.svg" alt="출발인원">
+                                                <img src="/70_pf/srt/images/sub/people.svg" alt="출발인원">
                                                 <span>출발인원</span>
                                                 <span>최소 8인</span>
                                             </div>
                                             <div class="tour_logo">
-                                                <img src="/70_pf/SRT/images/sub/hongtour.png" alt="홍익여행사">
+                                                <img src="/70_pf/srt/images/sub/hongtour.png" alt="홍익여행사">
                                             </div>
                                         </div>
                                     </div>
@@ -379,7 +401,8 @@
                         <div class="best_tour_contents_box" data-duration="2박3일" data-type="관광지" data-reserved="출발확정"
                             data-region="전라권">
                             <div>
-                                <div class="contents_img"><img src="/70_pf/SRT/images/sub/haenam.png" alt="시인의섬보길도청산도해남"></div>
+                                <div class="contents_img"><img src="/70_pf/srt/images/sub/haenam.png"
+                                        alt="시인의섬보길도청산도해남"></div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
                                         <div class="contents_filter">
@@ -391,17 +414,17 @@
                                             <h3>시인의 섬 보길도·청산도·해남</h3>
                                             <p class="subway">광주송정역</p>
                                             <div class="contents_info_1">
-                                                <img src="/70_pf/SRT/images/sub/month.svg" alt="여행기간">
+                                                <img src="/70_pf/srt/images/sub/month.svg" alt="여행기간">
                                                 <span>여행기간</span>
                                                 <span>2박 3일</span>
                                             </div>
                                             <div class="contents_info_2">
-                                                <img src="/70_pf/SRT/images/sub/people.svg" alt="출발인원">
+                                                <img src="/70_pf/srt/images/sub/people.svg" alt="출발인원">
                                                 <span>출발인원</span>
                                                 <span>최소 8인</span>
                                             </div>
                                             <div class="tour_logo">
-                                                <img src="/70_pf/SRT/images/sub/hongtour.png" alt="홍익여행사">
+                                                <img src="/70_pf/srt/images/sub/hongtour.png" alt="홍익여행사">
                                             </div>
                                         </div>
                                     </div>
@@ -417,7 +440,8 @@
                         <div class="best_tour_contents_box" data-duration="2박3일" data-type="산/강/바다" data-reserved="예약가능"
                             data-region="경상권">
                             <div>
-                                <div class="contents_img"><img src="/70_pf/SRT/images/sub/dochodo.png" alt="서해4도홍도흑산도비금도초도">
+                                <div class="contents_img"><img src="/70_pf/srt/images/sub/dochodo.png"
+                                        alt="서해4도홍도흑산도비금도초도">
                                 </div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
@@ -430,17 +454,17 @@
                                             <h3>서해 4島 홍도·흑산도·비금·도초도</h3>
                                             <p class="subway">부산역</p>
                                             <div class="contents_info_1">
-                                                <img src="/70_pf/SRT/images/sub/month.svg" alt="여행기간">
+                                                <img src="/70_pf/srt/images/sub/month.svg" alt="여행기간">
                                                 <span>여행기간</span>
                                                 <span>2박 3일</span>
                                             </div>
                                             <div class="contents_info_2">
-                                                <img src="/70_pf/SRT/images/sub/people.svg" alt="출발인원">
+                                                <img src="/70_pf/srt/images/sub/people.svg" alt="출발인원">
                                                 <span>출발인원</span>
                                                 <span>최소 4인</span>
                                             </div>
                                             <div class="tour_logo">
-                                                <img src="/70_pf/SRT/images/sub/hongtour.png" alt="홍익여행사">
+                                                <img src="/70_pf/srt/images/sub/hongtour.png" alt="홍익여행사">
                                             </div>
                                         </div>
                                     </div>
@@ -456,7 +480,8 @@
                         <div class="best_tour_contents_box" data-duration="당일" data-type="기차여행" data-reserved="출발확정"
                             data-region="경상권">
                             <div>
-                                <div class="contents_img"><img src="/70_pf/SRT/images/sub/busan1.png" alt="부산기차여행1"></div>
+                                <div class="contents_img"><img src="/70_pf/srt/images/sub/busan1.png" alt="부산기차여행1">
+                                </div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
                                         <div class="contents_filter">
@@ -465,20 +490,20 @@
                                             <div class="filter_tag type">기차여행</div>
                                         </div>
                                         <div class="contents_info">
-                                            <h3>[부산이야기 기차여행 2탄]당일로 즐기는 SRT 부산여행</h3>
+                                            <h3>[부산이야기 기차여행 2탄]당일로 즐기는 srt 부산여행</h3>
                                             <p class="subway">부산역</p>
                                             <div class="contents_info_1">
-                                                <img src="/70_pf/SRT/images/sub/month.svg" alt="여행기간">
+                                                <img src="/70_pf/srt/images/sub/month.svg" alt="여행기간">
                                                 <span>여행기간</span>
                                                 <span>당일</span>
                                             </div>
                                             <div class="contents_info_2">
-                                                <img src="/70_pf/SRT/images/sub/people.svg" alt="출발인원">
+                                                <img src="/70_pf/srt/images/sub/people.svg" alt="출발인원">
                                                 <span>출발인원</span>
                                                 <span>최소 4인</span>
                                             </div>
                                             <div class="tour_logo">
-                                                <img src="/70_pf/SRT/images/sub/tourgongbang.png" alt="여행공방여행사">
+                                                <img src="/70_pf/srt/images/sub/tourgongbang.png" alt="여행공방여행사">
                                             </div>
                                         </div>
                                     </div>
@@ -494,7 +519,8 @@
                         <div class="best_tour_contents_box" data-duration="당일" data-type="축제" data-reserved="예약가능"
                             data-region="전라권">
                             <div>
-                                <div class="contents_img"><img src="/70_pf/SRT/images/sub/gslose.png" alt="곡성장미축제와전주한옥마을"></div>
+                                <div class="contents_img"><img src="/70_pf/srt/images/sub/gslose.png"
+                                        alt="곡성장미축제와전주한옥마을"></div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
                                         <div class="contents_filter">
@@ -506,17 +532,17 @@
                                             <h3>곡성 장미축제·전주 한옥마을</h3>
                                             <p class="subway">익산역</p>
                                             <div class="contents_info_1">
-                                                <img src="/70_pf/SRT/images/sub/month.svg" alt="여행기간">
+                                                <img src="/70_pf/srt/images/sub/month.svg" alt="여행기간">
                                                 <span>여행기간</span>
                                                 <span>당일</span>
                                             </div>
                                             <div class="contents_info_2">
-                                                <img src="/70_pf/SRT/images/sub/people.svg" alt="출발인원">
+                                                <img src="/70_pf/srt/images/sub/people.svg" alt="출발인원">
                                                 <span>출발인원</span>
                                                 <span>최소 10인</span>
                                             </div>
                                             <div class="tour_logo">
-                                                <img src="/70_pf/SRT/images/sub/hongtour.png" alt="홍익여행사">
+                                                <img src="/70_pf/srt/images/sub/hongtour.png" alt="홍익여행사">
                                             </div>
                                         </div>
                                     </div>
@@ -532,7 +558,8 @@
                         <div class="best_tour_contents_box" data-duration="2박3일" data-type="시티투어" data-reserved="출발확정"
                             data-region="경상권">
                             <div>
-                                <div class="contents_img"><img src="/70_pf/SRT/images/sub/g_u_b.png" alt="경주울산부산여행"></div>
+                                <div class="contents_img"><img src="/70_pf/srt/images/sub/g_u_b.png" alt="경주울산부산여행">
+                                </div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
                                         <div class="contents_filter">
@@ -544,17 +571,17 @@
                                             <h3>경주·울산·부산 여행</h3>
                                             <p class="subway">경주역</p>
                                             <div class="contents_info_1">
-                                                <img src="/70_pf/SRT/images/sub/month.svg" alt="여행기간">
+                                                <img src="/70_pf/srt/images/sub/month.svg" alt="여행기간">
                                                 <span>여행기간</span>
                                                 <span>2박 3일</span>
                                             </div>
                                             <div class="contents_info_2">
-                                                <img src="/70_pf/SRT/images/sub/people.svg" alt="출발인원">
+                                                <img src="/70_pf/srt/images/sub/people.svg" alt="출발인원">
                                                 <span>출발인원</span>
                                                 <span>최소 8인</span>
                                             </div>
                                             <div class="tour_logo">
-                                                <img src="/70_pf/SRT/images/sub/hongtour.png" alt="홍익여행사">
+                                                <img src="/70_pf/srt/images/sub/hongtour.png" alt="홍익여행사">
                                             </div>
                                         </div>
                                     </div>
@@ -570,7 +597,8 @@
                         <div class="best_tour_contents_box" data-duration="2박3일" data-type="관광지" data-reserved="출발확정"
                             data-region="전라권">
                             <div>
-                                <div class="contents_img"><img src="/70_pf/SRT/images/sub/haenam.png" alt="시인의섬보길도청산도해남"></div>
+                                <div class="contents_img"><img src="/70_pf/srt/images/sub/haenam.png"
+                                        alt="시인의섬보길도청산도해남"></div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
                                         <div class="contents_filter">
@@ -582,17 +610,17 @@
                                             <h3>시인의 섬 보길도·청산도·해남</h3>
                                             <p class="subway">광주송정역</p>
                                             <div class="contents_info_1">
-                                                <img src="/70_pf/SRT/images/sub/month.svg" alt="여행기간">
+                                                <img src="/70_pf/srt/images/sub/month.svg" alt="여행기간">
                                                 <span>여행기간</span>
                                                 <span>2박 3일</span>
                                             </div>
                                             <div class="contents_info_2">
-                                                <img src="/70_pf/SRT/images/sub/people.svg" alt="출발인원">
+                                                <img src="/70_pf/srt/images/sub/people.svg" alt="출발인원">
                                                 <span>출발인원</span>
                                                 <span>최소 8인</span>
                                             </div>
                                             <div class="tour_logo">
-                                                <img src="/70_pf/SRT/images/sub/hongtour.png" alt="홍익여행사">
+                                                <img src="/70_pf/srt/images/sub/hongtour.png" alt="홍익여행사">
                                             </div>
                                         </div>
                                     </div>
@@ -608,7 +636,8 @@
                         <div class="best_tour_contents_box" data-duration="2박3일" data-type="산/강/바다" data-reserved="출발확정"
                             data-region="경상권">
                             <div>
-                                <div class="contents_img"><img src="/70_pf/SRT/images/sub/dochodo.png" alt="서해4도홍도흑산도비금도초도">
+                                <div class="contents_img"><img src="/70_pf/srt/images/sub/dochodo.png"
+                                        alt="서해4도홍도흑산도비금도초도">
                                 </div>
                                 <div class="contents_note">
                                     <div class="contents_flex">
@@ -621,17 +650,17 @@
                                             <h3>서해 4島 홍도·흑산도·비금·도초도</h3>
                                             <p class="subway">부산역</p>
                                             <div class="contents_info_1">
-                                                <img src="/70_pf/SRT/images/sub/month.svg" alt="여행기간">
+                                                <img src="/70_pf/srt/images/sub/month.svg" alt="여행기간">
                                                 <span>여행기간</span>
                                                 <span>2박 3일</span>
                                             </div>
                                             <div class="contents_info_2">
-                                                <img src="/70_pf/SRT/images/sub/people.svg" alt="출발인원">
+                                                <img src="/70_pf/srt/images/sub/people.svg" alt="출발인원">
                                                 <span>출발인원</span>
                                                 <span>최소 4인</span>
                                             </div>
                                             <div class="tour_logo">
-                                                <img src="/70_pf/SRT/images/sub/hongtour.png" alt="홍익여행사">
+                                                <img src="/70_pf/srt/images/sub/hongtour.png" alt="홍익여행사">
                                             </div>
                                         </div>
                                     </div>
@@ -679,11 +708,11 @@
                     </div>
                     <div class="sns">
                         <ul>
-                            <li><a href="#"><img src="/70_pf/SRT/images/footer/facebook.png" alt=""></a></li>
-                            <li><a href="#"><img src="/70_pf/SRT/images/footer/instagram.png" alt=""></a></li>
-                            <li><a href="#"><img src="/70_pf/SRT/images/footer/line.png" alt=""></a></li>
-                            <li><a href="#"><img src="/70_pf/SRT/images/footer/kakao_channel.png" alt=""></a></li>
-                            <li><a href="#"><img src="/70_pf/SRT/images/footer/band.png" alt=""></a></li>
+                            <li><a href="#"><img src="/70_pf/srt/images/footer/facebook.png" alt=""></a></li>
+                            <li><a href="#"><img src="/70_pf/srt/images/footer/instagram.png" alt=""></a></li>
+                            <li><a href="#"><img src="/70_pf/srt/images/footer/line.png" alt=""></a></li>
+                            <li><a href="#"><img src="/70_pf/srt/images/footer/kakao_channel.png" alt=""></a></li>
+                            <li><a href="#"><img src="/70_pf/srt/images/footer/band.png" alt=""></a></li>
                         </ul>
                     </div> <!-- end of .sns -->
                 </div> <!-- end of .fupper .inner -->
@@ -692,7 +721,7 @@
                 <div class="inner">
                     <div class="left">
                         <div class="blogo">
-                            <img src="/70_pf/SRT/images/footer/blogo.png" alt="blogo">
+                            <img src="/70_pf/srt/images/footer/blogo.png" alt="blogo">
                         </div> <!-- end of .blogo -->
                         <p>대표자 : 이종국 ㅣ 상호: 주식회사 에스알 ㅣ 사업자등록: 305-86-31590 ㅣ 통신판매업신고: 2016-서울강남-03705호<br>
                             (우: 06367) 서울특별시 강남구 광평로 56길 12 희림빌딩 | TEL. 1800-1472 l FAX. 6484-4093<br>
@@ -711,22 +740,22 @@
                         <div class="ads">
                             <ul>
                                 <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=76&pageId=TK0502000000"><img
-                                            src="/70_pf/SRT/images/footer/ad1.png" alt="ad1"></a></li>
+                                            src="/70_pf/srt/images/footer/ad1.png" alt="ad1"></a></li>
                                 <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=91&pageId=TK0502000000"><img
-                                            src="/70_pf/SRT/images/footer/ad2.png" alt="ad2"></a></li>
-                                <li><a href="#"><img src="/70_pf/SRT/images/footer/ad3.png" alt="ad3"></a></li>
+                                            src="/70_pf/srt/images/footer/ad2.png" alt="ad2"></a></li>
+                                <li><a href="#"><img src="/70_pf/srt/images/footer/ad3.png" alt="ad3"></a></li>
                                 <li><a href="https://partners.srail.or.kr/login.do"><img
-                                            src="/70_pf/SRT/images/footer/ad4.png" alt="ad4"></a></li>
+                                            src="/70_pf/srt/images/footer/ad4.png" alt="ad4"></a></li>
                                 <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=536&pageId=TK0502000000"><img
-                                            src="/70_pf/SRT/images/footer/ad5.png" alt="ad5"></a></li>
+                                            src="/70_pf/srt/images/footer/ad5.png" alt="ad5"></a></li>
                                 <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=359&pageId=TK0502000000"><img
-                                            src="/70_pf/SRT/images/footer/ad6.png" alt="ad6"></a></li>
+                                            src="/70_pf/srt/images/footer/ad6.png" alt="ad6"></a></li>
                                 <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=358&pageId=TK0502000000"><img
-                                            src="/70_pf/SRT/images/footer/ad7.png" alt="ad7"></a></li>
+                                            src="/70_pf/srt/images/footer/ad7.png" alt="ad7"></a></li>
                                 <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=365&pageId=TK0502000000"><img
-                                            src="/70_pf/SRT/images/footer/ad8.png" alt="ad8"></a></li>
+                                            src="/70_pf/srt/images/footer/ad8.png" alt="ad8"></a></li>
                                 <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=393&pageId=TK0502000000"><img
-                                            src="/70_pf/SRT/images/footer/ad9.png" alt="ad9"></a></li>
+                                            src="/70_pf/srt/images/footer/ad9.png" alt="ad9"></a></li>
                             </ul>
                         </div><!-- end .ads -->
                     </div><!-- end of right -->
