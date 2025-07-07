@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+/* sub 페이지의 section1 디자인 */
+#location_area .bg_box {
+    width: 90%;
+    height: 445px;
+    margin: 0 auto;
+    background-image: url("https://picsum.photos/id/210/1920/445") no-repeat 0% 0% / cover;
+}
+
+#location_area .tit_page {
+    margin: 0 auto;
+    width: 1050px;
+    padding-top: 250px;   
+    color: #333
+}
+
+#location_area .tit_page h2 {
+    font-size: 30px;
+    letter-spacing: 3px;
+    padding: 0;
+    border-bottom: 1px solid #333;
+    margin: 0 40px;  
+}
+
+#location_area .tit_page h2 span {
+    font-variant: small-caps;
+}
+
+#location_area .tit_page p {
+    margin-left: 40px;
+}
