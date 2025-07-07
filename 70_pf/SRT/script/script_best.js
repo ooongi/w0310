@@ -200,6 +200,7 @@ $(document).ready(function () {
 //
 // });
 
+//검색창 검색어기능
 function search() {
     const searchTerm = document
         .getElementById("searchInput")
