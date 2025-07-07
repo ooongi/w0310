@@ -105,51 +105,7 @@ $(document).ready(function () {
     });
 });
 
-// //리모컨 내 운행구간
-// $(document).ready(function () {
-//     $(".tour_main button").click(function () {
-//         $(".tour_sub").stop().slideDown();
-//     });
-//     $(".main>li").mouseout(function () {
-//         $(".sub").stop().slideUp();
-//         $(".nav_bg").stop().animate({ left: 0 });
-//     });
-// });
-
-// //드롭다운(왼쪽메뉴)
-// $(document).ready(function () {
-//     const mainMenu = document.getElementById("best_sub_title");
-//     const subMenu = document.getElementById("best_sub_nav");
-//     const arrow = document.getElementById("arrow");
-
-//     // 메인메뉴 클릭 시 토글
-//     mainMenu.addEventListener("click", function (e) {
-//         e.stopPropagation();
-
-//         if (subMenu.classList.contains("show")) {
-//             // 서브메뉴가 열려있으면 닫기
-//             subMenu.classList.remove("show");
-//             arrow.classList.remove("down");
-//         } else {
-//             // 서브메뉴가 닫혀있으면 열기
-//             subMenu.classList.add("show");
-//             arrow.classList.add("down");
-//         }
-//     });
-
-//     // 토글 밖 영역 클릭 시 서브메뉴 닫기
-//     document.addEventListener("click", function (e) {
-//         if (!mainMenu.contains(e.target) && !subMenu.contains(e.target)) {
-//             subMenu.classList.remove("show");
-//             arrow.classList.remove("down");
-//         }
-//     });
-
-//     // 서브메뉴 클릭 시 이벤트 버블링 방지
-//     subMenu.addEventListener("click", function (e) {
-//         e.stopPropagation();
-//     });
-// });
+// 검색창
 
 //드롭다운(오른쪽메뉴)
 $(document).ready(function () {
@@ -241,11 +197,46 @@ $(document).ready(function () {
 //     $('.best_btn_page button').on('click', function () {
 //         $('html').scrollTop('0');
 //     });
+//
 // });
+
+function search() {
+    const searchTerm = document
+        .getElementById("searchInput")
+        .value.toLowerCase();
+    const items = document.querySelectorAll(".best_tour_contents_box");
+
+    items.forEach((item) => {
+        const title = item.querySelector("best_tour_contents_box h3").textContent.toLowerCase();
+        const content = item.querySelector("best_tour_contents_box p").textContent.toLowerCase();
+        const content2 = item.querySelector("best_tour_contents_box span").textContent.toLowerCase();
+
+        if (
+            searchTerm === "" ||
+            title.includes(searchTerm) ||
+            content.includes(searchTerm) ||
+            content2.includes(searchTerm)
+        ) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+}
+
+// // 엔터키로도 검색 가능
+// document
+//     .getElementById("searchInput")
+//     .addEventListener("keypress", function (e) {
+//         if (e.key === "Enter") {
+//             search();
+//         }
+//     });
+// 이 코드 활성화 시 검색결과 적용이 안됌
+
 
 //필터
 // 선택된 필터 저장
-
 var selectedFilters = {
     duration: [],
     type: [],
@@ -305,8 +296,6 @@ $(document).ready(function () {
     $("#resetFilter").click(function () {
         resetFilters();
     });
-
-
 });
 
 // 필터 적용 함수
