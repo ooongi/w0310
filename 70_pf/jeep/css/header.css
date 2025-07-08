@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+.im {
+    width: 1920px;
+    height: 1080px;
+    background: #000;
+}
+
 /* 상단고정헤더 */
 .header {
     z-index: 9999;
@@ -28,7 +34,19 @@ nav {
     align-items: center;
 }
 
-.main li {
+nav:hover {
+    transition: 0.3s;
+    background: var(--whiteTextColor);
+    color: var(--mainTextColor);
+}
+
+nav:hover li a {
+    transition: 0.3s;
+    color: var(--mainTextColor);
+}
+
+.main li a {
+    color: var(--whiteTextColor);
     font-size: 16px;
     font-weight: bold;
 }
