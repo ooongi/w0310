@@ -105,8 +105,6 @@ $(document).ready(function () {
     });
 });
 
-// 검색창
-
 //드롭다운(오른쪽메뉴)
 $(document).ready(function () {
     const mainMenu = document.getElementById("best_sub_title");
@@ -200,23 +198,20 @@ $(document).ready(function () {
 //
 // });
 
-//검색창 검색어기능
+
+// 검색창
 function search() {
-    const searchTerm = document
-        .getElementById("searchInput")
-        .value.toLowerCase();
+    const searchTerm = document.getElementById("searchInput").value.toLowerCase();
     const items = document.querySelectorAll(".best_tour_contents_box");
 
     items.forEach((item) => {
-        const title = item.querySelector("best_tour_contents_box h3").textContent.toLowerCase();
-        const content = item.querySelector("best_tour_contents_box p").textContent.toLowerCase();
-        const content2 = item.querySelector("best_tour_contents_box span").textContent.toLowerCase();
+        const title = item.querySelector("h3").textContent.toLowerCase();
+        const content = item.querySelector("p").textContent.toLowerCase();
 
         if (
             searchTerm === "" ||
             title.includes(searchTerm) ||
-            content.includes(searchTerm) ||
-            content2.includes(searchTerm)
+            content.includes(searchTerm)
         ) {
             item.style.display = "block";
         } else {
@@ -234,7 +229,6 @@ function search() {
 //         }
 //     });
 // 이 코드 활성화 시 검색결과 적용이 안됌
-
 
 //필터
 // 선택된 필터 저장
