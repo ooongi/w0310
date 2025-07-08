@@ -87,14 +87,14 @@
 .arrow_left {
     position: absolute;
     z-index: 1;
-    top: 400px;
+    top: 360px;
     left: 334px;
 }
 
 .arrow_right {
     position: absolute;
     z-index: 1;
-    top: 400px;
+    top: 360px;
     right: 345px;
 }
 
@@ -120,6 +120,7 @@
     overflow: hidden;
     height: 540px;
     margin: 0 auto;
+    margin-top: 50px;
     background: #fff;
 }
 
