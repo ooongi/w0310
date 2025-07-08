@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map객체</title>
+</head>
+
+<body>
+    <script>
+
+        /* 
+            Map 객체
+                객체 리터럴을 보완해주는 객체이다.
+
+            객체 생성
+                const 변수 = new Map();
+                const 변수 = new Map([
+                    ['키', 값],
+                    [키, 값],
+                    ...
+                ]);
+        */
+        // myMap을 Map 컬렉션 객체(인스턴스)로 선언
+        const myMap = new Map();
+
+        /* 
+            const obj = {
+                'name': 값,
+                1: 값,
+                true: 값,
+                ...
+            }        
+        */
+        // Map객체.set(키, 값); -> myMap 객체에 값 추가
+        myMap.set('name', 'Alice');
+        myMap.set(1, 'one');
+        myMap.set(true, 'yes');
+        console.log(myMap); // Map(3) {'name' => 'Alice', 1 => 'one', true => 'yes'}
+
+        // 객체.get(key); -> 값 가져오기
+        console.log(myMap.get('name')); // Alice
+
+        // size -> 요소 개수 확인
+        console.log(myMap.size);
+
+        // 객체.has(key) 
+        // -> 값 존재 유무 확인
+        // -> 값을 갖고 있으면 true, 아니면 false
+        if (myMap.has(false)) {
+            console.log(`있습니다.`);
+        } else {
+            console.log(`없습니다.`);
+        }
+
+        // 객체.delete(key) -> 특정 값 삭제
+        myMap.delete('name');
+        console.log(myMap); // Map(2) {1 => 'one', true => 'yes'}
+
+        // 객체.clear() -> 모든 값 제거
+        myMap.clear();
+        console.log(myMap); // Map(0) {size: 0}
+
+
+        /* 
+            속성
+                size    객체의 속성 수
+
+            메서드
+                set(키, 값)     객체에 값을 추가
+                get(키)         객체에 키에 해당하는 값을 가져오기
+                has(키)         키가 존재하면 true, 아니면 false
+                keys()          객체의 모든 키를 가져오기
+                values()        객체의 모든 값을 가져오기
+                entries()       객체의 모든 키와 값을 가져오기
+                delete()        객체의 키를 삭제
+                clear()         모든 요소 삭제
+        */
+        // Map 객체 생성
+        const sub = new Map();
+
+        // myMap 객체에 값 추가
+        // -> Map객체.set(키, 값);
+        sub.set('html', 1);
+        sub.set('css', 2);
+        sub.set('javascript', 3);
+
+        console.log(sub);
+        console.log(sub.get('css'));
+        console.log(sub.has('jQuery'));
+        console.log('===key()===');
+        for (let key of sub.keys()) {
+            console.log(key); // html, css, js
+        }
+        console.log('===values()===');
+        for (let key of sub.values()) {
+            console.log(key); // 1,2,3
+        }
+        console.log('===entries()===');
+        for (let key of sub.entries()) {
+            console.log(key); // ['html', 1] ['css', 2] ['javascript', 3]
+        }
+    </script>
+</body>
+
+</html>

@@ -93,6 +93,25 @@
             /;
         */
         const emailReg = /^[A-Za-z0-9!#%^&*_-]+@[A-Za-z0-9_-]+(\.[A-Za-z0-9_-]+){1,2}/;
+
+        const hp1 = '010123456';
+        const hp2 = '01012345678';
+
+        const email1 = 'abc&1_23&A-BC@icox';
+        const email2 = 'abc&1_23&A-BC@icox.com';
+        const email3 = 'abc&1_23&A-BC@icox.co.kr';
+        const email4 = 'abc&1_23&A-BC@icox.abc.co.kr';
+
+        /* 
+            test()  정규표현식과 일치하는 문자열이 있으면 true, 없으면 false
+        */
+
+        console.log(hpReg.test(hp1)); // 9자를 써서 false
+        console.log(hpReg.test(hp2));
+        console.log(emailReg.test(email1)); // 이메일 형식에 맞지 않아서 false
+        console.log(emailReg.test(email2));
+        console.log(emailReg.test(email3));
+        console.log(emailReg.test(email4)); // 이메일 형식에 맞지 않아서 false
     </script>
 </body>
 
