@@ -5,19 +5,20 @@
     <meta charset="UTF-8" />
     <title>jQuery 풀페이지_jeep</title>
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/style_index.css">
+    <link rel="stylesheet" href="css/index.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/w0310/70_pf/jeep/script/index.js"></script>
 </head>
 
 <body>
     <header class="header">
         <nav>
             <ul class="main">
-                <li><a href="sub/">모델소개</a></li>
-                <li><a href="sub/">구입문의</a></li>
-                <li><a href="#"><img src="images/logo.png" alt="로고"></a></li>
-                <li><a href="sub/">고객지원</a></li>
-                <li><a href="sub/"><img src="images/jeepwave.png" alt="jeepwave"></a></li>
+                <li><a href="#">모델소개</a></li>
+                <li><a href="#">구입문의</a></li>
+                <li><a href="#"><img src="/w0310/70_pf/jeep/images/logo.png" alt="로고"></a></li>
+                <li><a href="#">고객지원</a></li>
+                <li><a href="#"><img src="/w0310/70_pf/jeep/images/jeepwave.png" alt="jeepwave"></a></li>
             </ul>
         </nav>
     </header>
@@ -29,37 +30,6 @@
         <div class="footer">Footer Area</div>
     </div>
 
-    <script>
-        //헤더고정풀페이지 - jeep
-        $(function () {
-            let now = 0;
-            const speed = 500;
-            const sections = $('.section');
-            const headerHeight = $('.header').height();
-            const total = sections.length + 1;
-
-            function scrollToSection(idx) {
-                let pos = 0;
-                if (idx < sections.length) {
-                    pos = sections.eq(idx).position().top;
-                } else {
-                    pos = $('.footer').position().top;
-                }
-                $('html,body').stop().animate({ scrollTop: pos }, speed);
-            }
-
-            $(window).on('wheel', function (e) {
-                if ($('html, body').is(':animated')) return; // 중복 스크롤 방지
-                const delta = e.originalEvent.deltaY;
-                if (delta > 0 && now < total - 1) {
-                    now++;
-                } else if (delta < 0 && now > 0) {
-                    now--;
-                }
-                scrollToSection(now);
-            });
-        });
-    </script>
 
 </body>
 
