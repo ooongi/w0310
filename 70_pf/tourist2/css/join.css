@@ -27,24 +27,30 @@
     padding: 8px 0;
 }
 
+#join input {
+    height: 43px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
 #join label {
     display: inline-block;
     width: 130px;
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 700;
 }
 
-#join .required_input {
-    color: #f00;
-    margin-right: 8px;
-}
-
 #join .w100p {
-    width: calc(100% - 140px);
+    width: calc(100% - 175px);
+    border: 1px solid #ccc;
 }
 
 #join .gender {
     width: 14px;
+}
+#join .pl16 {
+    padding-left: 16px;
 }
 
 #join #man,
@@ -53,18 +59,47 @@
     height: 13px;
 }
 
-#join input {
-    height: 43px;
+#join #woman {
+    margin-left: 24px;
 }
 
+#join input[type="radio"]+label,
+#join input[type="checkbox"]+label {
+    font-weight: 400;
+}
+
+#join .lbl_inquiry_detail {
+    vertical-align: top;
+}
+
+/* 빨간색 별표 */
+#join .required_input {
+    color: #f00;
+    margin-right: 8px;
+    font-weight: 400;
+}
+
+
+/* 이메일 */
 #join select {
     height: 43px;
+    border: 1px solid #ccc;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #333;
+    padding-left: 10px;
+}
+
+#join ::placeholder {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 #inquiry_detail {
     height: 245px;
 }
 
+/* 등록버튼 */
 .register_btn {
     text-align: center;
     padding: 20px;
