@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window객체</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #popup {
+            position: fixed;
+            top: 96px;
+            left: 520px;
+            width: 400px;
+            height: 500px;
+            border: 2px solid #ccc;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        #popup button {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+            padding: 4px 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="popup">
+        <iframe src="http://ooongi.github.io/w0310" frameborder="0"></iframe>
+        <button type="button" id="popup_btn">닫기</button>
+    </div>
+    <script>
+        // window.open('url', '창이름', 'width=숫자,height=숫자,left=숫자,top=숫자');
+        // window.open('url', '창이름', '옵션=값 ...');
+        /*
+            옵션
+                width =숫자
+                height =숫자
+                left =숫자
+                top =숫자
+
+                아래 옵션은 모던 브라우저에서는 무시됨
+                location =yes|no
+                scrollbars =yes|no
+                menubar =yes|no
+                toolbar =yes|no
+                status =yes|no
+        
+        */
+        // window.open('http://ooongi.github.io/w0310', 'pf', 'width=400,height=500,left=100,top=200, location=no,scrollbars=no,menubar=no,toolbar=no,status=no');
+
+        // 요소찾기
+        const btn = document.getElementById('popup_btn');
+        const popup = document.getElementById('popup');
+
+        // 이벤트 작성
+        btn.onclick = () => {
+            popup.style.display = 'none';
+        } // 팝업창닫기
+    </script>
+
+</body>
+
+</html>

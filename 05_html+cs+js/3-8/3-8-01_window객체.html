@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window객체</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <script>
+        /* 
+            BOM(Browser Object Model)
+            객체
+                window
+                    location
+                    screen
+                    history
+                    navigation
+                    document
+            메서드
+                alert()
+                    경고창
+                pormpt()
+                    입력창
+                confirm()
+                    확인창
+                open()
+                    새로운 창을 만든다 >> 팝업창
+                setInterval(함수, 시간)
+                    시간 간격으로 함수를 반복
+        */
+
+        // window.open('url', '창이름', 'width=숫자,height=숫자,left=숫자,top=숫자');
+        // window.open('url', '창이름', '옵션=값 ...');
+        /*
+            옵션
+                width =숫자
+                height =숫자
+                left =숫자
+                top =숫자
+
+                아래 옵션은 모던 브라우저에서는 무시됨
+                location =yes|no
+                scrollbars =yes|no
+                menubar =yes|no
+                toolbar =yes|no
+                status =yes|no
+        
+        */
+        window.open('http://ooongi.github.io/w0310', 'pf', 'width=300,height=500,left=100,top=10, location=no,scrollbars=no,menubar=no,toolbar=no,status=no');
+    </script>
+
+</body>
+
+</html>
