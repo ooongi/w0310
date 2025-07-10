@@ -15,8 +15,10 @@
     <h1>장치 구분하기</h1>
     <p id="useragent_info"></p>
     <ul>
-        <li>아이폰14pro: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1</li>
-        <li>Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Mobile Safari/537.36</li>
+        <li>아이폰14pro: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)
+            Version/18.5 Mobile/15E148 Safari/604.1</li>
+        <li>Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Mobile
+            Safari/537.36</li>
     </ul>
     <script>
 
@@ -46,7 +48,7 @@
         // jq
         // const useragent_info = $('#useragent_info');
         // useragent_info.text(browser);
-        
+
         // js
         const useragent_info = document.getElementById('useragent_info');
         const small_text = browser.toLowerCase();
@@ -55,7 +57,7 @@
             useragent_info.textContent = "출력";
             location.href = "desktop.html";
         } else {
-            location.href = "http://m.naver.com";
+            location.href = "mobile.html";
         }
 
     </script>
