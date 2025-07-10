@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>권희경</title>
 </head>
+
 <body>
     <h1>권희경 파일</h1>
     <p>비비안웨스트우드 메인페이지 와이어프레임과 시안입니다.</p>
-    <ul> 
-        <li> 
-            <img src="./70_pf/vivianwestwood/index_vivianwestwood.jpg" alt="비비안웨스트우드 메인페이지" style="width:300px; border: 1px solid #ccc;">
+    <ul>
+        <li>
+            <img src="./70_pf/vivianwestwood/index_vivianwestwood.jpg" alt="비비안웨스트우드 메인페이지"
+                style="width:300px; border: 1px solid #ccc;">
         </li>
         <li>
-            <img src="./70_pf/vivianwestwood/wireframe_vivan.png" alt="비비안웨스트우드 와이어프레임" style="width:300px; border: 1px solid #ccc;">
+            <img src="./70_pf/vivianwestwood/wireframe_vivan.png" alt="비비안웨스트우드 와이어프레임"
+                style="width:300px; border: 1px solid #ccc;">
         </li>
         <li>
-            <img src="./70_pf/jeepcar/swot_jeepcar.png" alt="jeep자동차 SWOT분석" style="width:300px; border: 1px solid #ccc;">
+            <img src="./70_pf/jeepcar/swot_jeepcar.png" alt="jeep자동차 SWOT분석"
+                style="width:300px; border: 1px solid #ccc;">
         </li>
         <li>
-            <img src="./70_pf/jeepcar/mindmap_jeepcar.png" alt="jeep자동차 마인드맵" style="width:300px; border: 1px solid #ccc;">
+            <img src="./70_pf/jeepcar/mindmap_jeepcar.png" alt="jeep자동차 마인드맵"
+                style="width:300px; border: 1px solid #ccc;">
         </li>
     </ul>
+
+    <script>
+        const browser = navigator.userAgent;
+        const useragent_info = document.getElementById('useragent_info');
+        const small_text = browser.toLowerCase();
+
+        if (small_text.includes('windows')) {
+            location.href = "desktop.html";
+        } else {
+            location.href = "mobile.html";
+        }
+    </script>
+
 </body>
+
 </html>
