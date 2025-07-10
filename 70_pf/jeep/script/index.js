@@ -3,7 +3,8 @@ $(function () {
     let now = 0;
     const speed = 500;
     const sections = $(".section");
-    const headerHeight = $("header").height();
+    const header = $(".header");
+    const headerHeight = header.height();
     const total = sections.length + 1;
 
     function scrollToSection(idx) {
@@ -16,7 +17,7 @@ $(function () {
         $("html,body").stop().animate({ scrollTop: pos }, speed);
 
         // 헤더 숨기기/보이기 로직
-        if (idx === total - 1) {
+        if (idx === sections.length) {
             // 마지막 섹션(footer)에 도달했을 때 헤더 숨기기
             header.animate({ opacity: 0, top: -headerHeight }, speed / 2);
         } else {
