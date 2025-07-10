@@ -19,14 +19,14 @@ header {
 }
 
 nav {
-    height: 100%;
     position: relative;
+    width: 900px;
+    height: 100%;
+    margin: 0 auto;
 }
 
 .main {
     position: absolute;
-    top: 0;
-    left: 530px;
     width: 910px;
     display: flex;
     justify-content: space-between;
@@ -34,13 +34,13 @@ nav {
     align-items: center;
 }
 
-nav:hover {
+header:hover {
     transition: 0.3s;
     background: var(--whiteTextColor);
     color: var(--mainTextColor);
 }
 
-nav:hover li a {
+header:hover li a {
     transition: 0.3s;
     color: var(--mainTextColor);
 }

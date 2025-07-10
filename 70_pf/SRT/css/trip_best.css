@@ -7,6 +7,10 @@
     margin: 0 auto;
 }
 
+.header_all {
+    height: 290px;
+}
+
 /* 본문 */
 .best_container {
     width: 1200px;
