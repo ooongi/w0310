@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigator객체</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>장치 구분하기</h1>
+    <p id="useragent_info"></p>
+    <script>
+
+        /*
+            navigator 객체
+                브라우저 버전이나 브라우저명 등
+                브라우저 정보에 관한 객체
+
+            속성
+                appCodeName
+                    브라우저의 코드명 반환
+                appName
+                    브라우저명 반환
+                appVersion
+                    브라우저 버전 반환
+                platForm
+                    플랫폼명 반환
+                userAgent
+                    브라우저의 코드명과 버전 반환
+        */
+
+        const browser = navigator.userAgent;
+        console.log(browser);
+        // Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+        // 브라우저, 운영체제 정보
+
+        // jq
+        // const useragent_info = $('#useragent_info');
+        // useragent_info.text(browser);
+        
+        // js
+        const useragent_info = document.getElementById('useragent_info');
+        useragent_info.textContent = browser;
+    </script>
+
+</body>
+
+
+</html>

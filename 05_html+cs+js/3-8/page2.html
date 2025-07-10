@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2페이지</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <h1>2페이지</h1>
+    <button type="button" id="home_btn">3-8-04_history객체로 이동</button>
+    <button type="button" onclick="javascript:history.back()">back</button>
+    <button type="button" onclick="javascript:history.forward()">forward</button>
+    <button type="button" onclick="javascript:history.go(2)">go(2)</button>
+    <button type="button" onclick="javascript:history.go(-2)">go(-2)</button>
+
+    <script>
+        const home_btn = document.getElementById('home_btn');
+
+        home_btn.onclick = () => location.href = "3-8-04_history객체.html";
+    </script>
+
+</body>
+
+
+</html>
