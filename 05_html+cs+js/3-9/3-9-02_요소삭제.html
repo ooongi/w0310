@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소생성삭제</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        div {
+            position: fixed;
+            left: 100px;
+            top: 10px;
+            width: 200px;
+            height: 200px;
+            background: #718c00;
+        }
+    </style>
+</head>
+
+<body>
+    <button>요소 생성</button>
+    <script>
+        /* 
+            DOM 요소 삭제
+
+                메서드
+                    document.remouveChild(자식요소)
+                    - 부모 요소에 자식 요소 제거
+        */
+
+        // 요소 생성
+        const btn = document.createElement('button');
+        const btnTit = document.createTextNode('요소생성');
+
+        // 추가(append)
+        document.body.appendChild(btn);
+        btn.appendChild(btnTit);
+
+        // 동적 요소 제거(remove)
+        document.body.removeChild(btn);
+
+        // 정적 요소 제거
+        // 요소를 찾아서(const) 제거
+        const btn2 = document.querySelector('button');
+        document.body.removeChild(btn2);
+        
+
+    </script>
+
+</body>
+
+
+</html>
