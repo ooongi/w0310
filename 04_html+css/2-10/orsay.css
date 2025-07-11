@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+/* reset */
+* {
+    box-sizing: border-box;
+}
+
+h1,h2,ul,p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    line-height: 1.5;
+    color: #333;
+}
+
+body {
+    background: #f1f1f1;
+    font-size: 13px;
+}
+
+/* header */
+header {
+    background: coral;
+}
+
+h1 {
+    font-size: 25px;
+    padding: 10px;
+    color: #fff;
+}
+
+/* navigation */
+.lnb li {
+    margin: 10px;
+    padding: 10px;
+    background: lightgreen;
+}
+
+/* content */
+.contents {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.ext {
+    margin: 10px;
+    padding: 20px;
+    background: lightgreen;
+}
+
+/* footer */
+footer {
+    padding: 10px;
+    background: #aaa;
+}
+
+
+/* tablet PC */
+@media (min-width: 768px) {
+    #container {
+        display: flex;
+        /* 줄바꿈 */
+        flex-wrap: wrap;
+    }
+    
+    /* lnb */
+    .lnb {
+        width: 25%;
+    }
+    
+    /* contents */
+    .contents {
+        width: 75%;
+    }
+
+    /* aside */
+    .aside {
+        width: 100%;
+    }
+}
+
+/* desktop PC */
+@media (min-width: 1200px) {
+    .wrap {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    #container {
+        display: flex;
+        /* 줄바꿈 */
+        flex-wrap: nowrap;
+        /* 위에 쓴 wrap에 영향을 받아서 nowrap으로 작성해야함 */
+    }
+    
+    /* lnb */
+    .lnb {
+        width: 20%;
+    }
+    
+    /* contents */
+    .contents {
+        width: 50%;
+    }
+
+    /* aside */
+    .aside {
+        width: 30%;
+    }
+}
