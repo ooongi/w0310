@@ -125,19 +125,19 @@ header:hover .logo2.hover {
 
 /* 서브메뉴 */
 
-
-.sub {
-    position: absolute;
-    width: 1906px;
-    top: 79px;
-    left: 0;
+.nav_bg {
     background: var(--whiteTextColor);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    visibility: hidden;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100vw;
+    height: 0;
+    z-index: 998;
     transition: 0.3s;
-    min-width: 200px;
-    /* 높이는 자동으로 조정됨 */
+}
+
+.sub_1 li {
+    position: absolute;
 }
 
 .nav_container li:hover .sub {

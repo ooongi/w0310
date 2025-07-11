@@ -37,3 +37,17 @@ $(function () {
         scrollToSection(now);
     });
 });
+
+// 헤더
+$(document).ready(function () {
+    $(".main>li").mouseover(function () {
+        $(this).find(".sub").stop().slideDown(200);
+    });
+    $(".main>li").mouseout(function () {
+        $(this).find(".sub").stop().slideUp(200);
+    });
+});
+/*
+        $ > find
+        메뉴 각자 내려오게 할 때 사용
+        */
