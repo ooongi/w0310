@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소의내용변경</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            background: #718c00;
+            transition: .3s;
+        }
+    </style>
+</head>
+
+<body>
+    <button>textContent</button>
+    <button>innerHTML</button>
+    <div id="content"></div>
+    <script>
+        /* 
+            <태그 속성=값>내용</태그>
+            
+            객체의 내용 변경
+            text(값) 태그인식x
+            inner(값)
+                문자 방식으로 요소를 생성하는 방법 태그인식o
+        */
+
+        /*  
+            바닐라스크립트 제작
+
+            //찾기
+            const bt0 = document.querySelectorAll('button')[0];
+            const bt1 = document.querySelectorAll('button')[1];
+            const content = document.getElementById('content');
+
+            //이벤트
+            bt0.onclick = () => {
+                content.textContent = '<p class="m1">자바스크립트</p>'
+            };
+            bt1.onclick = () => {
+                content.innerHTML = '<p class="m1">자바스크립트</p>'
+            };
+        */
+
+        //제이쿼리
+        //찾기
+        const bt0 = $('button').eq(0);
+        const bt1 = $('button:eq(1)');
+        const content = $('content');
+
+        //이벤트
+        bt0.click(function () {
+            content.text('<p class="m1">자바스크립트</p>');
+        });
+        bt1.click(function () {
+            content.html('<p class="m1">자바스크립트</p>');
+        });
+
+
+    </script>
+
+</body>
+
+
+</html>
