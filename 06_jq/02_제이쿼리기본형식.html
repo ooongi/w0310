@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리기본형식</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            // 실행문
+            document.write('Hello!')
+        });
+
+        // 줄여서 쓰기
+        $(function () {
+            // 실행문
+            document.write('Hi')
+        });
+
+        // 익명함수는 화살표함수로 대체 가능
+        $(() => {
+            // 실행문
+            document.write('Hello World!')
+        });
+
+        // 더 줄이기
+        $(() => document.write('pkb!'));
+    </script>
+</body>
+
+</html>
