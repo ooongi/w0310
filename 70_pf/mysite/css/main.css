@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    /* background image parallex scrolling */
+    background: url(/w0310/70_pf/mysite/images/bg-light.png) no-repeat 50% 50%/ cover fixed;
+}

@@ -7,85 +7,139 @@
     <title>my site</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <!-- SNS & GitHub -->
     <nav>
-        <div>
-            <ul>
-                <li><a href="https://www.instagram.com/d_greenwhiteblackcolor/">instagram</a></li>
-                <li><a href="https://ooongi.github.io/w0310">GitHub</a></li>
-            </ul>
+        <div class="container w-50">
+            <!-- 부트스트랩에서 .row는 display:flex; -->
+            <div class="row justify-content-end pt-5 pb-4">
+                <ul class="row col-3 list-unstyled">
+                    <li class="col-6"><a href="https://www.instagram.com/d_greenwhiteblackcolor/"
+                            class="text-secondary text-decoration-none fs-5 fst-italic">Instagram</a></li>
+                    <li class="col-6"><a href="https://ooongi.github.io/w0310"
+                            class="text-secondary text-decoration-none fs-5 fst-italic">GitHub</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
+
     <!-- About me -->
-    <header>
-        <div>
-            <h1>Kwon Hee Kyeong</h1>
+    <header class="py-5 mb-5">
+        <div class="container w-50">
+            <h1 class="display-4 text-white fw-bold fst-italic my-4">Kwon Hee Kyeong</h1>
         </div>
     </header>
+
     <!-- portfolio -->
     <main>
-        <div>
-            <h2>Team Work</h2>
-            <div class="home-card">
-                <div class="home-icon"></div>
-                <h3>SRT<span class="home-time">2025</span></h3>
-                <p>I'm one of the cofounders of Figma, a collaborative browser-based interface design tool. My main contributions were to the rendering engine, the multiplayer collboration service, the vector and text editors, and the plugin system.</p>
-                <p><a href="https://surimshim.github.io/w0310/70_pf/srt">SRT 사이트 바로가기</a></p>
+        <div class="container w-50">
+            <h2 class="display-6 fw-bold fst-italic my-5">Team Project</h2>
+            <!-- ///////////////////////////////////////////////////////////////////// -->
+            <div class="row">
+                <div class="col-2"><img src="/w0310/70_pf/mysite/images/srt_thumb.png" alt="SRT"
+                        class="rounded rounded-3"></div>
+                <div class="col-10">
+                    <h3 class="fs-4 fst-italic">SRT <span class="home-time">(2025)</span></h3>
+                    <!-- 
+                        lh-1    1rem
+                        lh-sm   1.25rem
+                        lh-base 1.5rem > 기본값
+                        lh-lg   2rem
+                    -->
+                    <p class="my-4">I'm one of the cofounders of Figma, a collaborative browser-based interface design
+                        tool. My main contributions were to the rendering engine, the multiplayer collboration service,
+                        the vector and text editors, and the plugin system.</p>
+                    <p><a href="https://surimshim.github.io/w0310/70_pf/srt" class="text-muted">SRT 사이트 바로가기</a></p>
+                </div>
             </div>
-            <div class="home-card">
-                <div class="home-icon"></div>
-                <h3>타이레놀<span class="home-time">2025</span></h3>
-                <p>I'm one of the cofounders of Figma, a collaborative browser-based interface design tool. My main contributions were to the rendering engine, the multiplayer collboration service, the vector and text editors, and the plugin system.</p>
-                <p><a href="#">타이레놀 사이트 바로가기</a></p>
+            <!-- ///////////////////////////////////////////////////////////////////// -->
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-10">
+                    <h3 class="fs-4 fst-italic">tylenol <span class="home-time">(2025)</span></h3>
+                    <p>I'm one of the cofounders of Figma, a collaborative browser-based interface design tool. My main
+                        contributions were to the rendering engine, the multiplayer collboration service, the vector and
+                        text editors, and the plugin system.</p>
+                    <p><a href="#" class="text-muted">타이레놀 사이트 바로가기</a></p>
+                </div>
             </div>
 
-            <h2>Personal Work</h2>
-            <div class="home-card">
-                <div class="home-icon"></div>
-                <h3>준비중...<span class="home-time">2025</span></h3>
-                <p>I'm one of the cofounders of Figma, a collaborative browser-based interface design tool. My main contributions were to the rendering engine, the multiplayer collboration service, the vector and text editors, and the plugin system.</p>
-                <p><a href="#">사이트 바로가기</a></p>
+            <h2 class="display-6 fw-bold fst-italic my-5">Personal Project</h2>
+            <div class="row">
+                <div class="col-2"><img src="https://placehold.co/100x100?text=wip..." alt="미정"
+                        class="rounded rounded-3"></div>
+                <div class="col-10">
+                    <h3 class="fs-4 fst-italic">wip... <span class="home-time">(2025)</span></h3>
+                    <p>I'm one of the cofounders of Figma, a collaborative browser-based interface design tool. My main
+                        contributions were to the rendering engine, the multiplayer collboration service, the vector and
+                        text editors, and the plugin system.</p>
+                    <p><a href="#" class="text-muted">사이트 바로가기</a></p>
+                </div>
             </div>
 
-            <h2>Web Practice Work</h2>
-            <div class="home-card">
-                <div class="home-icon"></div>
-                <h3>준비중...<span class="home-time">2025</span></h3>
-                <p>I'm one of the cofounders of Figma, a collaborative browser-based interface design tool. My main contributions were to the rendering engine, the multiplayer collboration service, the vector and text editors, and the plugin system.</p>
-                <p><a href="#">사이트 바로가기</a></p>
+            <h2 class="display-6 fw-bold fst-italic my-5">C.W.D.D</h2>
+            <div class="row">
+                <div class="col-2"><img src="https://placehold.co/100x100?text=wip..." alt="미정"
+                        class="rounded rounded-3"></div>
+                <div class="col-10">
+                    <h3 class="fs-4 fst-italic">wip... <span class="home-time">(2025)</span></h3>
+                    <p>I'm one of the cofounders of Figma, a collaborative browser-based interface design tool. My main
+                        contributions were to the rendering engine, the multiplayer collboration service, the vector and
+                        text editors, and the plugin system.</p>
+                    <p><a href="#" class="text-muted">사이트 바로가기</a></p>
+                </div>
             </div>
-            <div class="home-card">
-                <div class="home-icon"></div>
-                <h3>준비중...<span class="home-time">2025</span></h3>
-                <p>I'm one of the cofounders of Figma, a collaborative browser-based interface design tool. My main contributions were to the rendering engine, the multiplayer collboration service, the vector and text editors, and the plugin system.</p>
-                <p><a href="#">사이트 바로가기</a></p>
+            <div class="row">
+                <div class="col-2"><img src="https://placehold.co/100x100?text=wip..." alt="미정"
+                        class="rounded rounded-3"></div>
+                <div class="col-10">
+                    <h3 class="fs-4 fst-italic">wip... <span class="home-time">(2025)</span></h3>
+                    <p>I'm one of the cofounders of Figma, a collaborative browser-based interface design tool. My main
+                        contributions were to the rendering engine, the multiplayer collboration service, the vector and
+                        text editors, and the plugin system.</p>
+                    <p><a href="#" class="text-muted">사이트 바로가기</a></p>
+                </div>
             </div>
-            <div class="home-card">
-                <div class="home-icon"></div>
-                <h3>준비중...<span class="home-time">2025</span></h3>
-                <p>I'm one of the cofounders of Figma, a collaborative browser-based interface design tool. My main contributions were to the rendering engine, the multiplayer collboration service, the vector and text editors, and the plugin system.</p>
-                <p><a href="#">사이트 바로가기</a></p>
+            <div class="row">
+                <div class="col-2"><img src="https://placehold.co/100x100?text=wip..." alt="미정"
+                        class="rounded rounded-3"></div>
+                <div class="col-10">
+                    <h3 class="fs-4 fst-italic">wip... <span class="home-time">(2025)</span></h3>
+                    <p>I'm one of the cofounders of Figma, a collaborative browser-based interface design tool. My main
+                        contributions were to the rendering engine, the multiplayer collboration service, the vector and
+                        text editors, and the plugin system.</p>
+                    <p><a href="#" class="text-muted">사이트 바로가기</a></p>
+                </div>
             </div>
-            <div class="home-card">
-                <div class="home-icon"></div>
-                <h3>준비중...<span class="home-time">2025</span></h3>
-                <p>I'm one of the cofounders of Figma, a collaborative browser-based interface design tool. My main contributions were to the rendering engine, the multiplayer collboration service, the vector and text editors, and the plugin system.</p>
-                <p><a href="#">사이트 바로가기</a></p>
+            <div class="row">
+                <div class="col-2"><img src="https://placehold.co/100x100?text=wip..." alt="미정"
+                        class="rounded rounded-3"></div>
+                <div class="col-10">
+                    <h3 class="fs-4 fst-italic">wip... <span class="home-time">(2025)</span></h3>
+                    <p>I'm one of the cofounders of Figma, a collaborative browser-based interface design tool. My main
+                        contributions were to the rendering engine, the multiplayer collboration service, the vector and
+                        text editors, and the plugin system.</p>
+                    <p><a href="#" class="text-muted">사이트 바로가기</a></p>
+                </div>
             </div>
-            <div class="home-card">
-                <div class="home-icon"></div>
-                <h3>준비중...<span class="home-time">2025</span></h3>
-                <p>I'm one of the cofounders of Figma, a collaborative browser-based interface design tool. My main contributions were to the rendering engine, the multiplayer collboration service, the vector and text editors, and the plugin system.</p>
-                <p><a href="#">사이트 바로가기</a></p>
+            <div class="row">
+                <div class="col-2"><img src="https://placehold.co/100x100?text=wip..." alt="미정"
+                        class="rounded rounded-3"></div>
+                <div class="col-10">
+                    <h3 class="fs-4 fst-italic">wip... <span class="home-time">(2025)</span></h3>
+                    <p>I'm one of the cofounders of Figma, a collaborative browser-based interface design tool. My main
+                        contributions were to the rendering engine, the multiplayer collboration service, the vector and
+                        text editors, and the plugin system.</p>
+                    <p><a href="#" class="text-muted">사이트 바로가기</a></p>
+                </div>
             </div>
-        </div>
     </main>
     <!-- contact us -->
     <footer>
-        <div>
+        <div class="container w-50">
             <div class="to-the-top"><a href="#top">To the top</a></div>
             <ul>
                 <li><a href="tel:010-1234-5678">010-1234-5678</a></li>
