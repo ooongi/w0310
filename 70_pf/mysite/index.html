@@ -7,7 +7,6 @@
     <title>my site</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -20,12 +19,17 @@
         <div class="container pt-5 pb-4 text-end">
             <!-- 부트스트랩에서 .row는 display:flex; -->
             <div>
-                <ul class="list-unstyled">
-                    <li class="d-inline"><a href="https://www.instagram.com/d_greenwhiteblackcolor/"
-                            class="text-secondary text-decoration-none fs-5 fst-italic" target="_blank">Instagram</a>
+                <ul>
+                    <li class="d-inline">
+                        <a href="https://www.instagram.com/d_greenwhiteblackcolor/" class="text-secondary fst-italic" target="_blank">
+                            Instagram
+                        </a>
                     </li>
-                    <li class="d-inline"><a href="https://ooongi.github.io/w0310"
-                            class="text-secondary text-decoration-none fs-5 fst-italic" target="_blank">GitHub</a></li>
+                    <li class="d-inline">
+                        <a href="https://ooongi.github.io/w0310" class="text-secondary fst-italic" target="_blank">
+                            GitHub
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -33,19 +37,19 @@
 
     <!-- About me -->
     <header class="py-5 mb-5">
-        <div class="container w-50">
+        <div class="container">
             <h1 class="display-4 text-white fw-bold fst-italic my-4">Kwon Hee Kyeong</h1>
         </div>
     </header>
 
     <!-- portfolio -->
-    <main>
-        <div class="container w-50">
+    <main class="pb-5">
+        <div class="container">
             <h2 class="display-6 fw-bold fst-italic my-5">Team Project</h2>
             <!-- ///////////////////////////////////////////////////////////////////// -->
-            <div class="row pb-5">
+            <div class="row mb-4">
                 <div class="col-2"><img src="/w0310/70_pf/mysite/images/srt_thumb.png" alt="SRT"
-                        class="rounded rounded-3"></div>
+                        class="w-100 rounded rounded-3"></div>
                 <div class="col-10">
                     <h3 class="fs-4 fst-italic">SRT <span class="home-time">(2025)</span></h3>
                     <!-- 
@@ -54,7 +58,8 @@
                         lh-base 1.5rem > 기본값
                         lh-lg   2rem
                     -->
-                    <p class="mt-2 mb-3">I'm one of the cofounders of Figma, a collaborative browser-based interface design
+                    <p class="mt-2 mb-3">I'm one of the cofounders of Figma, a collaborative browser-based interface
+                        design
                         tool. My main contributions were to the rendering engine, the multiplayer collboration service,
                         the vector and text editors, and the plugin system.</p>
                     <p><a href="https://surimshim.github.io/w0310/70_pf/srt" class="text-muted" target="_blank">SRT 사이트
@@ -62,12 +67,13 @@
                 </div>
             </div>
             <!-- ///////////////////////////////////////////////////////////////////// -->
-            <div class="row pb-5">
+            <div class="row mb-4">
                 <div class="col-2"><img src="/w0310/70_pf/mysite/images/tylenol_thumb.png" alt="타이레놀"
-                        class="rounded rounded-3"></div>
+                        class="w-100 rounded rounded-3"></div>
                 <div class="col-10">
                     <h3 class="fs-4 fst-italic">tylenol <span class="home-time">(2025)</span></h3>
-                    <p class="mt-2 mb-3">I'm one of the cofounders of Figma, a collaborative browser-based interface design
+                    <p class="mt-2 mb-3">I'm one of the cofounders of Figma, a collaborative browser-based interface
+                        design
                         tool. My main
                         contributions were to the rendering engine, the multiplayer collboration service, the vector and
                         text editors, and the plugin system.</p>
@@ -76,12 +82,13 @@
             </div>
 
             <h2 class="display-6 fw-bold fst-italic my-5">Personal Project</h2>
-            <div class="row pb-5">
+            <div class="row mb-4">
                 <div class="col-2"><img src="https://placehold.co/100x100?text=wip..." alt="미정"
-                        class="rounded rounded-3"></div>
+                        class="w-100 rounded rounded-3"></div>
                 <div class="col-10">
                     <h3 class="fs-4 fst-italic">wip... <span class="home-time">(2025)</span></h3>
-                    <p class="mt-2 mb-3">I'm one of the cofounders of Figma, a collaborative browser-based interface design
+                    <p class="mt-2 mb-3">I'm one of the cofounders of Figma, a collaborative browser-based interface
+                        design
                         tool. My main
                         contributions were to the rendering engine, the multiplayer collboration service, the vector and
                         text editors, and the plugin system.</p>
@@ -90,12 +97,13 @@
             </div>
 
             <h2 class="display-6 fw-bold fst-italic my-5">C.W.D.D</h2>
-            <div class="row pb-5">
+            <div class="row mb-4">
                 <div class="col-2"><img src="/w0310/70_pf/mysite/images/bluebottle_thumb.png" alt="블루보틀"
-                        class="rounded rounded-3"></div>
+                        class="w-100 rounded rounded-3"></div>
                 <div class="col-10">
                     <h3 class="fs-4 fst-italic">Bluebottle <span class="home-time">(2025)</span></h3>
-                    <p class="mt-2 mb-3">I'm one of the cofounders of Figma, a collaborative browser-based interface design
+                    <p class="mt-2 mb-3">I'm one of the cofounders of Figma, a collaborative browser-based interface
+                        design
                         tool. My main
                         contributions were to the rendering engine, the multiplayer collboration service, the vector and
                         text editors, and the plugin system.</p>
@@ -103,12 +111,13 @@
                             target="_blank">Bluebottle 사이트 바로가기</a></p>
                 </div>
             </div>
-            <div class="row pb-5">
+            <div class="row mb-4">
                 <div class="col-2"><img src="/w0310/70_pf/mysite/images/daewooenc_thumb.png" alt="대우건설"
-                        class="rounded rounded-3"></div>
+                        class="w-100 rounded rounded-3"></div>
                 <div class="col-10">
                     <h3 class="fs-4 fst-italic">Daewooenc <span class="home-time">(2025)</span></h3>
-                    <p class="mt-2 mb-3">I'm one of the cofounders of Figma, a collaborative browser-based interface design
+                    <p class="mt-2 mb-3">I'm one of the cofounders of Figma, a collaborative browser-based interface
+                        design
                         tool. My main
                         contributions were to the rendering engine, the multiplayer collboration service, the vector and
                         text editors, and the plugin system.</p>
@@ -116,12 +125,13 @@
                             target="_blank">Daewooenc 사이트 바로가기</a></p>
                 </div>
             </div>
-            <div class="row pb-5">
+            <div class="row mb-4">
                 <div class="col-2"><img src="/w0310/70_pf/mysite/images/kart_thumb.png" alt="한예종"
-                        class="rounded rounded-3"></div>
+                        class="w-100 rounded rounded-3"></div>
                 <div class="col-10">
                     <h3 class="fs-4 fst-italic">Kart <span class="home-time">(2025)</span></h3>
-                    <p class="mt-2 mb-3">I'm one of the cofounders of Figma, a collaborative browser-based interface design
+                    <p class="mt-2 mb-3">I'm one of the cofounders of Figma, a collaborative browser-based interface
+                        design
                         tool. My main
                         contributions were to the rendering engine, the multiplayer collboration service, the vector and
                         text editors, and the plugin system.</p>
@@ -129,12 +139,13 @@
                             target="_blank">Kart 사이트 바로가기</a></p>
                 </div>
             </div>
-            <div class="row pb-5">
+            <div class="row mb-4">
                 <div class="col-2"><img src="/w0310/70_pf/mysite/images/kyowontour_thumb.png" alt="교원투어여행이지"
-                        class="rounded rounded-3"></div>
+                        class="w-100 rounded rounded-3"></div>
                 <div class="col-10">
                     <h3 class="fs-4 fst-italic">Kyowontour <span class="home-time">(2025)</span></h3>
-                    <p class="mt-2 mb-3">I'm one of the cofounders of Figma, a collaborative browser-based interface design
+                    <p class="mt-2 mb-3">I'm one of the cofounders of Figma, a collaborative browser-based interface
+                        design
                         tool. My main
                         contributions were to the rendering engine, the multiplayer collboration service, the vector and
                         text editors, and the plugin system.</p>
@@ -142,12 +153,13 @@
                             target="_blank">Kyowontour 사이트 바로가기</a></p>
                 </div>
             </div>
-            <div class="row pb-5">
+            <div class="row mb-4">
                 <div class="col-2"><img src="/w0310/70_pf/mysite/images/nongshim_thumb.png" alt="농심"
-                        class="rounded rounded-3"></div>
+                        class="w-100 rounded rounded-3"></div>
                 <div class="col-10">
                     <h3 class="fs-4 fst-italic">Nongshim <span class="home-time">(2025)</span></h3>
-                    <p class="mt-2 mb-3">I'm one of the cofounders of Figma, a collaborative browser-based interface design
+                    <p class="mt-2 mb-3">I'm one of the cofounders of Figma, a collaborative browser-based interface
+                        design
                         tool. My main
                         contributions were to the rendering engine, the multiplayer collboration service, the vector and
                         text editors, and the plugin system.</p>
@@ -155,12 +167,13 @@
                             target="_blank">Nongshim 사이트 바로가기</a></p>
                 </div>
             </div>
-            <div class="row pb-5">
+            <div class="row mb-4">
                 <div class="col-2"><img src="/w0310/70_pf/mysite/images/volkswagen_thumb.png" alt="폭스바겐"
-                        class="rounded rounded-3"></div>
+                        class="w-100 rounded rounded-3"></div>
                 <div class="col-10">
                     <h3 class="fs-4 fst-italic">Volkswagen <span class="home-time">(2025)</span></h3>
-                    <p class="mt-2 mb-3">I'm one of the cofounders of Figma, a collaborative browser-based interface design
+                    <p class="mt-2 mb-3">I'm one of the cofounders of Figma, a collaborative browser-based interface
+                        design
                         tool. My main
                         contributions were to the rendering engine, the multiplayer collboration service, the vector and
                         text editors, and the plugin system.</p>
@@ -170,19 +183,22 @@
             </div>
     </main>
     <!-- contact us -->
-    <footer class="bg-dark text-white text-center py-5">
+    <footer class="bg-dark text-white text-center py-5 mt-5">
         <div class="container w-50">
             <div class="to-the-top col-2 mx-auto">
                 <a href="#top" class="btn btn-outline-light">
-                    <i class="fa-solid fa-caret-up me-2 align-middle"></i>To the top
+                    <i class="fa-solid fa-caret-up me-2 align-middle"></i>
+                    To the top
                 </a>
             </div>
-            <ul class="row mt-3 mb-4 list-unstyled justify-content-center">
-                <li class="col-3">
-                    <a href="tel:010-1234-5678" class="text-white text-decoration-none" target="_blank">010-1234-5678</a>
+
+            <!-- tel & email -->
+            <ul class="mt-4 mb-5 justify-content-center">
+                <li class="d-inline bg-danger-subtle">
+                    <a href="tel:010-1234-5678" class="text-white" target="_blank">010-1234-5678</a>
                 </li>
-                <li class="col-2">
-                    <a href="mailto:ddors20818@gmail.com"class="text-white text-decoration-none" target="_blank">ddors20818@gmail.com</a>
+                <li class="d-inline bg-danger">
+                    <a href="mailto:ddors20818@gmail.com" class="text-white" target="_blank">ddors20818@gmail.com</a>
                 </li>
             </ul>
             <p>&copy; 2025 KHK. All rights reserved.</p>
