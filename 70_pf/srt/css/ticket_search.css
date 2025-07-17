@@ -1,0 +1,271 @@
+@charset "utf-8";
+
+#container {
+    text-align: center;
+}
+
+.container {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background: #fff;
+    margin-bottom: 30px;
+}
+
+.top {
+    position: relative;
+    height: 140px;
+    background: rgba(181, 181, 181, 0.2);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.top .station {
+    text-align-last: left;
+    padding: 30px 280px 10px;
+}
+
+.station img {
+    margin-right: 8px;
+}
+
+.station span {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.station span:first-of-type {
+    margin-right: 275px;
+}
+
+.station_btn a {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    line-height: 40px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.station_btn img {
+    padding-top: 8px;
+}
+
+.station_btn .station_name {
+    width: 300px;
+}
+
+.bottom {
+    padding: 20px 275px 30px;
+    text-align-last: left;
+    font-size: 16px;
+}
+
+.modal {
+    z-index: 9999;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.popup {
+    width: 1200px;
+    margin: 5% auto;
+    background: #fff;
+    overflow: auto;
+    padding-bottom: 35px;
+    text-align: center;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    height: 70px;
+    background: #fff;
+    border-bottom: 1px solid #b5b5b6;
+}
+
+.modal h2 {
+    text-align: left;
+}
+
+#modal_station .station {
+    margin: 40px;
+    font-size: 16px;
+}
+
+#modal_station #search {
+    width: 690px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+}
+
+#modal_station .search_btn {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    background: #4b2f48;
+    border-style: none;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#modal_station h3 {
+    text-align-last: left;
+    margin: 40px 200px 10px;
+}
+
+#modal_station .station_list {
+    width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 한 줄에 5개 */
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#modal_station .station_list button {
+    width: 150px;
+    height: 40px;
+    line-height: 20px;
+    padding: 10px 0;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #b5b5b6;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#modal_station .station_list button:hover {
+    border: 1px solid transparent;
+    outline: 1px solid #4b2f48;
+}
+
+#modal_date .date {
+    margin: 40px;
+    font-size: 16px;
+}
+
+#modal_date .date input {
+    margin-right: 10px;
+}
+
+#modal_person .person {
+    margin: 40px;
+    font-size: 16px;
+}
+
+#modal_person select {
+    margin-right: 20px;
+}
+
+.cancel_btn {
+    width: 150px;
+    height: 45px;
+    padding-bottom: 3px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    border-style: none;
+    background: #fff;
+    color: #4b2f48;
+    border: 1px solid #b5b5b6;
+    margin-right: 10px;
+}
+
+.apply_btn {
+    width: 150px;
+    height: 45px;
+    padding-bottom: 3px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    border-style: none;
+    background: #4b2f48;
+    color: #fff;
+}
+
+.tabs {
+    position: relative;
+}
+
+.tabs>label {
+    position: absolute;
+    top: -40px;
+    right: 0;
+}
+
+.tabs>label:first-of-type {
+    margin-right: 60px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.bottom h3 {
+    margin-bottom: 16px;
+}
+
+.input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom .inputbox {
+    width: 315px;
+    height: 80px;
+}
+
+.bottom p {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.bottom .input_btn {
+    border-bottom: 1px solid #333;
+}
+
+.bottom .input_btn a {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.bottom .input_btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.check_btn {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 45px;
+    line-height: 45px;
+    padding-bottom: 3px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    border-style: none;
+    background: #4b2f48;
+    color: #fff;
+}
