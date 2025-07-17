@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자식선택자</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        span {
+            margin: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="m1">
+        <span>1_1</span>
+        <span>1_2</span>
+        <span>1_3</span>
+    </div>
+    <div id="m2">
+        <strong>2_1</strong>
+        <span>2_2</span>
+        <strong>2_3</strong>
+        <span>2_4</span>
+    </div>
+    <div id="m3">
+        <span>3_1</span>
+        <span>3_2</span>
+        <span>3_3</span>
+    </div>
+    <div id="m4">
+        <strong>4_1</strong>
+        <span>4_2</span>
+        <strong>4_3</strong>
+        <span>4_4</span>
+        <strong>4_5</strong>
+        <span>4_6</span>
+    </div>
+    <div id="m5">
+        <span>내용5_1</span>
+    </div>
+    <div id="m6">
+        <strong>내용6_1</strong>
+        <span>내용6_2</span>
+    </div>
+    <script>
+        $(() => {
+            $('#m1 > span:first-child').css('border', '2px solid red');
+            $('#m1 > span:last-child').css('border', '2px solid red');
+            $('#m2 > span:first-of-type').css('border', '2px solid orange');
+            $('#m2 > span:last-of-type').css('border', '2px solid orange');
+            $('#m3 > span:nth-child(1)').css('border', '2px solid yellow');
+            $('#m3 > span:nth-last-child(1)').css('border', '2px solid yellow');
+            $('#m4 > span:nth-of-type(1)').css('border', '2px solid green');
+            $('#m4 > span:nth-last-of-type(1)').css('border', '2px solid green');
+            $('#m5 > span:only-child').css('border', '2px solid blue');
+            $('#m6 > span:only-of-type').css('border', '2px solid navy');
+
+        });
+    </script>
+</body>
+
+</html>

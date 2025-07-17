@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼필터선택자</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 5px;
+        }
+
+        #m1>p:last-child {
+            height: 20px;
+        }
+
+        span {
+            display: inline-block;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div><input type="text"></div>
+    <div><input type="password"></div>
+    <div><button type="button">확인</button></div>
+    <div><button type="submit">submit</button></div>
+    <div><button type="button">확인</button></div>
+    <div><button type="button">확인</button></div>
+    <div><input type="checkbox" id="css" checked><label for="'css">css</label></div>
+    <div>
+        <select>
+            <option>과목선택</option>
+            <option>javascript</option>
+            <option selected>jquery</option>
+        </select>
+        <textarea cols="20" rows="5" disabled>javascript</textarea>
+    </div>
+    <script>
+        /* 
+            :text       <input type="text">
+            :password   <input type="password">
+            
+            :checkbox   <input type="checkbox">
+            :radio      <input type="radio">
+
+            :image
+            :file
+
+            :button     <input type="button">
+                        모든 <button> 요소 선택
+                        <button type="submit">
+                        <button type="button">
+                        <button type="reset">
+            :submit     <input type="submit"> input 기본 submit
+            :reset      <input type="reset">
+
+            :input      모든 <input> 요소 선택
+
+            :focus      focus를 가진 요소 선택
+            :checked    선택된 요소 선택
+            :selected   선택된 요소 선택
+            :disabled   사용할 수 없는 요소 선택
+            :enabled    사용할 수 있는 요소 선택
+        */
+        $(() => {
+            $(':text').css({background: 'red'});
+            $(':password').css({background: 'orange'});
+            $(':button').css({background: 'yellow'});
+            $(':submit').css({background: 'pink'});
+            $(':checked + label').css({background: 'green'});
+            $('option:selected').css({background: 'blue'});
+            $('textarea:disabled').css({background: 'pink'});
+        });
+    </script>
+</body>
+
+</html>
