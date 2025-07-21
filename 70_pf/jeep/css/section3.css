@@ -41,29 +41,33 @@
     color: var(--whiteTextColor);
 }
 
-#section3_tab h3 {
+#tabs h3 {
     font-size: 20px;
     font-weight: bold;
     color: var(--whiteTextColor);
 }
 
-#section3_tab {
+#tabs {
     width: 643px;
     margin-left: 33px;
 }
 
-#section3_tab ul {
+#tabs ul {
     display: flex;
     font-size: 20px;
 }
 
-#section3_tab ul a {
+#tabs ul a {
     color: #555;
     font-size: 20px;
     font-weight: bold;
 }
 
-#section3_tab > div:first-child {
+#tabs ul a.active {
+    color: var(--whiteTextColor);
+}
+
+#tabs > div:first-child {
     display: flex;
     justify-content: space-between;
 }
@@ -100,7 +104,7 @@
     margin-left: 4px;
 }
 
-#section3_tab li:nth-of-type(1)::after {
+#tabs li:nth-of-type(1)::after {
     content: "|";
     color: #555;
     margin: 0 14px;
@@ -122,6 +126,10 @@
     margin-top: 32px;
 }
 
-#tabs-2 {
-    display: none;
+#tabs-2 > div:nth-of-type(3) {
+    margin-top: 32px;
+}
+
+#tabs-2 > div:nth-of-type(4) {
+    margin-top: 32px;
 }

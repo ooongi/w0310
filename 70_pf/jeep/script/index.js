@@ -39,7 +39,7 @@ $(function () {
 });
 
 // 헤더
-$(document).ready(function () {
+$(function () {
     $(".main>li").mouseover(function () {
         $(this).find(".sub").stop().slideDown(200);
     });
@@ -52,4 +52,16 @@ $(document).ready(function () {
         메뉴 각자 내려오게 할 때 사용
         */
 
+/* section3 tabs */
+$(function () {
+    $("#tabs").tabs();
+});
 
+$(function () {
+    const tab = "#tabs ul a";
+
+    $(tab).click(function () {
+        $(tab).addClass("active");
+        $(tab).siblings().removeClass("active");
+    });
+});

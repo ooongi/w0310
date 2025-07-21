@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import url(/w0310/70_pf/jeep/css/header.css);
+@import url(/w0310/70_pf/jeep/css/section3.css);
 /* 메인섹션 */
 .section {
     height: 100vh;
@@ -35,26 +36,7 @@ iframe {
     background: #e67e22;
 }
 
-.section:nth-child(3) {
-    background: #333;
-}
-
-
 /* section3 */
-.section3_title {
-    color: #fff;
-    font-size: 40px;
-    text-align: center;
-    padding-top: 150px;
-    padding-bottom: 70px;
-}
-
-.section3_contents {
-    width: 1320px;
-    height: 700px;
-    background: red;
-    margin: 0 auto;
-}
 
 .section:nth-child(4) {
     background: #dbe730;
