@@ -68,9 +68,11 @@
                     closest('선택자')
                         선택자에 해당하는 가장 가까운 부모 요소 선택(자신포함)
                     next()
-                        다음 요소 하나
+                        다음 요소
                     nextAll()
-                    nextUntil()
+                        다음 요소들 모두
+                    nextUntil('요소2')
+                        다음 요소부터 요소2 전까지
                     prev()
                     prevAll()
 
@@ -111,6 +113,7 @@
             $('#m3').css({ marginBottom: 40});
             $('#m3').closest('div').css({ border: '2px solid coral' });
             $('#m3 span').closest('div').css({ border: '2px solid yellow' });
+
             $('#m4 > span.m').nextUntil('em').css({ border: '2px solid red' });
             $('#m5 > span').filter('.m').css({ border: '2px solid red' });
             $('#m6 > div').has('span').css({ border: '2px solid purple' });

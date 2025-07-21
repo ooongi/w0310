@@ -4,17 +4,31 @@
 .section {
     height: 100vh;
     width: 100%;
-    text-align: center;
-    font-size: 3em;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: background 0.5s;
 }
 
-.section:nth-child(1) {
-    background: #3498db;
+.video_bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* z-index: -1; */
+    overflow: hidden;
+}
+
+iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* 클릭 방지 */
+
+    /* 화면 비율에 따른 반응형 크기 조정 */
+    width: 100vw;
+    height: 56.25vw; /* 16:9 비율 기본값 */
+
+    /* 세로가 더 긴 화면에서는 높이 기준으로 조정 */
+    min-height: 100vh;
+    min-width: 177.78vh; /* 16:9 비율 (100vh * 16/9) */
 }
 
 .section:nth-child(2) {
@@ -22,7 +36,24 @@
 }
 
 .section:nth-child(3) {
-    background: #2ecc71;
+    background: #333;
+}
+
+
+/* section3 */
+.section3_title {
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 70px;
+}
+
+.section3_contents {
+    width: 1320px;
+    height: 700px;
+    background: red;
+    margin: 0 auto;
 }
 
 .section:nth-child(4) {

@@ -37,6 +37,7 @@ nav {
     justify-content: space-between;
     line-height: 80px;
     align-items: center;
+    margin-left: 25px;
 }
 
 header:hover {
@@ -123,6 +124,37 @@ header:hover .logo2.hover {
     display: block;
 }
 
+.search_container {
+    position: absolute;
+    right: 5%;
+    top: 32px;
+    width: 16px;
+    height: 16px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sclogo {
+    transition: 0.3s;
+    position: absolute;
+}
+
+.sclogo.default {
+    display: block;
+}
+
+.sclogo.hover {
+    display: none;
+}
+
+header:hover .sclogo.default {
+    display: none;
+}
+
+header:hover .sclogo.hover {
+    display: block;
+}
+
 /* 서브메뉴 */
 
 .nav_bg {
@@ -134,6 +166,10 @@ header:hover .logo2.hover {
     height: 0;
     z-index: 998;
     transition: 0.3s;
+}
+
+.sub_1 {
+    display: none;
 }
 
 .sub_1 li {

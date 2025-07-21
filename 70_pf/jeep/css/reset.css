@@ -10,6 +10,10 @@
 
 }
 
+body,h1,h2,h3,h4,h5,h6,p,ul,ol {
+    margin: 0;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -27,10 +31,16 @@ a {
     color: #333;
 }
 
-ul {
+ul, ol{
+    padding: 0;
     list-style: none;
 }
 
 img {
+    width: 100%;
+    object-fit: cover;
+    /* 박스 크기에 맞게 처리, 빈 공간이 생기진 않지만 이미지 일부가 잘릴 수 있음
+        -contain: 박스 크기에 맞게 이미지 잘림 없이 표시되지만 빈 공간이 생길 수 있다.
+    */
     vertical-align: top;
 }
