@@ -10,20 +10,18 @@
 
 }
 
-body,h1,h2,h3,h4,h5,h6,p,ul,ol {
+body,h1,h2,h3,h4,h5,h6,p,ul,li {
     margin: 0;
 }
 
 * {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
 }
 
 html, body {
     color: #333;
     background: #fff;
-    font: 14px/1.6 "Noto Sans KR", sans-serif;
+    font: 16px/1.6 "Noto Sans KR", sans-serif;
 }
 
 a {
@@ -31,14 +29,14 @@ a {
     color: #333;
 }
 
-ul, ol{
+ul, li{
     padding: 0;
     list-style: none;
 }
 
 img {
-    width: 100%;
-    object-fit: cover;
+    /* width: 100%; */
+    /* object-fit: cover; */
     /* 박스 크기에 맞게 처리, 빈 공간이 생기진 않지만 이미지 일부가 잘릴 수 있음
         -contain: 박스 크기에 맞게 이미지 잘림 없이 표시되지만 빈 공간이 생길 수 있다.
     */
