@@ -26,12 +26,12 @@
 
 .section3_new p {
     font-size: 20px;
-    color: #777;
+    color: var(--grayTextColor);
     line-height: 0.7;
 }
 
 #tabs-1 > div p {
-    color: #777;
+    color: var(--grayTextColor);
     line-height: 0.9;
 }
 
@@ -58,12 +58,12 @@
 }
 
 #tabs ul a {
-    color: #555;
+    color: var(--grayTextColor);
     font-size: 20px;
     font-weight: bold;
 }
 
-#tabs ul a.active {
+#tabs_btn>li:nth-of-type(1) a {
     color: var(--whiteTextColor);
 }
 
@@ -106,7 +106,7 @@
 
 #tabs li:nth-of-type(1)::after {
     content: "|";
-    color: #555;
+    color: var(--grayTextColor);
     margin: 0 14px;
 }
 

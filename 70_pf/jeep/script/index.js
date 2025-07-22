@@ -53,15 +53,3 @@ $(function () {
         */
 
 /* section3 tabs */
-$(function () {
-    $("#tabs").tabs();
-});
-
-$(function () {
-    const tab = "#tabs ul a";
-
-    $(tab).click(function () {
-        $(tab).addClass("active");
-        $(tab).siblings().removeClass("active");
-    });
-});
