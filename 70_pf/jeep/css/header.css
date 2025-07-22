@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .im {
-    width: 1920px;
+    width: 1905px;
     height: 1080px;
     background: #000;
 }
@@ -67,7 +67,7 @@ header:hover li a {
     width: 100px;
 }
 
-.logo_container > a {
+.logo_container>a {
     position: absolute;
     left: 0;
 }
@@ -157,22 +157,37 @@ header:hover .sclogo.hover {
 
 /* 서브메뉴 */
 
-.nav_bg {
-    background: var(--whiteTextColor);
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100vw;
-    height: 0;
-    z-index: 998;
-    transition: 0.3s;
-}
-
 .sub_1 {
     display: none;
+    position: fixed;
+    top: 80px;
+    /* 1depth 메뉴 높이만큼 아래에 위치 */
+    left: 0;
+    width: 100vw;
+    background-color: var(--whiteTextColor);
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+    
+
 }
 
-.sub_1 li {
+/* 첫 번째 메뉴의 서브메뉴 */
+nav li:nth-child(1) ul {
+    height: calc(100vh - 80px);
+    /* 전체 높이에서 1depth 메뉴 높이 제외 */
+}
+
+/* 두 번째 메뉴의 서브메뉴 - 높이 500px */
+nav li:nth-child(2) ul {
+    height: 500px;
+}
+
+nav li:hover>ul {
+    display: block;
+}
+
+/* .sub_1 li {
     position: absolute;
 }
 
@@ -189,4 +204,4 @@ header:hover .sclogo.hover {
 
 .model_container {
     display: flex;
-}
+} */

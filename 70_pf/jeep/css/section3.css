@@ -2,25 +2,33 @@
 @import url(reset.css);
 
 .section {
-    height: 100vh;
+    position: relative;
+    max-height: 1080px;
     width: 100%;
     background: #000;
     transition: background 0.5s;
 }
 
 /* section3 */
+
+.section3_container {
+    position: absolute;
+    width: 1320px;
+    height: 100%;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+
 .section3_title {
     color: var(--whiteTextColor);
     font-size: 40px;
     text-align: center;
-    padding-top: 150px;
-    padding-bottom: 70px;
+    padding-bottom: 60px;
 }
 
 .section3_contents {
     display: flex;
-    width: 1320px;
-    height: 700px;
     margin: 0 auto;
 }
 
@@ -30,7 +38,7 @@
     line-height: 0.7;
 }
 
-#tabs-1 > div p {
+#tabs-1>div p {
     color: var(--grayTextColor);
     line-height: 0.9;
 }
@@ -67,7 +75,7 @@
     color: var(--whiteTextColor);
 }
 
-#tabs > div:first-child {
+#tabs>div:first-child {
     display: flex;
     justify-content: space-between;
 }
@@ -118,18 +126,18 @@
     margin-top: 30px;
 }
 
-#tabs-1 > div:nth-of-type(3) {
+#tabs-1>div:nth-of-type(3) {
     margin-top: 32px;
 }
 
-#tabs-1 > div:nth-of-type(4) {
+#tabs-1>div:nth-of-type(4) {
     margin-top: 32px;
 }
 
-#tabs-2 > div:nth-of-type(3) {
+#tabs-2>div:nth-of-type(3) {
     margin-top: 32px;
 }
 
-#tabs-2 > div:nth-of-type(4) {
+#tabs-2>div:nth-of-type(4) {
     margin-top: 32px;
 }
