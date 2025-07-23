@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addClass</title>
+    <style>
+        * {
+            margin: 5px;
+        }
+
+        #m2 {
+            text-align: center;
+        }
+
+        .con {
+            border-bottom: 2px solid #ccc;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+
+        .bg {
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            border: 4px solid rgb(0, 60, 255);
+            line-height: 200px;
+            display: inline-block;
+        }
+
+        .c1 {
+            border-radius: 100px;
+            border: 4px solid rgb(0, 255, 0);
+            line-height: 200px;
+            display: inline-block;
+        }
+
+        .c2 {
+            border-radius: 100px;
+            border: 4px solid #f60;
+            line-height: 200px;
+            display: inline-block;
+        }
+
+        .darkMode {
+            color: #fff;
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button">addclass</button>
+    <button type="button">removeclass</button>
+    <button type="button">addclass2</button>
+    <button type="button">removeclass2</button>
+    <button type="button">toggleClass</button>
+    <button type="button">hasClass</button>
+    <div id="m1">
+        <div>제이쿼리</div>
+    </div>
+
+    <div id="m2">
+        <div class="c1 bg">HTML</div>
+        <div class="c2 bg">CSS</div>
+        <div class="c3 bg">JavaScript</div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+        
+            <태그 class="aaa">콘텐츠</태그>
+                addClass('classname')
+                addClass(function(idx, classname))
+                클래스 추가
+                removeClass('classname')
+                removeClass(function([idx], [classname]))
+                    클래스 제거
+                toggleClass('classname')
+                    클래스 추가/제거
+                hasClass()
+                    요소가 클래스를 가지고 있으면 true, 아니면 false
+
+        */
+        $(() => {
+            function addClassFn() {
+                $('#m1>div').addClass('con');
+            }
+            function toggleClassFn() {
+                $('body').toggleClass('darkMode');
+                if ($('body').hasClass('darkMode')) {
+                    $('#m1>div').text('JQuery');
+                } else {
+                    $('#m1>div').text('제이쿼리');
+                }
+            }
+
+            // $('#m2>div').eq(0).addClass('circle0');
+            // $('#m2>div').eq(1).addClass('circle1');
+            // $('#m2>div').eq(2).addClass('circle2');
+
+            // for (let i = 0; i <= 2; i++) {
+            //     $('#m2>div').eq(1).addClass('c' + (i + 1));
+            // }
+
+            const addClassFn2 = function () {
+                $('#m2>div').addClass(function (index) {
+                    return 'c' + index;
+                });
+            }
+
+            const removeClassFn = () => $('#m1>div').removeClass('con');
+
+            const removeClassFn2 = () =>
+                $('#m2>div').removeClass(function (idx) {
+                    return 'c' + (idx + 1);
+                });
+
+            $('button').eq(0).click(function () {
+                addClassFn();
+            });
+
+            $('button').eq(1).click(() => removeClassFn());
+            $('button').eq(2).click(() => addClassFn2());
+            $('button').eq(3).click(() => removeClassFn2());
+            $('button').eq(4).click(() => toggleClassFn());
+        });
+    </script>
+</body>
+
+</html>

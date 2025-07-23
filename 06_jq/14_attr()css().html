@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attr,css</title>
+    <style>
+
+        div:nth-child(1) {
+            background: red;
+        }
+
+        div:nth-child(2) {
+            background: blue;
+        }
+
+        div:nth-child(3) {
+            background: peru;
+        }
+    </style>
+</head>
+
+<body>
+    <div>내용1</div>
+    <div>내용2</div>
+    <div>내용3</div>
+
+    <div id="site">
+        <a href="https://www.daum.net" target="_blank">다음</a>
+        <a href="https://www.naver.com" target="_blank">네이버</a>
+        <a href="https://www.nate.com" target="_blank">네이트</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            attribute html의 속성
+            css css의 속성
+            <태그 속성=값>콘텐츠</태그>
+                attr() -> setAttribute(), getAttribute()
+                attr('속성')
+                    값을 가져오기
+                attr('속성', 값)
+                    값으로 지정하기
+                attr('속성', function(){})
+                attr('속성', function(index, attribute){})
+                attr({속성: 값, 속성: 값, ...})
+                
+                선택자 {속성=값;}
+                css('속성')
+                    값을 가져오기
+                css('속성', 값)
+                    값으로 지정하기
+                css('속성', function(index, property){})
+                css({속성: 값, 속성: 값, ...})
+        */
+        $(() => {
+            console.log($('#site > a:eq(0)').attr('href'));
+            $('#site > a:eq(1)').attr('href', 'https://m.naver.com').text('네이버 모바일');
+            $('#site a').attr('title', '새창으로 지정하였습니다.');
+
+
+            const bg = $('div').eq(0).css('background');
+            console.log(bg);
+
+            $('div').eq(0).css({padding: 10, 'text-align':'center'})
+
+            // 일괄지정
+            $('div').css('width', function(index){
+                return index * 100 + 100;
+            });
+
+            // 개별지정
+            $('div').eq(0).css('width', 100);
+            $('div').eq(1).css('width', 200);
+            $('div').eq(2).css('width', 300);
+        });
+    </script>
+</body>
+
+</html>

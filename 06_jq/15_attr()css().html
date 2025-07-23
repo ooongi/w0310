@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attr,css</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #333;
+            text-align: center;
+            line-height: 100px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button">red</button>
+    <button type="button">green</button>
+    <button type="button">blue</button>
+    <button type="button">orange</button>
+    <button type="button">pink</button>
+    <button type="button">gray</button>
+    <div>박스</div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            
+        */
+        $(() => {
+            // 이벤트
+            $('button').click(function () {
+                // 버튼의 이름을 가져오기
+                const txt = $(this).text();
+                // 박스에 텍스트 지정
+                $('div').text(txt);
+                // 박스의 배경으로 지정
+                $('div').css({ background: txt });
+            });
+            
+        });
+    </script>
+</body>
+
+</html>

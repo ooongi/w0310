@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offset,position</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #outer {
+            width: 500px;
+            height: 500px;
+            margin: 50px;
+            position: relative;
+            background: #f60;
+        }
+
+        #inner {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 80px;
+            top: 50px;
+            background: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outer">
+        <div id="inner">내용</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            스크롤 모션(scroll motion,animation)
+            위치
+                offset()
+                offset().left
+                offset().top << 제일 많이 사용
+                    html(document,창)기준
+                position()
+                position().left
+                position().top
+                    부모 요소 기준(absolute)
+                scrollTop()
+                scrollLeft()
+        */
+        $(() => {
+            /* document(창)기준 */
+            // console.log($('#inner').offset()); >> {top: 100, left: 130}
+
+
+            // $('#inner').offset({left: 250, top:150})
+            console.log($('#inner').offset().left);
+            console.log($('#inner').offset().top);
+            $('#inner').position({left: 250, top:150})
+            console.log($('#inner').position().left);
+            console.log($('#inner').position().top);
+        });
+    </script>
+</body>
+
+</html>

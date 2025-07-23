@@ -180,7 +180,7 @@ nav li:nth-child(1) ul {
 
 /* 두 번째 메뉴의 서브메뉴 - 높이 500px */
 nav li:nth-child(2) ul {
-    height: 500px;
+    height: 180px;
 }
 
 nav li:hover>ul {

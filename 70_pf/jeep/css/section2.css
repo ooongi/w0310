@@ -8,6 +8,14 @@
     background: #fff;
 }
 
+.container2 {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: gray;
+    /* background: url(../images/10029.jpg) no-repeat 50% 50% / cover fixed; */
+}
+
 .inner {
     position: absolute;
     width: 1573px;
@@ -15,56 +23,114 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background: #777;
 }
 
+/* left product title & description */
 #fav_txt {
     position: absolute;
     left: 0;
-    top: 52px;
-    background: lightblue;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+    color: var(--whiteTextColor);
+}
+
+/* text & button scroll Motion */
+#fav_txt .scroll_motion {
+    position: relative;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease-out;
+}
+#fav_txt .scroll_motion.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#fav_txt h2 span {
+    display: block;
+    font-weight: 700;
+    line-height: 1;
+}
+
+#fav_txt h2 span:nth-child(1) {
+    font-size: 10rem;
+    letter-spacing: 0.5rem;
+}
+
+#fav_txt h2 span:nth-child(2) {
+    font-size: 8rem;
+    letter-spacing: 0.65rem;
+}
+
+#fav_txt h2 span:nth-child(3) {
+    font-size: 5rem;
+    letter-spacing: 0.1875rem;
+}
+
+#fav_txt p:first-of-type {
+    font-size: 2.8rem;
+    line-height: 1.3;
+    margin: 4rem 0 1.5rem;
+}
+
+#fav_txt strong {
+    color: var(--main);
+}
+
+/* see more button */
+#fav_txt a {
+    display: inline-block;
+    margin-top: 3rem;
+    padding: 0.5rem 2.5rem;
+    border-radius: 0.3125rem;
+    border: 2px solid var(--whiteTextColor);
+    color: var(--whiteTextColor);
+}
+#fav_txt a.scroll_motion {
+    transform: translateX(0px);
+}
+
+/* right product image */
+#fav_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 #fav_img {
     position: absolute;
     left: 655px;
-    top: 0;
-    background: lightcoral;
+    top: 50px;
 }
-
-#fav_img img {
-    width: 100%;
+#fav_img div {
+    border: 10px solid var(--main);
+    background: var(--whiteTextColor);
 }
 
 #fav_img div:first-child {
     position: absolute;
-    left: 0;
+    left: 0px;
     top: 54px;
     width: 270px;
-    height: 350px;
+    height: 365px;
     transform: rotate(-17deg);
-    background: darkcyan;
 }
 
 #fav_img div:nth-child(2) {
+    z-index: 1;
     position: absolute;
-    left: 288px;
+    left: 258px;
     top: 0;
     width: 260px;
     height: 364px;
-    background: darkcyan;
 }
 
 #fav_img div:last-child {
     position: absolute;
-    left: 463px;
+    left: 483px;
     top: 33px;
     width: 335px;
     height: 459px;
     transform: rotate(18deg);
-    background: darkcyan;
-}
-
-.section {
-    background: url(../images/10029.jpg) no-repeat 50% 50%/ cover fixed;
 }
