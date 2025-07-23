@@ -5,31 +5,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>header</title>
-    <link rel="stylesheet" href="/w0310/70_pf/jeep/css/common.css">
+    <link rel="stylesheet" href="/w0310/70_pf/jeep/css/reset.css">
     <link rel="stylesheet" href="/w0310/70_pf/jeep/css/header.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script src="/w0310/70_pf/jeep/script/index.js"></script>
+
 </head>
 
 <body>
     <header class="header">
-        <nav>
-            <ul class="main">
-                <li><a href="#">모델소개</a></li>
-                <li><a href="#">구입문의</a></li>
-                <li>
-                    <div class="logo_container">
-                        <a href="#"><img src="/w0310/70_pf/jeep/images/logo_w.png" alt="기본 로고" class="logo default"></a>
-                        <a href="#"><img src="/w0310/70_pf/jeep/images/logo.png" alt="호버 로고" class="logo hover"></a>
-                    </div>
-                </li>
-                <li><a href="#">고객지원</a></li>
-                <li>
-                    <div class="logo_container_2">
-                        <a href="#"><img src="/w0310/70_pf/jeep/images/jeepwave_w.png" alt="기본 로고" class="logo2 default"></a>
-                        <a href="#"><img src="/w0310/70_pf/jeep/images/jeepwave.png" alt="호버 로고" class="logo2 hover"></a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
+        <div class="nav_container">
+            <nav>
+                <ul class="main">
+                    <li><a href="#">모델소개</a>
+                        <ul class="sub_1">
+                            <li>
+                                <div class="model_1">
+                                    <div class="model_container">
+                                        <div class="img">
+                                            <img src="/w0310/70_pf/jeep/images/sub/model_1.png" alt="">
+                                        </div>
+                                        <div class="model_txt">
+                                            <div class="model_uptxt"></div>
+                                            <div class="model_downtxt"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">구입문의</a>
+                        <ul class="sub_1">
+                            <li>
+                                <div class="model_1">
+                                    <div class="model_container">
+                                        <div class="img">
+                                            <img src="/w0310/70_pf/jeep/images/sub/model_1.png" alt="">
+                                        </div>
+                                        <div class="model_txt">
+                                            <div class="model_uptxt"></div>
+                                            <div class="model_downtxt"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="logo_container">
+                            <a href="#"><img src="/w0310/70_pf/jeep/images/nav/logo_w.png" alt="기본 로고"
+                                    class="logo default"></a>
+                            <a href="#"><img src="/w0310/70_pf/jeep/images/nav/logo.png" alt="호버 로고"
+                                    class="logo hover"></a>
+                        </div>
+                    </li>
+                    <li><a href="#">고객지원</a></li>
+                    <li>
+                        <div class="logo_container_2">
+                            <a href="https://www.jeep-wave.co.kr/" target="_blank"><img
+                                    src="/w0310/70_pf/jeep/images/nav/jeepwave_w.png" alt="기본 로고"
+                                    class="logo2 default"></a>
+                            <a href="https://www.jeep-wave.co.kr/" target="_blank"><img
+                                    src="/w0310/70_pf/jeep/images/nav/jeepwave.png" alt="호버 로고" class="logo2 hover"></a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="search_container">
+                <img src="/w0310/70_pf/jeep/images/nav/search_w.svg" alt="기본 서치" class="sclogo default">
+                <img src="/w0310/70_pf/jeep/images/nav/search.svg" alt="기본 서치" class="sclogo hover">
+            </div>
+        </div>
     </header>
     <div class="im"></div>
 </body>
