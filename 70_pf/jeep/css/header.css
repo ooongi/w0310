@@ -158,34 +158,40 @@ header:hover .sclogo.hover {
 /* 서브메뉴 */
 
 .sub_1 {
-    display: none;
+    /* display: none; */
     position: fixed;
     top: 80px;
-    /* 1depth 메뉴 높이만큼 아래에 위치 */
     left: 0;
     width: 100vw;
     background-color: var(--whiteTextColor);
     z-index: 1000;
     padding: 20px;
     box-sizing: border-box;
-    
+
 
 }
 
-/* 첫 번째 메뉴의 서브메뉴 */
 nav li:nth-child(1) ul {
     height: calc(100vh - 80px);
-    /* 전체 높이에서 1depth 메뉴 높이 제외 */
 }
 
-/* 두 번째 메뉴의 서브메뉴 - 높이 500px */
 nav li:nth-child(2) ul {
-    height: 180px;
+    height: 160px;
 }
 
-nav li:hover>ul {
+
+.main ul {
+    display: none;
+}
+
+.main ul.active {
     display: block;
 }
+
+/* 
+nav li:hover>ul {
+    display: block;
+} */
 
 /* .sub_1 li {
     position: absolute;
