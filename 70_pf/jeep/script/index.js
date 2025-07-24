@@ -24,6 +24,21 @@ $(function () {
             // 다른 섹션에서는 헤더 보이기
             header.animate({ opacity: 1, top: 0 }, speed / 2);
         }
+
+        // if (idx === 3) {
+        //     header.css({
+        //         background: "#fff",
+        //         color: "#333",
+        //         transition: "0.5s"
+        //     });
+            
+        // } else {
+        //     header.css({
+        //         background: "transparent",
+        //         color: "#fff",
+        //         "box-shadow": "none",
+        //     });
+        // }
     }
 
     $(window).on("wheel", function (e) {

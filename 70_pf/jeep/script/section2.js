@@ -15,7 +15,7 @@ $(() => {
 
             // 화면에 요소가 보이면 show 클래스 추가, 아니면 제거
             // +100은 화면에 완전히 들어오기 전에 미리 감지하기 위한 보정값
-            if (scrollTop + windowHeight > boxTop + 100) {
+            if (scrollTop + windowHeight > boxTop) {
                 $(this).addClass("show");
             } else {
                 $(this).removeClass("show");

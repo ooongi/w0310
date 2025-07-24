@@ -1,6 +1,9 @@
 @charset "utf-8";
 @import url(/w0310/70_pf/jeep/css/header.css);
+@import url(/w0310/70_pf/jeep/css/section2.css);
 @import url(/w0310/70_pf/jeep/css/section3.css);
+@import url(/w0310/70_pf/jeep/css/section4.css);
+@import url(/w0310/70_pf/jeep/css/footer.css);
 /* 메인섹션 */
 .section {
     height: 100vh;
@@ -8,6 +11,7 @@
     transition: background 0.5s;
 }
 
+/* 섹션1 비디오처리 */
 .video_bg {
     position: relative;
     width: 100%;
@@ -32,26 +36,3 @@ iframe {
     min-width: 177.78vh; /* 16:9 비율 (100vh * 16/9) */
 }
 
-
-.section:nth-child(2) {
-    background: #e67e22;
-}
-
-/* section3 */
-
-.section:nth-child(4) {
-    background: #dbe730;
-}
-
-.footer {
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-    font-size: 3em;
-    color: #fff;
-    background: #555;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background 0.5s;
-}
