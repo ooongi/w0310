@@ -47,15 +47,19 @@ header:hover {
 }
 
 header:hover li a {
-    transition: 0.3s;
+    /* transition: 0.3s; */
     color: var(--mainTextColor);
 }
 
-.main li a {
+.main > li > a {
     color: var(--whiteTextColor);
     font-size: 16px;
     font-weight: bold;
 }
+
+/* .main li.underBar {
+    border-bottom: 8px solid var(--mainColor);
+} */
 
 .main img {
     vertical-align: middle;
@@ -67,7 +71,7 @@ header:hover li a {
     width: 100px;
 }
 
-.logo_container>a {
+.logo_container > a {
     position: absolute;
     left: 0;
 }
@@ -157,7 +161,9 @@ header:hover .sclogo.hover {
 
 /* 서브메뉴 */
 
-.sub_1 {
+.sub_1,
+.sub_2,
+.sub_3 {
     /* display: none; */
     position: fixed;
     top: 80px;
@@ -167,47 +173,210 @@ header:hover .sclogo.hover {
     z-index: 1000;
     padding: 20px;
     box-sizing: border-box;
-
-
 }
 
-nav li:nth-child(1) ul {
+/* 서브메뉴 왼쪽구성 */
+.sub_1 > ul {
+    display: flex;
+    width: 1560px;
+    margin: 0 auto;
+}
+
+.sub_left {
+    width: 350px;
+    position: relative;
+    line-height: 1.3;
+    text-align: left;
+    padding-left: 165px;
+    padding-right: 30px;
+    margin-top: 28px;
+}
+
+.sub_title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sub_exp {
+    margin-top: 18px;
+    font-size: 16px;
+}
+
+.sub_line {
+    border: 1px solid #ddd;
+}
+
+/* 서브메뉴 배경 */
+.sub_1 {
     height: calc(100vh - 80px);
 }
 
-nav li:nth-child(2) ul {
+.sub_2 {
     height: 160px;
 }
 
-
-.main ul {
-    display: none;
+.sub_3 {
+    height: 260px;
 }
 
-.main ul.active {
+/* 서브메뉴 클릭이벤트 */
+.main .sub_1,
+.main .sub_2,
+.main .sub_3 {
+    display: none;
+}
+.main .sub_1.active,
+.main .sub_2.active,
+.main .sub_3.active {
     display: block;
 }
 
-/* 
-nav li:hover>ul {
+/* .main div.active {
     display: block;
 } */
 
-/* .sub_1 li {
-    position: absolute;
+/* 서브메뉴 오른쪽 구성 */
+.main ul {
+    line-height: 1.3;
+    text-align: left;
 }
 
-.nav_container li:hover .sub {
-    opacity: 1;
-    visibility: visible;
-}
-
-.submenu {
+/* 모델소개 */
+.sub_1_right {
     display: flex;
-    flex-direction: column;
-    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+.model {
+    margin-left: 24px;
+    border: 1px solid transparent;
+}
+
+.model:hover {
+    border: 1px solid var(--mainTextColor);
 }
 
 .model_container {
+    position: relative;
     display: flex;
-} */
+    width: 600px;
+    height: 160px;
+}
+
+.model_container .img {
+    margin-left: 20px;
+}
+.model_txt_alert {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.model_txt {
+    margin-top: 18px;
+}
+
+.model_uptxt > p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.model_new {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+
+.model_new span {
+    background: var(--subColor);
+    padding: 5px 10px;
+    border-radius: 30px;
+}
+
+.model_purchase {
+    display: flex;
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+.model_purchase img {
+    margin-left: 4px;
+    margin-bottom: 2px;
+    margin-right: 16px;
+}
+
+.model_plus a {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 14px 50px;
+    border: 1px solid var(--mainTextColor);
+    font-weight: bold;
+}
+
+.model_plus a:hover {
+    color: var(--whiteTextColor);
+    background: var(--mainTextColor);
+    border: 1px solid var(--mainTextColor);
+}
+
+/* 구입문의 */
+.sub_2 > ul {
+    display: flex;
+    width: 1560px;
+    margin: 0 auto;
+}
+
+.sub_2_right {
+    width: 750px;
+    display: flex;
+    margin-left: 145px;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+}
+
+.sub_2_right a:hover {
+    border-bottom: 1px solid var(--mainTextColor);
+}
+
+/* 고객지원 */
+.sub_3 > ul {
+    display: flex;
+    width: 1560px;
+    margin: 0 auto;
+}
+
+.sub_3_right {
+    width: 845px;
+    margin-top: 48px;
+}
+
+.sub_3_right > ul {
+    display: flex;
+    width: 845px;
+    margin: 0 auto;
+    margin-left: 145px;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.sub_3_right > ul > li > a {
+    font-weight: bold;
+}
+
+.sub_3_right > ul ul a {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 2;
+    border-bottom: 1px solid transparent;
+}
+
+.sub_3_right > ul ul a:hover {
+    border-bottom: 1px solid var(--mainTextColor);
+}
+
+.sub_3_right > ul ul {
+    margin-top: 26px;
+}

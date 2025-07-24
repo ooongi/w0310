@@ -38,9 +38,17 @@ $(function () {
     });
 });
 
-
 $(() => {
-    $('.main > li').click(function () {
-        $(this).children('ul').toggleClass('active');
+    $(".main > li").click(function () {
+        // 형제 메뉴들의 active 클래스 제거
+        $(this).siblings().children("div").removeClass("active");
+
+        // 현재 메뉴의 서브메뉴 토글
+        $(this).children("div").toggleClass("active");
+    });
+
+    // 서브메뉴 클릭 시 닫힘 방지
+    $(".main > li div").click(function (e) {
+        e.stopPropagation();
     });
 });
