@@ -10,49 +10,14 @@
             margin: 0;
             padding: 0;
         }
-
-        #wrap {
-            height: 2000px;
-            margin: 0 auto;
-            border: 1px solid #333;
-            overflow: auto;
-        }
-
-        .inner {
-            width: 1000px;
-            height: 1000px;
-            background: #f60;
-        }
-
-        #up {
-            position: fixed;
-            right: -100px;
-            bottom: 30px;
-            transition: all .5s ease;
-            ;
-            opacity: 0;
-            visibility: hidden;
-        }
-
-        #up.on {
-            right: 0;
-            opacity: 1;
-            visibility: visible;
-        }
-
-        #up a {
-            display: inline-block;
-            padding: 20px;
-            text-align: center;
-            background: #333;
-            text-decoration: none;
-            color: #fff;
-        }
     </style>
 </head>
 
 <body>
-    <input type="checkbox" id="html" checked><label for="html">html</label>
+    <button type="button">버튼</button>
+    <button type="button">선택안함</button>
+    <br>
+    <input type="checkbox" id="html"><label for="html">html</label>
     <input type="checkbox" id="css"><label for="css">css</label>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -84,6 +49,31 @@
             // 출력
             console.log(chk0.attr('checked'));
             console.log(chk1.prop('checked'));
+
+            let flag = true;
+
+            $('button').click(function () {
+                if (flag === true) {
+                    chk0.attr({ checked: 'checked' });
+                    chk1.prop({ checked: true });
+                    // 출력
+                    console.log(chk0.attr('checked'));
+                    console.log(chk1.prop('checked'));
+                    flag = false;
+                } else {
+                    chk0.attr({ checked: null });
+                    chk1.prop({ checked: false });
+                    // 출력
+                    console.log(chk0.attr('checked'));
+                    console.log(chk1.prop('checked'));
+                    flag = true;
+                }
+            });
+
+
+
+
+
         });
     </script>
 </body>
