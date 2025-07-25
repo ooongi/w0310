@@ -4,7 +4,7 @@ import { data } from "./data.js";
 const tabs = $("#tabs");
 const tabs_1 = tabs.find("#tabs-1");
 
-const tabMenu = function (idx0, idx1, idx2, idx3) {
+export const tabMenu = function (idx0, idx1, idx2, idx3) {
     tabs_1.html(`
             <div>
                 <div>
@@ -38,4 +38,3 @@ const tabMenu = function (idx0, idx1, idx2, idx3) {
 };
 
 
-export default tabMenu;

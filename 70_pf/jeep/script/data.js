@@ -1,6 +1,6 @@
 // 데이터
 
-const data = [
+export const data = [
     {
         img: "./images/section3/vehicles_gche.png",
         txt: "GRAND CHEROKEE L",
@@ -23,4 +23,4 @@ const data = [
     },
 ];
 
-export default data;
+// export default data;

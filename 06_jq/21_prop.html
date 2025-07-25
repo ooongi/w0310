@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            height: 2000px;
+            margin: 0 auto;
+            border: 1px solid #333;
+            overflow: auto;
+        }
+
+        .inner {
+            width: 1000px;
+            height: 1000px;
+            background: #f60;
+        }
+
+        #up {
+            position: fixed;
+            right: -100px;
+            bottom: 30px;
+            transition: all .5s ease;
+            ;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        #up.on {
+            right: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #up a {
+            display: inline-block;
+            padding: 20px;
+            text-align: center;
+            background: #333;
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="html" checked><label for="html">html</label>
+    <input type="checkbox" id="css"><label for="css">css</label>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            HTML 속성 가져오기/지정하기
+                attr('속성')
+                    html 속성 가져오기
+                attr('속성', 값)
+                attr(속성: 값, 속성: 값, ...)
+                    html 속성 지정하기
+                removeAttr()
+
+                prop()
+                    자바스크립트 속성(property)
+                css()
+                    CSS 속성
+                animate()
+
+        */
+        $(() => {
+
+            //객체 탐색
+            const chk = $('input:checkbox');
+            const chk0 = chk.eq(0);
+            const chk1 = chk.eq(1);
+
+            // 출력
+            console.log(chk0.attr('checked'));
+            console.log(chk1.prop('checked'));
+        });
+    </script>
+</body>
+
+</html>

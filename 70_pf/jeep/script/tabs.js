@@ -1,4 +1,4 @@
-import tabMenu from "./section3.js";
+import {tabMenu} from "./section3.js";
 
 $(() => {
     // const data = [
