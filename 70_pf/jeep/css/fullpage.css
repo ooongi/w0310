@@ -102,3 +102,9 @@ body {
     padding: 100px 0;
     color: #fff;
 }
+
+.section {
+    height: 100vh;
+    width: 100%;
+    transition: background 0.5s;
+}
