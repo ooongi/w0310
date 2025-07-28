@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복제</title>
+    <!-- 
+        복제/감싸기
+        clone()
+            요소 복제
+        요소.wrap('부모요소')
+            요소를 '부모요소'로 감싼다.
+        요소.wrapAll('부모요소')
+            요소 전체를 '부모요소'로 감싼다.
+        요소.wrapInner('자식요소')
+            요소의 내용을 '자식요소'로 감싼다.
+        replaceWith('대상요소')
+            요소를 '대상요소'로 변경한다.
+        대상요소.replcaeAll(요소
+        )
+            요소를 대상요소로 변경한다.
+    -->
+    <style>
+        li {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="m1">
+        <li><img src="images/1.jpg" alt="html"></li>
+        <li><img src="images/2.jpg" alt="html"></li>
+        <li><img src="images/3.jpg" alt="html"></li>
+        <li><img src="images/4.jpg" alt="html"></li>
+    </ul>
+    <div id="m2">
+        <strong>내용1</strong>
+        <strong>내용2</strong>
+    </div>
+    <div id="m3">
+        <strong>내용3</strong>
+        <strong>내용4</strong>
+    </div>
+    <div id="m4">내용5</div>
+    <div id="m5">내용6</div>
+    <div id="m6">내용7</div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            
+        */
+        $(() => {
+            $('.m1').clone().insertAfter('.m1');
+            $('#m2 strong').wrap('<div></div>');
+            $('#m3 strong').wrapAll('<div></div>');
+            $('#m4').wrapInner('<div></div>');
+            $('#m5').replaceWith('<p>변경6</p>');
+            $('<p>변경7</p>').replaceAll('#m6');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <!-- 
+        이벤트
+
+        click
+        mouseover
+        mouseout
+            -> 이벤트 버블링
+        mouseenter
+        mouseleave
+            -> 이벤트 버블링x
+
+        mousedown
+        mouseup
+        mousemove
+        hover
+
+        이벤트 전파(Event Propagation)
+            이벤트 버블링(Event Bubbling)
+                상위요소에서 하위요소로 전파
+    -->
+    <style>
+        .bg {
+            padding: 40px;
+            margin-bottom: 40px;
+            background: #ccc;
+        }
+        
+        .inner {
+            padding: 20px;
+            background: #999;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap1 bg">
+        <div class="inner">mouseover</div>
+    </div>
+    <div class="wrap2 bg">
+        <div class="inner">mouseenter</div>
+    </div>
+    <div class="display"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(()=>{
+            $('.wrap1').mouseover(function(){
+                $('.display').append('<strong>마우스오버</strong>')
+            });
+            $('.wrap2').mouseenter(function(){
+                $('.display').append('<strong>마우스들어감</strong>')
+            });
+        });
+    </script>
+</body>
+
+</html>
