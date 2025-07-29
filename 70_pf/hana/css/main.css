@@ -54,6 +54,10 @@ a {
     line-height: 1;
 }
 
+#logo b {
+    margin-right: 12px;
+}
+
 /* sec1 */
 #sec1 {
     position: relative;
@@ -65,6 +69,10 @@ a {
     top: 50%;
     margin-bottom: 40px;
     transform: translate(-50%, -50%);
+    font-size: 3.6rem;
+    color: var(--white);
+    font-weight: normal;
+    letter-spacing: 2.5px;
 }
 
 #sec1 h2 span:first-child {
@@ -120,13 +128,14 @@ a {
     margin-bottom: 30px;
 }
 
-#sec3>p {
+#sec3 > p {
     margin-bottom: 40px;
 }
 
 #sec3 li h3 {
     color: var(--gray1);
     font-size: 2.4rem;
+    margin-top: 10px;
 }
 
 #sec3 li p:first-of-type {
@@ -158,12 +167,11 @@ a {
     margin-bottom: 16px;
 }
 
-
 #sec4 input {
     display: block;
     width: 100%;
     border: 1px solid var(--gray3);
-    padding: 8px;
+    padding: 12px;
     margin-bottom: 16px;
 }
 
@@ -203,8 +211,71 @@ a {
 
 /* tablet */
 @media (min-width: 768px) {
+    #gnb {
+        display: block;
+    }
+
+    #gnb ul {
+        display: flex;
+    }
+
+    #gnb li:not(:last-child) {
+        margin-right: 35px;
+    }
+
+    #gnb a {
+        letter-spacing: 2.5px;
+    }
+
+    /* sec1 */
+    #sec1 h2 span:last-child {
+        display: inline-block;
+    }
+
+    /* sec2,3 */
+    #sec2 ul,
+    #sec3 ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 16px;
+    }
+    #sec2 li,
+    #sec3 li {
+        /* 전체 100%을 50%씩 나눠가지는데
+        각자 옆에 여백 16px을 둘이서 나눠가짐 */
+        flex: 0 0 calc(50% - 8px);
+    }
 }
 
 /* desktop */
 @media (min-width: 1200px) {
+    #sec1 {
+        max-width: 1510px;
+        margin: 0 auto;
+    }
+    
+    /* sec2~4 common */
+    .sec {
+        padding: 68px 205px 0;
+    }
+
+    /* sec2,3 */
+    #sec2 li,
+    #sec3 li {
+        /* 48px(16px*3)을 4분할 */
+        flex: 0 0 calc(25% - 12px);
+    }
+
+    /* footer */
+    #footer span:first-child {
+        display: inline-block;
+    }
+
+    #footer span:nth-child(2) {
+        display: none;
+    }
+
+    #footer span:last-child {
+        display: inline-block;
+    }
 }

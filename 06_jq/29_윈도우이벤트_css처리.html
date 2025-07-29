@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윈도우이벤트_css</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            height: 2000px;
+        }
+
+        header {
+            height: 100px;
+            transition: .5s;
+
+            border-bottom: 1px solid #999;
+        }
+
+        body {
+            margin: 0;
+            font-size: 28px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            background-color: #f1f1f1;
+            padding: 30px;
+            text-align: center;
+        }
+
+        #navbar {
+            display: flex;
+            position: sticky;
+            top: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        #navbar a {
+            /* display: block; */
+            color: #f2f2f2;
+            /* text-align: center; */
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        #navbar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .content {
+            padding: 16px;
+        }
+
+        #quick {
+            position: sticky;
+            /* 달라붙는 */
+            top: 150px;
+            width: 200px;
+            height: 200px;
+            background: #ff6600;
+            color: #fff;
+            text-align: center;
+            left: 100%;
+            margin-left: -100px;
+        }
+
+
+        @media (max-width:960px) {
+            #navbar {
+                background: #f69;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h2>Scroll Down</h2>
+        <p>Scroll down to see the sticky effect.</p>
+    </div>
+
+    <div id="navbar">
+        <a class="active" href="javascript:void(0)">Home</a>
+        <a href="javascript:void(0)">News</a>
+        <a href="javascript:void(0)">Contact</a>
+    </div>
+    <div id="quick">QUICK</div>
+    <div class="content">
+        <h3>Sticky Navigation Example</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In accusamus accusantium tenetur illum eum debitis voluptates! Animi laborum eos corrupti voluptatum similique illo, magni ex quidem delectus neque, eligendi, laudantium itaque perferendis eveniet. Perferendis officiis omnis fugit ipsum! Quis, culpa! Ipsam adipisci aperiam at natus, neque consectetur! Quia dolor, perferendis reprehenderit, debitis dolorem laudantium nesciunt, a esse magnam pariatur fugit sint sunt unde sit ipsum voluptas suscipit temporibus optio nobis deleniti adipisci? Dolorem neque culpa ipsa qui possimus architecto explicabo. Voluptates itaque aperiam aut ea enim quisquam impedit, consequuntur, ab ipsa vero quis. Minima illum corporis ad animi veritatis ab officia, at nisi? Doloremque voluptatibus fuga expedita! Nihil enim eaque dicta sunt, esse quibusdam unde, minus doloremque ex deleniti numquam! Rerum fugit et quas ex. Et cupiditate autem, hic eos minima temporibus dolores? Consectetur quos autem corrupti, ullam atque illo, magnam odio fugiat velit neque voluptas omnis nam nihil sapiente aut minus a commodi asperiores reiciendis maiores placeat explicabo aliquam consequuntur. Doloribus qui repudiandae consequatur magnam facilis numquam illo odio dolorum dicta voluptatem sapiente, illum labore ratione harum tempore delectus neque corrupti aperiam dolor reprehenderit quae reiciendis fugit distinctio! Vitae nisi sapiente corrupti illo nihil asperiores laborum atque, repudiandae obcaecati deserunt hic corporis praesentium excepturi laudantium perferendis! Voluptatem in doloremque repellendus sit tempore facilis quod, error velit corporis consectetur consequuntur magni laborum quisquam sequi reprehenderit, ut labore animi commodi quo nobis deserunt. Eveniet vel cum non assumenda nulla animi et commodi, doloribus ea suscipit eligendi sit voluptatem labore illum reprehenderit magni? Odio odit consequatur excepturi impedit minima labore, itaque non consequuntur sunt. Neque eaque qui aliquam, nobis quaerat nam cumque! Aspernatur veniam hic facilis vel suscipit autem natus est harum numquam illum doloribus accusantium veritatis ratione ipsa, modi, commodi, fugiat in eveniet nemo iusto ullam neque officia ipsam recusandae. Aspernatur?</p>
+    </div>
+</body>
+
+</html>
