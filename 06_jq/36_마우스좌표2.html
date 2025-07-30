@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스좌표</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .tip {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(255, 64, 64, 0.5);
+            color: #fff;
+            position: absolute;
+        }
+
+        .tip.on {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tip"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            이벤트 객체
+                event
+            
+            메서드
+                event.preventDefault()
+                    -> 기본 이벤트 방지
+                stopPropagation()
+                    -> 이벤트 전파(버블링, 캡처링) 제거
+            
+            속성
+                event.target
+                    -> 이벤트를 발생한 객체 자신
+                e
+                
+                vent.type
+                    -> 이벤트 종류
+        */
+
+        $(() => {
+
+            const tip = $('.tip'); // 클래스명이 .tip인 요소를 변수에 저장
+            let mouseX = mouseY = tipX = tipY = 0;
+            // mouse- 마우스의 현재 좌표, // .tip 요소의 현재 좌표
+
+            // 선언적 함수 mouseMove 함수 정의
+            // 선언적 함수, 재귀 호출 함수
+            function mouseMove() {
+                // 마우스 위치와 tip 요소의 위치 차이를 줄이며 따라가게 함
+                tipX += (mouseX - tipX) * 0.1;
+                tipY += (mouseY - tipY) * 0.1;
+
+                // tip 요소의 위치를 갱신(css의 left, top 속성 변경)
+                tip.css({left: tipX, top: tipY});
+
+                // 매 프레임마다 mouseMove 함수를 호출하여 애니메이션 반복
+                requestAnimationFrame(mouseMove);
+
+            }
+
+            mouseMove(); // 애니메이션 시작
+
+            // 마우스가 움직일 때 마다 좌표 업데이트
+            $(window).on('mousemove', function (e) {
+                mouseX = e.pageX - 50; // 페이지 내 마우스 X 좌표
+                mouseY = e.pageY - 50; // 페이지 내 마우스 X 좌표
+            });
+
+        });
+    </script>
+</body>
+
+</html>

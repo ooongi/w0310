@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>preventDefault</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: "돋움";
+            font-size: 12px;
+            color: #333;
+            height: 100%;
+        }
+
+        a {
+            font-family: "돋움";
+            font-size: 12px;
+            color: #333;
+            text-decoration: none;
+            line-height: 20px;
+        }
+
+        #select {
+            width: 200px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background: orange;
+            z-index: 100;
+        }
+
+        #select a {
+            display: block;
+            height: 20px;
+        }
+
+        #select #title {
+            border: 1px solid #ccc;
+        }
+
+        #select #title a {
+            /* background: url(경로/이미지명) 반복여부 x위치 y위치; */
+            background: url(images/icon.gif) no-repeat 100% 0;
+            /* 
+                background-position x위치, y위치;
+                    x위치: left, right, center, px, %
+                    y위치: top, bottom center, px, %
+            */
+        }
+
+        #select #title a.on {
+            background-position: 100% -20px;
+        }
+
+        #select #list {
+            border: 1px solid #ccc;
+            background: #fff;
+            position: absolute;
+            left: 0;
+            top: -94px;
+            width: 200px;
+            box-sizing: border-box;
+            display: none;
+        }
+
+        #select #list.on {
+            display: block;
+        }
+
+        #select #list a {
+            padding: 5px 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #select #list a:hover,
+        #select #list a:active,
+        #select #list a:focus {
+            background: #ff6600;
+            color: #fff;
+        }
+
+        #con {
+            background: #ddd;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="select">
+        <div id="title"><a href="#">사이트이동</a></div>
+        <ul id="list">
+            <li><a href="http://www.naver.com" target="_blank" title="새창">클릭하면 네이버로 이동됩니다.</a></li>
+            <li><a href="http://www.daum.net" target="_blank" title="새창">클릭하면 다음로 이동됩니다.</a></li>
+            <li><a href="http://www.nate.com" target="_blank" title="새창">클릭하면 네이트로 이동됩니다.</a></li>
+        </ul>
+    </div>
+    <div id="con"></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            이벤트 객체
+                event
+            
+            메서드
+                event.preventDefault()
+                    -> 기본 이벤트 방지
+                stopPropagation()
+                    -> 이벤트 전파(버블링, 캡처링) 제거
+            
+            속성
+                event.target
+                    -> 이벤트를 발생한 객체 자신
+                e
+                
+                vent.type
+                    -> 이벤트 종류
+        */
+
+        $(() => {
+            $('#title a').click(function(){
+                // #title a가 on을 가지고 있으면
+                if($(this).hasClass('on')) {
+                    // #title a에 #list를 추가하고 '.on'을 제거
+                    $(this).add('#list').removeClass('on');
+                } else {
+                    // #title a에 #list를 추가하고 '.on'을 추가
+                    $(this).add('#list').addClass('on');
+                }
+
+                // 기본이벤트 방지
+                // a태그의 링크 동작을 제거
+                event.preventDefault();
+                // 이벤트 전파 방지
+                event.stopPropagation();
+            });
+
+
+            $('html').click(function(){
+                $('#title a').add("#list").removeClass('on');
+            });
+
+        });
+    </script>
+</body>
+
+</html>
