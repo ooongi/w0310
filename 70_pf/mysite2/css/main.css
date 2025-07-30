@@ -40,7 +40,7 @@ footer a {
     letter-spacing: 4px;
 }
 
-#sec3 {
+#sec3 .bg {
     height: 100vh;
     background: url(../images/sec1_1.jpg) no-repeat 50% 50% / cover fixed;
 }
