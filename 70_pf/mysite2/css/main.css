@@ -21,6 +21,7 @@ footer a {
     max-width: 940px;
 }
 
+/* 패럴랙스 스크롤링 이미지 */
 #sec1 {
     height: 100vh;
     background: url(../images/sec1_1.jpg) no-repeat 50% 50% / cover fixed;
@@ -38,3 +39,9 @@ footer a {
 #skill p {
     letter-spacing: 4px;
 }
+
+#sec3 {
+    height: 100vh;
+    background: url(../images/sec1_1.jpg) no-repeat 50% 50% / cover fixed;
+}
+
