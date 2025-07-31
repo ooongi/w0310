@@ -7,7 +7,6 @@
     <title>haribo</title>
     <link rel="icon" href="./images/favicon.svg" type="imge/svg+xml">
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./script/index.js"></script>
 </head>
 
@@ -29,7 +28,7 @@
         <div class="main_banner">
             <img src="./images/sec1.png" alt="메인이미지1">
         </div>
-        <h2>
+        <h2 class="motion motion-up">
             <img src="./images/logo.png" alt="로고"></a>
             <span>함께해요 모두다,</span>
             <span>행복해요 하리보!</span>
@@ -37,7 +36,7 @@
     </section><!-- //.main_banner -->
     <!-- section2: product -->
     <section class="sec" id="sec2">
-        <h2>Unique jelly since 1922</h2>
+        <h2 class="motion motion-up">Unique jelly since 1922</h2>
         <ul>
             <li class="motion motion-up">
                 <img src="./images/product1.png" alt="product1">
@@ -66,17 +65,19 @@
         </ul>
     </section><!-- //#product -->
     <section class="sec" id="sec_history">
-        <img src="./images/logo.png" alt="로고">
-        <p>100년 역사 하리보:</p>
-        <p>집 뒷마당에서 세계시장 리더가 되기까지</p>
-        <p>Haribo macht Kinder froh und Erwachsene ebenso.</p>
-        <p>하리보는 아이들을 행복하게 해줍니다. 그리고 어른들도요.</p>
-        <p>이 슬로건은 언제 처음 쓰기 시작했을까요?</p>
+        <div class="sech">
+            <div class="logo motion motion-up"><img src="./images/logo.png" alt="로고"></div>
+            <h3 class="motion motion-up">100년 역사 하리보:<br>집 뒷마당에서 세계시장 리더가 되기까지</h3>
+            <p class="gem motion motion-up">Haribo macht Kinder froh und Erwachsene ebenso.</p>
+            <p class="motion motion-up">하리보는 아이들을 행복하게 해줍니다. 그리고 어른들도요.</p>
+            <p class="motion motion-up">이 슬로건은 언제 처음 쓰기 시작했을까요?</p>
+            <div class="sech_btn motion motion-up"><a href="#">Brand Story</a></div>
+        </div>
     </section><!-- //#sec_history -->
     <!-- section3: event -->
     <section class="sec" id="sec3">
-        <h2>How</h2>
-        <p>1992년부터 독보적인 젤리! 하리보는 품질을 최우선으로 삼고 있습니다. 알록달록 다양하고 맛있는 과정 함께 해볼까요?</p>
+        <h2 class="motion motion-up">How</h2>
+        <p class="motion motion-up">1992년부터 독보적인 젤리! 하리보는 품질을 최우선으로 삼고 있습니다. 알록달록 다양하고 맛있는 과정 함께 해볼까요?</p>
         <ul>
             <li class="motion motion-up">
                 <div><img src="./images/how1.png" alt="how1"></div>
@@ -105,18 +106,25 @@
         </ul>
     </section><!-- //#event -->
     <!-- section4: service -->
-    <section class="sec motion motion-up" id="sec4">
-        <h2>Contact</h2>
-        <p>제품과 회사에 대해 궁금한 점 또는 제안하고 싶은 의견이 있으신가요? 하리보가 도와드려요. 망설이지 말고 문의해 주세요.</p>
-        <form action="#">
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <input type="text" placeholder="Subject">
-            <input type="text" placeholder="Comment">
-            <button type="submit">전송하기</button>
-        </form>
-        <div id="map">
-            <img src="./images/map.jpg" alt="구글지도">
+    <section id="sec4">
+        <h2 class="motion motion-up">Contact</h2>
+        <p class="motion motion-up">제품과 회사에 대해 궁금한 점 또는 제안하고 싶은 의견이 있으신가요? 하리보가 도와드려요. 망설이지 말고 문의해 주세요.</p>
+        <div class="sec4_flex">
+            <div>
+                <form action="#" class="motion motion-up">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <input type="text" placeholder="Subject">
+                    <input type="text" placeholder="Comment">
+                    <button type="submit">전송하기</button>
+                </form>
+            </div>
+            <div class="motion motion-up" id="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3988.8030163970925!2d103.84030807496558!3d1.2926123986951035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sko!2skr!4v1753949252473!5m2!1sko!2skr"
+                    allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </section><!-- //#service -->
     <!-- footer -->
