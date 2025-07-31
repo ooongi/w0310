@@ -1,11 +1,74 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HARIBO</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .draft {
+            width: 100%;
+            background-image: url('draft_pc.png');
+            background-size: 100% auto;
+            background-position: top center;
+            background-repeat: no-repeat;
+        }
+
+        .draft img {
+            width: 100%;
+            height: auto;
+            display: block;
+            visibility: hidden;
+        }
+
+        /* 데스크톱 (1024px 이상) */
+        @media (min-width: 1024px) {
+            .draft {
+                background-image: url('draft_pc.png');
+            }
+            .draft img {
+                content: url('draft_pc.png');
+            }
+        }
+
+        /* 태블릿 (768px ~ 1023px) */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .draft {
+                background-image: url('draft_tablet.png');
+            }
+            .draft img {
+                content: url('draft_tablet.png');
+            }
+        }
+
+        /* 모바일 (767px 이하) */
+        @media (max-width: 767px) {
+            .draft {
+                background-image: url('draft_phone.png');
+            }
+            .draft img {
+                content: url('draft_phone.png');
+            }
+        }
+
+    </style>
 </head>
+
 <body>
-    <img src="draft.png" alt="시안">
+    <div class="draft">
+        <img src="draft_pc.png" alt="pc시안">
+    </div>
 </body>
+
 </html>
