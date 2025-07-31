@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&family=Titan+One&display=swap');
+
+
+:root {
+    --mainColor: #E10E17;
+    --subColor: #FFF480;
+    --mainTextColor: #333333;
+    --grayTextColor: #999999;
+    --whiteTextColor: #ffffff;
+
+}
+
+body,h1,h2,h3,h4,h5,h6,p,ul,li {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    color: var(--mainTextColor);
+    background: var(--whiteTextColor);
+    font: 1.6rem/1.6 "Noto Sans KR", sans-serif;
+    /* font-family: "Titan One", sans-serif; */
+    /* font-family: "Archivo", sans-serif; */
+}
+
+a {
+    text-decoration: none;
+    color: var(--mainTextColor);
+}
+
+ul, li{
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* object-fit: cover; */
+    /* 박스 크기에 맞게 처리, 빈 공간이 생기진 않지만 이미지 일부가 잘릴 수 있음
+        -contain: 박스 크기에 맞게 이미지 잘림 없이 표시되지만 빈 공간이 생길 수 있다.
+    */
+    vertical-align: top;
+}
