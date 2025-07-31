@@ -1,0 +1,353 @@
+@charset "utf-8";
+@import url("reset.css");
+
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&family=Titan+One&display=swap");
+
+:root {
+    --mainColor: #e10e17;
+    --subColor: #fff480;
+}
+
+/* color, font size*/
+:root {
+    /* font */
+    font-size: 10px;
+    /* color */
+    --gray1: #111;
+    --gray2: #333;
+    --gray3: #ccc;
+    --gray4: #aaa;
+    --gray5: #f1f1f1;
+    --white: #fff;
+}
+
+body {
+    font: 1.6rem/1.6 "Noto Sans KR", sans-serif;
+    /* font-family: "Titan One", sans-serif; */
+    /* font-family: "Archivo", sans-serif; */
+}
+
+h2 {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+}
+h3 {
+    font-family: "Titan One", sans-serif;
+}
+
+a {
+    color: var(--gray1);
+}
+
+/* 공통: mobile 포함 */
+/* header */
+#header {
+    font-family: "Titan One", sans-serif;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 9999;
+    padding: 18px 32px;
+    background: var(--white);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.12),
+        o 2px 5px 0 rgba(0, 0, 0, 0.16);
+}
+
+/* gnb */
+#gnb {
+    display: none;
+}
+
+/* logo */
+#logo {
+    font-size: 1.6rem;
+    font-weight: normal;
+    letter-spacing: 4px;
+    line-height: 1;
+}
+
+#logo img {
+    height: 30px;
+}
+
+#logo b {
+    margin-right: 12px;
+}
+
+/* sec1 */
+#sec1 {
+    position: relative;
+}
+
+#sec1 h2 {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    margin-bottom: 40px;
+    transform: translate(-50%, -50%);
+    font-size: 3.6rem;
+    color: var(--white);
+    font-weight: normal;
+    letter-spacing: 2.5px;
+}
+
+#sec1 h2 img {
+    display: none;
+}
+
+#sec1 h2 span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    /* padding: 9px 15px; */
+}
+
+/* sec2,3,4 */
+.sec {
+    padding: 68px 32px 0;
+}
+
+.sec h2 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    border-bottom: 1px solid var(--gray5);
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+/* 개별섹션 */
+/* sec2 */
+#sec2 li {
+    position: relative;
+    margin-bottom: 16px;
+    border: 3px solid transparent;
+    transition: 0.5s;
+}
+
+#sec2 h2 {
+    color: var(--mainColor);
+    margin-bottom: 40px;
+    font-weight: 900;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#sec2 li:hover {
+    border: 3px solid var(--subColor);
+}
+
+/* sec3 */
+#sec3 h2 {
+    color: var(--mainColor);
+    margin-bottom: 40px;
+    font-weight: 900;
+    font-size: 5rem;
+    text-align: center;
+}
+
+#sec3 li {
+    margin-bottom: 30px;
+}
+
+#sec3 > p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#sec3 li h3 {
+    color: var(--gray1);
+    font-size: 2.4rem;
+    margin-top: 10px;
+}
+
+#sec3 li p:first-of-type {
+    color: var(--gray4);
+    margin: 18px 0;
+}
+
+#sec3 li a {
+    display: block;
+    color: var(--gray1);
+    background: var(--subColor);
+    padding: 7px 0 8px 0;
+    text-align: center;
+    margin-top: 14px;
+    transition: 0.3s;
+}
+
+#sec3 li a:hover {
+    color: var(--white);
+    background: var(--mainColor);
+}
+
+/* sec4 */
+#sec4 h2 {
+    color: var(--mainColor);
+    margin-bottom: 40px;
+    font-weight: 900;
+    font-size: 5rem;
+    text-align: center;
+}
+
+#sec4 > p {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+#sec4 input {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--gray3);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 16px;
+}
+
+#sec4 ::placeholder {
+    color: var(--gray4);
+}
+
+#sec4 button {
+    border: none;
+    background: var(--gray1);
+    color: var(--white);
+    padding: 8px 16px;
+    font-size: 1.2rem;
+    margin: 16px 0 48px 0;
+}
+
+#sec4 #map {
+    margin-bottom: 8px;
+}
+
+/* footer */
+#footer {
+    background: var(--mainColor);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 0;
+}
+
+#footer span:first-child {
+    display: none;
+}
+
+#footer span:last-child {
+    display: block;
+    font-size: 1.4rem;
+}
+
+/* tablet */
+@media (min-width: 768px) {
+    #gnb {
+        display: block;
+    }
+
+    #gnb ul {
+        display: flex;
+    }
+
+    #gnb li:not(:last-child) {
+        margin-right: 35px;
+    }
+
+    #gnb a {
+        letter-spacing: 2.5px;
+    }
+
+    /* sec1 */
+    #sec1 h2 span:last-child {
+        display: inline-block;
+    }
+
+    #sec1 h2 img {
+        width: 250px;
+        display: block;
+    }
+
+    #sec1 h2 span {
+        display: block;
+        font-size: 3.4rem;
+        font-weight: 700;
+        letter-spacing: 5px;
+        /* padding: 9px 15px; */
+    }
+
+    /* sec2,3 */
+    #sec2 ul,
+    #sec3 ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 16px;
+    }
+    #sec2 li,
+    #sec3 li {
+        /* 전체 100%을 50%씩 나눠가지는데
+        각자 옆에 여백 16px을 둘이서 나눠가짐 */
+        flex: 0 0 calc(50% - 8px);
+    }
+}
+
+/* desktop */
+@media (min-width: 1200px) {
+    #sec1 {
+        /* max-width: 1510px; */
+        margin: 0 auto;
+    }
+
+    #sec1 h2 span {
+        font-size: 5rem;
+        font-weight: 700;
+        letter-spacing: 5px;
+        /* padding: 9px 15px; */
+    }
+
+    /* sec2~4 common */
+    .sec {
+        padding: 68px 205px 0;
+    }
+
+    #sec2 h2,
+    #sec3 h2,
+    #sec4 h2 {
+        font-size: 6.4rem;
+    }
+
+    /* sec2,3 */
+    #sec2 li,
+    #sec3 li {
+        /* 48px(16px*3)을 4분할 */
+        flex: 0 0 calc(25% - 12px);
+    }
+
+    /* footer */
+    #footer span:first-child {
+        display: inline-block;
+    }
+
+    #footer span:nth-child(2) {
+        display: none;
+    }
+
+    #footer span:last-child {
+        display: inline-block;
+    }
+}
+
+/* 스크롤모션 */
+.motion {
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.motion.motion-up {
+    transform: translate(0, 100px);
+}
+
+.motion.show {
+    opacity: 1;
+    transform: none;
+}
