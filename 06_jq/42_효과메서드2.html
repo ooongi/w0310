@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>효과메서드2</title>
+    <style>
+        * {
+            margin: 5px;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background: #ff6600;
+            position: relative;
+        }
+
+        .m1 {
+            overflow: hidden;
+        }
+
+        .m1 span {
+            position: relative;
+            top: -50px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>animate1</button>
+    <div class="m0"></div>
+    <button>animate2</button>
+    <div class="m1"><span>애니메이션</span></div>
+    <button>animate3</button>
+    <div class="m2"></div>
+    <button>animate4</button>
+    <div class="m3"></div>
+
+    <!-- jQ core file -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- jq ui cdn 연결 -->
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
+    <script>
+        /* 
+            효과 메서드
+                animate()
+                    $(selector).animate({속성: 값}, speed, easing, callback)
+                clearQueue()
+                stop()
+
+        */
+
+        $(() => {
+            $('button:eq(0)').click(function () {
+                $('.m0').animate({ left: 500 }, 'fast');
+                $('.m0').animate({ left: 0 }, 'sloe');
+                // $('.m0').animate({left: 0}, 600);
+            });
+
+            $('button:eq(1)').click(function () {
+                $('.m1 span').css({ top: -50 });
+                // 앞에 것을 (left:500) 실행시킨 후 다음에 top:30을 싱행시킨다.
+                $('.m1').animate({ left: 500 }, 'fast').animate({ left: 0 }, 'slow', function () {
+                    $(this).find('span').animate({ top: 30 }, 'fast');
+                });
+                // $('.m0').animate({left: 0}, 600);
+            });
+
+            $('button:eq(2)').click(function () {
+                // 버튼을 누를 때마다 200px씩 이동
+                $('.m2').animate({ left: '+=200'}, 'fast');
+            });
+
+            $('button:eq(3)').click(function () {
+                // width: 100px; <-> width: 0;
+                $('.m3').animate({width: 'toggle'}, 'fast');
+                $('.m3').animate({ transform: 'scale(0)'}, 'fast', function(){
+                    $('.m3').animate({transform: 'scale(1)'});
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

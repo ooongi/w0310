@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stop</title>
+    <style>
+        * {
+            margin: 5px;
+        }
+
+        div>div {
+            width: 100px;
+            height: 100px;
+            background: #ff6600;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button>slideToggle()</button>
+        <div class="m1"></div>
+    </div>
+    <div>
+        <button>slideToggle()_stop()</button>
+        <div class="m2"></div>
+    </div>
+    <div>
+        <button>animate()</button>
+        <div class="m3"></div>
+    </div>
+    <div>
+        <button>animate_stop()</button>
+        <div class="m4"></div>
+    </div>
+
+    <!-- jQ core file -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- jq ui cdn 연결 -->
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
+    <script>
+        /* 
+            stop()
+            stio(clearqueue)
+            stop(clearqueue, jumpToEnd)
+                -clearQueue: false(기본값) true
+                    true이면 대기하고 있는 애니메이션을 메모리에서 제거
+                -jumpToEnd: false(기본값)
+                    true이면 다음 대기하고 있는 애니메이션으로 건너뛴다.
+
+
+        */
+
+        $(() => {
+
+            $("button:eq(0)").click(function () {
+                $(".m1").slideToggle();
+            });
+            $("button:eq(1)").click(function () {
+                $(".m2").stop().slideToggle();
+            });
+            $("button:eq(2)").click(function () {
+                $(".m3").animate({ height: "toggle" }, 1000, "swing");
+            });
+            $("button:eq(3)").click(function () {
+                $(".m4").stop().animate({ height: "toggle" }, 1000, "swing");
+            });
+        });
+    </script>
+</body>
+
+</html>

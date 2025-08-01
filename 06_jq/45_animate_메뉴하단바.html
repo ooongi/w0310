@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate_메뉴하단바</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "돋움";
+            font-size: 12px;
+            color: #000;
+            text-align: center;
+        }
+
+        a {
+            color: #999;
+            text-decoration: none;
+            display: block;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: color 0.5s ease;
+        }
+
+        a.on {
+            color: #000;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #gnb {
+            display: inline-block;
+            position: relative;
+        }
+
+        #gnb ul {
+            display: flex;
+        }
+
+        #gnb ul li {
+            /* float: left; */
+            height: 40px;
+            width: 150px;
+            line-height: 40px;
+            background: lightblue;
+        }
+
+        #gnb span {
+            display: block;
+            border-bottom: 2px solid #ff6600;
+            height: 40px;
+            width: 150px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="gnb">
+        <ul>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">Javascript</a></li>
+            <li><a href="#">jQuery</a></li>
+        </ul>
+    </nav>
+
+    <!-- jQ core file -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- jq ui cdn 연결 -->
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
+    <script>
+        /* 
+            stop()
+            stop(clearqueue)
+            stop(clearqueue, jumpToEnd)
+                -clearQueue: false(기본값) true
+                    true이면 대기하고 있는 애니메이션을 메모리에서 제거
+                -jumpToEnd: false(기본값)
+                    true이면 다음 대기하고 있는 애니메이션으로 건너뛴다.
+
+
+        */
+
+        $(() => {
+            // 현재 #gnb ul li의 width값 150px을 가져와서 w에 할당
+            const w = $('#gnb ul li').width();
+            // #gnb의 끝태그 앞에 span 추가
+            $('#gnb').append('<span></span>');
+
+            //이벤트
+            $('#gnb ul li').on('mouseenter focusin', function(){
+                // li의 index 번호를 index에 할당 >> 0,1,2,3
+                const index = $(this).index();
+                // li의 하위 요소 a를 찾아[find('a')] on클래스 추가, a의 상위 요소를 탐색하여[end()] 그것의 형제들 중에 'a'를 찾아서[find('a')] on클래스를 제거한다
+                $(this).find('a').addClass('on').end().siblings().find('a').removeClass('on');
+
+                // span이 left: index * w(150); 위치로 이동
+                // 첫 번째 메뉴인 html의 경우 left: 0 * 150 -> 0
+                // 두 번째 메뉴인 css의 경우 left: 1 * 150 -> 150
+                // 세 번째 메뉴인 js의 경우 left: 2 * 150 -> 300
+                // 네 번째 메뉴인 jq의 경우 left: 3 * 150 -> 450
+                $('#gnb span').stop().animate({left: index * w}, 'fast');
+                
+                
+            });
+            
+            // 문서가 준비되면 첫 번째 요소에 강제로 mouseenter 이벤트 발생시킴
+            $('#gnb ul li:eq(0)').trigger('mouseenter');
+        });
+    </script>
+</body>
+
+</html>

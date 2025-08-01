@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>효과메서드응용_네비게이션</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "돋움";
+            font-size: 12px;
+            color: #000;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        #gnb {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        #gnb:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        /* depth1 */
+        #gnb .m {
+            float: left;
+            width: 120px;
+            text-align: center;
+            position: relative;
+        }
+
+        #gnb .m>a {
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            font-size: 1.4em;
+        }
+
+        #gnb .m.on>a {
+            border-bottom: 4px solid #725f3f;
+            box-sizing: border-box;
+        }
+
+        /* depth2 */
+        #gnb .m ul {
+            position: absolute;
+            left: 0;
+            top: 40px;
+            width: 100%;
+            background: #000;
+            display: none;
+        }
+
+        #gnb .m ul li a {
+            display: block;
+            color: #fff;
+            padding: 12px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        #gnb .m ul li:last-child a {
+            border: none;
+        }
+
+        #gnb .m ul li a:hover,
+        #gnb .m ul li a:active,
+        #gnb .m ul li a:focus {
+            background: #fff;
+            color: #000;
+        }
+
+        #visual {
+            background: url(f1.jpg) no-repeat center center;
+            height: 300px;
+        }
+
+        #visual a {
+            display: block;
+            width: 1000px;
+            height: 300px;
+            margin: 0 auto;
+            text-indent: -99999%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><a href="#">기본 효과 메서드</a></h1>
+    <ul id="gnb">
+        <li class="m"><a href="#">메뉴1</a>
+            <ul>
+                <li><a href="#">메뉴1_1</a></li>
+                <li><a href="#">메뉴1_2</a></li>
+                <li><a href="#">메뉴1_3</a></li>
+                <li><a href="#">메뉴1_4</a></li>
+            </ul>
+        </li>
+        <li class="m"><a href="#">메뉴2</a>
+            <ul>
+                <li><a href="#">메뉴2_1</a></li>
+                <li><a href="#">메뉴2_2</a></li>
+                <li><a href="#">메뉴2_3</a></li>
+                <li><a href="#">메뉴2_4</a></li>
+            </ul>
+        </li>
+        <li class="m"><a href="#">메뉴3</a>
+            <ul>
+                <li><a href="#">메뉴3_1</a></li>
+                <li><a href="#">메뉴3_2</a></li>
+                <li><a href="#">메뉴3_3</a></li>
+                <li><a href="#">메뉴3_4</a></li>
+            </ul>
+        </li>
+        <li class="m"><a href="#">메뉴4</a>
+            <ul>
+                <li><a href="#">메뉴4_1</a></li>
+                <li><a href="#">메뉴4_2</a></li>
+                <li><a href="#">메뉴4_3</a></li>
+                <li><a href="#">메뉴4_4</a></li>
+            </ul>
+        </li>
+        <li class="m"><a href="#">메뉴5</a>
+            <ul>
+                <li><a href="#">메뉴5_1</a></li>
+                <li><a href="#">메뉴5_2</a></li>
+                <li><a href="#">메뉴5_3</a></li>
+                <li><a href="#">메뉴5_4</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- 캐로셀 일부 -->
+    <div id="visual"><a href="#">비주얼</a></div>
+
+    <!-- jQ core file -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- jq ui cdn 연결 -->
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
+    <script>
+
+
+        $(() => {
+            $('#gnb .m').on('mouseenter focusin', function(){
+                // .m의 자식 ul
+                // 마우스가 들어가거나 포커스를 가진 서브 메뉴는 보이고
+                $('ul', this).show();
+                // .m의[$(this)] 형제 li의[siblings('li')] 후손 ul을[find('ul')] 숨긴다[hide()].
+                $(this).siblings('li').find('ul').hide();
+                // .m[$(this)]에 on클래스를 추가하고 선택됐을 때 다른 형제들은[siblings('li')] on클래스를 제거한다.
+                // 아래쪽 테두리가 지정되고, 나머지는 테두리 제거
+                $(this).addClass('on').siblings('li').removeClass('on');
+
+                //마우스가 메뉴 영역에서 벗어나면[mouseleave]
+            }).on('mouseleave', function(){
+                // $('#gnb ul')을 숨기고 ['#gnb .m'][=$(this).addClass('on')]에 있는 on클래스를 지운다.
+                // 서브메뉴 영역을 숨기고, 선택된 .m의 테두리도 제거
+                $('#gnb ul').hide().add('#gnb .m').removeClass('on');
+                // 아래로도 사용 가능, 위는 순차적, 아래는 동시처리
+                // $('#gnb ul').hide();
+                // $('#gnb .m').removeClass('on');
+            });
+
+            // #gnb a태그를 제외한 모든 요소[$('*:not("$gnb a")')에 대해 포커스가 가면
+            $('*:not("#gnb a")').on('focus', function(){
+                // 서브 메뉴 영역을 숨기고, 선택된 .m의 테두리도 제거
+                $('#gnb ul').hide().add('#gnb .m').removeClass('on');
+            });
+        });
+    </script>
+</body>
+
+</html>

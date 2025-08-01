@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>효과메서드</title>
+    <style>
+        * {
+            margin: 2px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #333;
+            display: none;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="m1">
+        <button type="button">show</button>
+        <button type="button">hide</button>
+        <button type="button">toggle</button>
+        <div class="box">내용1</div>
+    </div>
+    <div id="m2">
+        <button type="button">slideDown</button>
+        <button type="button">slideUp</button>
+        <button type="button">slidelToggle</button>
+        <div class="box">내용2</div>
+    </div>
+    <div id="m3">
+        <button type="button">fadeIn()</button>
+        <button type="button">fadeOut()</button>
+        <button type="button">fadeToggle()</button>
+        <button type="button">fadeTo()</button>
+        <div class="box">내용3</div>
+    </div>
+
+    <!-- jQ core file -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- jQ ui file 로컬 연결 -->
+    <script src="jquery-ui.min.js"></script>
+    <!-- cdn 연결 -->
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
+    <script>
+        /* 
+            효과 메서드
+                show() -> display:block;
+                hide() -> display:none;
+                toggle()
+
+                sildeDown()
+                    서서히 보이기
+                slideUp()
+                    서서히 숨기기
+                slideToggle()
+
+                fadeIn()
+                    서서히 보이기 -> opacity:1;
+                fadeOut()
+                    서서히 숨기기 -> opacity:0;
+                fadeToggle()
+                fadeTo(값)
+                fadeTo([시간], 불투명도, [가속도], [함수])
+                fadeTo(숫자, 숫자, 문자열, function)
+                    값 0~1 사이
+
+                stop()
+                    즉시 중단
+                    -> 애니메이션의 중첩 문제나 잔상 방지
+                css 참고
+                https://cubic-bezier.com/#.17,.67,.85,.38
+                ease, linear, ease-in, ease-out, ease-in-out
+                transition-timing-function
+                easing function
+                ease, .. ease-in-out, -> 가속
+                linear -> 등속
+
+
+            형식
+                $(selector).effectMethod(speed, easing, callback);
+                $(선택자).효과메서드([시간], 가속도, 함수);
+                    -speed: 'slow, 'fast', 시간(밀리초) -> 기본값: 400
+                    -easing
+                        swing(기본값, 가속), linear(등속),
+                        easeInQuad, easeOutQuad
+                        easeInQuad,
+        */
+
+        $(() => {
+            $('#m1 button:eq(0)').click(function () {
+                $('#m1 .box').show();
+            });
+
+            $('#m1 button:eq(1)').click(function () {
+                $('#m1 .box').hide();
+            });
+
+            $('#m1 button').eq(2).on('click',()=> {
+                $('#m1 .box').toggle('slow', 'easeInBounce');
+            });
+
+
+            $('#m2 button').eq(0).on('click',()=> {
+                $('#m2 .box').slideDown(200, 'easeOutExpo');
+            });
+
+            $('#m2 button').eq(1).on('click',()=> {
+                $('#m2 .box').slideUp('fast', 'easeOutExpo');
+            });
+
+            $('#m2 button').eq(2).on('click',()=> {
+                $('#m2 .box').slideToggle(600, 'easeOutExpo');
+            });
+
+
+            $('#m3 button').eq(0).on('click',()=> {
+                $('#m3 .box').fadeIn('easeOutExpo');
+            });
+
+            $('#m3 button').eq(1).on('click',()=> {
+                $('#m3 .box').fadeOut('easeOutExpo');
+            });
+
+            // $('#m3 button').eq(2).on('click',()=> {
+            //     $('#m3 .box').fadeToggle('easeInOutExpo');
+            // });
+
+            $('#m3 button').eq(3).on('click',()=> {
+                $('#m3 .box').fadeTo(400, 0.5, 'easeInOutExpo');
+            });
+
+
+            $('#m3 button').eq(0).on('click',()=> {
+                $('#m3 .box').fadeIn(200, ()=>{
+                    $('#m3 .box').text('jQuery');
+                    // 화살표함수를 쓰려면 this>'#m3 .box'로 써야함
+                });
+            });
+
+            $('#m3 button').eq(2).on('click',()=> {
+                $('#m3 .box').fadeToggle('fast', function(){
+                    // if ($(this).css('display') =='none') {
+                    //     $(this).text('내용33')
+                    // } else {
+                    //     $(this).text('제이쿼리');
+                    // }
+
+                    // 3항 연산자
+                    // 조건 ? 참 : 거짓
+                    $(this).css('display') =='none' ? $(this).text('내용33') : $(this).text('제이쿼리');
+
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
