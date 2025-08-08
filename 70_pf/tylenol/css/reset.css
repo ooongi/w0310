@@ -29,8 +29,8 @@ html, body, h1, h2, h3, p, a, ul, li, div, section, footer {
 
 html,
 body {
-    color: #333;
-    background: #fff;
+    color: var(--text);
+    background: var(--white);
     font: 1.6rem/1.6 "Pretendard-Regular", sans-serif;
 }
 
@@ -48,9 +48,21 @@ img {
 
 a {
     text-decoration: none;
-    color: #333;
+    color: var(--text);
 }
 
 ul {
     list-style: none;
 }
+
+
+/*
+반응형
+
+기본작업은 모바일크기(화면최소화)로 작업
+
+타블렛
+@media (min-width: 768px)
+데스크탑
+@media (min-width: 1200px) 
+*/
