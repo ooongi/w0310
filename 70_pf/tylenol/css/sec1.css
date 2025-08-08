@@ -5,18 +5,27 @@
 #sec1 {
     position: relative;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
 
 #sec1 h2 {
     position: absolute;
-    left: 30%;
-    top: 50%;
     transform: translate(-50%, -50%);
     font-size: 8rem;
     color: var(--red);
     font-weight: 800;
-    letter-spacing: 2.5px;
+}
+
+#sec1 .font_1 {
+    position: absolute;
+    left: 30%;
+    top: 307px;
+}
+
+#sec1 .font_2 {
+    position: absolute;
+    right: 0;
+    top: 50%;
 }
 
 #sec1 h3 {
