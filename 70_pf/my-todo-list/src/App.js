@@ -21,6 +21,7 @@ function App() {
         }
     };
 
+    // 삭제
     const onDelete = (index) => setTasks(tasks.filter((_, i) => i !== index));
 
     return (
