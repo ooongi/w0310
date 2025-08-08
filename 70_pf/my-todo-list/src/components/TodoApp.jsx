@@ -10,7 +10,7 @@ const TodoApp = ({ tasks, onDeleted }) => {
                     <span>{task}</span>
                     <button
                     className="btn btn-danger btn-sm equal-height equal-width"
-                    onClick={()=>onDelete(index)}
+                    onClick={()=>onDeleted(index)}
                     >삭제
                     </button>
                 </li>
