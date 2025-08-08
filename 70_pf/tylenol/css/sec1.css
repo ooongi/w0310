@@ -1,0 +1,54 @@
+@charset "utf-8";
+@import url(./reset.css);
+
+/* 공통, 모바일 포함 */
+#sec1 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+#sec1 h2 {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8rem;
+    color: var(--red);
+    font-weight: 800;
+    letter-spacing: 2.5px;
+}
+
+#sec1 h3 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--red);
+}
+
+/* tablet */
+@media (min-width: 768px) {
+#sec1 h2 {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16rem;
+    color: var(--red);
+    font-weight: 800;
+    letter-spacing: 2.5px;
+}
+}
+
+/* desktop */
+@media (min-width: 1200px) {
+#sec1 h2 {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 26rem;
+    color: var(--red);
+    font-weight: 800;
+    letter-spacing: 2.5px;
+}
+}
