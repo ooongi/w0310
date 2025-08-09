@@ -33,5 +33,5 @@ const sliderTrack = document.querySelector('.sec1_slider');
 
 sliderTrack.addEventListener('wheel', (e) => {
   e.preventDefault(); // 기본 수직 스크롤 막기
-  sliderTrack.scrollLeft += e.deltaY; // 수직 휠 값을 가로 스크롤로 적용
+  sliderTrack.scrollLeft += e.deltaY *3; // 수직 휠 값을 가로 스크롤로 적용
 });

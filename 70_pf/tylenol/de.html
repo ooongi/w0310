@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>가로 관성 스크롤 테스트</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        #sec1 {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .sec1_slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* IE */
+        }
+
+        .sec1_slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Chrome/Safari/Edge */
+
+        /* 각 슬라이드(화면 한 칸) */
+        .sec1_slider>.slide {
+            flex: 0 0 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+        }
+
+        .s1 {
+            background: #c0392b;
+        }
+
+        .s2 {
+            background: #2980b9;
+        }
+
+        .s3 {
+            background: #27ae60;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="sec1">
+        <div class="sec1_slider">
+            <div class="slide s1">슬라이드 1</div>
+            <div class="slide s2">슬라이드 2</div>
+            <div class="slide s3">슬라이드 3</div>
+        </div>
+    </section>
+
+    <script>
+        const sliderTrack = document.querySelector('.sec1_slider');
+
+sliderTrack.addEventListener('wheel', (e) => {
+  e.preventDefault(); // 기본 수직 스크롤 막기
+  sliderTrack.scrollLeft += e.deltaY *3; // 수직 휠 값을 가로 스크롤로 적용
+});
+    </script>
+</body>
+
+</html>
