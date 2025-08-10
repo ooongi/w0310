@@ -1,18 +1,111 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>타이레놀</title>
-    <link rel="stylesheet" href="./css/reset.css">
+    <title>sec1</title>
+    <link rel="stylesheet" href="./css/sec1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./script/sec1.js"></script>
+    <script src="./script/header.js"></script>
+
 </head>
+
 <body>
-    <!-- header -->
-    <header id="header"></header>
-    <section id="sec1"></section>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#">
+                    <img src="./images/logo.png" alt="타이레놀 로고">
+                </a>
+            </div>
+            <div class="menu-icon" id="menuToggle">
+                <img src="./images/ham_btn.png" alt="햄버거버튼">
+            </div>
+        </div>
+    </header>
+
+    <div class="overlay" id="overlay">
+        <nav class="side-nav">
+            <div class="nav-header">
+                <div class="logo1"><a href="#"><img src="./images/logo.png" alt="타이레놀 로고"></a></div>
+                <div class="close-btn" id="closeBtn"><img src="./images/ham_btn2.png" alt="햄버거버튼"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#">제품소개</a>
+                    <ul class="sub-list">
+                        <li><a href="#">성인용 </a></li>
+                        <li><a href="#">어린이용 </a></li>
+                        <li><a href="#">제품 비교표 </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">증상별가이드</a>
+                    <ul class="sub-list">
+                        <li><a href="#">두통 </a></li>
+                        <li><a href="#">감기.독감 </a></li>
+                        <li><a href="#">몸살.근육통 </a></li>
+                        <li><a href="#">생리통 </a></li>
+                        <li><a href="#">치통.귀앓이 </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">연령별가이드</a>
+                    <ul class="sub-list">
+                        <li><a href="#">신생아 </a></li>
+                        <li><a href="#">어린이 </a></li>
+                        <li><a href="#">성인</a></li>
+                        <li><a href="#">60대 이상 </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">고객지원</a>
+                    <ul class="sub-list">
+                        <li><a href="#">FAQ </a></li>
+                        <li><a href="#">문의하기 </a></li>
+                        <li><a href="#">회사정보</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="pill">
+                <img src="./images/pill.png" alt="알약이미지">
+            </div>
+        </nav>
+    </div><!-- //.header navigation -->
+
+
+    <section id="sec1">
+        <div class="sec1_slider">
+            <div class="sec1_container_1">
+                <div>
+                    <div class="img_1"><img src="./images/main1.png" alt="타이레놀정500mg"></div>
+                    <h2 class="font_1">Quick &</h2>
+                    <h2 class="font_2">15 Min</h2>
+                    <h3 class="font_3">즉시 녹아 15분 만에 빠르게</h3>
+                    <h3 class="font_4">#타이레놀정500mg</h3>
+                </div>
+            </div>
+            <div class="sec1_container_2">
+                <div>
+                    <div class="img_1"><img src="./images/main2.png" alt="타이레놀이알서방정"></div>
+                    <h2 class="font_1">Long &</h2>
+                    <h2 class="font_2">8 Hours</h2>
+                    <h3 class="font_3">근육통에 8시간 내내</h3>
+                    <h3 class="font_4">#타이레놀이알서방정</h3>
+                </div>
+            </div>
+            <div class="sec1_container_3">
+                <div>
+                    <div class="img_1"><img src="./images/main3.png" alt="타이레놀콜드에스정"></div>
+                    <h2 class="font_1">6 Colds</h2>
+                    <h2 class="font_2">& 1 Pill</h2>
+                    <h3 class="font_3">6가지 감기 증상, 한 알로</h3>
+                    <h3 class="font_4">#타이레놀콜드에스정</h3>
+                </div>
+            </div>
+        </div>
+    </section><!-- //.sec1 -->
     <section id="sec2"></section>
-    <section id="sec3"></section>
-    <!-- footer -->
-    <footer id="footer"></footer>
+
 </body>
+
 </html>
