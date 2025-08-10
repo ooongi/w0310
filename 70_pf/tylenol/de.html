@@ -4,79 +4,159 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>가로 관성 스크롤 테스트</title>
+    <title>가로 ↔ 세로 스크롤 전환 예제</title>
     <style>
-        html,
         body {
-            height: 100%;
             margin: 0;
+            overflow-y: hidden;
+            /* 초기에는 가로 모드니까 세로 스크롤 막음 */
         }
 
-        #sec1 {
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .sec1_slider {
+        .slides {
             display: flex;
             overflow-x: auto;
-            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-            /* Firefox */
-            -ms-overflow-style: none;
-            /* IE */
+            height: 100vh;
+            scroll-behavior: smooth;
         }
 
-        .sec1_slider::-webkit-scrollbar {
+        .slides::-webkit-scrollbar {
             display: none;
         }
 
-        /* Chrome/Safari/Edge */
-
-        /* 각 슬라이드(화면 한 칸) */
-        .sec1_slider>.slide {
-            flex: 0 0 100vw;
-            height: 100vh;
+        .slide {
+            flex: 0 0 100%;
+            scroll-snap-align: start;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 48px;
+            font-size: 3rem;
             color: white;
         }
 
         .s1 {
-            background: #c0392b;
+            background: #1abc9c;
         }
 
         .s2 {
-            background: #2980b9;
+            background: #3498db;
         }
 
         .s3 {
-            background: #27ae60;
+            background: #9b59b6;
+        }
+
+        .below {
+            height: 100vh;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
         }
     </style>
 </head>
 
 <body>
-    <section id="sec1">
-        <div class="sec1_slider">
-            <div class="slide s1">슬라이드 1</div>
-            <div class="slide s2">슬라이드 2</div>
-            <div class="slide s3">슬라이드 3</div>
-        </div>
+
+    <div class="slides" id="slides">
+        <section class="slide s1">Slide 1</section>
+        <section class="slide s2">Slide 2</section>
+        <section class="slide s3">Slide 3</section>
+    </div>
+
+    <section class="below">
+        세로 콘텐츠<br>
+        위로 스크롤하면 가로 슬라이드로 복귀합니다.
     </section>
 
     <script>
-        const sliderTrack = document.querySelector('.sec1_slider');
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.getElementById('slides');
+            const slideCount = slides.children.length;
+            let currentIndex = 0;
+            let isHorizontal = true;  // 현재 모드: 가로(true) / 세로(false)
+            let scrolling = false;     // 쿨다운 플래그
 
-sliderTrack.addEventListener('wheel', (e) => {
-  e.preventDefault(); // 기본 수직 스크롤 막기
-  sliderTrack.scrollLeft += e.deltaY *3; // 수직 휠 값을 가로 스크롤로 적용
-});
+            function goToSlide(index) {
+                slides.scrollTo({
+                    left: index * window.innerWidth,
+                    behavior: 'smooth'
+                });
+            }
+
+            function startCooldown() {
+                scrolling = true;
+                setTimeout(() => scrolling = false, 700);
+            }
+
+            // 가로 모드 휠 이벤트 처리
+            function handleHorizontalWheel(e) {
+                if (scrolling) return;
+                if (Math.abs(e.deltaY) < Math.abs(e.deltaX)) return;
+
+                const direction = e.deltaY > 0 ? 1 : -1;
+
+                if (direction > 0 && currentIndex < slideCount - 1) {
+                    e.preventDefault();
+                    currentIndex++;
+                    goToSlide(currentIndex);
+                    startCooldown();
+                } else if (direction < 0 && currentIndex > 0) {
+                    e.preventDefault();
+                    currentIndex--;
+                    goToSlide(currentIndex);
+                    startCooldown();
+                } else if (currentIndex === slideCount - 1 && direction > 0) {
+                    // 마지막 슬라이드 → 세로 모드 전환
+                    e.preventDefault();
+                    isHorizontal = false;
+                    document.body.style.overflowY = 'auto';
+                    startCooldown();
+                }
+            }
+
+            // 세로 모드 휠 이벤트 처리
+            function handleVerticalWheel(e) {
+                if (scrolling) return;
+                if (window.scrollY === 0 && e.deltaY < 0) {
+                    // 세로 스크롤 최상단에서 위로 스크롤 시 가로 모드 복귀
+                    e.preventDefault();
+                    isHorizontal = true;
+                    document.body.style.overflowY = 'hidden';
+                    currentIndex = slideCount - 1; // 마지막 슬라이드부터 시작
+                    goToSlide(currentIndex);
+                    startCooldown();
+                }
+            }
+
+            // 메인 휠 이벤트 핸들러 (모드에 따라 분기)
+            window.addEventListener('wheel', (e) => {
+                if (isHorizontal) {
+                    handleHorizontalWheel(e);
+                } else {
+                    handleVerticalWheel(e);
+                }
+            }, { passive: false });
+
+            // 키보드 이벤트 (가로 모드에서만 동작)
+            document.addEventListener('keydown', (e) => {
+                if (!isHorizontal || scrolling) return;
+                if (e.key === 'ArrowRight' && currentIndex < slideCount - 1) {
+                    currentIndex++;
+                    goToSlide(currentIndex);
+                    startCooldown();
+                }
+                if (e.key === 'ArrowLeft' && currentIndex > 0) {
+                    currentIndex--;
+                    goToSlide(currentIndex);
+                    startCooldown();
+                }
+            });
+        });
     </script>
+
 </body>
 
 </html>
