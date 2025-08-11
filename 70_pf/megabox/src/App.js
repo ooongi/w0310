@@ -3,7 +3,6 @@ import "./css/App.css";
 
 // 구조분해할당
 function MovieCard({ rank, image, alt, initialLikes }) {
-    
     // useState() 정의
     const [likes, setLikes] = useState(initialLikes);
     const handleLike = () => setLikes(likes + 1);
@@ -59,9 +58,9 @@ function App() {
             <div className="boxoffice">
                 {/*
                 리스트 랜더링
-                  배열.map((element, [index], [arr])=>{});
-                  {arrays.map((array) => {return (값)})}
-                  {arrays.map((array) => 값)}
+                    배열.map((element, [index], [arr])=>{});
+                    {arrays.map((array) => {return (값)})}
+                    {arrays.map((array) => 값)}
                   */}
                 {movies.map((movie) => (
                     <MovieCard
