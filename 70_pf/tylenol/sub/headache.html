@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>두통</title>
+    <link rel="stylesheet" href="../css/sub/headache.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../script/header.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/header/logo.png" alt="타이레놀 로고">
+                </a>
+            </div>
+            <div class="menu-icon" id="menuToggle">
+                <img src="../images/header/ham_btn.png" alt="햄버거버튼">
+            </div>
+        </div>
+    </header>
+
+    <div class="overlay" id="overlay">
+        <nav class="side-nav">
+            <div class="nav-header">
+                <div class="logo1"><a href="#"><img src="../images/header/logo.png" alt="타이레놀 로고"></a></div>
+                <div class="close-btn" id="closeBtn"><img src="../images/header/ham_btn2.png" alt="햄버거버튼"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#">제품소개</a>
+                    <ul class="sub-list">
+                        <li><a href="#">성인용 </a></li>
+                        <li><a href="#">어린이용 </a></li>
+                        <li><a href="#">제품 비교표 </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">증상별가이드</a>
+                    <ul class="sub-list">
+                        <li><a href="#">두통 </a></li>
+                        <li><a href="#">감기.독감 </a></li>
+                        <li><a href="#">몸살.근육통 </a></li>
+                        <li><a href="#">생리통 </a></li>
+                        <li><a href="#">치통.귀앓이 </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">연령별가이드</a>
+                    <ul class="sub-list">
+                        <li><a href="#">신생아 </a></li>
+                        <li><a href="#">어린이 </a></li>
+                        <li><a href="#">성인</a></li>
+                        <li><a href="#">60대 이상 </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">고객지원</a>
+                    <ul class="sub-list">
+                        <li><a href="#">FAQ </a></li>
+                        <li><a href="#">문의하기 </a></li>
+                        <li><a href="#">회사정보</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="pill">
+                <img src="../images/header/pill.png" alt="알약이미지">
+            </div>
+        </nav>
+    </div><!-- //.header navigation -->
+
+    <section id="sub">
+        <div class="sub_container">
+            <div class="sub_box">
+                <div class="sub_title">
+                    <h2>증상별 가이드</h2>
+                </div>
+                <div class="sub_menu">
+                    <ul>
+                        <li><a href="#">두통</a></li>
+                        <li><a href="#">감기 · 독감</a></li>
+                        <li><a href="#">몸살 · 근육통</a></li>
+                        <li><a href="#">우먼스케어</a></li>
+                        <li><a href="#">열 · 귀앓이</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="guide_box">
+                <div class="guide_title">
+                    <h3>두통</h3>
+                </div>
+                <div class="tab_section">
+                    <div class="tabs">
+                        <button class="tab_button active" data-target="whatHeadache">두통의 원인</button>
+                        <button class="tab_button" data-target="authors">두통 완화법</button>
+                    </div>
+                    <div id="whatHeadache" class="tab-content active">
+                        <div class="guide_left">
+                            <p class="guide_left_1">두통의 원인</p>
+                            <p class="guide_left_2">두통을 유발하는<br>
+                                가장 흔한 요인<br>
+                                10가지</p>
+                            <p class="guide_left_3">두통을 예방하는 가장 효과적인 방법은 두통 유발 요인을 찾아내는 것입니다. 두통 일지를 만들어 두통 발생 몇 시간 전에 어떤 일이 있었는지 적어두세요.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab_section">
+                    <div class="tabs">
+                        <button class="tab_button active" data-target="whatHeadache">두통의 원인</button>
+                        <button class="tab_button" data-target="headSolution">두통 완화법</button>
+                    </div>
+                    <div id="headSolution" class="tab-content active">
+                        <!-- 두통완화법 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
