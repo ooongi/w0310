@@ -45,3 +45,9 @@ footer a {
     background: url(../images/sec1_1.jpg) no-repeat 50% 50% / cover fixed;
 }
 
+.parallax_bg{
+    background: url(../images/10012.jpg) no-repeat 50% 50% / cover fixed;
+    height: 30vh;
+
+}
+

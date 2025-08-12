@@ -8,8 +8,7 @@
     --menuText: #555;
     --text: #333;
     --white: #fff;
-    --red: #E31837;
-
+    --red: #e31837;
 }
 
 button {
@@ -57,7 +56,7 @@ body {
     justify-content: center;
 }
 
-.sub_menu li>a {
+.sub_menu li > a {
     display: block;
     padding: 8px 8px;
     align-items: center;
@@ -69,12 +68,10 @@ body {
     transition: 0.1s ease;
 }
 
-.sub_menu li>a:hover {
+.sub_menu li > a:hover {
     background: var(--red);
     color: var(--white);
 }
-
-
 
 /* 본문 */
 .guide_box {
@@ -85,7 +82,7 @@ body {
 }
 
 .guide_title {
-    padding-top: 20px;
+    padding-top: 100px;
     padding-bottom: 40px;
 }
 
@@ -99,7 +96,7 @@ body {
     justify-content: center;
 }
 
-.tabs button {
+.tabs a {
     background: var(--contentsGray);
     color: var(--menuText);
     padding: 15px 33px;
@@ -107,32 +104,32 @@ body {
     width: 100%;
     font-size: 1.3rem;
     font-weight: bold;
+    text-align: center;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    transition: 0.1s ease;
+}
+
+.tabs a:hover {
+    background: var(--red);
+    color: var(--white);
 }
 
 .tab_section {
     margin-bottom: 80px;
 }
 
-.tab-button.active {
-    background: var(---red);
+.tab_button.active {
+    background: var(--red);
     color: var(--white);
-    font-weight: bold;
 }
 
 .tab-content {
     background: var(--contentsGray);
-    display: none;
     padding: 20px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-
-.tab-content.active {
-    display: block;
-}
-
 
 .guide_layout {
     display: flex;
@@ -140,7 +137,6 @@ body {
 }
 
 /* guide_left */
-
 .guide_left_1 {
     font-size: 1.6rem;
     font-weight: bold;
@@ -189,11 +185,10 @@ body {
     justify-content: center;
     align-items: center;
     gap: 5px;
-    border-radius: 18px;
+    border-radius: 30px;
     background: var(--red);
     color: var(--white);
     font-weight: bold;
-
 }
 
 .right_box_2 {
@@ -207,7 +202,7 @@ body {
         font-weight: bold;
     }
 
-    .sub_menu li>a {
+    .sub_menu li > a {
         display: block;
         padding: 16px 36px;
         align-items: center;
@@ -218,12 +213,16 @@ body {
         border-radius: 30px;
     }
 
-    .tab_section {
-            margin-bottom: 140px;
-
+    .guide_title h3 {
+        font-size: 3rem;
     }
 
-    .tabs button {
+    .tab_section {
+        margin-bottom: 140px;
+    }
+
+    .tabs a {
+        font-size: 1.6rem;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
     }
@@ -232,7 +231,6 @@ body {
         padding: 50px;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
-
     }
 
     .guide_left_1 {
@@ -278,9 +276,8 @@ body {
 
 /* desktop */
 @media (min-width: 1200px) {
-
     .sub_container {
-        padding: 0 160px;
+        padding: 110px 160px;
     }
 
     .sub_title h2 {
@@ -288,7 +285,7 @@ body {
         font-weight: bold;
     }
 
-    .sub_menu li>a {
+    .sub_menu li > a {
         display: block;
         padding: 16px 36px;
         align-items: center;
@@ -297,6 +294,10 @@ body {
         font-size: 1.8rem;
         font-weight: 700;
         border-radius: 30px;
+    }
+
+    .guide_title h3 {
+        font-size: 5rem;
     }
 
     .guide_layout {
@@ -327,5 +328,9 @@ body {
         /* 가로 4칸 고정 */
         grid-template-rows: repeat(2, auto);
         /* 세로 2줄 고정 */
+    }
+
+    .tabs a {
+        font-size: 2.2rem;
     }
 }
