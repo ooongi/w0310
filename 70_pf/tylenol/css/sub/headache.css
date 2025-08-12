@@ -54,6 +54,7 @@ body {
     display: flex;
     gap: 10px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .sub_menu li > a {
@@ -66,6 +67,8 @@ body {
     font-weight: 700;
     border-radius: 30px;
     transition: 0.1s ease;
+    flex: 1 1 20%; /* 기본 너비 20%, 늘어나거나 줄어들 수 있음 */
+    min-width: 100px; /* 너무 작아지지 않도록 */
 }
 
 .sub_menu li > a:hover {
@@ -137,6 +140,39 @@ body {
 }
 
 /* guide_left */
+.guide_left {
+    display: grid;
+}
+
+.guide_left > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "c1 c2"
+        "g3 g3";
+    justify-content: space-between;
+}
+
+.left_container_1 {
+    grid-area: c1;
+}
+
+.left_container_2 {
+    align-content: end;
+    text-align: end;
+    grid-area: c2;
+}
+
+.guide_left_3 {
+    grid-area: g3;
+}
+
+/* .guide_left > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+} */
+
 .guide_left_1 {
     font-size: 1.6rem;
     font-weight: bold;
@@ -155,14 +191,22 @@ body {
     margin-bottom: 30px;
 }
 
+.left_container_2 a {
+    display: inline-block;
+    padding: 8px 16px;
+    background: var(--red);
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
 /* guide_right */
 .right_container {
     display: grid;
     row-gap: 10px;
     column-gap: 10px;
     flex-shrink: 0;
-    grid-template-rows: repeat(5, minmax(0, 1fr));
-    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .right_box {
@@ -193,6 +237,21 @@ body {
 
 .right_box_2 {
     color: var(--menuText);
+}
+
+/* 컨텐츠마다 그리드 조절 */
+/* 두통 원인 */
+.right_container.what_headache {
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* 두통 완화법 */
+.right_container.head_soultion {
+    display: grid;
+    row-gap: 10px;
+    column-gap: 10px;
+    flex-shrink: 0;
 }
 
 /* tablet */
@@ -233,6 +292,20 @@ body {
         border-bottom-right-radius: 20px;
     }
 
+    .guide_left > div {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "c1"
+            "g3"
+            "c2";
+    }
+
+    .left_container_2 {
+        text-align: start;
+        grid-area: c2;
+    }
+
     .guide_left_1 {
         font-size: 2rem;
         font-weight: bold;
@@ -249,6 +322,8 @@ body {
         font-size: 2.2rem;
         margin-top: 20px;
         margin-bottom: 30px;
+        align-items: start;
+        height: auto;
     }
 
     .right_box_1 {
@@ -266,7 +341,7 @@ body {
         /* 좌측 폭 30% 고정 */
     }
 
-    .right_container {
+    .right_container.what_headache {
         flex: 1;
         /* 우측 나머지 폭 */
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -275,7 +350,7 @@ body {
 }
 
 /* desktop */
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
     .sub_container {
         padding: 110px 160px;
     }
@@ -323,11 +398,20 @@ body {
         margin-bottom: 30px;
     }
 
-    .right_container {
+    .right_container.what_headache {
         grid-template-columns: repeat(4, 1fr);
         /* 가로 4칸 고정 */
         grid-template-rows: repeat(2, auto);
         /* 세로 2줄 고정 */
+        padding-top: 80px;
+    }
+
+    .right_container.head_soultion {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .wide {
+        grid-column: span 3; /* 가로 3칸 전체 차지 */
     }
 
     .tabs a {
