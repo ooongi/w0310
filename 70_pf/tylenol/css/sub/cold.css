@@ -250,7 +250,7 @@ body {
 
 /* 컨텐츠마다 그리드 조절 */
 /* 두통 원인 */
-.right_container.what_headache {
+.right_container.cold_4 {
     grid-template-rows: repeat(5, minmax(0, 1fr));
     grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -350,7 +350,7 @@ body {
         /* 좌측 폭 30% 고정 */
     }
 
-    .right_container.what_headache {
+    .right_container.cold_4 {
         flex: 1;
         /* 우측 나머지 폭 */
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -411,7 +411,7 @@ body {
         padding-top: 80px;
     }
 
-    .right_container.what_headache {
+    .right_container.cold_4 {
         grid-template-columns: repeat(4, 1fr);
         /* 가로 4칸 고정 */
         grid-template-rows: repeat(2, auto);

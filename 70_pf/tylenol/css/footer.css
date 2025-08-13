@@ -1,0 +1,96 @@
+@charset "utf-8";
+@import url(./reset.css);
+
+/* 푸터 섹션 스타일 */
+
+.footer-section {
+    width: 100vw;
+    display: flex;
+}
+
+footer {
+    width: 100%;
+    height: 100%;
+    /* ★ 중요: 부모 .footer-section의 높이를 100% 채움 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: var(--gray); */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer_menu_line {
+    border-top: 1px solid #d8cece;
+}
+
+.footer_menu {
+    display: flex;
+    gap: 10px;
+    padding: 20px 50px;
+    font-weight: 700;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 50px;
+    width: 100%;
+    align-items: center;
+}
+
+.logo2 {
+    padding: 20px 0;
+}
+
+.logo2 img {
+    width: 160px;
+}
+
+.info p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+.write {
+    flex-grow: 1;
+}
+
+.icon {
+    display: flex;
+    font-size: 3rem;
+    margin-top: 20px;
+}
+
+.icon a {
+    color: #868e96;
+    margin-right: 20px;
+}
+
+@media (min-width: 768px) {
+    .logo2 {
+        margin-bottom: 50px;
+    }
+
+    .write {
+        margin: 0 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    /* 회색선만 100vw, 나머진 좌우간격 160px */
+    .footer_menu {
+        padding: 20px 160px;
+    }
+
+    .info {
+        padding: 30px 160px;
+    }
+
+    /* 
+        // 회색선이 footer 간격과 함께 줄어듦
+        .footer-section {
+        padding: 0 160px;
+    } */
+}

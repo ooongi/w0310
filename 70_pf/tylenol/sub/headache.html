@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../script/header.js"></script>
-    <script src="../script/sub_guide.js"></script>
 </head>
 
 <body>
@@ -25,7 +24,6 @@
             </div>
         </div>
     </header>
-
     <div class="overlay" id="overlay">
         <nav class="side-nav">
             <div class="nav-header">
@@ -71,157 +69,188 @@
         </nav>
     </div><!-- //.header navigation -->
 
-    <section id="sub">
-        <div class="sub_container">
-            <div class="sub_box">
-                <div class="sub_title">
-                    <h2>증상별 가이드</h2>
-                </div>
-                <div class="sub_menu">
-                    <ul>
-                        <li><a href="./headache.html">두통</a></li>
-                        <li><a href="./cold.html">감기 · 독감</a></li>
-                        <li><a href="./myalgia.html">몸살 · 근육통</a></li>
-                        <li><a href="./cramps.html">우먼스케어</a></li>
-                        <li><a href="./heat.html">열 · 귀앓이</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="guide_box">
-                <div class="guide_title">
-                    <h3>두통</h3>
-                </div>
-                <div id="whatHeadache" class="tab_section">
-                    <div class="tabs">
-                        <a href="#whatHeadache" class="tab_button active">두통의 원인</a>
-                        <a href="#headSolution" class="tab_button">두통 완화법</a>
+    <div class="sub_body">
+        <section id="sub">
+            <div class="sub_container">
+                <div class="sub_box">
+                    <div class="sub_title">
+                        <h2>증상별 가이드</h2>
                     </div>
-                    <div class="tab-content">
-                        <div class="guide_layout">
-                            <div class="guide_left">
-                                <div>
-                                    <div class="left_container_1">
-                                        <p class="guide_left_1">두통의 원인</p>
-                                        <p class="guide_left_2">두통을 유발하는<br>
-                                            가장 흔한 요인<br>
-                                            10가지</p>
+                    <div class="sub_menu">
+                        <ul>
+                            <li><a href="./headache.html">두통</a></li>
+                            <li><a href="./cold.html">감기 · 독감</a></li>
+                            <li><a href="./myalgia.html">몸살 · 근육통</a></li>
+                            <li><a href="./cramps.html">우먼스케어</a></li>
+                            <li><a href="./heat.html">열 · 귀앓이</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="guide_box">
+                    <div class="guide_title">
+                        <h3>두통</h3>
+                    </div>
+                    <div id="whatHeadache" class="tab_section">
+                        <div class="tabs">
+                            <a href="#whatHeadache" class="tab_button active">두통의 원인</a>
+                            <a href="#headSolution" class="tab_button">두통 완화법</a>
+                        </div>
+                        <div class="tab-content">
+                            <div class="guide_layout">
+                                <div class="guide_left">
+                                    <div>
+                                        <div class="left_container_1">
+                                            <p class="guide_left_1">두통의 원인</p>
+                                            <p class="guide_left_2">두통을 유발하는<br>
+                                                가장 흔한 요인<br>
+                                                10가지</p>
+                                        </div>
+                                        <div class="left_container_2">
+                                            <a href="#">제품 보러가기 <i class="fa-solid fa-arrow-right"></i></a>
+                                        </div>
+                                        <p class="guide_left_3">두통을 예방하는 가장 효과적인 방법은 두통 유발 요인을 찾아내는 것입니다. 두통 일지를 만들어 두통 발생 몇
+                                            시간
+                                            전에
+                                            어떤 일이 있었는지 적어두세요.</p>
                                     </div>
-                                    <div class="left_container_2">
-                                        <a href="#">제품 보러가기 <i class="fa-solid fa-arrow-right"></i></a>
-                                    </div>
-                                    <p class="guide_left_3">두통을 예방하는 가장 효과적인 방법은 두통 유발 요인을 찾아내는 것입니다. 두통 일지를 만들어 두통 발생 몇
-                                        시간
-                                        전에
-                                        어떤 일이 있었는지 적어두세요.</p>
                                 </div>
-                            </div>
-                            <div class="guide_right">
-                                <div class="right_container what_headache">
-                                    <div class="right_box">
-                                        <p class="right_box_1">신체활동</p>
-                                        <p class="right_box_2">무리한 운동은 삼가세요.
-                                            격렬한 운동은 머리, 목, 두피의 혈관을 부풀게 해 운동성 두통을 유발할 수 있습니다.</p>
+                                <div class="guide_right">
+                                    <div class="right_container what_headache">
+                                        <div class="right_box">
+                                            <p class="right_box_1">신체활동</p>
+                                            <p class="right_box_2">무리한 운동은 삼가세요.
+                                                격렬한 운동은 머리, 목, 두피의 혈관을 부풀게 해 운동성 두통을 유발할 수 있습니다.</p>
+                                        </div>
+                                        <div class="right_box">
+                                            <p class="right_box_1">운동부족</p>
+                                            <p class="right_box_2">지나치게 정적인 생활 습관도 두통을 유발할 수 있습니다. 운동 요법을 시작하거나 변경하기 전에 의사와
+                                                먼저 상의하세요.</p>
+                                        </div>
+                                        <div class="right_box">
+                                            <p class="right_box_1">자세</p>
+                                            <p class="right_box_2">바르게 앉은 자세는 혈액순환에 도움이 됩니다. 또한 책상에 오래 앉아 있었다면 가볍게 걸어 다니는 것이
+                                                좋습니다.</p>
+                                        </div>
+                                        <div class="right_box">
+                                            <p class="right_box_1">호르몬</p>
+                                            <p class="right_box_2">에스트로젠 수치가 떨어지면(특히 월경 직전) 두통이 발생할 확률이 높아집니다. 월경 주기를 기억해 미리
+                                                대비하세요.</p>
+                                        </div>
+                                        <div class="right_box">
+                                            <p class="right_box_1">음식</p>
+                                            <p class="right_box_2">특정 음식은 두통을 유발할 수 있는 신경 전달 물질을 분비합니다. 이러한 식품에는 아스파탐, 카페인,
+                                                초콜릿, 알코올, 치즈 등이 있습니다.</p>
+                                        </div>
+                                        <div class="right_box">
+                                            <p class="right_box_1">의약품</p>
+                                            <p class="right_box_2">일부 처방약은 두통을 유발할 가능성이 있습니다. 두통이 심해지는 느낌이 든다면 의사와 상의하세요.
+                                            </p>
+                                        </div>
+                                        <div class="right_box">
+                                            <p class="right_box_1">수면습관</p>
+                                            <p class="right_box_2">적당한 수준으로 충분한 수면을 취하세요. 또한 추운 장소에서 바르지 않은 자세로 잠들면 근육 경련을
+                                                유발할 수 있습니다.</p>
+                                        </div>
+                                        <div class="right_box">
+                                            <p class="right_box_1">소음</p>
+                                            <p class="right_box_2">시끄럽고 반복적인 소음 뿐만 아니라 낮고 지속적인 소음 또한 두통을 유발할 수 있습니다.</p>
+                                        </div>
+                                        <div class="right_box">
+                                            <p class="right_box_1">빛</p>
+                                            <p class="right_box_2">컴퓨터, 태양, 실내조명 등이 발산하는 강렬한 빛은 두통을 유발할 수 있습니다. 조도를 낮추고 탁상용
+                                                스탠드를 추가로 사용해보세요.</p>
+                                        </div>
+                                        <div class="right_box">
+                                            <p class="right_box_1">근심</p>
+                                            <p class="right_box_2">스트레스는 신체에 큰 부담으로 다가옵니다. 심호흡과 휴식, 가벼운 산책을 해보세요.</p>
+                                        </div>
+                                    </div><!-- //.right_container -->
+                                </div><!-- //.guide_right -->
+                            </div><!-- //.guide_layout -->
+                        </div><!-- //.tab-content -->
+                    </div><!-- //.tab_section -->
+                    <div id="headSolution" class="tab_section">
+                        <div class="tabs">
+                            <a href="#whatHeadache" class="tab_button">두통의 원인</a>
+                            <a href="#headSolution" class="tab_button active">두통 완화법</a>
+                        </div>
+                        <div class="tab-content">
+                            <div class="guide_layout">
+                                <div class="guide_left">
+                                    <div>
+                                        <div class="left_container_1">
+                                            <p class="guide_left_1">두통 완화법</p>
+                                            <p class="guide_left_2">두통을 완화하는<br>
+                                                일상 속 작은 습관</p>
+                                        </div>
+                                        <div class="left_container_2">
+                                            <a href="#">제품 보러가기 <i class="fa-solid fa-arrow-right"></i></a>
+                                        </div>
+                                        <p class="guide_left_3">잘 먹고 잘 쉬는것만으로 두통을 줄일 수 있습니다.</p>
                                     </div>
-                                    <div class="right_box">
-                                        <p class="right_box_1">운동부족</p>
-                                        <p class="right_box_2">지나치게 정적인 생활 습관도 두통을 유발할 수 있습니다. 운동 요법을 시작하거나 변경하기 전에 의사와
-                                            먼저 상의하세요.</p>
-                                    </div>
-                                    <div class="right_box">
-                                        <p class="right_box_1">자세</p>
-                                        <p class="right_box_2">바르게 앉은 자세는 혈액순환에 도움이 됩니다. 또한 책상에 오래 앉아 있었다면 가볍게 걸어 다니는 것이
-                                            좋습니다.</p>
-                                    </div>
-                                    <div class="right_box">
-                                        <p class="right_box_1">호르몬</p>
-                                        <p class="right_box_2">에스트로젠 수치가 떨어지면(특히 월경 직전) 두통이 발생할 확률이 높아집니다. 월경 주기를 기억해 미리
-                                            대비하세요.</p>
-                                    </div>
-                                    <div class="right_box">
-                                        <p class="right_box_1">음식</p>
-                                        <p class="right_box_2">특정 음식은 두통을 유발할 수 있는 신경 전달 물질을 분비합니다. 이러한 식품에는 아스파탐, 카페인,
-                                            초콜릿, 알코올, 치즈 등이 있습니다.</p>
-                                    </div>
-                                    <div class="right_box">
-                                        <p class="right_box_1">의약품</p>
-                                        <p class="right_box_2">일부 처방약은 두통을 유발할 가능성이 있습니다. 두통이 심해지는 느낌이 든다면 의사와 상의하세요.
-                                        </p>
-                                    </div>
-                                    <div class="right_box">
-                                        <p class="right_box_1">수면습관</p>
-                                        <p class="right_box_2">적당한 수준으로 충분한 수면을 취하세요. 또한 추운 장소에서 바르지 않은 자세로 잠들면 근육 경련을
-                                            유발할 수 있습니다.</p>
-                                    </div>
-                                    <div class="right_box">
-                                        <p class="right_box_1">소음</p>
-                                        <p class="right_box_2">시끄럽고 반복적인 소음 뿐만 아니라 낮고 지속적인 소음 또한 두통을 유발할 수 있습니다.</p>
-                                    </div>
-                                    <div class="right_box">
-                                        <p class="right_box_1">빛</p>
-                                        <p class="right_box_2">컴퓨터, 태양, 실내조명 등이 발산하는 강렬한 빛은 두통을 유발할 수 있습니다. 조도를 낮추고 탁상용
-                                            스탠드를 추가로 사용해보세요.</p>
-                                    </div>
-                                    <div class="right_box">
-                                        <p class="right_box_1">근심</p>
-                                        <p class="right_box_2">스트레스는 신체에 큰 부담으로 다가옵니다. 심호흡과 휴식, 가벼운 산책을 해보세요.</p>
-                                    </div>
-                                </div><!-- //.right_container -->
-                            </div><!-- //.guide_right -->
-                        </div><!-- //.guide_layout -->
-                    </div><!-- //.tab-content -->
-                </div>
-                <div id="headSolution" class="tab_section">
-                    <div class="tabs">
-                        <a href="#whatHeadache" class="tab_button">두통의 원인</a>
-                        <a href="#headSolution" class="tab_button active">두통 완화법</a>
-                    </div>
-                    <div class="tab-content">
-                        <div class="guide_layout">
-                            <div class="guide_left">
-                                <div>
-                                    <div class="left_container_1">
-                                        <p class="guide_left_1">두통 완화법</p>
-                                        <p class="guide_left_2">두통을 완화하는<br>
-                                            일상 속 작은 습관</p>
-                                    </div>
-                                    <div class="left_container_2">
-                                        <a href="#">제품 보러가기 <i class="fa-solid fa-arrow-right"></i></a>
-                                    </div>
-                                    <p class="guide_left_3">잘 먹고 잘 쉬는것만으로 두통을 줄일 수 있습니다.</p>
                                 </div>
-                            </div>
-                            <div class="guide_right">
-                                <div class="right_container head_solution">
-                                    <div class="right_box">
-                                        <p class="right_box_1">근육 이완</p>
-                                        <p class="right_box_2">뜨거운 물로 목욕이나 샤워를 하면 근육을 이완시켜 통증을 덜 수 있습니다.</p>
-                                    </div>
-                                    <div class="right_box">
-                                        <p class="right_box_1">산책</p>
-                                        <p class="right_box_2">잠시 일을 멈추고 신선한 공기를 마시면 두통완화에 도움이 됩니다.</p>
-                                    </div>
-                                    <div class="right_box">
-                                        <p class="right_box_1">호흡</p>
-                                        <p class="right_box_2">배 위에 손을 얹고 배가 위아래로 부푸는 것을 느끼며 호흡하는 동작을 반복해보세요.</p>
-                                    </div>
-                                    <div class="right_box wide">
-                                        <p class="right_box_1">두통 예방을 위한 마사지 방법</p>
-                                        <p class="right_box_2">① 두피에 손가락을 얹고 손가락으로 작은 원을 그리며 이마에서부터 머리 뒤까지 전체를
-                                            마사지합니다.<br>
-                                            ② 손가락에 힘을 주어 누르면서 머리를 뒤쪽으로 기울입니다. 그 상태에서 머리와 목이 연결되는 뒷목 부위에 작은 원을 그리면서
-                                            마사지합니다.<br>
-                                            ③ 오른손을 왼쪽 어깨 위에 올립니다. 손가락에 힘을 주어 근육을 누르면서 작은 원을 그립니다. 반대쪽도 동일한 동작을
-                                            반복합니다.<br>
-                                            ④ 머리를 살짝 오른쪽으로 기울입니다. 그 상태에서 몇 번 호흡합니다. 반대쪽도 동일한 동작을 반복합니다.</p>
-                                    </div>
-                                </div><!-- //.right_container -->
-                            </div><!-- //.guide_right -->
-                        </div><!-- //.guide_layout -->
+                                <div class="guide_right">
+                                    <div class="right_container head_solution">
+                                        <div class="right_box">
+                                            <p class="right_box_1">근육 이완</p>
+                                            <p class="right_box_2">뜨거운 물로 목욕이나 샤워를 하면 근육을 이완시켜 통증을 덜 수 있습니다.</p>
+                                        </div>
+                                        <div class="right_box">
+                                            <p class="right_box_1">산책</p>
+                                            <p class="right_box_2">잠시 일을 멈추고 신선한 공기를 마시면 두통완화에 도움이 됩니다.</p>
+                                        </div>
+                                        <div class="right_box">
+                                            <p class="right_box_1">호흡</p>
+                                            <p class="right_box_2">배 위에 손을 얹고 배가 위아래로 부푸는 것을 느끼며 호흡하는 동작을 반복해보세요.</p>
+                                        </div>
+                                        <div class="right_box wide">
+                                            <p class="right_box_1">두통 예방을 위한 마사지 방법</p>
+                                            <p class="right_box_2">① 두피에 손가락을 얹고 손가락으로 작은 원을 그리며 이마에서부터 머리 뒤까지 전체를
+                                                마사지합니다.<br>
+                                                ② 손가락에 힘을 주어 누르면서 머리를 뒤쪽으로 기울입니다. 그 상태에서 머리와 목이 연결되는 뒷목 부위에 작은 원을 그리면서
+                                                마사지합니다.<br>
+                                                ③ 오른손을 왼쪽 어깨 위에 올립니다. 손가락에 힘을 주어 근육을 누르면서 작은 원을 그립니다. 반대쪽도 동일한 동작을
+                                                반복합니다.<br>
+                                                ④ 머리를 살짝 오른쪽으로 기울입니다. 그 상태에서 몇 번 호흡합니다. 반대쪽도 동일한 동작을 반복합니다.</p>
+                                        </div>
+                                    </div><!-- //.right_container -->
+                                </div><!-- //.guide_right -->
+                            </div><!-- //.guide_layout -->
+                        </div><!-- //.tab_content -->
+                    </div><!-- //.tab_section -->
+                </div><!-- //.guide_box -->
+            </div><!-- //.sub_container -->
+        </section><!-- #sub -->
+        <section id="footer" class="footer-section slide-section">
+            <footer>
+                <div class="footer_menu">
+                    <a href="#">법적고지</a>
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">공지사항</a>
+                </div>
+                <div class="footer_menu_line"></div>
+                <div class="info">
+                    <div class="logo2">
+                        <a href="#"><img src="../images/header/logo.png" alt="하단로고"></a>
+                    </div>
+                    <div class="write">
+                        <p>한국존슨앤드존슨판매(유) | 서울특별시 용산구 한강대로 92 LS용산타워 27층 | 대표이사 : 백준혁 | 대표전화 : 080-791-1414 (수신자부담) <br>광고심의필
+                            :
+                            (PC) 2024-1718-003300 (MO) 2025-1752-000200</p>
+                        <p>이 사이트는 대한민국 사용자만을 위해 한국존슨앤드존슨판매(유)에서 제작하였으며, 내용상 모든 책임은 한국존슨앤드존슨판매(유)에 있습니다. <br>본 홈페이지상의 건강정보는
+                            교육적인
+                            목적으로 제공되며, 의사와의 상담을 대신하지 않습니다.</p>
+                        <p>Copyright© 2023 Kenvue Inc. All rights reserved.</p>
+                    </div>
+                    <div class="icon">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </footer>
+        </section>
+    </div>
 </body>
 
 </html>
