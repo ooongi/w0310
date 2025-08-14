@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            display: grid;
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 50px 150px 50px;
+        }
+
+        .wrap>div {
+            margin: 1px;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .grid1 {
+            background: cadetblue;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .grid2 {
+            background: darkcyan;
+            grid-column-start: 1;
+            grid-column-end: 2;
+
+
+        }
+
+        .grid3 {
+            background: darkgreen;
+            grid-column-start: 2;
+            grid-column-end: 3;
+
+        }
+
+        .grid4 {
+            background: darkolivegreen;
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="grid1">header</div>
+        <div class="grid2">sidemenu</div>
+        <div class="grid3">content</div>
+        <div class="grid4">footer</div>
+    </div>
+</body>
+
+</html>

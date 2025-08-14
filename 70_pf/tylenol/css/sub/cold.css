@@ -110,7 +110,7 @@ body {
 .tabs a {
     background: var(--contentsGray);
     color: var(--menuText);
-    padding: 15px 33px;
+    padding: 10px 10px;
     cursor: pointer;
     width: 100%;
     font-size: 1.3rem;
@@ -231,6 +231,60 @@ body {
     border-radius: 25px;
     border: 2px solid var(--gray);
     background: var(--white);
+}
+
+/* cold_table 감기와 독감 테이블 css 속성 */
+.cold_table thead {
+    display: none;
+}
+
+.cold_table tr {
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* 첫 번째 열 숨김 */
+.cold_table td:first-child {
+    display: none;
+}
+
+/* 카드 제목 표시 */
+.cold_table tr::before {
+    display: inline-block;
+    content: attr(data-title);
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 30px;
+    background: var(--red);
+    color: var(--white);
+    font-weight: bold;
+}
+
+.cold_table td {
+    display: block;
+    text-align: left;
+    border: none;
+    padding: 0 4px;
+    margin-top: 8px;
+    word-break: break-word;
+}
+
+.cold_table td:last-child {
+    border-bottom: none;
+}
+
+/* 각 셀의 라벨 표시 */
+.cold_table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 3px;
 }
 
 .right_box_1 {
@@ -411,6 +465,66 @@ body {
         padding-top: 80px;
     }
 
+    /* cold_table 감기와 독감 테이블 css 속성 */
+    .right_box.table {
+        display: flex;
+        padding: 0;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 25px;
+        border: transparent;
+        background: var(--white);
+    }
+
+    .cold_table {
+        border-collapse: collapse;
+        table-layout: fixed; /* 고정 레이아웃 */
+    }
+
+    .cold_table thead {
+        display: table-header-group;
+        font-size: 1.6rem;
+    }
+
+    .cold_table tr {
+        display: table-row;
+        border: none;
+        border-radius: 0;
+        background: none;
+        padding: 0;
+    }
+
+    /* 카드 제목 표시 */
+    .cold_table tr::before {
+        display: inline-block;
+        content: atr(data-title);
+        font-size: 1.4rem;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+    }
+
+    .cold_table td,
+    .cold_table th {
+        display: table-cell;
+        border: 3px solid var(--contentsGray);
+    }
+
+    .cold_table td:not(:first-child) {
+        padding: 24px 45px;
+    }
+
+    .cold_table td:first-child {
+        display: table-cell;
+        text-align: center;
+        padding: 20px 80px;
+        white-space: nowrap; /* 줄바꿈 방지 */
+    }
+    .cold_table tr::before,
+    .cold_table td::before {
+        content: none !important; /* 카드형 전용 요소 제거 */
+    }
+
     .right_container.cold_4 {
         grid-template-columns: repeat(4, 1fr);
         /* 가로 4칸 고정 */
@@ -418,12 +532,12 @@ body {
         /* 세로 2줄 고정 */
     }
 
-    .right_container.head_soultion {
-        grid-template-columns: repeat(3, 1fr);
+    .right_container.grid2_2 {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .wide {
-        grid-column: span 3; /* 가로 3칸 전체 차지 */
+        grid-column: span 2; /* 가로 3칸 전체 차지 */
     }
 
     .tabs a {

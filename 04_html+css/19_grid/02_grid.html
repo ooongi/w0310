@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            display: grid;
+            /* grid-template-columns: 30% 70%; */
+            grid-template-rows: 100px 100px 100px;
+        }
+
+        .wrap>div {
+            margin: 1px;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .grid1 {
+            background: cadetblue;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .grid2 {
+            background: darkcyan;
+            grid-column-start: 3;
+            grid-column-end: 4;
+
+
+        }
+
+        .grid3 {
+            background: darkgreen;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 4;
+
+        }
+
+        .grid4 {
+            background: darkolivegreen;
+            grid-column-start: 2;
+            grid-column-end: 4;
+
+        }
+
+        .grid5 {
+            background: darkkhaki;
+            grid-column-start: 2;
+            grid-column-end: 3;
+
+        }
+
+        .grid6 {
+            background: dimgrey;
+            grid-column-start: 3;
+            grid-column-end: 4;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="grid1">1</div>
+        <div class="grid2">2</div>
+        <div class="grid3">3</div>
+        <div class="grid4">4</div>
+        <div class="grid5">5</div>
+        <div class="grid6">6</div>
+    </div>
+</body>
+
+</html>
