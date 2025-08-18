@@ -1,0 +1,70 @@
+
+/* bookinfo */
+.bookinfo {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 300px;
+    width: calc(100% - 600px);
+}
+
+.infobox {
+    width: 300px;
+    height: 300px;
+    margin: 100px auto;
+    border: 3px solid var(--text);
+    text-align: center;
+}
+
+.infobox_1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.infobox_2 {
+    border: 1px solid var(--text);
+    transform: rotate(90deg);
+    width: 40px;
+    margin: 50px auto;
+}
+
+/* book section */
+.bookbox {
+    margin: 0 auto;
+    width: 1170px;
+}
+
+.bookbox-container {
+    column-count: 4;
+    column-gap: 10px;
+}
+
+.book-card {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* book hover overlay */
+.overlay {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 400px;
+    color: var(--white);
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+.book-card:hover .overlay {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
