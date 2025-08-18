@@ -1,0 +1,89 @@
+/* common */
+/* typo system */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+/* reset */
+
+/* color, font size*/
+:root {
+    /* font */
+    font-size: 10px;
+    /* color */
+    --text: #333;
+    --white: #fff;
+    --black: #000;
+    --green: #3BAB3D;
+    --light: #F8F9FA;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+a,
+ul,
+li,
+div,
+section,
+footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    color: var(--text);
+    background: var(--white);
+    font: 1.6rem/1.6 "Pretendard Variable", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+ul {
+    list-style: none;
+}
+
+
+@media (min-width: 768px) {
+    :root {
+        padding: 0 100px;
+    }
+}
+
+@media (min-width: 1300px) {
+    :root {
+        padding: 0 200px;
+    }
+}
+/*
+반응형
+
+기본작업은 모바일크기(화면최소화)로 작업
+
+타블렛
+@media (min-width: 768px)
+데스크탑
+@media (min-width: 1200px) 
+*/
+

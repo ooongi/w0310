@@ -1,7 +1,9 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import MainPage from "./pages/MainPage";
-import SubPage from "./pages/SubPage";
+import SubPage from "./pages/Abouts";
+import MainPage from "./pages/PortFolio";
+import Title from "./pages/Title";
 import "./css/Nav.css";
+import "./css/Reset.css";
 import logoImg from "./images/logo.png";
 
 function App() {
@@ -16,23 +18,18 @@ function App() {
                         <div>
                             <ul className="nav-sub">
                                 <li>
-                                    <Link to="/">
-                                        허블 소개
+                                    <Link to="/about">
+                                        Abouts
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/sub">
-                                        출간 도서
+                                    <Link to="/portfolio">
+                                        Portfolio
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/sub">
-                                        제 8회 한국과학문학상
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to="/sub">
-                                        독자 문의
+                                    <Link to="/portfolio">
+                                        Contact
                                     </Link>
                                 </li>
                             </ul>
@@ -40,8 +37,9 @@ function App() {
                     </div>
                 </header>
                 <Routes>
-                    <Route path="/" element={<MainPage />}></Route>
-                    <Route path="/sub" element={<SubPage />}></Route>
+                    <Route path="/" element={<Title />}></Route>
+                    <Route path="/portfolio" element={<MainPage />}></Route>
+                    <Route path="/about" element={<SubPage />}></Route>
                 </Routes>
             </div>
         </BrowserRouter>
