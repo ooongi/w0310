@@ -2,11 +2,15 @@
 .bookbox {
     margin: 0 auto;
     height: 100%;
+    padding-top: 20px;
 }
 
 .bookbox-container {
-    column-count: 4;
-    column-gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    /* column-count: 4;
+    column-gap: 10px; */
 }
 
 .book-card {
@@ -36,4 +40,17 @@
 .book-card:hover .overlay {
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (min-width:768px) {
+    .bookbox-container {
+            grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+@media (min-width:1300px) {
+    .bookbox-container {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
