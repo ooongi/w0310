@@ -105,3 +105,9 @@ body {
   scrollbar-color: rgba(136,136,136,0.3) transparent;
 }
 
+/* waypoints */
+.motion {
+    position: relative;
+    top: 100px;
+    opacity: 0;
+}
