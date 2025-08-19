@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import SubPage from "./pages/Abouts";
-import MainPage from "./pages/PortFolio";
-import Title from "./pages/Title";
+import Abouts from "./pages/Abouts";
+import Portfolio from "./pages/PortFolio";
 import "./css/Nav.css";
 import "./css/Reset.css";
 import logoImg from "./images/logo.png";
@@ -37,9 +36,9 @@ function App() {
                     </div>
                 </header>
                 <Routes>
-                    <Route path="/" element={<Title />}></Route>
-                    <Route path="/portfolio" element={<MainPage />}></Route>
-                    <Route path="/about" element={<SubPage />}></Route>
+                    <Route path="/" element={<Portfolio />}></Route>
+                    <Route path="/portfolio" element={<Portfolio />}></Route>
+                    <Route path="/about" element={<Abouts />}></Route>
                 </Routes>
             </div>
         </BrowserRouter>
