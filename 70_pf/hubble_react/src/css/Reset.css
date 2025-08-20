@@ -12,8 +12,8 @@
     --text: #333;
     --white: #fff;
     --black: #000;
-    --green: #3BAB3D;
-    --light: #F8F9FA;
+    --green: #3bab3d;
+    --light: #f8f9fa;
 }
 
 html,
@@ -64,16 +64,23 @@ ul {
     list-style: none;
 }
 
-
 @media (min-width: 768px) {
-    :root {
+    .bookbox {
         padding: 0 100px;
+    }
+
+    .nav {
+        padding: 60px 100px 120px;
     }
 }
 
 @media (min-width: 1300px) {
-    :root {
+    .bookbox {
         padding: 0 200px;
+    }
+    
+    .nav {
+        padding: 60px 200px 120px;
     }
 }
 /*
@@ -86,4 +93,3 @@ ul {
 데스크탑
 @media (min-width: 1200px) 
 */
-

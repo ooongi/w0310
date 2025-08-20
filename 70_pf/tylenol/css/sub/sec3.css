@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+/* slides-wrapper (sec1 내부 슬라이드 컨테이너) */
+
+.slides-wrapper {
+    display: flex;
+
+    width: 300vw;
+
+    height: 100%;
+
+    /* ★ 중요: 부모인 .slide-section의 높이를 100% 채움 */
+
+    transition: transform 0.7s ease-in-out;
+}
+
+/* group1 (slides-wrapper의 각 개별 슬라이드) */
+
+.group1 {
+    width: 100vw;
+
+    height: 100%;
+
+    /* ★ 중요: 부모인 slides-wrapper의 높이를 100% 채움 */
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    /* 내부 콘텐츠 (main, des) 가로 정렬 */
+
+    align-items: center;
+
+    /* 수직 중앙 정렬 */
+
+    justify-content: center;
+
+    /* 수평 중앙 정렬 */
+
+    background-color: white;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+/* .main (이미지 컨테이너) */
+
+.group1 .main {
+    height: 100%;
+
+    /* ★ 중요: 부모 group1의 높이를 채움 */
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+/* .main 내부 이미지 */
+
+.group1 .main img {
+    max-width: 100%;
+
+    max-height: 100%;
+
+    object-fit: contain;
+
+    /* 비율 유지하며 콘텐츠 박스에 맞춤 */
+
+    display: block;
+}
+
+/* .des, .des1 (텍스트 컨테이너) */
+
+.des,
+.des1 {
+    height: 100%;
+
+    /* ★ 중요: 부모 group1의 높이를 채움 */
+
+    display: flex;
+
+    flex-direction: column;
+
+    /* 텍스트 콘텐츠 내부에서 세로 정렬 */
+
+    justify-content: center;
+
+    /* 수직 중앙 정렬 */
+
+    align-items: flex-start;
+
+    /* 왼쪽 정렬 (필요시 center) */
+
+    padding-right: 200px;
+}
+
+/* 기존 콘텐츠 스타일 */
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 60px;
+}
+
+p {
+    font-size: 20px;
+
+    margin: 15px 0;
+
+    font-weight: 200;
+}
+
+.product {
+    font-size: 17px;
+}
+
+.product img {
+    vertical-align: bottom;
+}

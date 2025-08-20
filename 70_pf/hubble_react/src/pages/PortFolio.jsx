@@ -33,6 +33,12 @@ export default function Portfolio() {
             overLay: "",
             image: "/images/tylenol.png",
             alt: "타이레놀 홈페이지 리디자인",
+        },
+        {
+            bookLink: "https://ooongi.github.io/w0310/70_pf/haribo_pf",
+            overLay: "",
+            image: "/images/haribo.png",
+            alt: "타이레놀 홈페이지 리디자인",
         }
     ];
 
