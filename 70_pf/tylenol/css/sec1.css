@@ -66,7 +66,7 @@ body {
     height: 200px;
     position: absolute;
     top: 43%;
-    left: 19%;
+    left: 12%;
     opacity: 0;
     transform: translateY(-350px);
     transition: all 0.6s ease;
@@ -130,21 +130,21 @@ body {
 .font_2 {
     position: absolute;
     right: 5%;
-    top: 40%;
+    top: 44%;
 }
 
 .font_3 {
     position: absolute;
     font-size: 2.8rem;
     left: 5%;
-    bottom: 30%;
+    bottom: 20%;
 }
 
 .font_4 {
     position: absolute;
     font-size: 1.6rem;
     left: 5%;
-    bottom: 27%;
+    bottom: 17%;
 }
 
 /* container2 */
@@ -215,13 +215,13 @@ body {
         height: 300px;
         position: absolute;
         top: 33%;
-        left: 17%;
+        left: 33%;
         animation: motion 1.5s linear 0.2s infinite alternate;
     }
 
     #sec1 h2 {
         position: absolute;
-        font-size: 12rem;
+        font-size: 15rem;
         font-weight: 800;
         text-align: center;
         line-height: 1;
@@ -230,7 +230,7 @@ body {
     .font_1 {
         position: absolute;
         left: 5%;
-        top: 30%;
+        top: 25%;
     }
 
     .font_2 {
@@ -243,7 +243,7 @@ body {
 }
 
 /* desktop */
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
 
     .sec1_container_1 .img_1,
     .sec1_container_2 .img_1,
