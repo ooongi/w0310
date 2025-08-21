@@ -102,11 +102,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // 세로 모드 휠 이벤트 처리
     function handleVerticalWheel(e) {
         if (scrolling) return;
-        if (window.scrollY === 0 && e.deltaY < 0) {
+        if (window.scrollY === 5 && e.deltaY < 0) {
             // 세로 스크롤 최상단에서 위로 스크롤 시 가로 모드 복귀
             e.preventDefault();
             isHorizontal = true;
             document.body.style.overflowY = 'hidden';
+            window.scrollTo(0, 0);
             currentIndex = slideCount - 1; // 마지막 슬라이드부터 시작
             goToSlide(currentIndex);
             startCooldown();
