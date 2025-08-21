@@ -303,19 +303,26 @@ body {
 }
 
 /* 컨텐츠마다 그리드 조절 */
-/* 두통 원인 */
 .right_container.cold_4 {
     grid-template-rows: repeat(5, minmax(0, 1fr));
     grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-/* 두통 완화법 */
+
 .right_container.head_soultion {
     display: grid;
     row-gap: 10px;
     column-gap: 10px;
     flex-shrink: 0;
 }
+
+/* scroll motion */
+.motion {
+    position: relative;
+    top: 100px;
+    opacity: 0;
+}
+
 
 /* tablet */
 @media (min-width: 768px) {
@@ -413,7 +420,7 @@ body {
 }
 
 /* desktop */
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
     .sub_container {
         padding: 110px 160px 0;
     }
