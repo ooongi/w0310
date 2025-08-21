@@ -108,14 +108,14 @@ body {
 
 }
 
-h2 {
+#sec1 h2 {
     position: absolute;
     font-size: 8rem;
     font-weight: 800;
     line-height: 1;
 }
 
-h3 {
+#sec1 h3 {
     position: absolute;
     font-weight: 800;
     line-height: 1;
@@ -219,7 +219,7 @@ h3 {
         animation: motion 1.5s linear 0.2s infinite alternate;
     }
 
-    h2 {
+    #sec1 h2 {
         position: absolute;
         font-size: 12rem;
         font-weight: 800;
@@ -256,7 +256,7 @@ h3 {
         animation: motion 1.5s linear 0.2s infinite alternate;
     }
 
-    h2 {
+    #sec1 h2 {
         position: absolute;
         font-size: 26rem;
         font-weight: 800;
