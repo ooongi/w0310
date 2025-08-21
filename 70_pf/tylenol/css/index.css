@@ -1,7 +1,7 @@
 @charset "utf-8";
-@import url(./reset.css);
-@import url(./header.css);
-@import url(./sec1.css);
-@import url(./sec2.css);
-@import url(./sec3.css);
-@import url(./footer.css);
+@import url(/w0310/70_pf/tylenol/css/reset.css);
+@import url(/w0310/70_pf/tylenol/css/header.css);
+@import url(/w0310/70_pf/tylenol/css/sec1.css);
+@import url(/w0310/70_pf/tylenol/css/sec2.css);
+@import url(/w0310/70_pf/tylenol/css/sec3.css);
+@import url(/w0310/70_pf/tylenol/css/footer.css);
