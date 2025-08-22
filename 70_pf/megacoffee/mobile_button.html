@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>햄버거 버튼</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <!-- 햄버거 버튼: 정확한 X 애니메이션 -->
+    <button id="menuBtn" aria-controls="sideMenu" aria-expanded="false" aria-label="메뉴 열기" class="relative w-8 h-6 z-50"
+        type="button">
+        <!-- 윗줄 -->
+        <span
+            class="absolute left-0 w-full h-0.5 bg-black rounded transition-all duration-300 ease-in-out top-1"></span>
+        <!-- 가운데줄 -->
+        <span
+            class="absolute left-0 w-full h-0.5 bg-black rounded transition-all duration-300 ease-in-out top-1/2 -translate-y-1/2"></span>
+        <!-- 아랫줄 -->
+        <span
+            class="absolute left-0 w-full h-0.5 bg-black rounded transition-all duration-300 ease-in-out bottom-1"></span>
+    </button>
+</body>
+
+</html>
