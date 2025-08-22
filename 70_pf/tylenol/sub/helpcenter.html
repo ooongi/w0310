@@ -59,7 +59,7 @@
                 <li><a href="#">고객지원</a>
                     <ul class="sub-list">
                         <li><a href="#">FAQ </a></li>
-                        <li><a href="#">문의하기 </a></li>
+                        <li><a href="helpcenter.html">문의하기 </a></li>
                         <li><a href="#">회사정보</a></li>
                     </ul>
                 </li>
@@ -72,78 +72,111 @@
 
     <div class="helpcenter_body">
         <section id="helpcenter">
-            <div class="helpcenter_container">
+            <div>
                 <div class="helpcenter_box">
                     <div class="helpcenter_title">
                         <h2>고객센터 이용 안내</h2>
                     </div>
                 </div>
-                <div class="container1">
-                    <div class="container1_title">
-                        <h3>소비자 상담실</h3>
-                    </div>
-                    <div class="container1 part1">
-                        <p>유선 상담</p>
-                        <p>080-791-1414</p>
-                    </div>
-                    <div class="container1 part2">
-                        <p>운영 시간</p>
-                        <p>월~금 오전 9시 ~ 오후 5시 30분</p>
-                    </div>
-                    <div class="container1 part3">
-                        <p>주의사항</p>
-                        <p>&#8251; 제품 사용으로 인한 부작용이나 이상 반응과 같이 민감정보가 포함된 내용은 좀 더 나은 상담 및 관련 법의 준수를 위하여 반드시 제품에 기재된 소비자
-                            상담실 전화번호를 이용하여 문의해 주시기 바랍니다.
-                        </p>
-                        <p>주말과 공휴일에 접수된 문의사항은 상담가능시간에 처리됨을 양해해 주시기 바랍니다.
-                        </p>
-                    </div>
-                </div><!-- //.container1 -->
-                <div class="container22">
-                    <div class="container1_title">
-                        <h3>일반제품 문의</h3>
-                        <div class="container2_input">
-                            <form action="#">
-                                <span>연락처 정보</span><input type="text">
-                                <!-- 타사사이트 형식 찾아볼것 -->
-                            </form>
+                <div class="helpcenter_container">
+                    <div class="container1">
+                        <div class="container1_title">
+                            <h3>소비자 상담실</h3>
                         </div>
-                    </div>
-                </div><!-- //.container2 -->
-            </div><!-- //.helpcenter_container -->
+                        <div class="container1 part1">
+                            <p>유선 상담</p>
+                            <p>080-791-1414</p>
+                        </div>
+                        <div class="container1 part2">
+                            <p>운영 시간</p>
+                            <p>월~금 오전 9시 ~ 오후 5시 30분</p>
+                        </div>
+                        <div class="container1 part3">
+                            <p>주의사항</p>
+                            <p>&#8251; 제품 사용으로 인한 부작용이나 이상 반응과 같이 민감정보가 포함된 내용은 좀 더 나은 상담 및 관련 법의 준수를 위하여 반드시 제품에 기재된
+                                소비자
+                                상담실 전화번호를 이용하여 문의해 주시기 바랍니다.
+                            </p>
+                            <p>&#8251; 주말과 공휴일에 접수된 문의사항은 상담가능시간에 처리됨을 양해해 주시기 바랍니다.
+                            </p>
+                        </div>
+                    </div><!-- //.container1 -->
+                    <div class="container2">
+                        <div class="container1_title">
+                            <h3>일반제품 문의</h3>
+                        </div>
+                        <span class="must1">*</span><span>필수 입력</span>
+                        <div class="container2_input">
+                            <div class="container2_left">
+                                <p class="container2_t">연락처 정보</h2>
+                                <div class="fields">
+                                    <div class="form-row">
+                                        <label for="name"><span class="must1">*</span>이름</label>
+                                        <input type="text" id="name" name="name" placeholder="이름 입력">
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="phone"><span class="must1">*</span>연락처</label>
+                                        <input type="tel" id="phone" name="phone" placeholder="010-1234-5678">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container2_right">
+                                <p class="container2_t">문의</h2>
+                                <div class="fields">
+                                    <div class="form-row">
+                                        <label for="type"><span class="must1">*</span>문의 유형</label>
+                                        <select id="type" name="type" required>
+                                            <option value="">선택하세요</option>
+                                            <option value="general">일반 문의</option>
+                                            <option value="support">기술 지원</option>
+                                            <option value="feedback">의견/피드백</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="phone"><span class="must1">*</span>문의내용</label>
+                                        <textarea id="message" name="message" placeholder="문의 내용을 입력하세요"
+                                            required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- //.input -->
+                    </div><!-- //.container2 -->
+                </div><!-- //.helpcenter_container -->
+            </div>
         </section><!-- #helpcenter -->
-        <section id="footer" class="footer-section slide-section">
-            <footer>
-                <div class="footer_menu">
-                    <a href="#">법적고지</a>
-                    <a href="#">개인정보처리방침</a>
-                    <a href="#">공지사항</a>
+    </div>
+    <section id="footer" class="footer-section slide-section">
+        <footer>
+            <div class="footer_menu">
+                <a href="#">법적고지</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">공지사항</a>
+            </div>
+            <div class="footer_menu_line"></div>
+            <div class="info">
+                <div class="logo2">
+                    <a href="#"><img src="/w0310/70_pf/tylenol/images/header/logo.png" alt="하단로고"></a>
                 </div>
-                <div class="footer_menu_line"></div>
-                <div class="info">
-                    <div class="logo2">
-                        <a href="#"><img src="/w0310/70_pf/tylenol/images/header/logo.png" alt="하단로고"></a>
-                    </div>
-                    <div class="write">
-                        <p>한국존슨앤드존슨판매(유) | 서울특별시 용산구 한강대로 92 LS용산타워 27층 | 대표이사 : 백준혁 | 대표전화 : 080-791-1414 (수신자부담)
-                            <br>광고심의필
-                            :
-                            (PC) 2024-1718-003300 (MO) 2025-1752-000200
-                        </p>
-                        <p>이 사이트는 대한민국 사용자만을 위해 한국존슨앤드존슨판매(유)에서 제작하였으며, 내용상 모든 책임은 한국존슨앤드존슨판매(유)에 있습니다. <br>본 홈페이지상의
-                            건강정보는
-                            교육적인
-                            목적으로 제공되며, 의사와의 상담을 대신하지 않습니다.</p>
-                        <p>Copyright© 2023 Kenvue Inc. All rights reserved.</p>
-                    </div>
-                    <div class="icon">
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    </div>
+                <div class="write">
+                    <p>한국존슨앤드존슨판매(유) | 서울특별시 용산구 한강대로 92 LS용산타워 27층 | 대표이사 : 백준혁 | 대표전화 : 080-791-1414 (수신자부담)
+                        <br>광고심의필
+                        :
+                        (PC) 2024-1718-003300 (MO) 2025-1752-000200
+                    </p>
+                    <p>이 사이트는 대한민국 사용자만을 위해 한국존슨앤드존슨판매(유)에서 제작하였으며, 내용상 모든 책임은 한국존슨앤드존슨판매(유)에 있습니다. <br>본 홈페이지상의
+                        건강정보는
+                        교육적인
+                        목적으로 제공되며, 의사와의 상담을 대신하지 않습니다.</p>
+                    <p>Copyright© 2023 Kenvue Inc. All rights reserved.</p>
                 </div>
-            </footer>
-        </section>
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </footer>
+    </section>
     </div>
 
 
