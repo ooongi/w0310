@@ -3,7 +3,7 @@
 
 .footer {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     color: var(--whiteTextColor);
     background: var(--mainTextColor);
@@ -113,7 +113,8 @@
 /* 푸터하단정보 */
 .footer_info {
     display: flex;
-    width: 1320px;
+    max-width: 1320px;
+    width: 90%;
     margin: 0 auto;
     margin-top: 50px;
     font-size: 14px;
